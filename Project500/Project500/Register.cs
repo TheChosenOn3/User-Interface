@@ -21,5 +21,10 @@ namespace Project500
         {
 
         }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
