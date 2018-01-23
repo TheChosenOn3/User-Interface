@@ -34,15 +34,19 @@
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
-            this.btnRegister = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.tcLogin = new MetroFramework.Controls.MetroTabControl();
+            this.tabLogin = new MetroFramework.Controls.MetroTabPage();
+            this.btnLogin = new MetroFramework.Controls.MetroButton();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.btnClear = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.navpan.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tcLogin.SuspendLayout();
+            this.tabLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnHome
@@ -121,59 +125,84 @@
             this.lblP500.Text = "Project 500";
             this.lblP500.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // btnRegister
+            // tcLogin
             // 
-            this.btnRegister.Location = new System.Drawing.Point(519, 194);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(119, 44);
-            this.btnRegister.TabIndex = 37;
-            this.btnRegister.Text = "Login";
-            this.btnRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tcLogin.Controls.Add(this.tabLogin);
+            this.tcLogin.Location = new System.Drawing.Point(161, 63);
+            this.tcLogin.Name = "tcLogin";
+            this.tcLogin.SelectedIndex = 0;
+            this.tcLogin.Size = new System.Drawing.Size(672, 221);
+            this.tcLogin.TabIndex = 60;
+            this.tcLogin.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox2
+            // tabLogin
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(519, 116);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox2.TabIndex = 36;
-            this.metroTextBox2.Text = "metroTextBox2";
-            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabLogin.Controls.Add(this.btnLogin);
+            this.tabLogin.Controls.Add(this.txtPassword);
+            this.tabLogin.Controls.Add(this.metroLabel2);
+            this.tabLogin.Controls.Add(this.btnClear);
+            this.tabLogin.Controls.Add(this.txtUsername);
+            this.tabLogin.Controls.Add(this.metroLabel1);
+            this.tabLogin.HorizontalScrollbarBarColor = true;
+            this.tabLogin.Location = new System.Drawing.Point(4, 39);
+            this.tabLogin.Name = "tabLogin";
+            this.tabLogin.Size = new System.Drawing.Size(664, 178);
+            this.tabLogin.TabIndex = 0;
+            this.tabLogin.Text = "Enter Login Details";
+            this.tabLogin.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabLogin.VerticalScrollbarBarColor = true;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(365, 126);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(119, 44);
+            this.btnLogin.TabIndex = 43;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(365, 48);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(127, 23);
+            this.txtPassword.TabIndex = 42;
+            this.txtPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(335, 119);
+            this.metroLabel2.Location = new System.Drawing.Point(181, 51);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(66, 20);
-            this.metroLabel2.TabIndex = 35;
+            this.metroLabel2.TabIndex = 41;
             this.metroLabel2.Text = "Password";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(327, 194);
+            this.btnClear.Location = new System.Drawing.Point(173, 126);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(119, 44);
-            this.btnClear.TabIndex = 34;
+            this.btnClear.TabIndex = 40;
             this.btnClear.Text = "Clear Flields";
             this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox1
+            // txtUsername
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(519, 77);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox1.TabIndex = 33;
-            this.metroTextBox1.Text = "metroTextBox1";
-            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtUsername.Location = new System.Drawing.Point(365, 9);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(127, 23);
+            this.txtUsername.TabIndex = 39;
+            this.txtUsername.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(335, 80);
+            this.metroLabel1.Location = new System.Drawing.Point(181, 12);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(73, 20);
-            this.metroLabel1.TabIndex = 32;
+            this.metroLabel1.TabIndex = 38;
             this.metroLabel1.Text = "Username";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -182,12 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 307);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.metroTextBox1);
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.tcLogin);
             this.Controls.Add(this.navpan);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.metroPanel2);
@@ -199,6 +223,9 @@
             this.navpan.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tcLogin.ResumeLayout(false);
+            this.tabLogin.ResumeLayout(false);
+            this.tabLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,11 +239,13 @@
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lblP500;
-        private MetroFramework.Controls.MetroButton btnRegister;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTabControl tcLogin;
+        private MetroFramework.Controls.MetroTabPage tabLogin;
+        private MetroFramework.Controls.MetroButton btnLogin;
+        private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton btnClear;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtUsername;
         private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

@@ -45,6 +45,10 @@
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
             this.tcFilterPayments = new MetroFramework.Controls.MetroTabControl();
             this.tabFilterPayments = new MetroFramework.Controls.MetroTabPage();
+            this.txtStatus = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnFilter = new MetroFramework.Controls.MetroButton();
@@ -53,19 +57,15 @@
             this.btnClearFields = new MetroFramework.Controls.MetroButton();
             this.txtBName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.tcPayments = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.dgvPayments = new System.Windows.Forms.DataGridView();
             this.tcCurrentPayment = new MetroFramework.Controls.MetroTabControl();
             this.tabCurrentPayment = new MetroFramework.Controls.MetroTabPage();
+            this.btnRemakePayment = new MetroFramework.Controls.MetroButton();
+            this.btnGenerateReport = new MetroFramework.Controls.MetroButton();
+            this.rteDecription = new System.Windows.Forms.RichTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.txtStatus = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.navpan.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -259,6 +259,41 @@
             this.tabFilterPayments.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabFilterPayments.VerticalScrollbarBarColor = true;
             // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(207, 91);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(127, 23);
+            this.txtStatus.TabIndex = 82;
+            this.txtStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(57, 94);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(45, 20);
+            this.metroLabel3.TabIndex = 81;
+            this.metroLabel3.Text = "Status";
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(503, 54);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(66, 20);
+            this.metroLabel4.TabIndex = 80;
+            this.metroLabel4.Text = "End Date";
+            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // dtpEnd
+            // 
+            this.dtpEnd.Location = new System.Drawing.Point(642, 52);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(225, 22);
+            this.dtpEnd.TabIndex = 79;
+            // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
@@ -331,23 +366,6 @@
             this.metroLabel29.Text = "Beneficiary Name";
             this.metroLabel29.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(503, 54);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(66, 20);
-            this.metroLabel4.TabIndex = 80;
-            this.metroLabel4.Text = "End Date";
-            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // dtpEnd
-            // 
-            this.dtpEnd.Location = new System.Drawing.Point(642, 52);
-            this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(225, 22);
-            this.dtpEnd.TabIndex = 79;
-            // 
             // tcPayments
             // 
             this.tcPayments.Controls.Add(this.metroTabPage1);
@@ -391,9 +409,9 @@
             // 
             // tabCurrentPayment
             // 
-            this.tabCurrentPayment.Controls.Add(this.metroButton3);
-            this.tabCurrentPayment.Controls.Add(this.metroButton2);
-            this.tabCurrentPayment.Controls.Add(this.richTextBox1);
+            this.tabCurrentPayment.Controls.Add(this.btnRemakePayment);
+            this.tabCurrentPayment.Controls.Add(this.btnGenerateReport);
+            this.tabCurrentPayment.Controls.Add(this.rteDecription);
             this.tabCurrentPayment.Controls.Add(this.metroLabel2);
             this.tabCurrentPayment.HorizontalScrollbarBarColor = true;
             this.tabCurrentPayment.Location = new System.Drawing.Point(4, 39);
@@ -404,59 +422,41 @@
             this.tabCurrentPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabCurrentPayment.VerticalScrollbarBarColor = true;
             // 
+            // btnRemakePayment
+            // 
+            this.btnRemakePayment.Location = new System.Drawing.Point(836, 63);
+            this.btnRemakePayment.Name = "btnRemakePayment";
+            this.btnRemakePayment.Size = new System.Drawing.Size(119, 39);
+            this.btnRemakePayment.TabIndex = 82;
+            this.btnRemakePayment.Text = "Remake payment";
+            this.btnRemakePayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btnGenerateReport
+            // 
+            this.btnGenerateReport.Location = new System.Drawing.Point(836, 14);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(119, 39);
+            this.btnGenerateReport.TabIndex = 81;
+            this.btnGenerateReport.Text = "Generate report";
+            this.btnGenerateReport.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // rteDecription
+            // 
+            this.rteDecription.Location = new System.Drawing.Point(139, 13);
+            this.rteDecription.Name = "rteDecription";
+            this.rteDecription.Size = new System.Drawing.Size(674, 96);
+            this.rteDecription.TabIndex = 80;
+            this.rteDecription.Text = "";
+            // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(3, 47);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(115, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(79, 20);
             this.metroLabel2.TabIndex = 79;
-            this.metroLabel2.Text = "payment Method";
+            this.metroLabel2.Text = "Description";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(139, 13);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(674, 96);
-            this.richTextBox1.TabIndex = 80;
-            this.richTextBox1.Text = "";
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(836, 14);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(119, 39);
-            this.metroButton2.TabIndex = 81;
-            this.metroButton2.Text = "Generate report";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(836, 63);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(119, 39);
-            this.metroButton3.TabIndex = 82;
-            this.metroButton3.Text = "Remake payment";
-            this.metroButton3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(207, 91);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(127, 23);
-            this.txtStatus.TabIndex = 82;
-            this.txtStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(57, 94);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(45, 20);
-            this.metroLabel3.TabIndex = 81;
-            this.metroLabel3.Text = "Status";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // History
             // 
@@ -525,9 +525,9 @@
         private System.Windows.Forms.DataGridView dgvPayments;
         private MetroFramework.Controls.MetroTabControl tcCurrentPayment;
         private MetroFramework.Controls.MetroTabPage tabCurrentPayment;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private MetroFramework.Controls.MetroButton btnRemakePayment;
+        private MetroFramework.Controls.MetroButton btnGenerateReport;
+        private System.Windows.Forms.RichTextBox rteDecription;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox txtStatus;
         private MetroFramework.Controls.MetroLabel metroLabel3;
