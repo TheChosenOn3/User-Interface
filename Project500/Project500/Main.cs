@@ -27,5 +27,35 @@ namespace Project500
         {
 
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnScheduel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBeneficiary_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

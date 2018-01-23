@@ -9,24 +9,7 @@ namespace Controllers
 {
   public  class BeneficiaryController
     {
-       public static void addBeneficiary(Beneficiary ben)
-        {
-            //  HttpClient _client = "localhost"\
-            Beneficiary piele = new Beneficiary( "a");
-            HttpClient _client = new HttpClient();
-
-            var hjallo = JsonConvert.SerializeObject(ben);
-            ///setv as conmtet buddum.......
-
-            var deser = JsonConvert.DeserializeObject<Beneficiary>(hjallo);
-            _client.PostAsync("", hjallo);
-
-        }
-        public static void addBeneficiary(Beneficiary ben)
-        {
-          
-
-        }
+     
 
 
 

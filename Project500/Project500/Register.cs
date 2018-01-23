@@ -26,5 +26,30 @@ namespace Project500
         {
 
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabCryptoDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabCardDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPersonalDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabEFTDetail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

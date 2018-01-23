@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Project500
 {
-    public partial class History : MetroFramework.Forms.MetroForm
+    public partial class Benenficiarys : MetroFramework.Forms.MetroForm
     {
-        public History()
+        public Benenficiarys()
         {
             InitializeComponent();
         }
 
-        private void History_Load(object sender, EventArgs e)
+        private void Benenficiarys_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtBID_Click(object sender, EventArgs e)
         {
 
         }
