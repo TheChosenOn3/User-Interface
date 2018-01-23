@@ -43,86 +43,86 @@
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
-            this.tabCRegister = new MetroFramework.Controls.MetroTabControl();
+            this.tabUserRegister = new MetroFramework.Controls.MetroTabControl();
             this.tabPersonalDetail = new MetroFramework.Controls.MetroTabPage();
-            this.btnRegister = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox11 = new MetroFramework.Controls.MetroTextBox();
+            this.btnUpdatePI = new MetroFramework.Controls.MetroButton();
+            this.txtCellNum = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox10 = new MetroFramework.Controls.MetroTextBox();
+            this.txtID = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox9 = new MetroFramework.Controls.MetroTextBox();
+            this.txtStreetNumber = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox8 = new MetroFramework.Controls.MetroTextBox();
+            this.txtStreet = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
+            this.txtSuburb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
+            this.txtCountry = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
+            this.txtConfirmPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtSurname = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.btnClear = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.btnClearPI = new MetroFramework.Controls.MetroButton();
+            this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tabCryptoDetail = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton8 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.metroTextBox14 = new MetroFramework.Controls.MetroTextBox();
+            this.btnDeleteCrypto = new MetroFramework.Controls.MetroButton();
+            this.btnUpateCrypto = new MetroFramework.Controls.MetroButton();
+            this.dgvCrypto = new System.Windows.Forms.DataGridView();
+            this.txtWalletName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
+            this.cbCryptoType = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox16 = new MetroFramework.Controls.MetroTextBox();
+            this.btnAddCrypto = new MetroFramework.Controls.MetroButton();
+            this.btnClearCrypto = new MetroFramework.Controls.MetroButton();
+            this.txtWalletCode = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
             this.tabCardDetail = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
-            this.metroButton7 = new MetroFramework.Controls.MetroButton();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnDeleteCard = new MetroFramework.Controls.MetroButton();
+            this.btnUpdateCard = new MetroFramework.Controls.MetroButton();
+            this.dgvCard = new System.Windows.Forms.DataGridView();
+            this.dtpED = new System.Windows.Forms.DateTimePicker();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.metroTextBox15 = new MetroFramework.Controls.MetroTextBox();
+            this.cbCardType = new MetroFramework.Controls.MetroComboBox();
+            this.txtCardHolder = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox13 = new MetroFramework.Controls.MetroTextBox();
+            this.txtCVV = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.btnCSubmit = new MetroFramework.Controls.MetroButton();
+            this.btnAddCard = new MetroFramework.Controls.MetroButton();
             this.BtnCClear = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox12 = new MetroFramework.Controls.MetroTextBox();
+            this.txtCardNum = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.cbCardIsuer = new MetroFramework.Controls.MetroComboBox();
             this.tabEFTDetail = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton9 = new MetroFramework.Controls.MetroButton();
-            this.metroButton10 = new MetroFramework.Controls.MetroButton();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.metroTextBox18 = new MetroFramework.Controls.MetroTextBox();
+            this.btnDeleteEFT = new MetroFramework.Controls.MetroButton();
+            this.btnUpdateEFT = new MetroFramework.Controls.MetroButton();
+            this.dgvEFT = new System.Windows.Forms.DataGridView();
+            this.txtEFTNum = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.cbEFTType = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox17 = new MetroFramework.Controls.MetroTextBox();
+            this.btnAddEFT = new MetroFramework.Controls.MetroButton();
+            this.btnClearEFT = new MetroFramework.Controls.MetroButton();
+            this.txtEFTReference = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.navpan.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
-            this.tabCRegister.SuspendLayout();
+            this.tabUserRegister.SuspendLayout();
             this.tabPersonalDetail.SuspendLayout();
             this.tabCryptoDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCrypto)).BeginInit();
             this.tabCardDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCard)).BeginInit();
             this.tabEFTDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEFT)).BeginInit();
             this.SuspendLayout();
             // 
             // navpan
@@ -284,45 +284,45 @@
             this.lblP500.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lblP500.Click += new System.EventHandler(this.lblP500_Click);
             // 
-            // tabCRegister
+            // tabUserRegister
             // 
-            this.tabCRegister.Controls.Add(this.tabPersonalDetail);
-            this.tabCRegister.Controls.Add(this.tabCryptoDetail);
-            this.tabCRegister.Controls.Add(this.tabCardDetail);
-            this.tabCRegister.Controls.Add(this.tabEFTDetail);
-            this.tabCRegister.Location = new System.Drawing.Point(144, 121);
-            this.tabCRegister.Name = "tabCRegister";
-            this.tabCRegister.SelectedIndex = 0;
-            this.tabCRegister.Size = new System.Drawing.Size(987, 618);
-            this.tabCRegister.TabIndex = 11;
-            this.tabCRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tabCRegister.SelectedIndexChanged += new System.EventHandler(this.tabCRegister_SelectedIndexChanged);
+            this.tabUserRegister.Controls.Add(this.tabPersonalDetail);
+            this.tabUserRegister.Controls.Add(this.tabCryptoDetail);
+            this.tabUserRegister.Controls.Add(this.tabCardDetail);
+            this.tabUserRegister.Controls.Add(this.tabEFTDetail);
+            this.tabUserRegister.Location = new System.Drawing.Point(144, 121);
+            this.tabUserRegister.Name = "tabUserRegister";
+            this.tabUserRegister.SelectedIndex = 3;
+            this.tabUserRegister.Size = new System.Drawing.Size(987, 618);
+            this.tabUserRegister.TabIndex = 11;
+            this.tabUserRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabUserRegister.SelectedIndexChanged += new System.EventHandler(this.tabCRegister_SelectedIndexChanged);
             // 
             // tabPersonalDetail
             // 
-            this.tabPersonalDetail.Controls.Add(this.btnRegister);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox11);
+            this.tabPersonalDetail.Controls.Add(this.btnUpdatePI);
+            this.tabPersonalDetail.Controls.Add(this.txtCellNum);
             this.tabPersonalDetail.Controls.Add(this.metroLabel11);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox10);
+            this.tabPersonalDetail.Controls.Add(this.txtID);
             this.tabPersonalDetail.Controls.Add(this.metroLabel10);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox9);
+            this.tabPersonalDetail.Controls.Add(this.txtStreetNumber);
             this.tabPersonalDetail.Controls.Add(this.metroLabel9);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox8);
+            this.tabPersonalDetail.Controls.Add(this.txtStreet);
             this.tabPersonalDetail.Controls.Add(this.metroLabel8);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox7);
+            this.tabPersonalDetail.Controls.Add(this.txtSuburb);
             this.tabPersonalDetail.Controls.Add(this.metroLabel7);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox6);
+            this.tabPersonalDetail.Controls.Add(this.txtCountry);
             this.tabPersonalDetail.Controls.Add(this.metroLabel6);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox5);
+            this.tabPersonalDetail.Controls.Add(this.txtConfirmPassword);
             this.tabPersonalDetail.Controls.Add(this.metroLabel5);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox4);
+            this.tabPersonalDetail.Controls.Add(this.txtPassword);
             this.tabPersonalDetail.Controls.Add(this.metroLabel4);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox3);
+            this.tabPersonalDetail.Controls.Add(this.txtEmail);
             this.tabPersonalDetail.Controls.Add(this.metroLabel3);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox2);
+            this.tabPersonalDetail.Controls.Add(this.txtSurname);
             this.tabPersonalDetail.Controls.Add(this.metroLabel2);
-            this.tabPersonalDetail.Controls.Add(this.btnClear);
-            this.tabPersonalDetail.Controls.Add(this.metroTextBox1);
+            this.tabPersonalDetail.Controls.Add(this.btnClearPI);
+            this.tabPersonalDetail.Controls.Add(this.txtName);
             this.tabPersonalDetail.Controls.Add(this.metroLabel1);
             this.tabPersonalDetail.HorizontalScrollbarBarColor = true;
             this.tabPersonalDetail.Location = new System.Drawing.Point(4, 39);
@@ -334,25 +334,24 @@
             this.tabPersonalDetail.VerticalScrollbarBarColor = true;
             this.tabPersonalDetail.Click += new System.EventHandler(this.tabPersonalDetail_Click);
             // 
-            // btnRegister
+            // btnUpdatePI
             // 
-            this.btnRegister.Location = new System.Drawing.Point(215, 476);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(119, 44);
-            this.btnRegister.TabIndex = 25;
-            this.btnRegister.Text = "Updaet Details";
-            this.btnRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnUpdatePI.Location = new System.Drawing.Point(215, 476);
+            this.btnUpdatePI.Name = "btnUpdatePI";
+            this.btnUpdatePI.Size = new System.Drawing.Size(119, 44);
+            this.btnUpdatePI.TabIndex = 25;
+            this.btnUpdatePI.Text = "Updaet Details";
+            this.btnUpdatePI.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpdatePI.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // metroTextBox11
+            // txtCellNum
             // 
-            this.metroTextBox11.Location = new System.Drawing.Point(207, 421);
-            this.metroTextBox11.Name = "metroTextBox11";
-            this.metroTextBox11.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox11.TabIndex = 24;
-            this.metroTextBox11.Text = "metroTextBox11";
-            this.metroTextBox11.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox11.Click += new System.EventHandler(this.metroTextBox11_Click);
+            this.txtCellNum.Location = new System.Drawing.Point(207, 421);
+            this.txtCellNum.Name = "txtCellNum";
+            this.txtCellNum.Size = new System.Drawing.Size(127, 23);
+            this.txtCellNum.TabIndex = 24;
+            this.txtCellNum.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtCellNum.Click += new System.EventHandler(this.metroTextBox11_Click);
             // 
             // metroLabel11
             // 
@@ -365,15 +364,14 @@
             this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel11.Click += new System.EventHandler(this.metroLabel11_Click);
             // 
-            // metroTextBox10
+            // txtID
             // 
-            this.metroTextBox10.Location = new System.Drawing.Point(207, 112);
-            this.metroTextBox10.Name = "metroTextBox10";
-            this.metroTextBox10.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox10.TabIndex = 22;
-            this.metroTextBox10.Text = "metroTextBox10";
-            this.metroTextBox10.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox10.Click += new System.EventHandler(this.metroTextBox10_Click);
+            this.txtID.Location = new System.Drawing.Point(207, 112);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(127, 23);
+            this.txtID.TabIndex = 22;
+            this.txtID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtID.Click += new System.EventHandler(this.metroTextBox10_Click);
             // 
             // metroLabel10
             // 
@@ -386,15 +384,14 @@
             this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel10.Click += new System.EventHandler(this.metroLabel10_Click);
             // 
-            // metroTextBox9
+            // txtStreetNumber
             // 
-            this.metroTextBox9.Location = new System.Drawing.Point(207, 385);
-            this.metroTextBox9.Name = "metroTextBox9";
-            this.metroTextBox9.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox9.TabIndex = 20;
-            this.metroTextBox9.Text = "metroTextBox9";
-            this.metroTextBox9.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox9.Click += new System.EventHandler(this.metroTextBox9_Click);
+            this.txtStreetNumber.Location = new System.Drawing.Point(207, 385);
+            this.txtStreetNumber.Name = "txtStreetNumber";
+            this.txtStreetNumber.Size = new System.Drawing.Size(127, 23);
+            this.txtStreetNumber.TabIndex = 20;
+            this.txtStreetNumber.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtStreetNumber.Click += new System.EventHandler(this.metroTextBox9_Click);
             // 
             // metroLabel9
             // 
@@ -407,15 +404,14 @@
             this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel9.Click += new System.EventHandler(this.metroLabel9_Click);
             // 
-            // metroTextBox8
+            // txtStreet
             // 
-            this.metroTextBox8.Location = new System.Drawing.Point(207, 349);
-            this.metroTextBox8.Name = "metroTextBox8";
-            this.metroTextBox8.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox8.TabIndex = 18;
-            this.metroTextBox8.Text = "metroTextBox8";
-            this.metroTextBox8.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox8.Click += new System.EventHandler(this.metroTextBox8_Click);
+            this.txtStreet.Location = new System.Drawing.Point(207, 349);
+            this.txtStreet.Name = "txtStreet";
+            this.txtStreet.Size = new System.Drawing.Size(127, 23);
+            this.txtStreet.TabIndex = 18;
+            this.txtStreet.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtStreet.Click += new System.EventHandler(this.metroTextBox8_Click);
             // 
             // metroLabel8
             // 
@@ -428,15 +424,14 @@
             this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel8.Click += new System.EventHandler(this.metroLabel8_Click);
             // 
-            // metroTextBox7
+            // txtSuburb
             // 
-            this.metroTextBox7.Location = new System.Drawing.Point(207, 310);
-            this.metroTextBox7.Name = "metroTextBox7";
-            this.metroTextBox7.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox7.TabIndex = 16;
-            this.metroTextBox7.Text = "metroTextBox7";
-            this.metroTextBox7.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox7.Click += new System.EventHandler(this.metroTextBox7_Click);
+            this.txtSuburb.Location = new System.Drawing.Point(207, 310);
+            this.txtSuburb.Name = "txtSuburb";
+            this.txtSuburb.Size = new System.Drawing.Size(127, 23);
+            this.txtSuburb.TabIndex = 16;
+            this.txtSuburb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtSuburb.Click += new System.EventHandler(this.metroTextBox7_Click);
             // 
             // metroLabel7
             // 
@@ -449,15 +444,14 @@
             this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel7.Click += new System.EventHandler(this.metroLabel7_Click);
             // 
-            // metroTextBox6
+            // txtCountry
             // 
-            this.metroTextBox6.Location = new System.Drawing.Point(207, 267);
-            this.metroTextBox6.Name = "metroTextBox6";
-            this.metroTextBox6.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox6.TabIndex = 14;
-            this.metroTextBox6.Text = "metroTextBox6";
-            this.metroTextBox6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox6.Click += new System.EventHandler(this.metroTextBox6_Click);
+            this.txtCountry.Location = new System.Drawing.Point(207, 267);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(127, 23);
+            this.txtCountry.TabIndex = 14;
+            this.txtCountry.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtCountry.Click += new System.EventHandler(this.metroTextBox6_Click);
             // 
             // metroLabel6
             // 
@@ -470,15 +464,14 @@
             this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel6.Click += new System.EventHandler(this.metroLabel6_Click);
             // 
-            // metroTextBox5
+            // txtConfirmPassword
             // 
-            this.metroTextBox5.Location = new System.Drawing.Point(207, 229);
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox5.TabIndex = 12;
-            this.metroTextBox5.Text = "metroTextBox5";
-            this.metroTextBox5.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox5.Click += new System.EventHandler(this.metroTextBox5_Click);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(207, 229);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(127, 23);
+            this.txtConfirmPassword.TabIndex = 12;
+            this.txtConfirmPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtConfirmPassword.Click += new System.EventHandler(this.metroTextBox5_Click);
             // 
             // metroLabel5
             // 
@@ -491,15 +484,14 @@
             this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel5.Click += new System.EventHandler(this.metroLabel5_Click);
             // 
-            // metroTextBox4
+            // txtPassword
             // 
-            this.metroTextBox4.Location = new System.Drawing.Point(207, 191);
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox4.TabIndex = 10;
-            this.metroTextBox4.Text = "metroTextBox4";
-            this.metroTextBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox4.Click += new System.EventHandler(this.metroTextBox4_Click);
+            this.txtPassword.Location = new System.Drawing.Point(207, 191);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(127, 23);
+            this.txtPassword.TabIndex = 10;
+            this.txtPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtPassword.Click += new System.EventHandler(this.metroTextBox4_Click);
             // 
             // metroLabel4
             // 
@@ -512,15 +504,14 @@
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
             // 
-            // metroTextBox3
+            // txtEmail
             // 
-            this.metroTextBox3.Location = new System.Drawing.Point(207, 153);
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox3.TabIndex = 8;
-            this.metroTextBox3.Text = "metroTextBox3";
-            this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox3.Click += new System.EventHandler(this.metroTextBox3_Click);
+            this.txtEmail.Location = new System.Drawing.Point(207, 153);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(127, 23);
+            this.txtEmail.TabIndex = 8;
+            this.txtEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtEmail.Click += new System.EventHandler(this.metroTextBox3_Click);
             // 
             // metroLabel3
             // 
@@ -533,15 +524,14 @@
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
             // 
-            // metroTextBox2
+            // txtSurname
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(207, 74);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox2.TabIndex = 6;
-            this.metroTextBox2.Text = "metroTextBox2";
-            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox2.Click += new System.EventHandler(this.metroTextBox2_Click);
+            this.txtSurname.Location = new System.Drawing.Point(207, 74);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(127, 23);
+            this.txtSurname.TabIndex = 6;
+            this.txtSurname.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtSurname.Click += new System.EventHandler(this.metroTextBox2_Click);
             // 
             // metroLabel2
             // 
@@ -554,25 +544,24 @@
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
-            // btnClear
+            // btnClearPI
             // 
-            this.btnClear.Location = new System.Drawing.Point(23, 476);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(119, 44);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Clear Flields";
-            this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClearPI.Location = new System.Drawing.Point(23, 476);
+            this.btnClearPI.Name = "btnClearPI";
+            this.btnClearPI.Size = new System.Drawing.Size(119, 44);
+            this.btnClearPI.TabIndex = 4;
+            this.btnClearPI.Text = "Clear Flields";
+            this.btnClearPI.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearPI.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // metroTextBox1
+            // txtName
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(207, 35);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.Text = "metroTextBox1";
-            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.txtName.Location = new System.Drawing.Point(207, 35);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(127, 23);
+            this.txtName.TabIndex = 3;
+            this.txtName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtName.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // metroLabel1
             // 
@@ -587,16 +576,16 @@
             // 
             // tabCryptoDetail
             // 
-            this.tabCryptoDetail.Controls.Add(this.metroButton8);
-            this.tabCryptoDetail.Controls.Add(this.metroButton5);
-            this.tabCryptoDetail.Controls.Add(this.dataGridView1);
-            this.tabCryptoDetail.Controls.Add(this.metroTextBox14);
+            this.tabCryptoDetail.Controls.Add(this.btnDeleteCrypto);
+            this.tabCryptoDetail.Controls.Add(this.btnUpateCrypto);
+            this.tabCryptoDetail.Controls.Add(this.dgvCrypto);
+            this.tabCryptoDetail.Controls.Add(this.txtWalletName);
             this.tabCryptoDetail.Controls.Add(this.metroLabel19);
-            this.tabCryptoDetail.Controls.Add(this.metroComboBox4);
+            this.tabCryptoDetail.Controls.Add(this.cbCryptoType);
             this.tabCryptoDetail.Controls.Add(this.metroLabel20);
-            this.tabCryptoDetail.Controls.Add(this.metroButton3);
-            this.tabCryptoDetail.Controls.Add(this.metroButton4);
-            this.tabCryptoDetail.Controls.Add(this.metroTextBox16);
+            this.tabCryptoDetail.Controls.Add(this.btnAddCrypto);
+            this.tabCryptoDetail.Controls.Add(this.btnClearCrypto);
+            this.tabCryptoDetail.Controls.Add(this.txtWalletCode);
             this.tabCryptoDetail.Controls.Add(this.metroLabel21);
             this.tabCryptoDetail.HorizontalScrollbarBarColor = true;
             this.tabCryptoDetail.Location = new System.Drawing.Point(4, 39);
@@ -608,45 +597,44 @@
             this.tabCryptoDetail.VerticalScrollbarBarColor = true;
             this.tabCryptoDetail.Click += new System.EventHandler(this.tabCryptoDetail_Click);
             // 
-            // metroButton8
+            // btnDeleteCrypto
             // 
-            this.metroButton8.Location = new System.Drawing.Point(216, 270);
-            this.metroButton8.Name = "metroButton8";
-            this.metroButton8.Size = new System.Drawing.Size(119, 44);
-            this.metroButton8.TabIndex = 63;
-            this.metroButton8.Text = "Delete Account";
-            this.metroButton8.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton8.Click += new System.EventHandler(this.metroButton8_Click);
+            this.btnDeleteCrypto.Location = new System.Drawing.Point(216, 270);
+            this.btnDeleteCrypto.Name = "btnDeleteCrypto";
+            this.btnDeleteCrypto.Size = new System.Drawing.Size(119, 44);
+            this.btnDeleteCrypto.TabIndex = 63;
+            this.btnDeleteCrypto.Text = "Delete Account";
+            this.btnDeleteCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeleteCrypto.Click += new System.EventHandler(this.metroButton8_Click);
             // 
-            // metroButton5
+            // btnUpateCrypto
             // 
-            this.metroButton5.Location = new System.Drawing.Point(36, 270);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(119, 44);
-            this.metroButton5.TabIndex = 62;
-            this.metroButton5.Text = "Update Account";
-            this.metroButton5.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
+            this.btnUpateCrypto.Location = new System.Drawing.Point(36, 270);
+            this.btnUpateCrypto.Name = "btnUpateCrypto";
+            this.btnUpateCrypto.Size = new System.Drawing.Size(119, 44);
+            this.btnUpateCrypto.TabIndex = 62;
+            this.btnUpateCrypto.Text = "Update Account";
+            this.btnUpateCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpateCrypto.Click += new System.EventHandler(this.metroButton5_Click);
             // 
-            // dataGridView1
+            // dgvCrypto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(391, 17);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(573, 227);
-            this.dataGridView1.TabIndex = 61;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvCrypto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCrypto.Location = new System.Drawing.Point(391, 17);
+            this.dgvCrypto.Name = "dgvCrypto";
+            this.dgvCrypto.RowTemplate.Height = 24;
+            this.dgvCrypto.Size = new System.Drawing.Size(573, 227);
+            this.dgvCrypto.TabIndex = 61;
+            this.dgvCrypto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // metroTextBox14
+            // txtWalletName
             // 
-            this.metroTextBox14.Location = new System.Drawing.Point(194, 81);
-            this.metroTextBox14.Name = "metroTextBox14";
-            this.metroTextBox14.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox14.TabIndex = 60;
-            this.metroTextBox14.Text = "metroTextBox14";
-            this.metroTextBox14.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox14.Click += new System.EventHandler(this.metroTextBox14_Click);
+            this.txtWalletName.Location = new System.Drawing.Point(194, 81);
+            this.txtWalletName.Name = "txtWalletName";
+            this.txtWalletName.Size = new System.Drawing.Size(127, 23);
+            this.txtWalletName.TabIndex = 60;
+            this.txtWalletName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtWalletName.Click += new System.EventHandler(this.metroTextBox14_Click);
             // 
             // metroLabel19
             // 
@@ -659,16 +647,16 @@
             this.metroLabel19.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel19.Click += new System.EventHandler(this.metroLabel19_Click);
             // 
-            // metroComboBox4
+            // cbCryptoType
             // 
-            this.metroComboBox4.FormattingEnabled = true;
-            this.metroComboBox4.ItemHeight = 24;
-            this.metroComboBox4.Location = new System.Drawing.Point(194, 31);
-            this.metroComboBox4.Name = "metroComboBox4";
-            this.metroComboBox4.Size = new System.Drawing.Size(121, 30);
-            this.metroComboBox4.TabIndex = 58;
-            this.metroComboBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroComboBox4.SelectedIndexChanged += new System.EventHandler(this.metroComboBox4_SelectedIndexChanged);
+            this.cbCryptoType.FormattingEnabled = true;
+            this.cbCryptoType.ItemHeight = 24;
+            this.cbCryptoType.Location = new System.Drawing.Point(194, 31);
+            this.cbCryptoType.Name = "cbCryptoType";
+            this.cbCryptoType.Size = new System.Drawing.Size(121, 30);
+            this.cbCryptoType.TabIndex = 58;
+            this.cbCryptoType.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbCryptoType.SelectedIndexChanged += new System.EventHandler(this.metroComboBox4_SelectedIndexChanged);
             // 
             // metroLabel20
             // 
@@ -681,35 +669,34 @@
             this.metroLabel20.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel20.Click += new System.EventHandler(this.metroLabel20_Click);
             // 
-            // metroButton3
+            // btnAddCrypto
             // 
-            this.metroButton3.Location = new System.Drawing.Point(216, 200);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(119, 44);
-            this.metroButton3.TabIndex = 56;
-            this.metroButton3.Text = "Submit Account";
-            this.metroButton3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            this.btnAddCrypto.Location = new System.Drawing.Point(216, 200);
+            this.btnAddCrypto.Name = "btnAddCrypto";
+            this.btnAddCrypto.Size = new System.Drawing.Size(119, 44);
+            this.btnAddCrypto.TabIndex = 56;
+            this.btnAddCrypto.Text = "Submit Account";
+            this.btnAddCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddCrypto.Click += new System.EventHandler(this.metroButton3_Click);
             // 
-            // metroButton4
+            // btnClearCrypto
             // 
-            this.metroButton4.Location = new System.Drawing.Point(32, 200);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(119, 44);
-            this.metroButton4.TabIndex = 55;
-            this.metroButton4.Text = "Clear Flields";
-            this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
+            this.btnClearCrypto.Location = new System.Drawing.Point(32, 200);
+            this.btnClearCrypto.Name = "btnClearCrypto";
+            this.btnClearCrypto.Size = new System.Drawing.Size(119, 44);
+            this.btnClearCrypto.TabIndex = 55;
+            this.btnClearCrypto.Text = "Clear Flields";
+            this.btnClearCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearCrypto.Click += new System.EventHandler(this.metroButton4_Click);
             // 
-            // metroTextBox16
+            // txtWalletCode
             // 
-            this.metroTextBox16.Location = new System.Drawing.Point(194, 131);
-            this.metroTextBox16.Name = "metroTextBox16";
-            this.metroTextBox16.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox16.TabIndex = 54;
-            this.metroTextBox16.Text = "metroTextBox16";
-            this.metroTextBox16.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox16.Click += new System.EventHandler(this.metroTextBox16_Click);
+            this.txtWalletCode.Location = new System.Drawing.Point(194, 131);
+            this.txtWalletCode.Name = "txtWalletCode";
+            this.txtWalletCode.Size = new System.Drawing.Size(127, 23);
+            this.txtWalletCode.TabIndex = 54;
+            this.txtWalletCode.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtWalletCode.Click += new System.EventHandler(this.metroTextBox16_Click);
             // 
             // metroLabel21
             // 
@@ -724,70 +711,69 @@
             // 
             // tabCardDetail
             // 
-            this.tabCardDetail.Controls.Add(this.metroButton6);
-            this.tabCardDetail.Controls.Add(this.metroButton7);
-            this.tabCardDetail.Controls.Add(this.dataGridView3);
-            this.tabCardDetail.Controls.Add(this.dateTimePicker1);
+            this.tabCardDetail.Controls.Add(this.btnDeleteCard);
+            this.tabCardDetail.Controls.Add(this.btnUpdateCard);
+            this.tabCardDetail.Controls.Add(this.dgvCard);
+            this.tabCardDetail.Controls.Add(this.dtpED);
             this.tabCardDetail.Controls.Add(this.metroLabel17);
-            this.tabCardDetail.Controls.Add(this.metroComboBox2);
-            this.tabCardDetail.Controls.Add(this.metroTextBox15);
+            this.tabCardDetail.Controls.Add(this.cbCardType);
+            this.tabCardDetail.Controls.Add(this.txtCardHolder);
             this.tabCardDetail.Controls.Add(this.metroLabel16);
             this.tabCardDetail.Controls.Add(this.metroLabel15);
-            this.tabCardDetail.Controls.Add(this.metroTextBox13);
+            this.tabCardDetail.Controls.Add(this.txtCVV);
             this.tabCardDetail.Controls.Add(this.metroLabel14);
             this.tabCardDetail.Controls.Add(this.metroLabel13);
-            this.tabCardDetail.Controls.Add(this.btnCSubmit);
+            this.tabCardDetail.Controls.Add(this.btnAddCard);
             this.tabCardDetail.Controls.Add(this.BtnCClear);
-            this.tabCardDetail.Controls.Add(this.metroTextBox12);
+            this.tabCardDetail.Controls.Add(this.txtCardNum);
             this.tabCardDetail.Controls.Add(this.metroLabel12);
-            this.tabCardDetail.Controls.Add(this.metroComboBox1);
+            this.tabCardDetail.Controls.Add(this.cbCardIsuer);
             this.tabCardDetail.HorizontalScrollbarBarColor = true;
             this.tabCardDetail.Location = new System.Drawing.Point(4, 39);
             this.tabCardDetail.Name = "tabCardDetail";
             this.tabCardDetail.Size = new System.Drawing.Size(979, 575);
             this.tabCardDetail.TabIndex = 1;
-            this.tabCardDetail.Text = "Card Details";
             this.tabCardDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabCardDetail.VerticalScrollbarBarColor = true;
             this.tabCardDetail.Click += new System.EventHandler(this.tabCardDetail_Click);
             // 
-            // metroButton6
+            // btnDeleteCard
             // 
-            this.metroButton6.Location = new System.Drawing.Point(213, 416);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(119, 44);
-            this.metroButton6.TabIndex = 65;
-            this.metroButton6.Text = "Delete Account";
-            this.metroButton6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton6.Click += new System.EventHandler(this.metroButton6_Click);
+            this.btnDeleteCard.Location = new System.Drawing.Point(213, 416);
+            this.btnDeleteCard.Name = "btnDeleteCard";
+            this.btnDeleteCard.Size = new System.Drawing.Size(119, 44);
+            this.btnDeleteCard.TabIndex = 65;
+            this.btnDeleteCard.Text = "Delete Account";
+            this.btnDeleteCard.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeleteCard.Click += new System.EventHandler(this.metroButton6_Click);
             // 
-            // metroButton7
+            // btnUpdateCard
             // 
-            this.metroButton7.Location = new System.Drawing.Point(29, 416);
-            this.metroButton7.Name = "metroButton7";
-            this.metroButton7.Size = new System.Drawing.Size(119, 44);
-            this.metroButton7.TabIndex = 64;
-            this.metroButton7.Text = "Update Account";
-            this.metroButton7.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton7.Click += new System.EventHandler(this.metroButton7_Click);
+            this.btnUpdateCard.Location = new System.Drawing.Point(29, 416);
+            this.btnUpdateCard.Name = "btnUpdateCard";
+            this.btnUpdateCard.Size = new System.Drawing.Size(119, 44);
+            this.btnUpdateCard.TabIndex = 64;
+            this.btnUpdateCard.Text = "Update Account";
+            this.btnUpdateCard.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpdateCard.Click += new System.EventHandler(this.metroButton7_Click);
             // 
-            // dataGridView3
+            // dgvCard
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(392, 14);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(573, 227);
-            this.dataGridView3.TabIndex = 62;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            this.dgvCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCard.Location = new System.Drawing.Point(392, 14);
+            this.dgvCard.Name = "dgvCard";
+            this.dgvCard.RowTemplate.Height = 24;
+            this.dgvCard.Size = new System.Drawing.Size(573, 227);
+            this.dgvCard.TabIndex = 62;
+            this.dgvCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // dateTimePicker1
+            // dtpED
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(176, 261);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(223, 22);
-            this.dateTimePicker1.TabIndex = 37;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpED.Location = new System.Drawing.Point(176, 261);
+            this.dtpED.Name = "dtpED";
+            this.dtpED.Size = new System.Drawing.Size(223, 22);
+            this.dtpED.TabIndex = 37;
+            this.dtpED.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // metroLabel17
             // 
@@ -800,26 +786,25 @@
             this.metroLabel17.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel17.Click += new System.EventHandler(this.metroLabel17_Click);
             // 
-            // metroComboBox2
+            // cbCardType
             // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 24;
-            this.metroComboBox2.Location = new System.Drawing.Point(178, 84);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(121, 30);
-            this.metroComboBox2.TabIndex = 35;
-            this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+            this.cbCardType.FormattingEnabled = true;
+            this.cbCardType.ItemHeight = 24;
+            this.cbCardType.Location = new System.Drawing.Point(178, 84);
+            this.cbCardType.Name = "cbCardType";
+            this.cbCardType.Size = new System.Drawing.Size(121, 30);
+            this.cbCardType.TabIndex = 35;
+            this.cbCardType.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbCardType.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
             // 
-            // metroTextBox15
+            // txtCardHolder
             // 
-            this.metroTextBox15.Location = new System.Drawing.Point(176, 218);
-            this.metroTextBox15.Name = "metroTextBox15";
-            this.metroTextBox15.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox15.TabIndex = 34;
-            this.metroTextBox15.Text = "metroTextBox15";
-            this.metroTextBox15.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox15.Click += new System.EventHandler(this.metroTextBox15_Click);
+            this.txtCardHolder.Location = new System.Drawing.Point(176, 218);
+            this.txtCardHolder.Name = "txtCardHolder";
+            this.txtCardHolder.Size = new System.Drawing.Size(127, 23);
+            this.txtCardHolder.TabIndex = 34;
+            this.txtCardHolder.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtCardHolder.Click += new System.EventHandler(this.metroTextBox15_Click);
             // 
             // metroLabel16
             // 
@@ -843,15 +828,14 @@
             this.metroLabel15.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel15.Click += new System.EventHandler(this.metroLabel15_Click);
             // 
-            // metroTextBox13
+            // txtCVV
             // 
-            this.metroTextBox13.Location = new System.Drawing.Point(178, 176);
-            this.metroTextBox13.Name = "metroTextBox13";
-            this.metroTextBox13.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox13.TabIndex = 30;
-            this.metroTextBox13.Text = "metroTextBox13";
-            this.metroTextBox13.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox13.Click += new System.EventHandler(this.metroTextBox13_Click);
+            this.txtCVV.Location = new System.Drawing.Point(178, 176);
+            this.txtCVV.Name = "txtCVV";
+            this.txtCVV.Size = new System.Drawing.Size(127, 23);
+            this.txtCVV.TabIndex = 30;
+            this.txtCVV.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtCVV.Click += new System.EventHandler(this.metroTextBox13_Click);
             // 
             // metroLabel14
             // 
@@ -875,15 +859,15 @@
             this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel13.Click += new System.EventHandler(this.metroLabel13_Click);
             // 
-            // btnCSubmit
+            // btnAddCard
             // 
-            this.btnCSubmit.Location = new System.Drawing.Point(213, 342);
-            this.btnCSubmit.Name = "btnCSubmit";
-            this.btnCSubmit.Size = new System.Drawing.Size(119, 44);
-            this.btnCSubmit.TabIndex = 27;
-            this.btnCSubmit.Text = "Submit Account";
-            this.btnCSubmit.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnCSubmit.Click += new System.EventHandler(this.btnCSubmit_Click);
+            this.btnAddCard.Location = new System.Drawing.Point(213, 342);
+            this.btnAddCard.Name = "btnAddCard";
+            this.btnAddCard.Size = new System.Drawing.Size(119, 44);
+            this.btnAddCard.TabIndex = 27;
+            this.btnAddCard.Text = "Submit Account";
+            this.btnAddCard.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddCard.Click += new System.EventHandler(this.btnCSubmit_Click);
             // 
             // BtnCClear
             // 
@@ -895,15 +879,14 @@
             this.BtnCClear.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.BtnCClear.Click += new System.EventHandler(this.BtnCClear_Click);
             // 
-            // metroTextBox12
+            // txtCardNum
             // 
-            this.metroTextBox12.Location = new System.Drawing.Point(176, 134);
-            this.metroTextBox12.Name = "metroTextBox12";
-            this.metroTextBox12.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox12.TabIndex = 5;
-            this.metroTextBox12.Text = "metroTextBox12";
-            this.metroTextBox12.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox12.Click += new System.EventHandler(this.metroTextBox12_Click);
+            this.txtCardNum.Location = new System.Drawing.Point(176, 134);
+            this.txtCardNum.Name = "txtCardNum";
+            this.txtCardNum.Size = new System.Drawing.Size(127, 23);
+            this.txtCardNum.TabIndex = 5;
+            this.txtCardNum.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtCardNum.Click += new System.EventHandler(this.metroTextBox12_Click);
             // 
             // metroLabel12
             // 
@@ -916,29 +899,29 @@
             this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel12.Click += new System.EventHandler(this.metroLabel12_Click);
             // 
-            // metroComboBox1
+            // cbCardIsuer
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Location = new System.Drawing.Point(176, 34);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 30);
-            this.metroComboBox1.TabIndex = 2;
-            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            this.cbCardIsuer.FormattingEnabled = true;
+            this.cbCardIsuer.ItemHeight = 24;
+            this.cbCardIsuer.Location = new System.Drawing.Point(176, 34);
+            this.cbCardIsuer.Name = "cbCardIsuer";
+            this.cbCardIsuer.Size = new System.Drawing.Size(121, 30);
+            this.cbCardIsuer.TabIndex = 2;
+            this.cbCardIsuer.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbCardIsuer.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
             // tabEFTDetail
             // 
-            this.tabEFTDetail.Controls.Add(this.metroButton9);
-            this.tabEFTDetail.Controls.Add(this.metroButton10);
-            this.tabEFTDetail.Controls.Add(this.dataGridView2);
-            this.tabEFTDetail.Controls.Add(this.metroTextBox18);
+            this.tabEFTDetail.Controls.Add(this.btnDeleteEFT);
+            this.tabEFTDetail.Controls.Add(this.btnUpdateEFT);
+            this.tabEFTDetail.Controls.Add(this.dgvEFT);
+            this.tabEFTDetail.Controls.Add(this.txtEFTNum);
             this.tabEFTDetail.Controls.Add(this.metroLabel18);
-            this.tabEFTDetail.Controls.Add(this.metroComboBox3);
+            this.tabEFTDetail.Controls.Add(this.cbEFTType);
             this.tabEFTDetail.Controls.Add(this.metroLabel22);
-            this.tabEFTDetail.Controls.Add(this.metroButton1);
-            this.tabEFTDetail.Controls.Add(this.metroButton2);
-            this.tabEFTDetail.Controls.Add(this.metroTextBox17);
+            this.tabEFTDetail.Controls.Add(this.btnAddEFT);
+            this.tabEFTDetail.Controls.Add(this.btnClearEFT);
+            this.tabEFTDetail.Controls.Add(this.txtEFTReference);
             this.tabEFTDetail.Controls.Add(this.metroLabel23);
             this.tabEFTDetail.HorizontalScrollbarBarColor = true;
             this.tabEFTDetail.Location = new System.Drawing.Point(4, 39);
@@ -950,45 +933,44 @@
             this.tabEFTDetail.VerticalScrollbarBarColor = true;
             this.tabEFTDetail.Click += new System.EventHandler(this.tabEFTDetail_Click);
             // 
-            // metroButton9
+            // btnDeleteEFT
             // 
-            this.metroButton9.Location = new System.Drawing.Point(206, 270);
-            this.metroButton9.Name = "metroButton9";
-            this.metroButton9.Size = new System.Drawing.Size(119, 44);
-            this.metroButton9.TabIndex = 64;
-            this.metroButton9.Text = "Delete Account";
-            this.metroButton9.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton9.Click += new System.EventHandler(this.metroButton9_Click);
+            this.btnDeleteEFT.Location = new System.Drawing.Point(206, 270);
+            this.btnDeleteEFT.Name = "btnDeleteEFT";
+            this.btnDeleteEFT.Size = new System.Drawing.Size(119, 44);
+            this.btnDeleteEFT.TabIndex = 64;
+            this.btnDeleteEFT.Text = "Delete Account";
+            this.btnDeleteEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeleteEFT.Click += new System.EventHandler(this.metroButton9_Click);
             // 
-            // metroButton10
+            // btnUpdateEFT
             // 
-            this.metroButton10.Location = new System.Drawing.Point(22, 270);
-            this.metroButton10.Name = "metroButton10";
-            this.metroButton10.Size = new System.Drawing.Size(119, 44);
-            this.metroButton10.TabIndex = 63;
-            this.metroButton10.Text = "Update Account";
-            this.metroButton10.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton10.Click += new System.EventHandler(this.metroButton10_Click);
+            this.btnUpdateEFT.Location = new System.Drawing.Point(22, 270);
+            this.btnUpdateEFT.Name = "btnUpdateEFT";
+            this.btnUpdateEFT.Size = new System.Drawing.Size(119, 44);
+            this.btnUpdateEFT.TabIndex = 63;
+            this.btnUpdateEFT.Text = "Update Account";
+            this.btnUpdateEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpdateEFT.Click += new System.EventHandler(this.metroButton10_Click);
             // 
-            // dataGridView2
+            // dgvEFT
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(384, 35);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(573, 227);
-            this.dataGridView2.TabIndex = 62;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgvEFT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEFT.Location = new System.Drawing.Point(384, 35);
+            this.dgvEFT.Name = "dgvEFT";
+            this.dgvEFT.RowTemplate.Height = 24;
+            this.dgvEFT.Size = new System.Drawing.Size(573, 227);
+            this.dgvEFT.TabIndex = 62;
+            this.dgvEFT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // metroTextBox18
+            // txtEFTNum
             // 
-            this.metroTextBox18.Location = new System.Drawing.Point(180, 35);
-            this.metroTextBox18.Name = "metroTextBox18";
-            this.metroTextBox18.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox18.TabIndex = 52;
-            this.metroTextBox18.Text = "metroTextBox18";
-            this.metroTextBox18.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox18.Click += new System.EventHandler(this.metroTextBox18_Click);
+            this.txtEFTNum.Location = new System.Drawing.Point(180, 35);
+            this.txtEFTNum.Name = "txtEFTNum";
+            this.txtEFTNum.Size = new System.Drawing.Size(127, 23);
+            this.txtEFTNum.TabIndex = 52;
+            this.txtEFTNum.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtEFTNum.Click += new System.EventHandler(this.metroTextBox18_Click);
             // 
             // metroLabel18
             // 
@@ -1001,16 +983,16 @@
             this.metroLabel18.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel18.Click += new System.EventHandler(this.metroLabel18_Click);
             // 
-            // metroComboBox3
+            // cbEFTType
             // 
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 24;
-            this.metroComboBox3.Location = new System.Drawing.Point(186, 85);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(121, 30);
-            this.metroComboBox3.TabIndex = 49;
-            this.metroComboBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroComboBox3.SelectedIndexChanged += new System.EventHandler(this.metroComboBox3_SelectedIndexChanged);
+            this.cbEFTType.FormattingEnabled = true;
+            this.cbEFTType.ItemHeight = 24;
+            this.cbEFTType.Location = new System.Drawing.Point(186, 85);
+            this.cbEFTType.Name = "cbEFTType";
+            this.cbEFTType.Size = new System.Drawing.Size(121, 30);
+            this.cbEFTType.TabIndex = 49;
+            this.cbEFTType.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbEFTType.SelectedIndexChanged += new System.EventHandler(this.metroComboBox3_SelectedIndexChanged);
             // 
             // metroLabel22
             // 
@@ -1023,35 +1005,34 @@
             this.metroLabel22.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel22.Click += new System.EventHandler(this.metroLabel22_Click);
             // 
-            // metroButton1
+            // btnAddEFT
             // 
-            this.metroButton1.Location = new System.Drawing.Point(206, 204);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(119, 44);
-            this.metroButton1.TabIndex = 42;
-            this.metroButton1.Text = "Submit Account";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btnAddEFT.Location = new System.Drawing.Point(206, 204);
+            this.btnAddEFT.Name = "btnAddEFT";
+            this.btnAddEFT.Size = new System.Drawing.Size(119, 44);
+            this.btnAddEFT.TabIndex = 42;
+            this.btnAddEFT.Text = "Submit Account";
+            this.btnAddEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddEFT.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // metroButton2
+            // btnClearEFT
             // 
-            this.metroButton2.Location = new System.Drawing.Point(22, 204);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(119, 44);
-            this.metroButton2.TabIndex = 41;
-            this.metroButton2.Text = "Clear Flields";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.btnClearEFT.Location = new System.Drawing.Point(22, 204);
+            this.btnClearEFT.Name = "btnClearEFT";
+            this.btnClearEFT.Size = new System.Drawing.Size(119, 44);
+            this.btnClearEFT.TabIndex = 41;
+            this.btnClearEFT.Text = "Clear Flields";
+            this.btnClearEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearEFT.Click += new System.EventHandler(this.metroButton2_Click);
             // 
-            // metroTextBox17
+            // txtEFTReference
             // 
-            this.metroTextBox17.Location = new System.Drawing.Point(184, 135);
-            this.metroTextBox17.Name = "metroTextBox17";
-            this.metroTextBox17.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox17.TabIndex = 40;
-            this.metroTextBox17.Text = "metroTextBox17";
-            this.metroTextBox17.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox17.Click += new System.EventHandler(this.metroTextBox17_Click);
+            this.txtEFTReference.Location = new System.Drawing.Point(184, 135);
+            this.txtEFTReference.Name = "txtEFTReference";
+            this.txtEFTReference.Size = new System.Drawing.Size(127, 23);
+            this.txtEFTReference.TabIndex = 40;
+            this.txtEFTReference.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtEFTReference.Click += new System.EventHandler(this.metroTextBox17_Click);
             // 
             // metroLabel23
             // 
@@ -1069,7 +1050,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 781);
-            this.Controls.Add(this.tabCRegister);
+            this.Controls.Add(this.tabUserRegister);
             this.Controls.Add(this.navpan);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblUser);
@@ -1082,18 +1063,18 @@
             this.metroPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
-            this.tabCRegister.ResumeLayout(false);
+            this.tabUserRegister.ResumeLayout(false);
             this.tabPersonalDetail.ResumeLayout(false);
             this.tabPersonalDetail.PerformLayout();
             this.tabCryptoDetail.ResumeLayout(false);
             this.tabCryptoDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCrypto)).EndInit();
             this.tabCardDetail.ResumeLayout(false);
             this.tabCardDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCard)).EndInit();
             this.tabEFTDetail.ResumeLayout(false);
             this.tabEFTDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEFT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1115,73 +1096,73 @@
         private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroLabel lblP500;
-        private MetroFramework.Controls.MetroTabControl tabCRegister;
+        private MetroFramework.Controls.MetroTabControl tabUserRegister;
         private MetroFramework.Controls.MetroTabPage tabPersonalDetail;
-        private MetroFramework.Controls.MetroButton btnRegister;
-        private MetroFramework.Controls.MetroTextBox metroTextBox11;
+        private MetroFramework.Controls.MetroButton btnUpdatePI;
+        private MetroFramework.Controls.MetroTextBox txtCellNum;
         private MetroFramework.Controls.MetroLabel metroLabel11;
-        private MetroFramework.Controls.MetroTextBox metroTextBox10;
+        private MetroFramework.Controls.MetroTextBox txtID;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroTextBox metroTextBox9;
+        private MetroFramework.Controls.MetroTextBox txtStreetNumber;
         private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroTextBox metroTextBox8;
+        private MetroFramework.Controls.MetroTextBox txtStreet;
         private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroTextBox metroTextBox7;
+        private MetroFramework.Controls.MetroTextBox txtSuburb;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroTextBox metroTextBox6;
+        private MetroFramework.Controls.MetroTextBox txtCountry;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox5;
+        private MetroFramework.Controls.MetroTextBox txtConfirmPassword;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+        private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroTextBox txtEmail;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox txtSurname;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroButton btnClear;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroButton btnClearPI;
+        private MetroFramework.Controls.MetroTextBox txtName;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTabPage tabCryptoDetail;
-        private MetroFramework.Controls.MetroTextBox metroTextBox14;
+        private MetroFramework.Controls.MetroTextBox txtWalletName;
         private MetroFramework.Controls.MetroLabel metroLabel19;
-        private MetroFramework.Controls.MetroComboBox metroComboBox4;
+        private MetroFramework.Controls.MetroComboBox cbCryptoType;
         private MetroFramework.Controls.MetroLabel metroLabel20;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox16;
+        private MetroFramework.Controls.MetroButton btnAddCrypto;
+        private MetroFramework.Controls.MetroButton btnClearCrypto;
+        private MetroFramework.Controls.MetroTextBox txtWalletCode;
         private MetroFramework.Controls.MetroLabel metroLabel21;
         private MetroFramework.Controls.MetroTabPage tabCardDetail;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpED;
         private MetroFramework.Controls.MetroLabel metroLabel17;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox15;
+        private MetroFramework.Controls.MetroComboBox cbCardType;
+        private MetroFramework.Controls.MetroTextBox txtCardHolder;
         private MetroFramework.Controls.MetroLabel metroLabel16;
         private MetroFramework.Controls.MetroLabel metroLabel15;
-        private MetroFramework.Controls.MetroTextBox metroTextBox13;
+        private MetroFramework.Controls.MetroTextBox txtCVV;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroButton btnCSubmit;
+        private MetroFramework.Controls.MetroButton btnAddCard;
         private MetroFramework.Controls.MetroButton BtnCClear;
-        private MetroFramework.Controls.MetroTextBox metroTextBox12;
+        private MetroFramework.Controls.MetroTextBox txtCardNum;
         private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cbCardIsuer;
         private MetroFramework.Controls.MetroTabPage tabEFTDetail;
-        private MetroFramework.Controls.MetroTextBox metroTextBox18;
+        private MetroFramework.Controls.MetroTextBox txtEFTNum;
         private MetroFramework.Controls.MetroLabel metroLabel18;
-        private MetroFramework.Controls.MetroComboBox metroComboBox3;
+        private MetroFramework.Controls.MetroComboBox cbEFTType;
         private MetroFramework.Controls.MetroLabel metroLabel22;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox17;
+        private MetroFramework.Controls.MetroButton btnAddEFT;
+        private MetroFramework.Controls.MetroButton btnClearEFT;
+        private MetroFramework.Controls.MetroTextBox txtEFTReference;
         private MetroFramework.Controls.MetroLabel metroLabel23;
-        private MetroFramework.Controls.MetroButton metroButton8;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private MetroFramework.Controls.MetroButton metroButton6;
-        private MetroFramework.Controls.MetroButton metroButton7;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private MetroFramework.Controls.MetroButton metroButton9;
-        private MetroFramework.Controls.MetroButton metroButton10;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private MetroFramework.Controls.MetroButton btnDeleteCrypto;
+        private MetroFramework.Controls.MetroButton btnUpateCrypto;
+        private System.Windows.Forms.DataGridView dgvCrypto;
+        private MetroFramework.Controls.MetroButton btnDeleteCard;
+        private MetroFramework.Controls.MetroButton btnUpdateCard;
+        private System.Windows.Forms.DataGridView dgvCard;
+        private MetroFramework.Controls.MetroButton btnDeleteEFT;
+        private MetroFramework.Controls.MetroButton btnUpdateEFT;
+        private System.Windows.Forms.DataGridView dgvEFT;
     }
 }

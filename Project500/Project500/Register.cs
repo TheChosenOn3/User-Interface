@@ -22,11 +22,6 @@ namespace Project500
 
         }
 
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
 
@@ -48,6 +43,46 @@ namespace Project500
         }
 
         private void tabEFTDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroLabel19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel21_Click(object sender, EventArgs e)
         {
 
         }

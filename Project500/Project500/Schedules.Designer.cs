@@ -43,25 +43,25 @@
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.tcFilterScheduel = new MetroFramework.Controls.MetroTabControl();
+            this.tabFilterScheduel = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFEnd = new System.Windows.Forms.DateTimePicker();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.cbFPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.btnFilter = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.metroButton17 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox12 = new MetroFramework.Controls.MetroTextBox();
+            this.dtpFStart = new System.Windows.Forms.DateTimePicker();
+            this.btnClearFilter = new MetroFramework.Controls.MetroButton();
+            this.txtFBName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton8 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.metroTabControl3 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.tcFilteredSchedules = new MetroFramework.Controls.MetroTabControl();
+            this.tabFilteredSchedules = new MetroFramework.Controls.MetroTabPage();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
+            this.btnDeleteAll = new MetroFramework.Controls.MetroButton();
+            this.dgvScheduels = new System.Windows.Forms.DataGridView();
+            this.tcCurerntScheduel = new MetroFramework.Controls.MetroTabControl();
+            this.tabCurrentScheduel = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
@@ -84,13 +84,13 @@
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
-            this.metroTabControl1.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
-            this.metroTabControl2.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.metroTabControl3.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
+            this.tcFilterScheduel.SuspendLayout();
+            this.tabFilterScheduel.SuspendLayout();
+            this.tcFilteredSchedules.SuspendLayout();
+            this.tabFilteredSchedules.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvScheduels)).BeginInit();
+            this.tcCurerntScheduel.SuspendLayout();
+            this.tabCurrentScheduel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,11 +179,11 @@
             this.lblHeading.AutoSize = true;
             this.lblHeading.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblHeading.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblHeading.Location = new System.Drawing.Point(571, 25);
+            this.lblHeading.Location = new System.Drawing.Point(461, 36);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(66, 25);
+            this.lblHeading.Size = new System.Drawing.Size(290, 25);
             this.lblHeading.TabIndex = 6;
-            this.lblHeading.Text = "Home";
+            this.lblHeading.Text = "View Your Schedueld Payments";
             this.lblHeading.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // lblUser
@@ -241,36 +241,36 @@
             this.lblP500.Text = "Project 500";
             this.lblP500.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTabControl1
+            // tcFilterScheduel
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Location = new System.Drawing.Point(146, 84);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(987, 175);
-            this.metroTabControl1.TabIndex = 21;
-            this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tcFilterScheduel.Controls.Add(this.tabFilterScheduel);
+            this.tcFilterScheduel.Location = new System.Drawing.Point(146, 84);
+            this.tcFilterScheduel.Name = "tcFilterScheduel";
+            this.tcFilterScheduel.SelectedIndex = 0;
+            this.tcFilterScheduel.Size = new System.Drawing.Size(987, 175);
+            this.tcFilterScheduel.TabIndex = 21;
+            this.tcFilterScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTabPage2
+            // tabFilterScheduel
             // 
-            this.metroTabPage2.Controls.Add(this.metroLabel4);
-            this.metroTabPage2.Controls.Add(this.dateTimePicker2);
-            this.metroTabPage2.Controls.Add(this.metroLabel6);
-            this.metroTabPage2.Controls.Add(this.comboBox2);
-            this.metroTabPage2.Controls.Add(this.metroButton1);
-            this.metroTabPage2.Controls.Add(this.metroLabel1);
-            this.metroTabPage2.Controls.Add(this.dateTimePicker1);
-            this.metroTabPage2.Controls.Add(this.metroButton17);
-            this.metroTabPage2.Controls.Add(this.metroTextBox12);
-            this.metroTabPage2.Controls.Add(this.metroLabel29);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(979, 132);
-            this.metroTabPage2.TabIndex = 0;
-            this.metroTabPage2.Text = "Filter Your Schedueld payment";
-            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.tabFilterScheduel.Controls.Add(this.metroLabel4);
+            this.tabFilterScheduel.Controls.Add(this.dtpFEnd);
+            this.tabFilterScheduel.Controls.Add(this.metroLabel6);
+            this.tabFilterScheduel.Controls.Add(this.cbFPaymentMethod);
+            this.tabFilterScheduel.Controls.Add(this.btnFilter);
+            this.tabFilterScheduel.Controls.Add(this.metroLabel1);
+            this.tabFilterScheduel.Controls.Add(this.dtpFStart);
+            this.tabFilterScheduel.Controls.Add(this.btnClearFilter);
+            this.tabFilterScheduel.Controls.Add(this.txtFBName);
+            this.tabFilterScheduel.Controls.Add(this.metroLabel29);
+            this.tabFilterScheduel.HorizontalScrollbarBarColor = true;
+            this.tabFilterScheduel.Location = new System.Drawing.Point(4, 39);
+            this.tabFilterScheduel.Name = "tabFilterScheduel";
+            this.tabFilterScheduel.Size = new System.Drawing.Size(979, 132);
+            this.tabFilterScheduel.TabIndex = 0;
+            this.tabFilterScheduel.Text = "Filter Your Schedueld payment";
+            this.tabFilterScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabFilterScheduel.VerticalScrollbarBarColor = true;
             // 
             // metroLabel4
             // 
@@ -282,12 +282,12 @@
             this.metroLabel4.Text = "End Date";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dateTimePicker2
+            // dtpFEnd
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(642, 52);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(225, 22);
-            this.dateTimePicker2.TabIndex = 79;
+            this.dtpFEnd.Location = new System.Drawing.Point(642, 52);
+            this.dtpFEnd.Name = "dtpFEnd";
+            this.dtpFEnd.Size = new System.Drawing.Size(225, 22);
+            this.dtpFEnd.TabIndex = 79;
             // 
             // metroLabel6
             // 
@@ -299,22 +299,22 @@
             this.metroLabel6.Text = "payment Method";
             this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // comboBox2
+            // cbFPaymentMethod
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(182, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(253, 24);
-            this.comboBox2.TabIndex = 77;
+            this.cbFPaymentMethod.FormattingEnabled = true;
+            this.cbFPaymentMethod.Location = new System.Drawing.Point(182, 49);
+            this.cbFPaymentMethod.Name = "cbFPaymentMethod";
+            this.cbFPaymentMethod.Size = new System.Drawing.Size(253, 24);
+            this.cbFPaymentMethod.TabIndex = 77;
             // 
-            // metroButton1
+            // btnFilter
             // 
-            this.metroButton1.Location = new System.Drawing.Point(471, 95);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(119, 37);
-            this.metroButton1.TabIndex = 70;
-            this.metroButton1.Text = "Filter";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnFilter.Location = new System.Drawing.Point(471, 95);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(119, 37);
+            this.btnFilter.TabIndex = 70;
+            this.btnFilter.Text = "Filter";
+            this.btnFilter.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel1
             // 
@@ -326,30 +326,29 @@
             this.metroLabel1.Text = "Start Date";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dateTimePicker1
+            // dtpFStart
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(642, 13);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 22);
-            this.dateTimePicker1.TabIndex = 64;
+            this.dtpFStart.Location = new System.Drawing.Point(642, 13);
+            this.dtpFStart.Name = "dtpFStart";
+            this.dtpFStart.Size = new System.Drawing.Size(225, 22);
+            this.dtpFStart.TabIndex = 64;
             // 
-            // metroButton17
+            // btnClearFilter
             // 
-            this.metroButton17.Location = new System.Drawing.Point(312, 95);
-            this.metroButton17.Name = "metroButton17";
-            this.metroButton17.Size = new System.Drawing.Size(119, 37);
-            this.metroButton17.TabIndex = 25;
-            this.metroButton17.Text = "Clear Fields";
-            this.metroButton17.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearFilter.Location = new System.Drawing.Point(312, 95);
+            this.btnClearFilter.Name = "btnClearFilter";
+            this.btnClearFilter.Size = new System.Drawing.Size(119, 37);
+            this.btnClearFilter.TabIndex = 25;
+            this.btnClearFilter.Text = "Clear Fields";
+            this.btnClearFilter.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTextBox12
+            // txtFBName
             // 
-            this.metroTextBox12.Location = new System.Drawing.Point(207, 15);
-            this.metroTextBox12.Name = "metroTextBox12";
-            this.metroTextBox12.Size = new System.Drawing.Size(127, 23);
-            this.metroTextBox12.TabIndex = 3;
-            this.metroTextBox12.Text = "metroTextBox12";
-            this.metroTextBox12.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtFBName.Location = new System.Drawing.Point(207, 15);
+            this.txtFBName.Name = "txtFBName";
+            this.txtFBName.Size = new System.Drawing.Size(127, 23);
+            this.txtFBName.TabIndex = 3;
+            this.txtFBName.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel29
             // 
@@ -361,95 +360,95 @@
             this.metroLabel29.Text = "Beneficiary Name";
             this.metroLabel29.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTabControl2
+            // tcFilteredSchedules
             // 
-            this.metroTabControl2.Controls.Add(this.metroTabPage1);
-            this.metroTabControl2.Location = new System.Drawing.Point(146, 261);
-            this.metroTabControl2.Name = "metroTabControl2";
-            this.metroTabControl2.SelectedIndex = 0;
-            this.metroTabControl2.Size = new System.Drawing.Size(987, 304);
-            this.metroTabControl2.TabIndex = 22;
-            this.metroTabControl2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tcFilteredSchedules.Controls.Add(this.tabFilteredSchedules);
+            this.tcFilteredSchedules.Location = new System.Drawing.Point(146, 261);
+            this.tcFilteredSchedules.Name = "tcFilteredSchedules";
+            this.tcFilteredSchedules.SelectedIndex = 0;
+            this.tcFilteredSchedules.Size = new System.Drawing.Size(987, 304);
+            this.tcFilteredSchedules.TabIndex = 22;
+            this.tcFilteredSchedules.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTabPage1
+            // tabFilteredSchedules
             // 
-            this.metroTabPage1.Controls.Add(this.metroButton8);
-            this.metroTabPage1.Controls.Add(this.metroButton3);
-            this.metroTabPage1.Controls.Add(this.dataGridView1);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(979, 261);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Filtered Schedeuld Payments";
-            this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.tabFilteredSchedules.Controls.Add(this.btnDelete);
+            this.tabFilteredSchedules.Controls.Add(this.btnDeleteAll);
+            this.tabFilteredSchedules.Controls.Add(this.dgvScheduels);
+            this.tabFilteredSchedules.HorizontalScrollbarBarColor = true;
+            this.tabFilteredSchedules.Location = new System.Drawing.Point(4, 39);
+            this.tabFilteredSchedules.Name = "tabFilteredSchedules";
+            this.tabFilteredSchedules.Size = new System.Drawing.Size(979, 261);
+            this.tabFilteredSchedules.TabIndex = 0;
+            this.tabFilteredSchedules.Text = "Filtered Schedeuld Payments";
+            this.tabFilteredSchedules.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabFilteredSchedules.VerticalScrollbarBarColor = true;
             // 
-            // metroButton8
+            // btnDelete
             // 
-            this.metroButton8.Location = new System.Drawing.Point(357, 217);
-            this.metroButton8.Name = "metroButton8";
-            this.metroButton8.Size = new System.Drawing.Size(119, 40);
-            this.metroButton8.TabIndex = 79;
-            this.metroButton8.Text = "Delete payment";
-            this.metroButton8.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDelete.Location = new System.Drawing.Point(357, 217);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(119, 40);
+            this.btnDelete.TabIndex = 79;
+            this.btnDelete.Text = "Delete payment";
+            this.btnDelete.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroButton3
+            // btnDeleteAll
             // 
-            this.metroButton3.Location = new System.Drawing.Point(482, 217);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(119, 40);
-            this.metroButton3.TabIndex = 76;
-            this.metroButton3.Text = "Delete All payment";
-            this.metroButton3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeleteAll.Location = new System.Drawing.Point(482, 217);
+            this.btnDeleteAll.Name = "btnDeleteAll";
+            this.btnDeleteAll.Size = new System.Drawing.Size(119, 40);
+            this.btnDeleteAll.TabIndex = 76;
+            this.btnDeleteAll.Text = "Delete All payment";
+            this.btnDeleteAll.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dataGridView1
+            // dgvScheduels
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(936, 198);
-            this.dataGridView1.TabIndex = 63;
+            this.dgvScheduels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvScheduels.Location = new System.Drawing.Point(19, 13);
+            this.dgvScheduels.Name = "dgvScheduels";
+            this.dgvScheduels.RowTemplate.Height = 24;
+            this.dgvScheduels.Size = new System.Drawing.Size(936, 198);
+            this.dgvScheduels.TabIndex = 63;
             // 
-            // metroTabControl3
+            // tcCurerntScheduel
             // 
-            this.metroTabControl3.Controls.Add(this.metroTabPage3);
-            this.metroTabControl3.Location = new System.Drawing.Point(153, 563);
-            this.metroTabControl3.Name = "metroTabControl3";
-            this.metroTabControl3.SelectedIndex = 0;
-            this.metroTabControl3.Size = new System.Drawing.Size(987, 318);
-            this.metroTabControl3.TabIndex = 24;
-            this.metroTabControl3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tcCurerntScheduel.Controls.Add(this.tabCurrentScheduel);
+            this.tcCurerntScheduel.Location = new System.Drawing.Point(153, 563);
+            this.tcCurerntScheduel.Name = "tcCurerntScheduel";
+            this.tcCurerntScheduel.SelectedIndex = 0;
+            this.tcCurerntScheduel.Size = new System.Drawing.Size(987, 318);
+            this.tcCurerntScheduel.TabIndex = 24;
+            this.tcCurerntScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTabPage3
+            // tabCurrentScheduel
             // 
-            this.metroTabPage3.Controls.Add(this.metroLabel2);
-            this.metroTabPage3.Controls.Add(this.comboBox1);
-            this.metroTabPage3.Controls.Add(this.metroTextBox3);
-            this.metroTabPage3.Controls.Add(this.metroLabel5);
-            this.metroTabPage3.Controls.Add(this.metroTextBox1);
-            this.metroTabPage3.Controls.Add(this.dataGridView2);
-            this.metroTabPage3.Controls.Add(this.metroTextBox2);
-            this.metroTabPage3.Controls.Add(this.metroLabel3);
-            this.metroTabPage3.Controls.Add(this.metroButton2);
-            this.metroTabPage3.Controls.Add(this.metroLabel7);
-            this.metroTabPage3.Controls.Add(this.comboBox3);
-            this.metroTabPage3.Controls.Add(this.metroLabel8);
-            this.metroTabPage3.Controls.Add(this.metroLabel9);
-            this.metroTabPage3.Controls.Add(this.dateTimePicker3);
-            this.metroTabPage3.Controls.Add(this.metroButton4);
-            this.metroTabPage3.Controls.Add(this.metroButton18);
-            this.metroTabPage3.Controls.Add(this.metroTextBox4);
-            this.metroTabPage3.Controls.Add(this.metroLabel10);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(979, 275);
-            this.metroTabPage3.TabIndex = 0;
-            this.metroTabPage3.Text = "Current payment";
-            this.metroTabPage3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.tabCurrentScheduel.Controls.Add(this.metroLabel2);
+            this.tabCurrentScheduel.Controls.Add(this.comboBox1);
+            this.tabCurrentScheduel.Controls.Add(this.metroTextBox3);
+            this.tabCurrentScheduel.Controls.Add(this.metroLabel5);
+            this.tabCurrentScheduel.Controls.Add(this.metroTextBox1);
+            this.tabCurrentScheduel.Controls.Add(this.dataGridView2);
+            this.tabCurrentScheduel.Controls.Add(this.metroTextBox2);
+            this.tabCurrentScheduel.Controls.Add(this.metroLabel3);
+            this.tabCurrentScheduel.Controls.Add(this.metroButton2);
+            this.tabCurrentScheduel.Controls.Add(this.metroLabel7);
+            this.tabCurrentScheduel.Controls.Add(this.comboBox3);
+            this.tabCurrentScheduel.Controls.Add(this.metroLabel8);
+            this.tabCurrentScheduel.Controls.Add(this.metroLabel9);
+            this.tabCurrentScheduel.Controls.Add(this.dateTimePicker3);
+            this.tabCurrentScheduel.Controls.Add(this.metroButton4);
+            this.tabCurrentScheduel.Controls.Add(this.metroButton18);
+            this.tabCurrentScheduel.Controls.Add(this.metroTextBox4);
+            this.tabCurrentScheduel.Controls.Add(this.metroLabel10);
+            this.tabCurrentScheduel.HorizontalScrollbarBarColor = true;
+            this.tabCurrentScheduel.Location = new System.Drawing.Point(4, 39);
+            this.tabCurrentScheduel.Name = "tabCurrentScheduel";
+            this.tabCurrentScheduel.Size = new System.Drawing.Size(979, 275);
+            this.tabCurrentScheduel.TabIndex = 0;
+            this.tabCurrentScheduel.Text = "Current payment";
+            this.tabCurrentScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabCurrentScheduel.VerticalScrollbarBarColor = true;
             // 
             // metroLabel2
             // 
@@ -475,7 +474,6 @@
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox3.TabIndex = 76;
-            this.metroTextBox3.Text = "metroTextBox3";
             this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel5
@@ -494,7 +492,6 @@
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox1.TabIndex = 74;
-            this.metroTextBox1.Text = "metroTextBox1";
             this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // dataGridView2
@@ -512,7 +509,6 @@
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox2.TabIndex = 72;
-            this.metroTextBox2.Text = "metroTextBox2";
             this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel3
@@ -603,7 +599,6 @@
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox4.TabIndex = 3;
-            this.metroTextBox4.Text = "metroTextBox4";
             this.metroTextBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel10
@@ -621,9 +616,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 890);
-            this.Controls.Add(this.metroTabControl3);
-            this.Controls.Add(this.metroTabControl2);
-            this.Controls.Add(this.metroTabControl1);
+            this.Controls.Add(this.tcCurerntScheduel);
+            this.Controls.Add(this.tcFilteredSchedules);
+            this.Controls.Add(this.tcFilterScheduel);
             this.Controls.Add(this.navpan);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblUser);
@@ -636,15 +631,15 @@
             this.metroPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
-            this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage2.ResumeLayout(false);
-            this.metroTabPage2.PerformLayout();
-            this.metroTabControl2.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.metroTabControl3.ResumeLayout(false);
-            this.metroTabPage3.ResumeLayout(false);
-            this.metroTabPage3.PerformLayout();
+            this.tcFilterScheduel.ResumeLayout(false);
+            this.tabFilterScheduel.ResumeLayout(false);
+            this.tabFilterScheduel.PerformLayout();
+            this.tcFilteredSchedules.ResumeLayout(false);
+            this.tabFilteredSchedules.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvScheduels)).EndInit();
+            this.tcCurerntScheduel.ResumeLayout(false);
+            this.tabCurrentScheduel.ResumeLayout(false);
+            this.tabCurrentScheduel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -667,25 +662,25 @@
         private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroLabel lblP500;
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private MetroFramework.Controls.MetroTabControl tcFilterScheduel;
+        private MetroFramework.Controls.MetroTabPage tabFilterScheduel;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpFEnd;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.ComboBox cbFPaymentMethod;
+        private MetroFramework.Controls.MetroButton btnFilter;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private MetroFramework.Controls.MetroButton metroButton17;
-        private MetroFramework.Controls.MetroTextBox metroTextBox12;
+        private System.Windows.Forms.DateTimePicker dtpFStart;
+        private MetroFramework.Controls.MetroButton btnClearFilter;
+        private MetroFramework.Controls.MetroTextBox txtFBName;
         private MetroFramework.Controls.MetroLabel metroLabel29;
-        private MetroFramework.Controls.MetroTabControl metroTabControl2;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroButton metroButton8;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private MetroFramework.Controls.MetroTabControl metroTabControl3;
-        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private MetroFramework.Controls.MetroTabControl tcFilteredSchedules;
+        private MetroFramework.Controls.MetroTabPage tabFilteredSchedules;
+        private MetroFramework.Controls.MetroButton btnDelete;
+        private MetroFramework.Controls.MetroButton btnDeleteAll;
+        private System.Windows.Forms.DataGridView dgvScheduels;
+        private MetroFramework.Controls.MetroTabControl tcCurerntScheduel;
+        private MetroFramework.Controls.MetroTabPage tabCurrentScheduel;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.ComboBox comboBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
