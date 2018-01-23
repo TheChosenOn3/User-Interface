@@ -164,11 +164,11 @@
             this.lblHeading.AutoSize = true;
             this.lblHeading.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblHeading.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblHeading.Location = new System.Drawing.Point(570, 24);
+            this.lblHeading.Location = new System.Drawing.Point(495, 44);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(66, 25);
+            this.lblHeading.Size = new System.Drawing.Size(264, 25);
             this.lblHeading.TabIndex = 6;
-            this.lblHeading.Text = "Home";
+            this.lblHeading.Text = "View Your Payments History";
             this.lblHeading.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // lblUser
