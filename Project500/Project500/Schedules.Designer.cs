@@ -123,6 +123,7 @@
             this.btnBeneficiary.TabIndex = 7;
             this.btnBeneficiary.Text = "Benefchiary";
             this.btnBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnBeneficiary.Click += new System.EventHandler(this.btnBeneficiary_Click);
             // 
             // btnScheduel
             // 
@@ -133,6 +134,7 @@
             this.btnScheduel.TabIndex = 6;
             this.btnScheduel.Text = "View Scheduel";
             this.btnScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnScheduel.Click += new System.EventHandler(this.btnScheduel_Click);
             // 
             // btnHistory
             // 
@@ -143,6 +145,7 @@
             this.btnHistory.TabIndex = 5;
             this.btnHistory.Text = "View History";
             this.btnHistory.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnPayment
             // 
@@ -153,6 +156,7 @@
             this.btnPayment.TabIndex = 4;
             this.btnPayment.Text = "Make Payment";
             this.btnPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnProfile
             // 
@@ -163,6 +167,7 @@
             this.btnProfile.TabIndex = 3;
             this.btnProfile.Text = "Profile";
             this.btnProfile.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
             // 
@@ -173,6 +178,7 @@
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // lblHeading
             // 

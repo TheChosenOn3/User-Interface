@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.navpan = new MetroFramework.Controls.MetroPanel();
-            this.btnBeneficiary = new MetroFramework.Controls.MetroButton();
-            this.btnScheduel = new MetroFramework.Controls.MetroButton();
-            this.btnHistory = new MetroFramework.Controls.MetroButton();
-            this.btnPayment = new MetroFramework.Controls.MetroButton();
-            this.btnProfile = new MetroFramework.Controls.MetroButton();
             this.btnHome = new MetroFramework.Controls.MetroButton();
             this.lblHeading = new MetroFramework.Controls.MetroLabel();
             this.lblUser = new MetroFramework.Controls.MetroLabel();
@@ -45,6 +40,17 @@
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
             this.tabCRegister = new MetroFramework.Controls.MetroTabControl();
             this.tabPersonalDetail = new MetroFramework.Controls.MetroTabPage();
+            this.txtCellNum = new MetroFramework.Controls.MetroTextBox();
+            this.txtID = new MetroFramework.Controls.MetroTextBox();
+            this.txtStreetNumber = new MetroFramework.Controls.MetroTextBox();
+            this.txtStreet = new MetroFramework.Controls.MetroTextBox();
+            this.txtSuburb = new MetroFramework.Controls.MetroTextBox();
+            this.txtCountry = new MetroFramework.Controls.MetroTextBox();
+            this.txtConfirmPassword = new MetroFramework.Controls.MetroTextBox();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
+            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.txtSurname = new MetroFramework.Controls.MetroTextBox();
+            this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.btnRegister = new MetroFramework.Controls.MetroButton();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -58,17 +64,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.btnClear = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtCellNum = new MetroFramework.Controls.MetroTextBox();
-            this.txtID = new MetroFramework.Controls.MetroTextBox();
-            this.txtStreetNumber = new MetroFramework.Controls.MetroTextBox();
-            this.txtStreet = new MetroFramework.Controls.MetroTextBox();
-            this.txtSuburb = new MetroFramework.Controls.MetroTextBox();
-            this.txtCountry = new MetroFramework.Controls.MetroTextBox();
-            this.txtConfirmPassword = new MetroFramework.Controls.MetroTextBox();
-            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
-            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
-            this.txtSurname = new MetroFramework.Controls.MetroTextBox();
-            this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.navpan.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,11 +74,6 @@
             // 
             // navpan
             // 
-            this.navpan.Controls.Add(this.btnBeneficiary);
-            this.navpan.Controls.Add(this.btnScheduel);
-            this.navpan.Controls.Add(this.btnHistory);
-            this.navpan.Controls.Add(this.btnPayment);
-            this.navpan.Controls.Add(this.btnProfile);
             this.navpan.Controls.Add(this.btnHome);
             this.navpan.HorizontalScrollbarBarColor = true;
             this.navpan.HorizontalScrollbarHighlightOnWheel = false;
@@ -96,56 +86,6 @@
             this.navpan.VerticalScrollbarBarColor = true;
             this.navpan.VerticalScrollbarHighlightOnWheel = false;
             this.navpan.VerticalScrollbarSize = 10;
-            // 
-            // btnBeneficiary
-            // 
-            this.btnBeneficiary.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBeneficiary.Location = new System.Drawing.Point(0, 515);
-            this.btnBeneficiary.Name = "btnBeneficiary";
-            this.btnBeneficiary.Size = new System.Drawing.Size(134, 103);
-            this.btnBeneficiary.TabIndex = 7;
-            this.btnBeneficiary.Text = "Benefchiary";
-            this.btnBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnScheduel
-            // 
-            this.btnScheduel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnScheduel.Location = new System.Drawing.Point(0, 412);
-            this.btnScheduel.Name = "btnScheduel";
-            this.btnScheduel.Size = new System.Drawing.Size(134, 103);
-            this.btnScheduel.TabIndex = 6;
-            this.btnScheduel.Text = "View Scheduel";
-            this.btnScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnHistory
-            // 
-            this.btnHistory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistory.Location = new System.Drawing.Point(0, 309);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(134, 103);
-            this.btnHistory.TabIndex = 5;
-            this.btnHistory.Text = "View History";
-            this.btnHistory.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPayment.Location = new System.Drawing.Point(0, 206);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(134, 103);
-            this.btnPayment.TabIndex = 4;
-            this.btnPayment.Text = "Make Payment";
-            this.btnPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProfile.Location = new System.Drawing.Point(0, 103);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(134, 103);
-            this.btnProfile.TabIndex = 3;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // btnHome
             // 
@@ -271,6 +211,94 @@
             this.tabPersonalDetail.VerticalScrollbarBarColor = true;
             this.tabPersonalDetail.Click += new System.EventHandler(this.tabPersonalDetail_Click);
             // 
+            // txtCellNum
+            // 
+            this.txtCellNum.Location = new System.Drawing.Point(215, 421);
+            this.txtCellNum.Name = "txtCellNum";
+            this.txtCellNum.Size = new System.Drawing.Size(127, 23);
+            this.txtCellNum.TabIndex = 36;
+            this.txtCellNum.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(215, 112);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(127, 23);
+            this.txtID.TabIndex = 35;
+            this.txtID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtStreetNumber
+            // 
+            this.txtStreetNumber.Location = new System.Drawing.Point(215, 385);
+            this.txtStreetNumber.Name = "txtStreetNumber";
+            this.txtStreetNumber.Size = new System.Drawing.Size(127, 23);
+            this.txtStreetNumber.TabIndex = 34;
+            this.txtStreetNumber.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtStreet
+            // 
+            this.txtStreet.Location = new System.Drawing.Point(215, 349);
+            this.txtStreet.Name = "txtStreet";
+            this.txtStreet.Size = new System.Drawing.Size(127, 23);
+            this.txtStreet.TabIndex = 33;
+            this.txtStreet.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtSuburb
+            // 
+            this.txtSuburb.Location = new System.Drawing.Point(215, 310);
+            this.txtSuburb.Name = "txtSuburb";
+            this.txtSuburb.Size = new System.Drawing.Size(127, 23);
+            this.txtSuburb.TabIndex = 32;
+            this.txtSuburb.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(215, 267);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(127, 23);
+            this.txtCountry.TabIndex = 31;
+            this.txtCountry.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.Location = new System.Drawing.Point(215, 229);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(127, 23);
+            this.txtConfirmPassword.TabIndex = 30;
+            this.txtConfirmPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(215, 191);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(127, 23);
+            this.txtPassword.TabIndex = 29;
+            this.txtPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(215, 153);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(127, 23);
+            this.txtEmail.TabIndex = 28;
+            this.txtEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(215, 74);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(127, 23);
+            this.txtSurname.TabIndex = 27;
+            this.txtSurname.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(215, 35);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(127, 23);
+            this.txtName.TabIndex = 26;
+            this.txtName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(215, 476);
@@ -279,6 +307,7 @@
             this.btnRegister.TabIndex = 25;
             this.btnRegister.Text = "Register";
             this.btnRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // metroLabel11
             // 
@@ -399,94 +428,6 @@
             this.metroLabel1.Text = "Name";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // txtCellNum
-            // 
-            this.txtCellNum.Location = new System.Drawing.Point(215, 421);
-            this.txtCellNum.Name = "txtCellNum";
-            this.txtCellNum.Size = new System.Drawing.Size(127, 23);
-            this.txtCellNum.TabIndex = 36;
-            this.txtCellNum.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(215, 112);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(127, 23);
-            this.txtID.TabIndex = 35;
-            this.txtID.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtStreetNumber
-            // 
-            this.txtStreetNumber.Location = new System.Drawing.Point(215, 385);
-            this.txtStreetNumber.Name = "txtStreetNumber";
-            this.txtStreetNumber.Size = new System.Drawing.Size(127, 23);
-            this.txtStreetNumber.TabIndex = 34;
-            this.txtStreetNumber.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtStreet
-            // 
-            this.txtStreet.Location = new System.Drawing.Point(215, 349);
-            this.txtStreet.Name = "txtStreet";
-            this.txtStreet.Size = new System.Drawing.Size(127, 23);
-            this.txtStreet.TabIndex = 33;
-            this.txtStreet.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtSuburb
-            // 
-            this.txtSuburb.Location = new System.Drawing.Point(215, 310);
-            this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(127, 23);
-            this.txtSuburb.TabIndex = 32;
-            this.txtSuburb.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtCountry
-            // 
-            this.txtCountry.Location = new System.Drawing.Point(215, 267);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(127, 23);
-            this.txtCountry.TabIndex = 31;
-            this.txtCountry.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtConfirmPassword
-            // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(215, 229);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(127, 23);
-            this.txtConfirmPassword.TabIndex = 30;
-            this.txtConfirmPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(215, 191);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(127, 23);
-            this.txtPassword.TabIndex = 29;
-            this.txtPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(215, 153);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(127, 23);
-            this.txtEmail.TabIndex = 28;
-            this.txtEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtSurname
-            // 
-            this.txtSurname.Location = new System.Drawing.Point(215, 74);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(127, 23);
-            this.txtSurname.TabIndex = 27;
-            this.txtSurname.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(215, 35);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(127, 23);
-            this.txtName.TabIndex = 26;
-            this.txtName.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -524,11 +465,6 @@
         private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroLabel lblP500;
-        private MetroFramework.Controls.MetroButton btnBeneficiary;
-        private MetroFramework.Controls.MetroButton btnScheduel;
-        private MetroFramework.Controls.MetroButton btnHistory;
-        private MetroFramework.Controls.MetroButton btnPayment;
-        private MetroFramework.Controls.MetroButton btnProfile;
         private MetroFramework.Controls.MetroTabControl tabCRegister;
         private MetroFramework.Controls.MetroTabPage tabPersonalDetail;
         private MetroFramework.Controls.MetroButton btnRegister;

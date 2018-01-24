@@ -287,12 +287,12 @@
             // tabUserRegister
             // 
             this.tabUserRegister.Controls.Add(this.tabPersonalDetail);
+            this.tabUserRegister.Controls.Add(this.tabEFTDetail);
             this.tabUserRegister.Controls.Add(this.tabCryptoDetail);
             this.tabUserRegister.Controls.Add(this.tabCardDetail);
-            this.tabUserRegister.Controls.Add(this.tabEFTDetail);
             this.tabUserRegister.Location = new System.Drawing.Point(144, 121);
             this.tabUserRegister.Name = "tabUserRegister";
-            this.tabUserRegister.SelectedIndex = 3;
+            this.tabUserRegister.SelectedIndex = 2;
             this.tabUserRegister.Size = new System.Drawing.Size(987, 618);
             this.tabUserRegister.TabIndex = 11;
             this.tabUserRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -733,6 +733,7 @@
             this.tabCardDetail.Name = "tabCardDetail";
             this.tabCardDetail.Size = new System.Drawing.Size(979, 575);
             this.tabCardDetail.TabIndex = 1;
+            this.tabCardDetail.Text = "Card Account";
             this.tabCardDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabCardDetail.VerticalScrollbarBarColor = true;
             this.tabCardDetail.Click += new System.EventHandler(this.tabCardDetail_Click);

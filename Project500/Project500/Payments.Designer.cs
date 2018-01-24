@@ -45,6 +45,7 @@
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
             this.tcCurrentpayment = new MetroFramework.Controls.MetroTabControl();
             this.tabCurrentPaymnet = new MetroFramework.Controls.MetroTabPage();
+            this.btnBatch = new MetroFramework.Controls.MetroButton();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.cbUPaymentType = new System.Windows.Forms.ComboBox();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
@@ -72,7 +73,6 @@
             this.btnExacuteAllPayment = new MetroFramework.Controls.MetroButton();
             this.btnDeleteAllPayment = new MetroFramework.Controls.MetroButton();
             this.dgvAddedPayments = new System.Windows.Forms.DataGridView();
-            this.btnBatch = new MetroFramework.Controls.MetroButton();
             this.navpan.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,6 +114,7 @@
             this.btnBeneficiary.TabIndex = 7;
             this.btnBeneficiary.Text = "Benefchiary";
             this.btnBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnBeneficiary.Click += new System.EventHandler(this.btnBeneficiary_Click);
             // 
             // btnScheduel
             // 
@@ -124,6 +125,7 @@
             this.btnScheduel.TabIndex = 6;
             this.btnScheduel.Text = "View Scheduel";
             this.btnScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnScheduel.Click += new System.EventHandler(this.btnScheduel_Click);
             // 
             // btnHistory
             // 
@@ -134,6 +136,7 @@
             this.btnHistory.TabIndex = 5;
             this.btnHistory.Text = "View History";
             this.btnHistory.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnPayment
             // 
@@ -144,6 +147,7 @@
             this.btnPayment.TabIndex = 4;
             this.btnPayment.Text = "Make Payment";
             this.btnPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnProfile
             // 
@@ -154,6 +158,7 @@
             this.btnProfile.TabIndex = 3;
             this.btnProfile.Text = "Profile";
             this.btnProfile.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
             // 
@@ -164,6 +169,7 @@
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // lblHeading
             // 
@@ -271,6 +277,15 @@
             this.tabCurrentPaymnet.Text = "Current payment";
             this.tabCurrentPaymnet.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabCurrentPaymnet.VerticalScrollbarBarColor = true;
+            // 
+            // btnBatch
+            // 
+            this.btnBatch.Location = new System.Drawing.Point(395, 269);
+            this.btnBatch.Name = "btnBatch";
+            this.btnBatch.Size = new System.Drawing.Size(119, 44);
+            this.btnBatch.TabIndex = 80;
+            this.btnBatch.Text = "Import Bach";
+            this.btnBatch.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel6
             // 
@@ -524,15 +539,6 @@
             this.dgvAddedPayments.RowTemplate.Height = 24;
             this.dgvAddedPayments.Size = new System.Drawing.Size(936, 231);
             this.dgvAddedPayments.TabIndex = 63;
-            // 
-            // btnBatch
-            // 
-            this.btnBatch.Location = new System.Drawing.Point(395, 269);
-            this.btnBatch.Name = "btnBatch";
-            this.btnBatch.Size = new System.Drawing.Size(119, 44);
-            this.btnBatch.TabIndex = 80;
-            this.btnBatch.Text = "Import Bach";
-            this.btnBatch.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Payments
             // 

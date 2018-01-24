@@ -12,6 +12,9 @@ namespace Project500
 {
     public partial class Register : MetroFramework.Forms.MetroForm
     {
+        Home home = new Home();
+       
+
         public Register()
         {
             InitializeComponent();
@@ -24,7 +27,9 @@ namespace Project500
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-
+            Home main = new Home();
+            this.Hide();
+            main.Show();
         }
 
         private void tabCryptoDetail_Click(object sender, EventArgs e)
@@ -85,6 +90,13 @@ namespace Project500
         private void metroLabel21_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            this.Hide();
+            main.Show();
         }
     }
 }

@@ -124,6 +124,7 @@
             this.btnregister.TabIndex = 60;
             this.btnregister.Text = "Register";
             this.btnregister.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
             // 
             // btnlogin
             // 
@@ -133,8 +134,9 @@
             this.btnlogin.TabIndex = 59;
             this.btnlogin.Text = "Login";
             this.btnlogin.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // Home
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +145,7 @@
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblP500);
             this.Controls.Add(this.metroPanel2);
-            this.Name = "Home";
+            this.Name = "Main";
             this.Text = "Home";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Home_Load);

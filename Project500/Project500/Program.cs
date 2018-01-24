@@ -16,7 +16,7 @@ namespace Project500
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Schedules());
+            Application.Run(new Home());
         }
     }
 }

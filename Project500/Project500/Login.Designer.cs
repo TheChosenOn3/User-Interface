@@ -58,6 +58,7 @@
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // navpan
             // 
@@ -160,6 +161,7 @@
             this.btnLogin.TabIndex = 43;
             this.btnLogin.Text = "Login";
             this.btnLogin.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
