@@ -35,15 +35,20 @@ namespace Project500
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Home main = new Home();
-            this.Hide();
-            main.Show();
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtPassword.Text = "";
             txtUsername.Text = "";
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Home main = new Home();
+            this.Hide();
+            main.Show();
         }
     }
 }

@@ -119,7 +119,6 @@
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.navpan = new MetroFramework.Controls.MetroPanel();
             this.btnBeneficiary = new MetroFramework.Controls.MetroButton();
             this.btnScheduel = new MetroFramework.Controls.MetroButton();
@@ -130,7 +129,6 @@
             this.lblHeading = new MetroFramework.Controls.MetroLabel();
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
             this.lblUser = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.tcBeneficiary = new MetroFramework.Controls.MetroTabControl();
             this.tabBeneficiary = new MetroFramework.Controls.MetroTabPage();
             this.btnDeleteB = new MetroFramework.Controls.MetroButton();
@@ -149,9 +147,7 @@
             this.tcBAcounts.SuspendLayout();
             this.tabEFTDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.navpan.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
             this.tcBeneficiary.SuspendLayout();
             this.tabBeneficiary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBeneficiary)).BeginInit();
@@ -999,8 +995,8 @@
             // tcBAcounts
             // 
             this.tcBAcounts.Controls.Add(this.tabPersonalDetails);
-            this.tcBAcounts.Controls.Add(this.tabCryptoDetail);
             this.tcBAcounts.Controls.Add(this.tabEFTDetail);
+            this.tcBAcounts.Controls.Add(this.tabCryptoDetail);
             this.tcBAcounts.Location = new System.Drawing.Point(145, 401);
             this.tcBAcounts.Name = "tcBAcounts";
             this.tcBAcounts.SelectedIndex = 2;
@@ -1053,14 +1049,6 @@
             // metroStyleManager1
             // 
             this.metroStyleManager1.Owner = null;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 84);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // navpan
             // 
@@ -1184,25 +1172,6 @@
             this.lblUser.Text = "User";
             this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.metroPanel2.Controls.Add(this.pictureBox1);
-            this.metroPanel2.CustomBackground = true;
-            this.metroPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(5, 5);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(134, 103);
-            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroPanel2.TabIndex = 14;
-            this.metroPanel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
             // tcBeneficiary
             // 
             this.tcBeneficiary.Controls.Add(this.tabBeneficiary);
@@ -1288,7 +1257,6 @@
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblP500);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.metroPanel2);
             this.Name = "Benenficiarys";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Benenficiarys_Load);
@@ -1307,9 +1275,7 @@
             this.tabEFTDetail.ResumeLayout(false);
             this.tabEFTDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.navpan.ResumeLayout(false);
-            this.metroPanel2.ResumeLayout(false);
             this.tcBeneficiary.ResumeLayout(false);
             this.tabBeneficiary.ResumeLayout(false);
             this.tabBeneficiary.PerformLayout();
@@ -1408,7 +1374,6 @@
         private MetroFramework.Controls.MetroTabPage tabEFTDetail;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroPanel navpan;
         private MetroFramework.Controls.MetroButton btnBeneficiary;
         private MetroFramework.Controls.MetroButton btnScheduel;
@@ -1419,7 +1384,6 @@
         private MetroFramework.Controls.MetroLabel lblHeading;
         private MetroFramework.Controls.MetroLabel lblP500;
         private MetroFramework.Controls.MetroLabel lblUser;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroTabControl tcBeneficiary;
         private MetroFramework.Controls.MetroTabPage tabBeneficiary;
         private System.Windows.Forms.DataGridView dgvBeneficiary;

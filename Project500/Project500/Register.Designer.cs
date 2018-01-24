@@ -33,8 +33,6 @@
             this.btnHome = new MetroFramework.Controls.MetroButton();
             this.lblHeading = new MetroFramework.Controls.MetroLabel();
             this.lblUser = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
@@ -67,8 +65,6 @@
             this.btnClear = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.navpan.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tabCRegister.SuspendLayout();
             this.tabPersonalDetail.SuspendLayout();
@@ -123,33 +119,6 @@
             this.lblUser.TabIndex = 8;
             this.lblUser.Text = "User";
             this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.metroPanel2.Controls.Add(this.pictureBox1);
-            this.metroPanel2.CustomBackground = true;
-            this.metroPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(8, 12);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(134, 103);
-            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroPanel2.TabIndex = 7;
-            this.metroPanel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 84);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // metroStyleManager1
             // 
@@ -460,14 +429,11 @@
             this.Controls.Add(this.navpan);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.lblP500);
             this.Name = "Register";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Register_Load);
             this.navpan.ResumeLayout(false);
-            this.metroPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.tabCRegister.ResumeLayout(false);
             this.tabPersonalDetail.ResumeLayout(false);
@@ -483,8 +449,6 @@
         private MetroFramework.Controls.MetroButton btnHome;
         private MetroFramework.Controls.MetroLabel lblHeading;
         private MetroFramework.Controls.MetroLabel lblUser;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroLabel lblP500;

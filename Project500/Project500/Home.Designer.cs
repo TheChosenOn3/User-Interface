@@ -30,14 +30,10 @@
         {
             this.lblHeading = new MetroFramework.Controls.MetroLabel();
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tcWelcome = new MetroFramework.Controls.MetroTabControl();
             this.tabWelcome = new MetroFramework.Controls.MetroTabPage();
             this.btnregister = new MetroFramework.Controls.MetroButton();
             this.btnlogin = new MetroFramework.Controls.MetroButton();
-            this.metroPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tcWelcome.SuspendLayout();
             this.tabWelcome.SuspendLayout();
             this.SuspendLayout();
@@ -65,33 +61,6 @@
             this.lblP500.TabIndex = 7;
             this.lblP500.Text = "Project 500";
             this.lblP500.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.metroPanel2.Controls.Add(this.pictureBox1);
-            this.metroPanel2.CustomBackground = true;
-            this.metroPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(6, 11);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(134, 103);
-            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroPanel2.TabIndex = 6;
-            this.metroPanel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 84);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // tcWelcome
             // 
@@ -136,7 +105,7 @@
             this.btnlogin.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // Main
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,13 +113,10 @@
             this.Controls.Add(this.tcWelcome);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblP500);
-            this.Controls.Add(this.metroPanel2);
-            this.Name = "Main";
+            this.Name = "Home";
             this.Text = "Home";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Home_Load);
-            this.metroPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tcWelcome.ResumeLayout(false);
             this.tabWelcome.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -162,8 +128,6 @@
 
         private MetroFramework.Controls.MetroLabel lblHeading;
         private MetroFramework.Controls.MetroLabel lblP500;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroTabControl tcWelcome;
         private MetroFramework.Controls.MetroTabPage tabWelcome;
         private MetroFramework.Controls.MetroButton btnregister;
