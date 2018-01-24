@@ -31,6 +31,10 @@ namespace Entities1
        
         public Beneficiary(string BeneficairyID, string BeneficairyName, string BeneficiaryBranch)
         {
+            this.beneficiaryBranch = BeneficiaryBranch;
+            this.beneficiaryID = BeneficairyID;
+            this.beneficiaryName = BeneficairyName;
+
 
         }
 

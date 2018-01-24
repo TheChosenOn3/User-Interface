@@ -30,12 +30,20 @@ namespace Entities1
         }
 
         private DateTime expiry;
+
         public DateTime Expiry
         {
             get { return expiry; }
             set { expiry = value; }
         }
-        
+
+        public Card(string CardNr, string AccountHolder, string Cvv, DateTime Expiry)
+        {
+            this.cardNr = CardNr;
+            this.accountHolder = AccountHolder;
+            this.Cvv = cvv;
+            this.expiry = Expiry;
+        }
 
 
 

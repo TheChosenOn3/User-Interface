@@ -93,13 +93,29 @@ namespace Entities1
         }
         private string userID;
 
+    
+
         public string UserID
         {
             get { return userID; }
             set { userID = value; }
         }
 
-
+        public Payment(string ScheduleNr, string Description, string BeneficairyID, DateTime PayDate, float Amount, string Interval, string Status, string PaymentNumber, PaymentType TypePayment, bool Recurring, DateTime DateCreated, string UserID)
+        {
+            this.scheduleNr = ScheduleNr;
+            this.description = Description;
+            this.beneficiaryID = BeneficairyID;
+            this.payDate = PayDate;
+            this.amount = Amount;
+            this.interval = Interval;
+            this.status = Status;
+            this.paymentNumber = PaymentNumber;
+            this.typePayment = TypePayment;
+            this.recurring = Recurring;
+            this.dateCreated = DateCreated;
+            this.userID = UserID;
+        }
 
 
 

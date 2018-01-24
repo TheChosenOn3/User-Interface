@@ -34,11 +34,21 @@ namespace Entities1
         }
         private AccountTypes typeAcc;
 
+      
+
         public AccountTypes TypeAcc
         {
             get { return typeAcc; }
             set { typeAcc = value; }
         }
+        public PaymentAccount(string AccountNumber, string AccountHolder, string Reference, AccountTypes TypeAcc)
+        {
+            this.accountNumber = AccountNumber;
+            this.accountHolder = AccountHolder;
+            this.reference = Reference;
+            this.typeAcc = TypeAcc;
+        }
+
 
 
 
