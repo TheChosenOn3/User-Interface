@@ -168,12 +168,12 @@
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
-      <Project>{c9b5681b-85c9-4f3a-bee4-289980f7ad5b}</Project>
-      <Name>BusinessEntities</Name>
+    <ProjectReference Include="..\..\..\Middle-Ware\Middle-Ware\Entities\Entities.csproj">
+      <Project>{d07ae0c0-22a2-40d0-8d53-6ce47a8ca582}</Project>
+      <Name>Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Controllers\Controllers.csproj">
-      <Project>{baed8af7-d9bd-469e-a292-b01d608c611a}</Project>
+      <Project>{d00add87-e96a-4a1d-84d8-f5d0a56a1720}</Project>
       <Name>Controllers</Name>
     </ProjectReference>
   </ItemGroup>
