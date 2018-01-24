@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,9 +25,20 @@ namespace Project500
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            this.Hide();
-            main.Show();
+            Boolean LoginSuccessful = true; //UserController.checkLogin(1);
+
+            if (LoginSuccessful)
+            {
+                MessageBox.Show("Success");
+                Main main = new Main();
+                this.Hide();
+                main.Show();
+            }
+            else
+            {
+                MessageBox.Show("Failed");
+            }
+            
         }
 
         private void btnHome_Click(object sender, EventArgs e)
