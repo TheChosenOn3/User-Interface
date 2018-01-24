@@ -29,10 +29,10 @@ namespace Entities
         }
         private int myVar;
 
-        public int MyProperty
+       
+        public Beneficiary(string BeneficairyID, string BeneficairyName, string BeneficiaryBranch)
         {
-            get { return myVar; }
-            set { myVar = value; }
+
         }
 
 

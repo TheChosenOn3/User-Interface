@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entities;
+using Entities1;
 
 namespace Project500
 {
@@ -97,7 +97,7 @@ namespace Project500
 
             String Address = "";
             User user = new User(txtName.Text,txtID.Text,txtSurname.Text,txtCellNum.Text,Address,txtEmail.Text,txtPassword.Text,"Active",txtBusiness.Text);
-       
+        
             Main main = new Main();
             this.Hide();
             main.Show();

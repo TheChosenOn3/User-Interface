@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities
+namespace Entities1
 {
     public class User
     {
+      
+
         private string name;
 
         public string Name
@@ -71,7 +73,18 @@ namespace Entities
             set { businessName = value; }
         }
 
-
+        public User(string Name, string RsaID, string Surname, string CellNr, string Address, string Email, string Password, string AccountStatus, string BusinessName)
+        {
+            this.name = Name;
+            this.rsaID = RsaID;
+            this.surname = Surname;
+            this.cellNr = CellNr;
+            this.address = Address;
+            this.email = Email;
+            this.password = Password;
+            this.accountStatus = AccountStatus;
+            this.businessName = BusinessName;
+        }
 
 
 

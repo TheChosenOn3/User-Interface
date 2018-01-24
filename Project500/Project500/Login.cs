@@ -19,7 +19,8 @@ namespace Project500
 
         private void Login_Load(object sender, EventArgs e)
         {
-            User user = new User();
+            
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
