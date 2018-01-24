@@ -136,6 +136,8 @@
             this.btnSeachB = new MetroFramework.Controls.MetroButton();
             this.txtSearchBName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
+            this.txtAccHolder = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPersonalDetail.SuspendLayout();
@@ -750,7 +752,7 @@
             // 
             // txtEFTRefernce
             // 
-            this.txtEFTRefernce.Location = new System.Drawing.Point(184, 135);
+            this.txtEFTRefernce.Location = new System.Drawing.Point(184, 126);
             this.txtEFTRefernce.Name = "txtEFTRefernce";
             this.txtEFTRefernce.Size = new System.Drawing.Size(127, 23);
             this.txtEFTRefernce.TabIndex = 40;
@@ -842,7 +844,7 @@
             // metroLabel32
             // 
             this.metroLabel32.AutoSize = true;
-            this.metroLabel32.Location = new System.Drawing.Point(26, 138);
+            this.metroLabel32.Location = new System.Drawing.Point(26, 129);
             this.metroLabel32.Name = "metroLabel32";
             this.metroLabel32.Size = new System.Drawing.Size(73, 20);
             this.metroLabel32.TabIndex = 39;
@@ -985,17 +987,19 @@
             // tcBAcounts
             // 
             this.tcBAcounts.Controls.Add(this.tabPersonalDetails);
-            this.tcBAcounts.Controls.Add(this.tabEFTDetail);
             this.tcBAcounts.Controls.Add(this.tabCryptoDetail);
+            this.tcBAcounts.Controls.Add(this.tabEFTDetail);
             this.tcBAcounts.Location = new System.Drawing.Point(145, 401);
             this.tcBAcounts.Name = "tcBAcounts";
-            this.tcBAcounts.SelectedIndex = 2;
+            this.tcBAcounts.SelectedIndex = 1;
             this.tcBAcounts.Size = new System.Drawing.Size(987, 365);
             this.tcBAcounts.TabIndex = 17;
             this.tcBAcounts.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // tabEFTDetail
             // 
+            this.tabEFTDetail.Controls.Add(this.txtAccHolder);
+            this.tabEFTDetail.Controls.Add(this.metroLabel24);
             this.tabEFTDetail.Controls.Add(this.btnDeletEFT);
             this.tabEFTDetail.Controls.Add(this.btnUpdateEFT);
             this.tabEFTDetail.Controls.Add(this.dgvEFT);
@@ -1240,6 +1244,24 @@
             this.metroLabel29.Text = "Beneficiary Name";
             this.metroLabel29.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // txtAccHolder
+            // 
+            this.txtAccHolder.Location = new System.Drawing.Point(184, 166);
+            this.txtAccHolder.Name = "txtAccHolder";
+            this.txtAccHolder.Size = new System.Drawing.Size(127, 23);
+            this.txtAccHolder.TabIndex = 66;
+            this.txtAccHolder.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel24
+            // 
+            this.metroLabel24.AutoSize = true;
+            this.metroLabel24.Location = new System.Drawing.Point(26, 169);
+            this.metroLabel24.Name = "metroLabel24";
+            this.metroLabel24.Size = new System.Drawing.Size(106, 20);
+            this.metroLabel24.TabIndex = 65;
+            this.metroLabel24.Text = "Account Holder";
+            this.metroLabel24.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // Benenficiarys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1390,5 +1412,7 @@
         private MetroFramework.Controls.MetroTextBox txtSearchBName;
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroButton btnDeleteB;
+        private MetroFramework.Controls.MetroTextBox txtAccHolder;
+        private MetroFramework.Controls.MetroLabel metroLabel24;
     }
 }

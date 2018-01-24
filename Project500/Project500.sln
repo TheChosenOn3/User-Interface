@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project500", "Project500\Project500.csproj", "{7B85100B-86DC-465B-A7BC-34A9C18A4D94}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D00ADD87-E96A-4A1D-84D8-F5D0A56A1720} = {D00ADD87-E96A-4A1D-84D8-F5D0A56A1720}
+		{D07AE0C0-22A2-40D0-8D53-6CE47A8CA582} = {D07AE0C0-22A2-40D0-8D53-6CE47A8CA582}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "..\..\Middle-Ware\Middle-Ware\Entities\Entities.csproj", "{D07AE0C0-22A2-40D0-8D53-6CE47A8CA582}"
 EndProject

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Entities;
 namespace Project500
 {
     public partial class Login : MetroFramework.Forms.MetroForm
@@ -19,7 +19,7 @@ namespace Project500
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            User user = new User();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -27,6 +27,7 @@ namespace Project500
             Main main = new Main();
             this.Hide();
             main.Show();
+            
         }
 
         private void btnHome_Click(object sender, EventArgs e)
