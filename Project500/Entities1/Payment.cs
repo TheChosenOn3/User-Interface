@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities
+namespace Entities1
 {
    public  enum PaymentType
     {

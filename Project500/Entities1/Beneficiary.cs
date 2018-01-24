@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities
+namespace Entities1
 {
    public class Beneficiary
     {
@@ -27,8 +27,7 @@ namespace Entities
             get { return beneficiaryBranch; }
             set { beneficiaryBranch = value; }
         }
-        private int myVar;
-
+      
        
         public Beneficiary(string BeneficairyID, string BeneficairyName, string BeneficiaryBranch)
         {

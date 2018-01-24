@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entities;
+using Entities1;
 namespace Project500
 {
     public partial class Login : MetroFramework.Forms.MetroForm
