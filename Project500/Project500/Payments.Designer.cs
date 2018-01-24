@@ -59,7 +59,7 @@
             this.cbBAccType = new System.Windows.Forms.ComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpPayDatae = new System.Windows.Forms.DateTimePicker();
             this.btnAddPayment = new MetroFramework.Controls.MetroButton();
             this.btnClear = new MetroFramework.Controls.MetroButton();
             this.txtAmount = new MetroFramework.Controls.MetroTextBox();
@@ -264,7 +264,7 @@
             this.tabCurrentPaymnet.Controls.Add(this.cbBAccType);
             this.tabCurrentPaymnet.Controls.Add(this.metroLabel2);
             this.tabCurrentPaymnet.Controls.Add(this.metroLabel1);
-            this.tabCurrentPaymnet.Controls.Add(this.dateTimePicker1);
+            this.tabCurrentPaymnet.Controls.Add(this.dtpPayDatae);
             this.tabCurrentPaymnet.Controls.Add(this.btnAddPayment);
             this.tabCurrentPaymnet.Controls.Add(this.btnClear);
             this.tabCurrentPaymnet.Controls.Add(this.txtAmount);
@@ -339,6 +339,7 @@
             this.dgvBeneficiarys.RowTemplate.Height = 24;
             this.dgvBeneficiarys.Size = new System.Drawing.Size(372, 150);
             this.dgvBeneficiarys.TabIndex = 73;
+            this.dgvBeneficiarys.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBeneficiarys_CellContentClick);
             // 
             // txtInterval
             // 
@@ -366,6 +367,7 @@
             this.btnSearchB.TabIndex = 70;
             this.btnSearchB.Text = "Search Beneficiary";
             this.btnSearchB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnSearchB.Click += new System.EventHandler(this.btnSearchB_Click);
             // 
             // metroLabel3
             // 
@@ -405,13 +407,13 @@
             this.metroLabel1.Text = "Payment Date";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dateTimePicker1
+            // dtpPayDatae
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(158, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 22);
-            this.dateTimePicker1.TabIndex = 64;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpPayDatae.Location = new System.Drawing.Point(158, 57);
+            this.dtpPayDatae.Name = "dtpPayDatae";
+            this.dtpPayDatae.Size = new System.Drawing.Size(225, 22);
+            this.dtpPayDatae.TabIndex = 64;
+            this.dtpPayDatae.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // btnAddPayment
             // 
@@ -421,6 +423,7 @@
             this.btnAddPayment.TabIndex = 25;
             this.btnAddPayment.Text = "Add payment";
             this.btnAddPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddPayment.Click += new System.EventHandler(this.btnAddPayment_Click);
             // 
             // btnClear
             // 
@@ -430,6 +433,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear Flields";
             this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtAmount
             // 
@@ -485,6 +489,7 @@
             this.btnRetryPayment.TabIndex = 81;
             this.btnRetryPayment.Text = "Retry Payment ";
             this.btnRetryPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnRetryPayment.Click += new System.EventHandler(this.btnRetryPayment_Click);
             // 
             // btnExacutePayment
             // 
@@ -494,6 +499,7 @@
             this.btnExacutePayment.TabIndex = 80;
             this.btnExacutePayment.Text = "Execute Payments";
             this.btnExacutePayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnExacutePayment.Click += new System.EventHandler(this.btnExacutePayment_Click);
             // 
             // btnDeletePayment
             // 
@@ -503,6 +509,7 @@
             this.btnDeletePayment.TabIndex = 79;
             this.btnDeletePayment.Text = "Delete payment";
             this.btnDeletePayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeletePayment.Click += new System.EventHandler(this.btnDeletePayment_Click);
             // 
             // btnRetryAllPayment
             // 
@@ -512,6 +519,7 @@
             this.btnRetryAllPayment.TabIndex = 78;
             this.btnRetryAllPayment.Text = "Retry All Payment payment";
             this.btnRetryAllPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnRetryAllPayment.Click += new System.EventHandler(this.btnRetryAllPayment_Click);
             // 
             // btnExacuteAllPayment
             // 
@@ -521,6 +529,7 @@
             this.btnExacuteAllPayment.TabIndex = 77;
             this.btnExacuteAllPayment.Text = "Execute All Payments";
             this.btnExacuteAllPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnExacuteAllPayment.Click += new System.EventHandler(this.btnExacuteAllPayment_Click);
             // 
             // btnDeleteAllPayment
             // 
@@ -530,6 +539,7 @@
             this.btnDeleteAllPayment.TabIndex = 76;
             this.btnDeleteAllPayment.Text = "Delete All payment";
             this.btnDeleteAllPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeleteAllPayment.Click += new System.EventHandler(this.btnDeleteAllPayment_Click);
             // 
             // dgvAddedPayments
             // 
@@ -539,6 +549,7 @@
             this.dgvAddedPayments.RowTemplate.Height = 24;
             this.dgvAddedPayments.Size = new System.Drawing.Size(936, 231);
             this.dgvAddedPayments.TabIndex = 63;
+            this.dgvAddedPayments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddedPayments_CellContentClick);
             // 
             // Payments
             // 
@@ -589,7 +600,7 @@
         private MetroFramework.Controls.MetroLabel lblP500;
         private MetroFramework.Controls.MetroTabControl tcCurrentpayment;
         private MetroFramework.Controls.MetroTabPage tabCurrentPaymnet;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpPayDatae;
         private MetroFramework.Controls.MetroButton btnAddPayment;
         private MetroFramework.Controls.MetroButton btnClear;
         private MetroFramework.Controls.MetroTextBox txtAmount;
