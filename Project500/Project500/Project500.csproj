@@ -167,15 +167,5 @@
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
-      <Project>{c9b5681b-85c9-4f3a-bee4-289980f7ad5b}</Project>
-      <Name>BusinessEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Controllers\Controllers.csproj">
-      <Project>{baed8af7-d9bd-469e-a292-b01d608c611a}</Project>
-      <Name>Controllers</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

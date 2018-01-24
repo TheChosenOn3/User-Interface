@@ -4,10 +4,7 @@ using System.Text;
 
 namespace Controllers
 {
-    class UserController
+    class CardController
     {
-
-
-
     }
 }
