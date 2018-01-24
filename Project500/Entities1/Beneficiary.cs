@@ -37,6 +37,10 @@ namespace Entities1
 
 
         }
+        public Beneficiary()
+        {
+
+        }
 
 
 

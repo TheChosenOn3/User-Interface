@@ -49,7 +49,10 @@ namespace Entities1
             this.typeAcc = TypeAcc;
         }
 
+        public PaymentAccount()
+        {
 
+        }
 
 
 

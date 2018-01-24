@@ -8,9 +8,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project500", "Project500\Pr
 		{D00ADD87-E96A-4A1D-84D8-F5D0A56A1720} = {D00ADD87-E96A-4A1D-84D8-F5D0A56A1720}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{D00ADD87-E96A-4A1D-84D8-F5D0A56A1720}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers", "Controllers\Controllers.csproj", "{D00ADD87-E96A-4A1D-84D8-F5D0A56A1720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities1", "Entities1\Entities1.csproj", "{6ABBB725-7B74-43F9-9BF9-7F7006F6116C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities1", "Entities1\Entities1.csproj", "{6ABBB725-7B74-43F9-9BF9-7F7006F6116C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

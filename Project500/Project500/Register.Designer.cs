@@ -40,6 +40,8 @@
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
             this.tabCRegister = new MetroFramework.Controls.MetroTabControl();
             this.tabPersonalDetail = new MetroFramework.Controls.MetroTabPage();
+            this.txtBusiness = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.txtCellNum = new MetroFramework.Controls.MetroTextBox();
             this.txtID = new MetroFramework.Controls.MetroTextBox();
             this.txtStreetNumber = new MetroFramework.Controls.MetroTextBox();
@@ -64,8 +66,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.btnClear = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtBusiness = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.navpan.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -214,6 +214,24 @@
             this.tabPersonalDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabPersonalDetail.VerticalScrollbarBarColor = true;
             this.tabPersonalDetail.Click += new System.EventHandler(this.tabPersonalDetail_Click);
+            // 
+            // txtBusiness
+            // 
+            this.txtBusiness.Location = new System.Drawing.Point(212, 420);
+            this.txtBusiness.Name = "txtBusiness";
+            this.txtBusiness.Size = new System.Drawing.Size(127, 23);
+            this.txtBusiness.TabIndex = 38;
+            this.txtBusiness.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(20, 423);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(62, 20);
+            this.metroLabel12.TabIndex = 37;
+            this.metroLabel12.Text = "Business";
+            this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txtCellNum
             // 
@@ -421,6 +439,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear Flields";
             this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // metroLabel1
             // 
@@ -431,24 +450,6 @@
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Name";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtBusiness
-            // 
-            this.txtBusiness.Location = new System.Drawing.Point(212, 420);
-            this.txtBusiness.Name = "txtBusiness";
-            this.txtBusiness.Size = new System.Drawing.Size(127, 23);
-            this.txtBusiness.TabIndex = 38;
-            this.txtBusiness.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(20, 423);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(62, 20);
-            this.metroLabel12.TabIndex = 37;
-            this.metroLabel12.Text = "Business";
-            this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Register
             // 

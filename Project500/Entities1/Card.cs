@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entities1
 {
-    class Card
+  public  class Card
     {
         private string cardNr;
 
@@ -48,7 +48,10 @@ namespace Entities1
 
 
 
-
+        public Card()
+        {
+                
+        }
 
 
 

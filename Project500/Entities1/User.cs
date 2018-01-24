@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace Entities1
 {
-    public class User
+    public class User 
     {
       
-
         private string name;
 
         public string Name
@@ -85,7 +85,10 @@ namespace Entities1
             this.accountStatus = AccountStatus;
             this.businessName = BusinessName;
         }
-
+        public User()
+        {
+                
+        }
 
 
 

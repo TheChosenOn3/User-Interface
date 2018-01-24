@@ -119,7 +119,10 @@ namespace Entities1
 
 
 
+        public Payment()
+        {
 
+        }
 
 
 

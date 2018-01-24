@@ -22,7 +22,7 @@ namespace Project500
 
         private void Register_Load(object sender, EventArgs e)
         {
-
+         //   btnRegister.Enabled = false;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -94,13 +94,29 @@ namespace Project500
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
-            String Address = "";
+            
+            String Address = txtCountry.Text+" "+ txtSuburb.Text+ " " +txtStreet.Text+ " " +txtStreetNumber.Text ;
             User user = new User(txtName.Text,txtID.Text,txtSurname.Text,txtCellNum.Text,Address,txtEmail.Text,txtPassword.Text,"Active",txtBusiness.Text);
         
             Main main = new Main();
             this.Hide();
             main.Show();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtCountry.Text = "";
+            txtSuburb.Text = "";
+            txtStreet.Text = "";
+            txtStreetNumber.Text = "";
+            txtName.Text = "";
+            txtID.Text = "";
+            txtSurname.Text = "";
+            txtCellNum.Text = "";
+            txtEmail.Text = "";
+            txtPassword.Text = "";
+            txtBusiness.Text = "";
+
         }
     }
 }

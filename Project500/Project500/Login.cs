@@ -15,16 +15,18 @@ namespace Project500
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
-            
+
+           // btnLogin.Enabled = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             Main main = new Main();
             this.Hide();
             main.Show();
@@ -36,6 +38,12 @@ namespace Project500
             Home main = new Home();
             this.Hide();
             main.Show();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text = "";
+            txtUsername.Text = "";
         }
     }
 }

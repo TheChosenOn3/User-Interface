@@ -189,6 +189,7 @@
             this.btnClear.TabIndex = 40;
             this.btnClear.Text = "Clear Flields";
             this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtUsername
             // 

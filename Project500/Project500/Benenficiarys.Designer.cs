@@ -115,6 +115,8 @@
             this.tabCryptoDetail = new MetroFramework.Controls.MetroTabPage();
             this.tcBAcounts = new MetroFramework.Controls.MetroTabControl();
             this.tabEFTDetail = new MetroFramework.Controls.MetroTabPage();
+            this.txtAccHolder = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -136,8 +138,6 @@
             this.btnSeachB = new MetroFramework.Controls.MetroButton();
             this.txtSearchBName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
-            this.txtAccHolder = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPersonalDetail.SuspendLayout();
@@ -675,6 +675,7 @@
             this.dgvCrypto.RowTemplate.Height = 24;
             this.dgvCrypto.Size = new System.Drawing.Size(573, 227);
             this.dgvCrypto.TabIndex = 61;
+            this.dgvCrypto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCrypto_CellContentClick);
             // 
             // txtWaletName
             // 
@@ -722,6 +723,7 @@
             this.btnAddCrypto.TabIndex = 56;
             this.btnAddCrypto.Text = "Submit Account";
             this.btnAddCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddCrypto.Click += new System.EventHandler(this.btnAddCrypto_Click);
             // 
             // btnClearCrypto
             // 
@@ -731,6 +733,7 @@
             this.btnClearCrypto.TabIndex = 55;
             this.btnClearCrypto.Text = "Clear Flields";
             this.btnClearCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearCrypto.Click += new System.EventHandler(this.btnClearCrypto_Click);
             // 
             // txtWalletCode
             // 
@@ -766,6 +769,7 @@
             this.btnDeletEFT.TabIndex = 64;
             this.btnDeletEFT.Text = "Delete Account";
             this.btnDeletEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeletEFT.Click += new System.EventHandler(this.btnDeletEFT_Click);
             // 
             // btnUpdateEFT
             // 
@@ -775,6 +779,7 @@
             this.btnUpdateEFT.TabIndex = 63;
             this.btnUpdateEFT.Text = "Update Account";
             this.btnUpdateEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpdateEFT.Click += new System.EventHandler(this.btnUpdateEFT_Click);
             // 
             // dgvEFT
             // 
@@ -784,6 +789,7 @@
             this.dgvEFT.RowTemplate.Height = 24;
             this.dgvEFT.Size = new System.Drawing.Size(573, 227);
             this.dgvEFT.TabIndex = 62;
+            this.dgvEFT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEFT_CellContentClick);
             // 
             // txtEFTAccNum
             // 
@@ -831,6 +837,7 @@
             this.btnAddEFT.TabIndex = 42;
             this.btnAddEFT.Text = "Submit Account";
             this.btnAddEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddEFT.Click += new System.EventHandler(this.btnAddEFT_Click);
             // 
             // btnClearEFT
             // 
@@ -840,6 +847,7 @@
             this.btnClearEFT.TabIndex = 41;
             this.btnClearEFT.Text = "Clear Flields";
             this.btnClearEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearEFT.Click += new System.EventHandler(this.btnClearEFT_Click);
             // 
             // metroLabel32
             // 
@@ -879,6 +887,7 @@
             this.btnUpdateBPI.TabIndex = 27;
             this.btnUpdateBPI.Text = "Updaet Beneficiary";
             this.btnUpdateBPI.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpdateBPI.Click += new System.EventHandler(this.btnUpdateBPI_Click);
             // 
             // btnAddB
             // 
@@ -888,6 +897,7 @@
             this.btnAddB.TabIndex = 25;
             this.btnAddB.Text = "Add Beneficiary";
             this.btnAddB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddB.Click += new System.EventHandler(this.btnAddB_Click);
             // 
             // txtBBranchCode
             // 
@@ -934,6 +944,7 @@
             this.btnClearBPI.TabIndex = 4;
             this.btnClearBPI.Text = "Clear Flields";
             this.btnClearBPI.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearBPI.Click += new System.EventHandler(this.btnClearBPI_Click);
             // 
             // txtBName
             // 
@@ -961,6 +972,7 @@
             this.BtnDeletCrypto.TabIndex = 63;
             this.BtnDeletCrypto.Text = "Delete Account";
             this.BtnDeletCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.BtnDeletCrypto.Click += new System.EventHandler(this.BtnDeletCrypto_Click);
             // 
             // tabCryptoDetail
             // 
@@ -991,7 +1003,7 @@
             this.tcBAcounts.Controls.Add(this.tabEFTDetail);
             this.tcBAcounts.Location = new System.Drawing.Point(145, 401);
             this.tcBAcounts.Name = "tcBAcounts";
-            this.tcBAcounts.SelectedIndex = 1;
+            this.tcBAcounts.SelectedIndex = 2;
             this.tcBAcounts.Size = new System.Drawing.Size(987, 365);
             this.tcBAcounts.TabIndex = 17;
             this.tcBAcounts.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1019,6 +1031,24 @@
             this.tabEFTDetail.Text = "EFT Information";
             this.tabEFTDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabEFTDetail.VerticalScrollbarBarColor = true;
+            // 
+            // txtAccHolder
+            // 
+            this.txtAccHolder.Location = new System.Drawing.Point(184, 166);
+            this.txtAccHolder.Name = "txtAccHolder";
+            this.txtAccHolder.Size = new System.Drawing.Size(127, 23);
+            this.txtAccHolder.TabIndex = 66;
+            this.txtAccHolder.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel24
+            // 
+            this.metroLabel24.AutoSize = true;
+            this.metroLabel24.Location = new System.Drawing.Point(26, 169);
+            this.metroLabel24.Name = "metroLabel24";
+            this.metroLabel24.Size = new System.Drawing.Size(106, 20);
+            this.metroLabel24.TabIndex = 65;
+            this.metroLabel24.Text = "Account Holder";
+            this.metroLabel24.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroStyleManager1
             // 
@@ -1207,6 +1237,7 @@
             this.btnDeleteB.TabIndex = 64;
             this.btnDeleteB.Text = "Delete Beneficiary";
             this.btnDeleteB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeleteB.Click += new System.EventHandler(this.btnDeleteB_Click);
             // 
             // dgvBeneficiary
             // 
@@ -1216,15 +1247,17 @@
             this.dgvBeneficiary.RowTemplate.Height = 24;
             this.dgvBeneficiary.Size = new System.Drawing.Size(573, 227);
             this.dgvBeneficiary.TabIndex = 63;
+            this.dgvBeneficiary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBeneficiary_CellContentClick);
             // 
             // btnSeachB
             // 
-            this.btnSeachB.Location = new System.Drawing.Point(37, 88);
+            this.btnSeachB.Location = new System.Drawing.Point(40, 88);
             this.btnSeachB.Name = "btnSeachB";
             this.btnSeachB.Size = new System.Drawing.Size(119, 44);
             this.btnSeachB.TabIndex = 25;
             this.btnSeachB.Text = "Search Beneficiary";
             this.btnSeachB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnSeachB.Click += new System.EventHandler(this.btnSeachB_Click);
             // 
             // txtSearchBName
             // 
@@ -1243,24 +1276,6 @@
             this.metroLabel29.TabIndex = 2;
             this.metroLabel29.Text = "Beneficiary Name";
             this.metroLabel29.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtAccHolder
-            // 
-            this.txtAccHolder.Location = new System.Drawing.Point(184, 166);
-            this.txtAccHolder.Name = "txtAccHolder";
-            this.txtAccHolder.Size = new System.Drawing.Size(127, 23);
-            this.txtAccHolder.TabIndex = 66;
-            this.txtAccHolder.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel24
-            // 
-            this.metroLabel24.AutoSize = true;
-            this.metroLabel24.Location = new System.Drawing.Point(26, 169);
-            this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(106, 20);
-            this.metroLabel24.TabIndex = 65;
-            this.metroLabel24.Text = "Account Holder";
-            this.metroLabel24.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Benenficiarys
             // 
