@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities;
 
 namespace Project500
 {
     public partial class Register : MetroFramework.Forms.MetroForm
     {
-        Home home = new Home();
        
 
         public Register()
@@ -94,6 +94,10 @@ namespace Project500
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+
+            String Address = "";
+            User user = new User(txtName.Text,txtID.Text,txtSurname.Text,txtCellNum.Text,Address,txtEmail.Text,txtPassword.Text,"Active",txtBusiness.Text);
+       
             Main main = new Main();
             this.Hide();
             main.Show();
