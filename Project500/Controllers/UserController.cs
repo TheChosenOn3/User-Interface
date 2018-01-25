@@ -21,6 +21,8 @@ namespace Controllers
             var response = client.GetStringAsync(path).Result;
             _user = (User)JsonConvert.DeserializeObject<User>(response);
             return _user;
+            //wegfs
+            //ewfa
 
 
 
