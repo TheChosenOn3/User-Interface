@@ -40,7 +40,6 @@
             this.lblUser = new MetroFramework.Controls.MetroLabel();
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.lblP500 = new MetroFramework.Controls.MetroLabel();
             this.tabUserRegister = new MetroFramework.Controls.MetroTabControl();
             this.tabPersonalDetail = new MetroFramework.Controls.MetroTabPage();
             this.btnUpdatePI = new MetroFramework.Controls.MetroButton();
@@ -243,19 +242,6 @@
             // metroStyleManager1
             // 
             this.metroStyleManager1.Owner = null;
-            // 
-            // lblP500
-            // 
-            this.lblP500.AutoSize = true;
-            this.lblP500.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblP500.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblP500.Location = new System.Drawing.Point(168, 24);
-            this.lblP500.Name = "lblP500";
-            this.lblP500.Size = new System.Drawing.Size(113, 25);
-            this.lblP500.TabIndex = 9;
-            this.lblP500.Text = "Project 500";
-            this.lblP500.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lblP500.Click += new System.EventHandler(this.lblP500_Click);
             // 
             // tabUserRegister
             // 
@@ -1495,7 +1481,6 @@
             this.Controls.Add(this.navpan);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.lblP500);
             this.Name = "Profile";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Profile_Load);
@@ -1531,7 +1516,6 @@
         private MetroFramework.Controls.MetroLabel lblUser;
         private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
-        private MetroFramework.Controls.MetroLabel lblP500;
         private MetroFramework.Controls.MetroTabControl tabUserRegister;
         private MetroFramework.Controls.MetroTabPage tabPersonalDetail;
         private MetroFramework.Controls.MetroButton btnUpdatePI;
