@@ -999,8 +999,8 @@
             // tcBAcounts
             // 
             this.tcBAcounts.Controls.Add(this.tabPersonalDetails);
-            this.tcBAcounts.Controls.Add(this.tabCryptoDetail);
             this.tcBAcounts.Controls.Add(this.tabEFTDetail);
+            this.tcBAcounts.Controls.Add(this.tabCryptoDetail);
             this.tcBAcounts.Location = new System.Drawing.Point(145, 401);
             this.tcBAcounts.Name = "tcBAcounts";
             this.tcBAcounts.SelectedIndex = 2;
@@ -1228,6 +1228,7 @@
             this.tabBeneficiary.Text = "Lister Beneficiarys";
             this.tabBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabBeneficiary.VerticalScrollbarBarColor = true;
+            this.tabBeneficiary.Click += new System.EventHandler(this.tabBeneficiary_Click);
             // 
             // btnDeleteB
             // 

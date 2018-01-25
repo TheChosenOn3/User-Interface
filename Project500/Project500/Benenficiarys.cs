@@ -15,6 +15,8 @@ namespace Project500
 {
     public partial class Benenficiarys : MetroFramework.Forms.MetroForm
     {
+     
+        
         
         List<Beneficiary> BeneficiaryList = new List<Beneficiary>();
         List<PaymentAccount> BenCryptoList = new List<PaymentAccount>();
@@ -22,13 +24,23 @@ namespace Project500
         PaymentAccount Crypto = new PaymentAccount();
         List<PaymentAccount> BenEFTList = new List<PaymentAccount>();
         PaymentAccount EFT = new PaymentAccount();
-      
+     
+       
 
         public Benenficiarys()
         {
             InitializeComponent();
-           
-            
+            //demo population
+            BeneficiaryList.Add(new Beneficiary("12324", "Sybrin", "pretoria"));
+            BeneficiaryList.Add(new Beneficiary("1134", "EOH", "pretoria"));
+            BeneficiaryList.Add(new Beneficiary("1345", "Emin", "pretoria"));
+            BeneficiaryList.Add(new Beneficiary("12345", "Seop", "pretoria"));
+            BeneficiaryList.Add(new Beneficiary("23423", "BC", "pretoria"));
+            BenEFTList.Add(new PaymentAccount("09423","Ethan","EFTCheck", AccountTypes.Cheque, "12324"));
+            BenEFTList.Add(new PaymentAccount("33333", "Daniel", "EFTCheck", AccountTypes.Cheque, "12324"));
+            BenEFTList.Add(new PaymentAccount("11111", "Daniel", "EFTDebit", AccountTypes.Credit, "12324"));
+            BenEFTList.Add(new PaymentAccount("0934", "Jason", "EFTDebit", AccountTypes.Credit, "1134"));
+
         }
 
         private void Benenficiarys_Load(object sender, EventArgs e)
@@ -244,6 +256,11 @@ namespace Project500
             // clear eft combobox
             //BenEFTList= get update EFT list
             FillEFTDatagrid(ben.BeneficairyName, BenEFTList);
+        }
+
+        private void tabBeneficiary_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
