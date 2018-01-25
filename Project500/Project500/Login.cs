@@ -50,5 +50,10 @@ namespace Project500
             this.Hide();
             main.Show();
         }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
