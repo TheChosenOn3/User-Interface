@@ -1197,6 +1197,7 @@
             this.tabBeneficiary.Text = "Lister Beneficiarys";
             this.tabBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabBeneficiary.VerticalScrollbarBarColor = true;
+            this.tabBeneficiary.Click += new System.EventHandler(this.tabBeneficiary_Click);
             // 
             // btnDeleteB
             // 
