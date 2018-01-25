@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,16 @@ namespace Project500
     public partial class Main : MetroFramework.Forms.MetroForm
     {
        
+        public Main(User user)
+        {
+            InitializeComponent();
+        }
+
         public Main()
         {
             InitializeComponent();
         }
+
 
         private void Main_Load(object sender, EventArgs e)
         {

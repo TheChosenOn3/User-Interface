@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Entities1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,9 +28,11 @@ namespace Project500
 
         private void btnregister_Click(object sender, EventArgs e)
         {
-            Register register = new Register();
-            register.Show();
-            this.Hide();
+            User user = new User {Name="Danie" };
+            UserController.registerUser(user);
+            //Register register = new Register();
+            //register.Show();
+            //this.Hide();
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
