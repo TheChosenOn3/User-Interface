@@ -28,17 +28,17 @@ namespace Project500
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            string username = txtUsername.Text.Trim();
-            string passworrd = txtPassword.Text.Trim();
-            User _user = UserController.CheckLogin(username, passworrd);
-            if (_user.RsaID!=null)
-            {
-                Main main = new Main();
-                this.Hide();
-                main.Show();
+            //string username = txtUsername.Text.Trim();
+            //string passworrd = txtPassword.Text.Trim();
+            //User _user = UserController.CheckLogin(username, passworrd);
+            //if (_user.RsaID!=null)
+            //{
+            Main main = new Main();
+            this.Hide();
+            main.Show();
 
-            }
-            else { MessageBox.Show("Credentials are wrong"); }
+            //}
+            //else { MessageBox.Show("Credentials are wrong"); }
 
         }
 

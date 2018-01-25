@@ -120,7 +120,7 @@ namespace Project500
             txtAmount.Text = "";
             txtBName.Text = "";
             txtDescription.Text = "";
-            txtInterval.Text = "";
+            //txtInterval.Text = "";
             //clear cbBAccType
             //clear cbUPaymentType
             // clear dtpPayDatae
@@ -149,7 +149,7 @@ namespace Project500
           //  txtAmount.Text = payment.Amount
             txtBName.Text = payment.BeneficairyID;
             txtDescription.Text = payment.Description;
-            txtInterval.Text = payment.Interval;
+            //txtInterval.Text = payment.Interval;
             //set cbBAccType
             //set cbUPaymentType
             // set dtpPayDatae
@@ -176,6 +176,25 @@ namespace Project500
             // caheck valid
             // add ne payment to datagrid payments
             ClearFields();
+        }
+
+        private void chxInterval_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chxInterval_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxInterval.Checked)
+            {
+                lblInterval.Visible = true;
+                cbxInterval.Visible = true;
+            }
+            else
+            {
+                lblInterval.Visible = false;
+                cbxInterval.Visible = false;
+            }
         }
     }
     }

@@ -29,18 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.navpan = new MetroFramework.Controls.MetroPanel();
-            this.btnBeneficiary = new MetroFramework.Controls.MetroButton();
-            this.btnScheduel = new MetroFramework.Controls.MetroButton();
-            this.btnHistory = new MetroFramework.Controls.MetroButton();
-            this.btnPayment = new MetroFramework.Controls.MetroButton();
-            this.btnProfile = new MetroFramework.Controls.MetroButton();
-            this.btnHome = new MetroFramework.Controls.MetroButton();
-            this.lblHeading = new MetroFramework.Controls.MetroLabel();
-            this.lblUser = new MetroFramework.Controls.MetroLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.lblP500 = new MetroFramework.Controls.MetroLabel();
             this.tabUserRegister = new MetroFramework.Controls.MetroTabControl();
             this.tabPersonalDetail = new MetroFramework.Controls.MetroTabPage();
             this.btnUpdatePI = new MetroFramework.Controls.MetroButton();
@@ -109,7 +100,25 @@
             this.txtCardNum = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.cbCardIsuer = new MetroFramework.Controls.MetroComboBox();
-            this.navpan.SuspendLayout();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnProfileImage = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBeneficiaryNew = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnScheduleNew = new System.Windows.Forms.Button();
+            this.btnHistoryNew = new System.Windows.Forms.Button();
+            this.btnPaymentNew = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnHomeNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tabUserRegister.SuspendLayout();
             this.tabPersonalDetail.SuspendLayout();
@@ -119,154 +128,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEFT)).BeginInit();
             this.tabCardDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCard)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // navpan
-            // 
-            this.navpan.Controls.Add(this.btnBeneficiary);
-            this.navpan.Controls.Add(this.btnScheduel);
-            this.navpan.Controls.Add(this.btnHistory);
-            this.navpan.Controls.Add(this.btnPayment);
-            this.navpan.Controls.Add(this.btnProfile);
-            this.navpan.Controls.Add(this.btnHome);
-            this.navpan.HorizontalScrollbarBarColor = true;
-            this.navpan.HorizontalScrollbarHighlightOnWheel = false;
-            this.navpan.HorizontalScrollbarSize = 10;
-            this.navpan.Location = new System.Drawing.Point(4, 121);
-            this.navpan.Name = "navpan";
-            this.navpan.Size = new System.Drawing.Size(134, 693);
-            this.navpan.TabIndex = 5;
-            this.navpan.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.navpan.VerticalScrollbarBarColor = true;
-            this.navpan.VerticalScrollbarHighlightOnWheel = false;
-            this.navpan.VerticalScrollbarSize = 10;
-            this.navpan.Paint += new System.Windows.Forms.PaintEventHandler(this.navpan_Paint);
-            // 
-            // btnBeneficiary
-            // 
-            this.btnBeneficiary.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBeneficiary.Location = new System.Drawing.Point(0, 515);
-            this.btnBeneficiary.Name = "btnBeneficiary";
-            this.btnBeneficiary.Size = new System.Drawing.Size(134, 103);
-            this.btnBeneficiary.TabIndex = 7;
-            this.btnBeneficiary.Text = "Benefchiary";
-            this.btnBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnBeneficiary.UseSelectable = true;
-            this.btnBeneficiary.Click += new System.EventHandler(this.btnBeneficiary_Click);
-            // 
-            // btnScheduel
-            // 
-            this.btnScheduel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnScheduel.Location = new System.Drawing.Point(0, 412);
-            this.btnScheduel.Name = "btnScheduel";
-            this.btnScheduel.Size = new System.Drawing.Size(134, 103);
-            this.btnScheduel.TabIndex = 6;
-            this.btnScheduel.Text = "View Scheduel";
-            this.btnScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnScheduel.UseSelectable = true;
-            this.btnScheduel.Click += new System.EventHandler(this.btnScheduel_Click);
-            // 
-            // btnHistory
-            // 
-            this.btnHistory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistory.Location = new System.Drawing.Point(0, 309);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(134, 103);
-            this.btnHistory.TabIndex = 5;
-            this.btnHistory.Text = "View History";
-            this.btnHistory.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnHistory.UseSelectable = true;
-            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPayment.Location = new System.Drawing.Point(0, 206);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(134, 103);
-            this.btnPayment.TabIndex = 4;
-            this.btnPayment.Text = "Make Payment";
-            this.btnPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnPayment.UseSelectable = true;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProfile.Location = new System.Drawing.Point(0, 103);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(134, 103);
-            this.btnProfile.TabIndex = 3;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnProfile.UseSelectable = true;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(134, 103);
-            this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "Home";
-            this.btnHome.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnHome.UseSelectable = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // lblHeading
-            // 
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblHeading.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblHeading.Location = new System.Drawing.Point(569, 24);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(118, 25);
-            this.lblHeading.TabIndex = 6;
-            this.lblHeading.Text = "Your Profile";
-            this.lblHeading.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lblHeading.Click += new System.EventHandler(this.lblHeading_Click);
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblUser.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblUser.Location = new System.Drawing.Point(229, 62);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(52, 25);
-            this.lblUser.TabIndex = 8;
-            this.lblUser.Text = "User";
-            this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
             // 
             // metroStyleManager1
             // 
             this.metroStyleManager1.Owner = null;
             // 
-            // lblP500
-            // 
-            this.lblP500.AutoSize = true;
-            this.lblP500.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblP500.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblP500.Location = new System.Drawing.Point(168, 24);
-            this.lblP500.Name = "lblP500";
-            this.lblP500.Size = new System.Drawing.Size(113, 25);
-            this.lblP500.TabIndex = 9;
-            this.lblP500.Text = "Project 500";
-            this.lblP500.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lblP500.Click += new System.EventHandler(this.lblP500_Click);
-            // 
             // tabUserRegister
             // 
+            this.tabUserRegister.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabUserRegister.Controls.Add(this.tabPersonalDetail);
             this.tabUserRegister.Controls.Add(this.tabCryptoDetail);
             this.tabUserRegister.Controls.Add(this.tabEFTDetail);
             this.tabUserRegister.Controls.Add(this.tabCardDetail);
-            this.tabUserRegister.Location = new System.Drawing.Point(144, 121);
+            this.tabUserRegister.Location = new System.Drawing.Point(181, 110);
             this.tabUserRegister.Name = "tabUserRegister";
-            this.tabUserRegister.SelectedIndex = 1;
-            this.tabUserRegister.Size = new System.Drawing.Size(987, 618);
+            this.tabUserRegister.SelectedIndex = 0;
+            this.tabUserRegister.Size = new System.Drawing.Size(911, 629);
             this.tabUserRegister.TabIndex = 11;
             this.tabUserRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabUserRegister.UseSelectable = true;
@@ -301,9 +182,9 @@
             this.tabPersonalDetail.HorizontalScrollbarBarColor = true;
             this.tabPersonalDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabPersonalDetail.HorizontalScrollbarSize = 10;
-            this.tabPersonalDetail.Location = new System.Drawing.Point(4, 38);
+            this.tabPersonalDetail.Location = new System.Drawing.Point(4, 41);
             this.tabPersonalDetail.Name = "tabPersonalDetail";
-            this.tabPersonalDetail.Size = new System.Drawing.Size(979, 576);
+            this.tabPersonalDetail.Size = new System.Drawing.Size(903, 584);
             this.tabPersonalDetail.TabIndex = 0;
             this.tabPersonalDetail.Text = "Personal Information";
             this.tabPersonalDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -823,9 +704,9 @@
             this.tabCryptoDetail.HorizontalScrollbarBarColor = true;
             this.tabCryptoDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabCryptoDetail.HorizontalScrollbarSize = 10;
-            this.tabCryptoDetail.Location = new System.Drawing.Point(4, 38);
+            this.tabCryptoDetail.Location = new System.Drawing.Point(4, 41);
             this.tabCryptoDetail.Name = "tabCryptoDetail";
-            this.tabCryptoDetail.Size = new System.Drawing.Size(979, 576);
+            this.tabCryptoDetail.Size = new System.Drawing.Size(903, 584);
             this.tabCryptoDetail.TabIndex = 3;
             this.tabCryptoDetail.Text = "CryptoCurrency Acount";
             this.tabCryptoDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -862,7 +743,7 @@
             this.dgvCrypto.Location = new System.Drawing.Point(391, 17);
             this.dgvCrypto.Name = "dgvCrypto";
             this.dgvCrypto.RowTemplate.Height = 24;
-            this.dgvCrypto.Size = new System.Drawing.Size(573, 227);
+            this.dgvCrypto.Size = new System.Drawing.Size(489, 227);
             this.dgvCrypto.TabIndex = 61;
             this.dgvCrypto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -1015,9 +896,9 @@
             this.tabEFTDetail.HorizontalScrollbarBarColor = true;
             this.tabEFTDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabEFTDetail.HorizontalScrollbarSize = 10;
-            this.tabEFTDetail.Location = new System.Drawing.Point(4, 38);
+            this.tabEFTDetail.Location = new System.Drawing.Point(4, 41);
             this.tabEFTDetail.Name = "tabEFTDetail";
-            this.tabEFTDetail.Size = new System.Drawing.Size(979, 576);
+            this.tabEFTDetail.Size = new System.Drawing.Size(903, 584);
             this.tabEFTDetail.TabIndex = 2;
             this.tabEFTDetail.Text = "EFT Information";
             this.tabEFTDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1095,7 +976,7 @@
             this.dgvEFT.Location = new System.Drawing.Point(384, 35);
             this.dgvEFT.Name = "dgvEFT";
             this.dgvEFT.RowTemplate.Height = 24;
-            this.dgvEFT.Size = new System.Drawing.Size(573, 227);
+            this.dgvEFT.Size = new System.Drawing.Size(501, 227);
             this.dgvEFT.TabIndex = 62;
             this.dgvEFT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -1250,9 +1131,9 @@
             this.tabCardDetail.HorizontalScrollbarBarColor = true;
             this.tabCardDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabCardDetail.HorizontalScrollbarSize = 10;
-            this.tabCardDetail.Location = new System.Drawing.Point(4, 38);
+            this.tabCardDetail.Location = new System.Drawing.Point(4, 41);
             this.tabCardDetail.Name = "tabCardDetail";
-            this.tabCardDetail.Size = new System.Drawing.Size(979, 576);
+            this.tabCardDetail.Size = new System.Drawing.Size(903, 584);
             this.tabCardDetail.TabIndex = 1;
             this.tabCardDetail.Text = "Card Account";
             this.tabCardDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1289,7 +1170,7 @@
             this.dgvCard.Location = new System.Drawing.Point(392, 14);
             this.dgvCard.Name = "dgvCard";
             this.dgvCard.RowTemplate.Height = 24;
-            this.dgvCard.Size = new System.Drawing.Size(573, 227);
+            this.dgvCard.Size = new System.Drawing.Size(493, 227);
             this.dgvCard.TabIndex = 62;
             this.dgvCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
@@ -1486,20 +1367,265 @@
             this.cbCardIsuer.UseSelectable = true;
             this.cbCardIsuer.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel8.Controls.Add(this.lblProfile);
+            this.panel8.Controls.Add(this.pictureBox1);
+            this.panel8.ForeColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(186, 4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(906, 100);
+            this.panel8.TabIndex = 63;
+            // 
+            // lblProfile
+            // 
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.Location = new System.Drawing.Point(408, 33);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(142, 30);
+            this.lblProfile.TabIndex = 1;
+            this.lblProfile.Text = "User Profile";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.btnProfileImage);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnBeneficiaryNew);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.btnScheduleNew);
+            this.panel1.Controls.Add(this.btnHistoryNew);
+            this.panel1.Controls.Add(this.btnPaymentNew);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnHomeNew);
+            this.panel1.Location = new System.Drawing.Point(0, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(180, 734);
+            this.panel1.TabIndex = 62;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Red;
+            this.panel9.Location = new System.Drawing.Point(0, 642);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 66);
+            this.panel9.TabIndex = 8;
+            // 
+            // btnProfileImage
+            // 
+            this.btnProfileImage.FlatAppearance.BorderSize = 0;
+            this.btnProfileImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfileImage.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfileImage.ForeColor = System.Drawing.Color.White;
+            this.btnProfileImage.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileImage.Image")));
+            this.btnProfileImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfileImage.Location = new System.Drawing.Point(13, 3);
+            this.btnProfileImage.Name = "btnProfileImage";
+            this.btnProfileImage.Size = new System.Drawing.Size(164, 71);
+            this.btnProfileImage.TabIndex = 8;
+            this.btnProfileImage.Text = " Username";
+            this.btnProfileImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProfileImage.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel7.Location = new System.Drawing.Point(0, 441);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 66);
+            this.panel7.TabIndex = 7;
+            this.panel7.Visible = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel6.Location = new System.Drawing.Point(0, 373);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 66);
+            this.panel6.TabIndex = 5;
+            this.panel6.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel5.Location = new System.Drawing.Point(0, 305);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 66);
+            this.panel5.TabIndex = 4;
+            this.panel5.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel4.Location = new System.Drawing.Point(0, 238);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 65);
+            this.panel4.TabIndex = 3;
+            this.panel4.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel3.Location = new System.Drawing.Point(0, 171);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 60);
+            this.panel3.TabIndex = 3;
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.Transparent;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(16, 642);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(164, 71);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "     Exit";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
+            // btnBeneficiaryNew
+            // 
+            this.btnBeneficiaryNew.FlatAppearance.BorderSize = 0;
+            this.btnBeneficiaryNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBeneficiaryNew.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBeneficiaryNew.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBeneficiaryNew.Image = ((System.Drawing.Image)(resources.GetObject("btnBeneficiaryNew.Image")));
+            this.btnBeneficiaryNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBeneficiaryNew.Location = new System.Drawing.Point(16, 441);
+            this.btnBeneficiaryNew.Name = "btnBeneficiaryNew";
+            this.btnBeneficiaryNew.Size = new System.Drawing.Size(164, 71);
+            this.btnBeneficiaryNew.TabIndex = 5;
+            this.btnBeneficiaryNew.Text = " Beneficiary";
+            this.btnBeneficiaryNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBeneficiaryNew.UseVisualStyleBackColor = true;
+            this.btnBeneficiaryNew.Click += new System.EventHandler(this.btnBeneficiary_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.Location = new System.Drawing.Point(0, 94);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 71);
+            this.panel2.TabIndex = 2;
+            this.panel2.Visible = false;
+            // 
+            // btnScheduleNew
+            // 
+            this.btnScheduleNew.FlatAppearance.BorderSize = 0;
+            this.btnScheduleNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScheduleNew.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduleNew.ForeColor = System.Drawing.Color.Transparent;
+            this.btnScheduleNew.Image = ((System.Drawing.Image)(resources.GetObject("btnScheduleNew.Image")));
+            this.btnScheduleNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScheduleNew.Location = new System.Drawing.Point(16, 373);
+            this.btnScheduleNew.Name = "btnScheduleNew";
+            this.btnScheduleNew.Size = new System.Drawing.Size(164, 71);
+            this.btnScheduleNew.TabIndex = 4;
+            this.btnScheduleNew.Text = "  Schedule";
+            this.btnScheduleNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnScheduleNew.UseVisualStyleBackColor = true;
+            this.btnScheduleNew.Click += new System.EventHandler(this.btnScheduel_Click);
+            // 
+            // btnHistoryNew
+            // 
+            this.btnHistoryNew.FlatAppearance.BorderSize = 0;
+            this.btnHistoryNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistoryNew.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistoryNew.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHistoryNew.Image = ((System.Drawing.Image)(resources.GetObject("btnHistoryNew.Image")));
+            this.btnHistoryNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistoryNew.Location = new System.Drawing.Point(16, 305);
+            this.btnHistoryNew.Name = "btnHistoryNew";
+            this.btnHistoryNew.Size = new System.Drawing.Size(164, 71);
+            this.btnHistoryNew.TabIndex = 3;
+            this.btnHistoryNew.Text = "  History";
+            this.btnHistoryNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHistoryNew.UseVisualStyleBackColor = true;
+            this.btnHistoryNew.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
+            // btnPaymentNew
+            // 
+            this.btnPaymentNew.FlatAppearance.BorderSize = 0;
+            this.btnPaymentNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaymentNew.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaymentNew.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPaymentNew.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentNew.Image")));
+            this.btnPaymentNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPaymentNew.Location = new System.Drawing.Point(16, 238);
+            this.btnPaymentNew.Name = "btnPaymentNew";
+            this.btnPaymentNew.Size = new System.Drawing.Size(164, 71);
+            this.btnPaymentNew.TabIndex = 2;
+            this.btnPaymentNew.Text = "  Payment";
+            this.btnPaymentNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPaymentNew.UseVisualStyleBackColor = true;
+            this.btnPaymentNew.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(16, 171);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 61);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "  Profile";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // btnHomeNew
+            // 
+            this.btnHomeNew.FlatAppearance.BorderSize = 0;
+            this.btnHomeNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomeNew.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomeNew.ForeColor = System.Drawing.Color.White;
+            this.btnHomeNew.Image = ((System.Drawing.Image)(resources.GetObject("btnHomeNew.Image")));
+            this.btnHomeNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHomeNew.Location = new System.Drawing.Point(16, 94);
+            this.btnHomeNew.Name = "btnHomeNew";
+            this.btnHomeNew.Size = new System.Drawing.Size(164, 71);
+            this.btnHomeNew.TabIndex = 0;
+            this.btnHomeNew.Text = "  Home";
+            this.btnHomeNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHomeNew.UseVisualStyleBackColor = true;
+            this.btnHomeNew.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
             // Profile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 781);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1093, 742);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabUserRegister);
-            this.Controls.Add(this.navpan);
-            this.Controls.Add(this.lblHeading);
-            this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.lblP500);
             this.Name = "Profile";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Profile_Load);
-            this.navpan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.tabUserRegister.ResumeLayout(false);
             this.tabPersonalDetail.ResumeLayout(false);
@@ -1513,25 +1639,17 @@
             this.tabCardDetail.ResumeLayout(false);
             this.tabCardDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCard)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroPanel navpan;
-        private MetroFramework.Controls.MetroButton btnBeneficiary;
-        private MetroFramework.Controls.MetroButton btnScheduel;
-        private MetroFramework.Controls.MetroButton btnHistory;
-        private MetroFramework.Controls.MetroButton btnPayment;
-        private MetroFramework.Controls.MetroButton btnProfile;
-        private MetroFramework.Controls.MetroButton btnHome;
-        private MetroFramework.Controls.MetroLabel lblHeading;
-        private MetroFramework.Controls.MetroLabel lblUser;
         private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
-        private MetroFramework.Controls.MetroLabel lblP500;
         private MetroFramework.Controls.MetroTabControl tabUserRegister;
         private MetroFramework.Controls.MetroTabPage tabPersonalDetail;
         private MetroFramework.Controls.MetroButton btnUpdatePI;
@@ -1600,5 +1718,24 @@
         private System.Windows.Forms.DataGridView dgvEFT;
         private MetroFramework.Controls.MetroTextBox txtAccHolder;
         private MetroFramework.Controls.MetroLabel metroLabel17;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnProfileImage;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBeneficiaryNew;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnScheduleNew;
+        private System.Windows.Forms.Button btnHistoryNew;
+        private System.Windows.Forms.Button btnPaymentNew;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHomeNew;
     }
 }
