@@ -17,6 +17,7 @@ namespace Project500
         public Home()
         {
             InitializeComponent();
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         }
 
         private void Home_Load(object sender, EventArgs e)

@@ -77,6 +77,7 @@
             this.btnBeneficiary.TabIndex = 7;
             this.btnBeneficiary.Text = "Benefchiary";
             this.btnBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnBeneficiary.UseSelectable = true;
             this.btnBeneficiary.Click += new System.EventHandler(this.btnBeneficiary_Click);
             // 
             // btnScheduel
@@ -88,6 +89,7 @@
             this.btnScheduel.TabIndex = 6;
             this.btnScheduel.Text = "View Scheduel";
             this.btnScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnScheduel.UseSelectable = true;
             this.btnScheduel.Click += new System.EventHandler(this.btnScheduel_Click);
             // 
             // btnHistory
@@ -99,6 +101,7 @@
             this.btnHistory.TabIndex = 5;
             this.btnHistory.Text = "View History";
             this.btnHistory.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHistory.UseSelectable = true;
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnPayment
@@ -110,6 +113,7 @@
             this.btnPayment.TabIndex = 4;
             this.btnPayment.Text = "Make Payment";
             this.btnPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnPayment.UseSelectable = true;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnProfile
@@ -121,6 +125,7 @@
             this.btnProfile.TabIndex = 3;
             this.btnProfile.Text = "Profile";
             this.btnProfile.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnProfile.UseSelectable = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
@@ -132,6 +137,7 @@
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHome.UseSelectable = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // lblHeading
@@ -183,22 +189,26 @@
             this.tcNotifications.Size = new System.Drawing.Size(925, 438);
             this.tcNotifications.TabIndex = 60;
             this.tcNotifications.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tcNotifications.UseSelectable = true;
             // 
             // tabNotifications
             // 
             this.tabNotifications.HorizontalScrollbarBarColor = true;
-            this.tabNotifications.Location = new System.Drawing.Point(4, 39);
+            this.tabNotifications.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabNotifications.HorizontalScrollbarSize = 10;
+            this.tabNotifications.Location = new System.Drawing.Point(4, 38);
             this.tabNotifications.Name = "tabNotifications";
-            this.tabNotifications.Size = new System.Drawing.Size(917, 395);
+            this.tabNotifications.Size = new System.Drawing.Size(917, 396);
             this.tabNotifications.TabIndex = 0;
             this.tabNotifications.Text = "Yourr Daily Notofications";
             this.tabNotifications.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabNotifications.VerticalScrollbarBarColor = true;
+            this.tabNotifications.VerticalScrollbarHighlightOnWheel = false;
+            this.tabNotifications.VerticalScrollbarSize = 10;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1093, 742);
             this.Controls.Add(this.tcNotifications);
             this.Controls.Add(this.lblHeading);

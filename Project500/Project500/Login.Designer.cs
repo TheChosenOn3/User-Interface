@@ -49,7 +49,7 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblHeader.Location = new System.Drawing.Point(226, 99);
+            this.lblHeader.Location = new System.Drawing.Point(242, 103);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(115, 25);
             this.lblHeader.TabIndex = 50;
@@ -162,8 +162,7 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(613, 418);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
