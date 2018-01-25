@@ -7,7 +7,15 @@ namespace Entities1
 {
     public class User 
     {
-      
+        private string id;
+
+        public string Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+
         private string name;
 
         public string Name

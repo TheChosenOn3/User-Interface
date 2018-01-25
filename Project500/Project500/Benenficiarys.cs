@@ -51,10 +51,21 @@ namespace Project500
 
         // method to populate datagrid beneficharys
         public void FillBeneficiaryDatagrid(List<Beneficiary> BenDataGridList) {
+           
+            DataTable bentable = ConvertListToDataTable(BeneficiaryList);
+            dgvBeneficiary.DataSource = bentable;
+             DataTable ConvertListToDataTable(List<Beneficiary> benlist)
+            {
+                DataTable table = new DataTable();
+                table.Columns.Add("Beneficairy Nme");
+                table.Columns.Add("Beneficiary Branch");
+                foreach (Beneficiary item in benlist)
+                { 
+                    table.Rows.Add(item.BeneficairyName,item.BeneficiaryBranch);
+                }
+                  return table;
+            }
 
-          BindingSource BenBinding = new BindingSource();
-           BenBinding.Add(BenDataGridList);
-            dgvBeneficiary.DataSource = BenBinding;
         }
         // method to populate crypto datagrid of beneficiary
         public void FillCryptoDatagrid(string selectedben, List<PaymentAccount> CryptoList)
@@ -66,9 +77,7 @@ namespace Project500
         // method to populate eft datagrid of beneficiary
         public void FillEFTDatagrid(string selectedben, List<PaymentAccount> EFTList)
         {
-            BindingSource EFTBind = new BindingSource();
-            EFTBind.Add(EFTList);
-            dgvEFT.DataSource = EFTBind;
+         
         }
         private void txtBID_Click(object sender, EventArgs e)
         {
@@ -127,14 +136,17 @@ namespace Project500
 
         private void dgvBeneficiary_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // ben = the selected ben from the datagrid
+            // get ben
+            int index = e.RowIndex;
+            ben = BeneficiaryList[index];
             //BenEFTList =
+            
+
             //BenCryptoList =
             txtBName.Text = ben.BeneficairyName;
             txtBID.Text = ben.BeneficairyID;
             txtBBranchCode.Text = ben.BeneficiaryBranch;
-            FillEFTDatagrid(ben.BeneficairyName, BenEFTList);
-            FillCryptoDatagrid(ben.BeneficairyName,BenCryptoList);
+          
 
         }
 

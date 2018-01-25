@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controllers;
 using Entities1;
 namespace Project500
 {
@@ -27,10 +28,18 @@ namespace Project500
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            Main main = new Main();
-            this.Hide();
-            main.Show();
-            
+            string username = txtUsername.Text.Trim();
+            string passworrd = txtPassword.Text.Trim();
+            User _user = UserController.CheckLogin(username, passworrd);
+            if (_user.RsaID!=null)
+            {
+                Main main = new Main();
+                this.Hide();
+                main.Show();
+
+            }
+            else { MessageBox.Show("Credentials are wrong"); }
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
