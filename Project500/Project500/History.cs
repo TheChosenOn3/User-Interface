@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities1;
 
 namespace Project500
 {
@@ -17,7 +18,13 @@ namespace Project500
         {
             InitializeComponent();
         }
-
+        // method to populate datagrid Added payments
+        public void FillPaymentsDatagrid(List<Payment> PaymentDataGridList)
+        {
+            BindingSource PayBinding = new BindingSource();
+            PayBinding.Add(PaymentDataGridList);
+            dgvPayments.DataSource = PayBinding;
+        }
         private void History_Load(object sender, EventArgs e)
         {
 

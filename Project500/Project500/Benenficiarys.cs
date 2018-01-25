@@ -41,7 +41,7 @@ namespace Project500
         public void FillBeneficiaryDatagrid(List<Beneficiary> BenDataGridList) {
 
           BindingSource BenBinding = new BindingSource();
-           BenBinding.Add(BenBinding);
+           BenBinding.Add(BenDataGridList);
             dgvBeneficiary.DataSource = BenBinding;
         }
         // method to populate crypto datagrid of beneficiary
