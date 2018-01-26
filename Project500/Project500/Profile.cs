@@ -500,18 +500,48 @@ namespace Project500
 
         private void metroButton6_Click(object sender, EventArgs e)
         {
-            CardController.DeleteCard(Card.CardNr);
-            UserCardList.Remove(Card);
-            ClearCard();
-            FillUserCardDatagrid(UserCardList);
+            bool go = false;
+            foreach (Card item in UserCardList)
+            {
+                if (txtCardNum.Text.Trim() == item.CardNr)
+                {
+                    CardController.DeleteCard(Card.CardNr);
+                    UserCardList.Remove(Card);
+                    ClearCard();
+                    FillUserCardDatagrid(UserCardList);
+                    go = true;
+                    break;
+                }
+            }
+            if (go != true)
+            {
+                MessageBox.Show("Sorry the Account deos not exsist that you are trying to delete");
+            }
+
         }
 
         private void metroButton7_Click(object sender, EventArgs e)
         {
-            SendUserCardAccUp();
-            //update the list
-            ClearCard();
-            FillUserCardDatagrid(UserCardList);
+
+            bool go = false;
+            Card eftup = new Card();
+            foreach (Card item in UserCardList)
+            {
+                if (txtCardNum.Text == item.CardNr)
+                {
+                    UserCardList.Remove(item);
+                    UserCardList.Add(new Card(txtCardNum.Text.Trim(),txtCardHolder.Text.Trim(),txtCVV.Text.Trim(),DateTime.Now,user.RsaID));
+                    SendUserCardAccUp();
+                    ClearCard();
+                    FillUserCardDatagrid(UserCardList);
+                    go = true;
+                    break;
+                }
+            }
+            if (go != true)
+            {
+                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+            }
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -571,12 +601,27 @@ namespace Project500
         }
 
         private void btnCSubmit_Click(object sender, EventArgs e)
-        {///cehck if it alreddy exis
-            //check for aclidation
-            SendUserCardAcc();
-            UserCardList.Add(makecard());
-            ClearCard();
-            FillUserCardDatagrid(UserCardList);
+        {    //check for aclidation
+            bool go = false;
+            foreach (Card item in UserCardList)
+            {
+                if (txtCardNum.Text.Trim() == item.CardNr)
+                {
+                    go = true;
+                    break;
+                }
+            }
+            if (go == false)
+            {
+                SendUserCardAcc();
+                UserCardList.Add(makecard());
+                ClearCard();
+                FillUserCardDatagrid(UserCardList);
+            }
+            else
+            {
+                MessageBox.Show("Sorry the Account alreddy exists");
+            }
         }
 
         private void BtnCClear_Click(object sender, EventArgs e)
@@ -655,7 +700,7 @@ namespace Project500
             {
                 if (txtEFTNum.Text == item.AccountNumber)
                 {
-                    UserEFTList.Remove(eftup);
+                    UserEFTList.Remove(item);
                     AccountTypes Acounttype = new AccountTypes();
                     switch (cbPaymentType.SelectedIndex)
                     {
@@ -718,7 +763,7 @@ namespace Project500
             bool go = false;
             foreach (PaymentAccount item in UserEFTList)
             {
-                if (txtEFTNum.Text == item.AccountNumber)
+                if (txtEFTNum.Text.Trim() == item.AccountNumber)
                 {
                     go = true;
                     break;
