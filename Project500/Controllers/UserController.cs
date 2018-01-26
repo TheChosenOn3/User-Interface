@@ -21,11 +21,7 @@ namespace Controllers
             var response = client.GetStringAsync(path).Result;
             _user = (User)JsonConvert.DeserializeObject<User>(response);
             return _user;
-            //wegfs
-            //ewfa
-
-
-
+         
         }
 
         public static bool registerUser(User newUser)
@@ -42,17 +38,11 @@ namespace Controllers
                 return true;//User Added to DB successfuly
             }
             return false;//something went wrong
-
-
-
         }
         public static bool UpdateUser(User newUser)
         {
             
             return true;//something went wrong
-
-
-
         }
 
 

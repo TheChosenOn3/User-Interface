@@ -162,7 +162,7 @@ namespace Project500
 
         private void btnAddB_Click(object sender, EventArgs e)
         {
-            ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text);
+            ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text,user.Id);
             txtBName.Text = "";
             txtBID.Text = "";
             txtBBranchCode.Text = "";
@@ -180,7 +180,7 @@ namespace Project500
         private void btnUpdateBPI_Click(object sender, EventArgs e)
         {
             // cehck if ben alreddy exist then update
-            ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text);
+            ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text,user.Id);
             txtBName.Text = "";
             txtBID.Text = "";
             txtBBranchCode.Text = "";

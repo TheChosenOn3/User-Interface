@@ -39,7 +39,7 @@ namespace Project500
         {
             //dummy data
             UserCardList = CardController.RetrveCards(user.RsaID);
-            UserEFTList = PaymentsAccountController.RetrveAcounts(user.RsaID);
+            UserEFTList = PaymentsAccountController.SearchBenPaymentAcount(user.RsaID);
           //fill datagrids
             FillUserEFTDatagrid(UserEFTList);
             FillUserCardDatagrid(UserCardList);

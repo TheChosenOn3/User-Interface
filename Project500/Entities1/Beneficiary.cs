@@ -28,14 +28,16 @@ namespace Entities1
             get { return beneficiaryBranch; }
             set { beneficiaryBranch = value; }
         }
-
+        string userId;
         public string Id1 { get => Id; set => Id = value; }
+        public string UserId { get => userId; set => userId = value; }
 
-        public Beneficiary(string BeneficairyID, string BeneficairyName, string BeneficiaryBranch)
+        public Beneficiary(string BeneficairyID, string BeneficairyName, string BeneficiaryBranch,string UserId)
         {
             this.beneficiaryBranch = BeneficiaryBranch;
             this.beneficiaryID = BeneficairyID;
             this.beneficiaryName = BeneficairyName;
+            this.userId = UserId;
 
 
         }

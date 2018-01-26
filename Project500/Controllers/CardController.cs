@@ -7,7 +7,8 @@ using Newtonsoft.Json;
 
 namespace Controllers
 {
-   public class CardController
+    
+    public class CardController
     {
         static HttpClient client;
         public static bool AddCard()
@@ -26,7 +27,6 @@ namespace Controllers
         public static List<Card> RetrveCards(string userId)
         {
           
-
             //    string path = "http://localhost:49860/api/Card/";
             //    client = new HttpClient();
             //List<Card> cards = new List<Card>();
@@ -39,11 +39,10 @@ namespace Controllers
             //    //ewfa
             //wesdf
     
-
             List<Card> UserCardList = new List<Card>();
-            UserCardList.Add(new Card("262464", "EthanKilian", "321", DateTime.Now, "11111"));
-            UserCardList.Add(new Card("2222", "EthanKilian", "222", DateTime.Now, "11111"));
-            UserCardList.Add(new Card("33123", "EthanKilian", "111", DateTime.Now, "11111"));
+            UserCardList.Add(new Card("262464", "EthanKilian", "321", DateTime.Now, "1234"));
+            UserCardList.Add(new Card("2222", "EthanKilian", "222", DateTime.Now, "1234"));
+            UserCardList.Add(new Card("33123", "EthanKilian", "111", DateTime.Now, "1234"));
 
             return UserCardList;
         }
