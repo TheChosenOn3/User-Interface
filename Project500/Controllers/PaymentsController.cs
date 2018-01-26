@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Controllers
 {
-    class PaymentsController
+   public class PaymentsController
     {
+       
     }
 }

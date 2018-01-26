@@ -78,8 +78,6 @@
             this.dgvCrypto = new System.Windows.Forms.DataGridView();
             this.txtWalletName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.cbCryptoType = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.btnAddCrypto = new MetroFramework.Controls.MetroButton();
             this.btnClearCrypto = new MetroFramework.Controls.MetroButton();
             this.txtWalletCode = new MetroFramework.Controls.MetroTextBox();
@@ -114,6 +112,8 @@
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.lblCompanyName = new MetroFramework.Controls.MetroLabel();
             this.lblUser = new MetroFramework.Controls.MetroLabel();
+            this.txtCryptAmount = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.navpan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tabUserRegister.SuspendLayout();
@@ -257,7 +257,7 @@
             this.tabUserRegister.Controls.Add(this.tabCardDetail);
             this.tabUserRegister.Location = new System.Drawing.Point(144, 121);
             this.tabUserRegister.Name = "tabUserRegister";
-            this.tabUserRegister.SelectedIndex = 0;
+            this.tabUserRegister.SelectedIndex = 3;
             this.tabUserRegister.Size = new System.Drawing.Size(987, 618);
             this.tabUserRegister.TabIndex = 11;
             this.tabUserRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -930,13 +930,13 @@
             // 
             // tabCryptoDetail
             // 
+            this.tabCryptoDetail.Controls.Add(this.txtCryptAmount);
+            this.tabCryptoDetail.Controls.Add(this.metroLabel13);
             this.tabCryptoDetail.Controls.Add(this.btnDeleteCrypto);
             this.tabCryptoDetail.Controls.Add(this.btnUpateCrypto);
             this.tabCryptoDetail.Controls.Add(this.dgvCrypto);
             this.tabCryptoDetail.Controls.Add(this.txtWalletName);
             this.tabCryptoDetail.Controls.Add(this.metroLabel19);
-            this.tabCryptoDetail.Controls.Add(this.cbCryptoType);
-            this.tabCryptoDetail.Controls.Add(this.metroLabel20);
             this.tabCryptoDetail.Controls.Add(this.btnAddCrypto);
             this.tabCryptoDetail.Controls.Add(this.btnClearCrypto);
             this.tabCryptoDetail.Controls.Add(this.txtWalletCode);
@@ -957,7 +957,7 @@
             // 
             // btnDeleteCrypto
             // 
-            this.btnDeleteCrypto.Location = new System.Drawing.Point(216, 270);
+            this.btnDeleteCrypto.Location = new System.Drawing.Point(216, 388);
             this.btnDeleteCrypto.Name = "btnDeleteCrypto";
             this.btnDeleteCrypto.Size = new System.Drawing.Size(119, 44);
             this.btnDeleteCrypto.TabIndex = 63;
@@ -968,7 +968,7 @@
             // 
             // btnUpateCrypto
             // 
-            this.btnUpateCrypto.Location = new System.Drawing.Point(36, 270);
+            this.btnUpateCrypto.Location = new System.Drawing.Point(36, 388);
             this.btnUpateCrypto.Name = "btnUpateCrypto";
             this.btnUpateCrypto.Size = new System.Drawing.Size(119, 44);
             this.btnUpateCrypto.TabIndex = 62;
@@ -1030,32 +1030,9 @@
             this.metroLabel19.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel19.Click += new System.EventHandler(this.metroLabel19_Click);
             // 
-            // cbCryptoType
-            // 
-            this.cbCryptoType.FormattingEnabled = true;
-            this.cbCryptoType.ItemHeight = 24;
-            this.cbCryptoType.Location = new System.Drawing.Point(194, 31);
-            this.cbCryptoType.Name = "cbCryptoType";
-            this.cbCryptoType.Size = new System.Drawing.Size(121, 30);
-            this.cbCryptoType.TabIndex = 58;
-            this.cbCryptoType.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.cbCryptoType.UseSelectable = true;
-            this.cbCryptoType.SelectedIndexChanged += new System.EventHandler(this.metroComboBox4_SelectedIndexChanged);
-            // 
-            // metroLabel20
-            // 
-            this.metroLabel20.AutoSize = true;
-            this.metroLabel20.Location = new System.Drawing.Point(30, 31);
-            this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(82, 20);
-            this.metroLabel20.TabIndex = 57;
-            this.metroLabel20.Text = "Crypto type";
-            this.metroLabel20.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel20.Click += new System.EventHandler(this.metroLabel20_Click);
-            // 
             // btnAddCrypto
             // 
-            this.btnAddCrypto.Location = new System.Drawing.Point(216, 200);
+            this.btnAddCrypto.Location = new System.Drawing.Point(216, 318);
             this.btnAddCrypto.Name = "btnAddCrypto";
             this.btnAddCrypto.Size = new System.Drawing.Size(119, 44);
             this.btnAddCrypto.TabIndex = 56;
@@ -1066,7 +1043,7 @@
             // 
             // btnClearCrypto
             // 
-            this.btnClearCrypto.Location = new System.Drawing.Point(32, 200);
+            this.btnClearCrypto.Location = new System.Drawing.Point(32, 318);
             this.btnClearCrypto.Name = "btnClearCrypto";
             this.btnClearCrypto.Size = new System.Drawing.Size(119, 44);
             this.btnClearCrypto.TabIndex = 55;
@@ -1607,6 +1584,47 @@
             this.lblUser.Text = "User";
             this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // txtCryptAmount
+            // 
+            // 
+            // 
+            // 
+            this.txtCryptAmount.CustomButton.Image = null;
+            this.txtCryptAmount.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtCryptAmount.CustomButton.Name = "";
+            this.txtCryptAmount.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCryptAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCryptAmount.CustomButton.TabIndex = 1;
+            this.txtCryptAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCryptAmount.CustomButton.UseSelectable = true;
+            this.txtCryptAmount.CustomButton.Visible = false;
+            this.txtCryptAmount.Lines = new string[0];
+            this.txtCryptAmount.Location = new System.Drawing.Point(194, 179);
+            this.txtCryptAmount.MaxLength = 32767;
+            this.txtCryptAmount.Name = "txtCryptAmount";
+            this.txtCryptAmount.PasswordChar = '\0';
+            this.txtCryptAmount.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCryptAmount.SelectedText = "";
+            this.txtCryptAmount.SelectionLength = 0;
+            this.txtCryptAmount.SelectionStart = 0;
+            this.txtCryptAmount.ShortcutsEnabled = true;
+            this.txtCryptAmount.Size = new System.Drawing.Size(127, 23);
+            this.txtCryptAmount.TabIndex = 65;
+            this.txtCryptAmount.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtCryptAmount.UseSelectable = true;
+            this.txtCryptAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCryptAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.Location = new System.Drawing.Point(36, 182);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(109, 20);
+            this.metroLabel13.TabIndex = 64;
+            this.metroLabel13.Text = "Wallet ammount";
+            this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1682,8 +1700,6 @@
         private MetroFramework.Controls.MetroTabPage tabCryptoDetail;
         private MetroFramework.Controls.MetroTextBox txtWalletName;
         private MetroFramework.Controls.MetroLabel metroLabel19;
-        private MetroFramework.Controls.MetroComboBox cbCryptoType;
-        private MetroFramework.Controls.MetroLabel metroLabel20;
         private MetroFramework.Controls.MetroButton btnAddCrypto;
         private MetroFramework.Controls.MetroButton btnClearCrypto;
         private MetroFramework.Controls.MetroTextBox txtWalletCode;
@@ -1727,5 +1743,7 @@
         private MetroFramework.Controls.MetroTextBox txtCountry;
         private MetroFramework.Controls.MetroLabel metroLabel26;
         private System.Windows.Forms.ComboBox cmbPaymentType;
+        private MetroFramework.Controls.MetroTextBox txtCryptAmount;
+        private MetroFramework.Controls.MetroLabel metroLabel13;
     }
 }

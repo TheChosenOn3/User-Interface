@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,6 +11,7 @@ namespace Entities1
     }
     public class PaymentAccount
     {
+        string Id;
         private string accountNumber;
 
         public string AccountNumber
@@ -34,7 +36,7 @@ namespace Entities1
         }
         private AccountTypes typeAcc;
 
-      
+        string userID;
 
         public AccountTypes TypeAcc
         {
@@ -44,16 +46,17 @@ namespace Entities1
 
         string beneficiaryID;
         public string BeneficiaryID { get => beneficiaryID; set => beneficiaryID = value; }
+        public string Id1 { get => Id; set => Id = value; }
+        public string UserID { get => userID; set => userID = value; }
 
-        
-
-        public PaymentAccount(string AccountNumber, string AccountHolder, string Reference, AccountTypes TypeAcc,string BeneficiaryID)
+        public PaymentAccount(string AccountNumber, string AccountHolder, string Reference, AccountTypes TypeAcc,string BeneficiaryID,string UserId)
         {
             this.accountNumber = AccountNumber;
             this.accountHolder = AccountHolder;
             this.reference = Reference;
             this.typeAcc = TypeAcc;
             this.beneficiaryID = BeneficiaryID;
+            this.userID = UserId;
         }
 
         public PaymentAccount()

@@ -29,8 +29,7 @@ namespace Project500
 
         private void Main_Load(object sender, EventArgs e)
         {
-            lblHeading.Text = user.Name;
-            lblCompanyName.Text = user.BusinessName;
+           
             
         }
 
@@ -79,6 +78,13 @@ namespace Project500
             Benenficiarys beneficiarys = new Benenficiarys();
             this.Hide();
             beneficiarys.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            this.Hide();
+            profile.Show();
         }
     }
 }

@@ -6,6 +6,7 @@ namespace Entities1
 {
    public class Beneficiary
     {
+        string Id;
         private string beneficiaryID;
 
         public string BeneficairyID
@@ -27,8 +28,9 @@ namespace Entities1
             get { return beneficiaryBranch; }
             set { beneficiaryBranch = value; }
         }
-      
-       
+
+        public string Id1 { get => Id; set => Id = value; }
+
         public Beneficiary(string BeneficairyID, string BeneficairyName, string BeneficiaryBranch)
         {
             this.beneficiaryBranch = BeneficiaryBranch;

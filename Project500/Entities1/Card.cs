@@ -6,8 +6,9 @@ namespace Entities1
 {
   public  class Card
     {
+        string Id;
         private string cardNr;
-
+        string userId;
         public string CardNr
         {
             get { return cardNr; }
@@ -33,16 +34,22 @@ namespace Entities1
 
         public DateTime Expiry
         {
+
             get { return expiry; }
             set { expiry = value; }
         }
 
-        public Card(string CardNr, string AccountHolder, string Cvv, DateTime Expiry)
+        public string Id1 { get => Id; set => Id = value; }
+        public string UserId { get => userId; set => userId = value; }
+
+        public Card(string CardNr, string AccountHolder, string Cvv, DateTime Expiry,string UseId)
         {
             this.cardNr = CardNr;
             this.accountHolder = AccountHolder;
-            this.Cvv = cvv;
+            this.cvv = Cvv;
             this.expiry = Expiry;
+            this.userId = UserId;
+
         }
 
 
