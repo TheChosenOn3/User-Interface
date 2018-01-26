@@ -14,13 +14,16 @@ namespace Project500
 {
     public partial class Profile : MetroFramework.Forms.MetroForm
     {
-        
-        //dummy data
-        User user = new User("ethan", "1234567890123", "kilina", "0989788433", "SouthAfrika/Gouteng/pretoria/Erasmuskloof/kasuka/123", "ethankilian5@gmail.com", "1234", "Active", "Sybrin");
 
+        //dummy data
+        User user = new User();
         List<PaymentAccount> UserEFTList = new List<PaymentAccount>();
         List<Card> UserCardList = new List<Card>();
-     
+        List<Crypto> UserCryptoList = new List<Crypto>();
+        // wat de seop hier gebeer is nog onseker
+        string Waletname = "BTCACC";
+        float Waletammount = 1234;
+        string WalletID = "234567890";
         Card Card = new Card();
         PaymentAccount EFT = new PaymentAccount();
 
@@ -36,10 +39,12 @@ namespace Project500
         }
 
         private void Profile_Load(object sender, EventArgs e)
-        {
-            //dummy data
+        {//populate mar dei random fields van btc
+            
+
             UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchBenPaymentAcount(user.RsaID);
+            
           //fill datagrids
             FillUserEFTDatagrid(UserEFTList);
             FillUserCardDatagrid(UserCardList);

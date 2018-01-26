@@ -22,23 +22,33 @@ namespace Project500
         private void Login_Load(object sender, EventArgs e)
         {
 
-           // btnLogin.Enabled = false;
+         
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
             string username = txtUsername.Text.Trim();
             string passworrd = txtPassword.Text.Trim();
-            User _user = UserController.CheckLogin(username, passworrd);
-            if (_user.RsaID!=null)
+            
+            if (username == "" || passworrd == "")
             {
-                Main main = new Main(_user);
-                this.Hide();
-                main.Show();
+                MessageBox.Show("Credentials are wrong");
 
             }
-            else { MessageBox.Show("Credentials are wrong"); }
+            else {
+                User _user = UserController.CheckLogin(username, passworrd);
+                if (_user.RsaID != null)
+                {
+                    Main main = new Main(_user);
+                    this.Hide();
+                    main.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Credentials are wrong");
+                }
+            }
 
         }
 
