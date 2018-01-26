@@ -43,6 +43,7 @@
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
             this.tcNotifications = new MetroFramework.Controls.MetroTabControl();
             this.tabNotifications = new MetroFramework.Controls.MetroTabPage();
+            this.lblCompanyName = new MetroFramework.Controls.MetroLabel();
             this.navpan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tcNotifications.SuspendLayout();
@@ -206,10 +207,23 @@
             this.tabNotifications.VerticalScrollbarHighlightOnWheel = false;
             this.tabNotifications.VerticalScrollbarSize = 10;
             // 
+            // lblCompanyName
+            // 
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblCompanyName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblCompanyName.Location = new System.Drawing.Point(315, 44);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(148, 25);
+            this.lblCompanyName.TabIndex = 61;
+            this.lblCompanyName.Text = "company name";
+            this.lblCompanyName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1093, 742);
+            this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.tcNotifications);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblUser);
@@ -243,5 +257,6 @@
         private MetroFramework.Controls.MetroLabel lblP500;
         private MetroFramework.Controls.MetroTabControl tcNotifications;
         private MetroFramework.Controls.MetroTabPage tabNotifications;
+        private MetroFramework.Controls.MetroLabel lblCompanyName;
     }
 }

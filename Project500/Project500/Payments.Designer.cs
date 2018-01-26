@@ -37,7 +37,6 @@
             this.btnProfile = new MetroFramework.Controls.MetroButton();
             this.btnHome = new MetroFramework.Controls.MetroButton();
             this.lblHeading = new MetroFramework.Controls.MetroLabel();
-            this.lblUser = new MetroFramework.Controls.MetroLabel();
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
@@ -71,6 +70,8 @@
             this.btnExacuteAllPayment = new MetroFramework.Controls.MetroButton();
             this.btnDeleteAllPayment = new MetroFramework.Controls.MetroButton();
             this.dgvAddedPayments = new System.Windows.Forms.DataGridView();
+            this.lblCompanyName = new MetroFramework.Controls.MetroLabel();
+            this.lblUser = new MetroFramework.Controls.MetroLabel();
             this.navpan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tcCurrentpayment.SuspendLayout();
@@ -184,18 +185,6 @@
             this.lblHeading.TabIndex = 6;
             this.lblHeading.Text = "Home";
             this.lblHeading.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblUser.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblUser.Location = new System.Drawing.Point(231, 61);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(52, 25);
-            this.lblUser.TabIndex = 8;
-            this.lblUser.Text = "User";
-            this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroStyleExtender1
             // 
@@ -643,15 +632,40 @@
             this.dgvAddedPayments.TabIndex = 63;
             this.dgvAddedPayments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddedPayments_CellContentClick);
             // 
+            // lblCompanyName
+            // 
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblCompanyName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblCompanyName.Location = new System.Drawing.Point(299, 50);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(148, 25);
+            this.lblCompanyName.TabIndex = 63;
+            this.lblCompanyName.Text = "company name";
+            this.lblCompanyName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblUser.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblUser.Location = new System.Drawing.Point(214, 66);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(52, 25);
+            this.lblUser.TabIndex = 62;
+            this.lblUser.Text = "User";
+            this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // Payments
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1144, 795);
+            this.Controls.Add(this.lblCompanyName);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.tcAddedPayments);
             this.Controls.Add(this.tcCurrentpayment);
             this.Controls.Add(this.navpan);
             this.Controls.Add(this.lblHeading);
-            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblP500);
             this.Name = "Payments";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -680,7 +694,6 @@
         private MetroFramework.Controls.MetroButton btnProfile;
         private MetroFramework.Controls.MetroButton btnHome;
         private MetroFramework.Controls.MetroLabel lblHeading;
-        private MetroFramework.Controls.MetroLabel lblUser;
         private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroLabel lblP500;
@@ -714,5 +727,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.ComboBox cbUPaymentType;
         private MetroFramework.Controls.MetroButton btnBatch;
+        private MetroFramework.Controls.MetroLabel lblCompanyName;
+        private MetroFramework.Controls.MetroLabel lblUser;
     }
 }

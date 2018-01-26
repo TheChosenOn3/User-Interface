@@ -13,7 +13,10 @@ namespace Project500
 {
     public partial class History : MetroFramework.Forms.MetroForm
     {
-        
+        public History(User user)
+        {
+            InitializeComponent();
+        }
         public History()
         {
             InitializeComponent();

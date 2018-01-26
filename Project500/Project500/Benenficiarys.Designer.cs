@@ -128,7 +128,6 @@
             this.btnHome = new MetroFramework.Controls.MetroButton();
             this.lblHeading = new MetroFramework.Controls.MetroLabel();
             this.lblP500 = new MetroFramework.Controls.MetroLabel();
-            this.lblUser = new MetroFramework.Controls.MetroLabel();
             this.tcBeneficiary = new MetroFramework.Controls.MetroTabControl();
             this.tabBeneficiary = new MetroFramework.Controls.MetroTabPage();
             this.btnDeleteB = new MetroFramework.Controls.MetroButton();
@@ -136,6 +135,8 @@
             this.btnSeachB = new MetroFramework.Controls.MetroButton();
             this.txtSearchBName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
+            this.lblCompanyName = new MetroFramework.Controls.MetroLabel();
+            this.lblUser = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPersonalDetail.SuspendLayout();
@@ -171,6 +172,7 @@
             this.metroButton2.TabIndex = 41;
             this.metroButton2.Text = "Clear Flields";
             this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.UseSelectable = true;
             // 
             // metroButton1
             // 
@@ -180,6 +182,7 @@
             this.metroButton1.TabIndex = 42;
             this.metroButton1.Text = "Submit Account";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
             // 
             // metroLabel22
             // 
@@ -200,6 +203,7 @@
             this.metroComboBox3.Size = new System.Drawing.Size(121, 30);
             this.metroComboBox3.TabIndex = 49;
             this.metroComboBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox3.UseSelectable = true;
             // 
             // metroLabel18
             // 
@@ -228,6 +232,7 @@
             this.metroButton10.TabIndex = 63;
             this.metroButton10.Text = "Update Account";
             this.metroButton10.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton10.UseSelectable = true;
             // 
             // metroLabel21
             // 
@@ -247,6 +252,7 @@
             this.metroButton4.TabIndex = 55;
             this.metroButton4.Text = "Clear Flields";
             this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton4.UseSelectable = true;
             // 
             // metroButton3
             // 
@@ -256,6 +262,7 @@
             this.metroButton3.TabIndex = 56;
             this.metroButton3.Text = "Submit Account";
             this.metroButton3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton3.UseSelectable = true;
             // 
             // metroLabel20
             // 
@@ -276,6 +283,7 @@
             this.metroComboBox4.Size = new System.Drawing.Size(121, 30);
             this.metroComboBox4.TabIndex = 58;
             this.metroComboBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox4.UseSelectable = true;
             // 
             // metroLabel19
             // 
@@ -304,6 +312,7 @@
             this.metroButton5.TabIndex = 62;
             this.metroButton5.Text = "Update Account";
             this.metroButton5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton5.UseSelectable = true;
             // 
             // tabPersonalDetail
             // 
@@ -329,6 +338,8 @@
             this.tabPersonalDetail.Controls.Add(this.btnClear);
             this.tabPersonalDetail.Controls.Add(this.metroLabel1);
             this.tabPersonalDetail.HorizontalScrollbarBarColor = true;
+            this.tabPersonalDetail.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabPersonalDetail.HorizontalScrollbarSize = 10;
             this.tabPersonalDetail.Location = new System.Drawing.Point(4, 39);
             this.tabPersonalDetail.Name = "tabPersonalDetail";
             this.tabPersonalDetail.Size = new System.Drawing.Size(192, 57);
@@ -336,6 +347,8 @@
             this.tabPersonalDetail.Text = "Personal Information";
             this.tabPersonalDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabPersonalDetail.VerticalScrollbarBarColor = true;
+            this.tabPersonalDetail.VerticalScrollbarHighlightOnWheel = false;
+            this.tabPersonalDetail.VerticalScrollbarSize = 10;
             // 
             // btnRegister
             // 
@@ -345,15 +358,40 @@
             this.btnRegister.TabIndex = 25;
             this.btnRegister.Text = "Updaet Details";
             this.btnRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnRegister.UseSelectable = true;
             // 
             // metroTextBox11
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox11.CustomButton.Image = null;
+            this.metroTextBox11.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.metroTextBox11.CustomButton.Name = "";
+            this.metroTextBox11.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox11.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox11.CustomButton.TabIndex = 1;
+            this.metroTextBox11.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox11.CustomButton.UseSelectable = true;
+            this.metroTextBox11.CustomButton.Visible = false;
+            this.metroTextBox11.Lines = new string[] {
+        "metroTextBox11"};
             this.metroTextBox11.Location = new System.Drawing.Point(207, 421);
+            this.metroTextBox11.MaxLength = 32767;
             this.metroTextBox11.Name = "metroTextBox11";
+            this.metroTextBox11.PasswordChar = '\0';
+            this.metroTextBox11.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox11.SelectedText = "";
+            this.metroTextBox11.SelectionLength = 0;
+            this.metroTextBox11.SelectionStart = 0;
+            this.metroTextBox11.ShortcutsEnabled = true;
             this.metroTextBox11.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox11.TabIndex = 24;
             this.metroTextBox11.Text = "metroTextBox11";
             this.metroTextBox11.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox11.UseSelectable = true;
+            this.metroTextBox11.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox11.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel11
             // 
@@ -377,12 +415,36 @@
             // 
             // metroTextBox9
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox9.CustomButton.Image = null;
+            this.metroTextBox9.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.metroTextBox9.CustomButton.Name = "";
+            this.metroTextBox9.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox9.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox9.CustomButton.TabIndex = 1;
+            this.metroTextBox9.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox9.CustomButton.UseSelectable = true;
+            this.metroTextBox9.CustomButton.Visible = false;
+            this.metroTextBox9.Lines = new string[] {
+        "metroTextBox9"};
             this.metroTextBox9.Location = new System.Drawing.Point(207, 385);
+            this.metroTextBox9.MaxLength = 32767;
             this.metroTextBox9.Name = "metroTextBox9";
+            this.metroTextBox9.PasswordChar = '\0';
+            this.metroTextBox9.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox9.SelectedText = "";
+            this.metroTextBox9.SelectionLength = 0;
+            this.metroTextBox9.SelectionStart = 0;
+            this.metroTextBox9.ShortcutsEnabled = true;
             this.metroTextBox9.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox9.TabIndex = 20;
             this.metroTextBox9.Text = "metroTextBox9";
             this.metroTextBox9.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox9.UseSelectable = true;
+            this.metroTextBox9.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox9.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel9
             // 
@@ -396,12 +458,36 @@
             // 
             // metroTextBox8
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox8.CustomButton.Image = null;
+            this.metroTextBox8.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.metroTextBox8.CustomButton.Name = "";
+            this.metroTextBox8.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox8.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox8.CustomButton.TabIndex = 1;
+            this.metroTextBox8.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox8.CustomButton.UseSelectable = true;
+            this.metroTextBox8.CustomButton.Visible = false;
+            this.metroTextBox8.Lines = new string[] {
+        "metroTextBox8"};
             this.metroTextBox8.Location = new System.Drawing.Point(207, 349);
+            this.metroTextBox8.MaxLength = 32767;
             this.metroTextBox8.Name = "metroTextBox8";
+            this.metroTextBox8.PasswordChar = '\0';
+            this.metroTextBox8.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox8.SelectedText = "";
+            this.metroTextBox8.SelectionLength = 0;
+            this.metroTextBox8.SelectionStart = 0;
+            this.metroTextBox8.ShortcutsEnabled = true;
             this.metroTextBox8.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox8.TabIndex = 18;
             this.metroTextBox8.Text = "metroTextBox8";
             this.metroTextBox8.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox8.UseSelectable = true;
+            this.metroTextBox8.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox8.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel8
             // 
@@ -415,12 +501,36 @@
             // 
             // metroTextBox7
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox7.CustomButton.Image = null;
+            this.metroTextBox7.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.metroTextBox7.CustomButton.Name = "";
+            this.metroTextBox7.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox7.CustomButton.TabIndex = 1;
+            this.metroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox7.CustomButton.UseSelectable = true;
+            this.metroTextBox7.CustomButton.Visible = false;
+            this.metroTextBox7.Lines = new string[] {
+        "metroTextBox7"};
             this.metroTextBox7.Location = new System.Drawing.Point(207, 310);
+            this.metroTextBox7.MaxLength = 32767;
             this.metroTextBox7.Name = "metroTextBox7";
+            this.metroTextBox7.PasswordChar = '\0';
+            this.metroTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox7.SelectedText = "";
+            this.metroTextBox7.SelectionLength = 0;
+            this.metroTextBox7.SelectionStart = 0;
+            this.metroTextBox7.ShortcutsEnabled = true;
             this.metroTextBox7.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox7.TabIndex = 16;
             this.metroTextBox7.Text = "metroTextBox7";
             this.metroTextBox7.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox7.UseSelectable = true;
+            this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel7
             // 
@@ -434,12 +544,36 @@
             // 
             // metroTextBox6
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox6.CustomButton.Image = null;
+            this.metroTextBox6.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.metroTextBox6.CustomButton.Name = "";
+            this.metroTextBox6.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox6.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox6.CustomButton.TabIndex = 1;
+            this.metroTextBox6.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox6.CustomButton.UseSelectable = true;
+            this.metroTextBox6.CustomButton.Visible = false;
+            this.metroTextBox6.Lines = new string[] {
+        "metroTextBox6"};
             this.metroTextBox6.Location = new System.Drawing.Point(207, 267);
+            this.metroTextBox6.MaxLength = 32767;
             this.metroTextBox6.Name = "metroTextBox6";
+            this.metroTextBox6.PasswordChar = '\0';
+            this.metroTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox6.SelectedText = "";
+            this.metroTextBox6.SelectionLength = 0;
+            this.metroTextBox6.SelectionStart = 0;
+            this.metroTextBox6.ShortcutsEnabled = true;
             this.metroTextBox6.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox6.TabIndex = 14;
             this.metroTextBox6.Text = "metroTextBox6";
             this.metroTextBox6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox6.UseSelectable = true;
+            this.metroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel6
             // 
@@ -453,12 +587,36 @@
             // 
             // metroTextBox5
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox5.CustomButton.Image = null;
+            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.metroTextBox5.CustomButton.Name = "";
+            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox5.CustomButton.TabIndex = 1;
+            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox5.CustomButton.UseSelectable = true;
+            this.metroTextBox5.CustomButton.Visible = false;
+            this.metroTextBox5.Lines = new string[] {
+        "metroTextBox5"};
             this.metroTextBox5.Location = new System.Drawing.Point(207, 229);
+            this.metroTextBox5.MaxLength = 32767;
             this.metroTextBox5.Name = "metroTextBox5";
+            this.metroTextBox5.PasswordChar = '\0';
+            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox5.SelectedText = "";
+            this.metroTextBox5.SelectionLength = 0;
+            this.metroTextBox5.SelectionStart = 0;
+            this.metroTextBox5.ShortcutsEnabled = true;
             this.metroTextBox5.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox5.TabIndex = 12;
             this.metroTextBox5.Text = "metroTextBox5";
             this.metroTextBox5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox5.UseSelectable = true;
+            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel5
             // 
@@ -472,12 +630,36 @@
             // 
             // metroTextBox4
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox4.CustomButton.Image = null;
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.metroTextBox4.CustomButton.Name = "";
+            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox4.CustomButton.TabIndex = 1;
+            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox4.CustomButton.UseSelectable = true;
+            this.metroTextBox4.CustomButton.Visible = false;
+            this.metroTextBox4.Lines = new string[] {
+        "metroTextBox4"};
             this.metroTextBox4.Location = new System.Drawing.Point(207, 191);
+            this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.PasswordChar = '\0';
+            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox4.SelectedText = "";
+            this.metroTextBox4.SelectionLength = 0;
+            this.metroTextBox4.SelectionStart = 0;
+            this.metroTextBox4.ShortcutsEnabled = true;
             this.metroTextBox4.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox4.TabIndex = 10;
             this.metroTextBox4.Text = "metroTextBox4";
             this.metroTextBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox4.UseSelectable = true;
+            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel4
             // 
@@ -491,12 +673,36 @@
             // 
             // metroTextBox3
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox3.CustomButton.Image = null;
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.metroTextBox3.CustomButton.Name = "";
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox3.CustomButton.TabIndex = 1;
+            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox3.CustomButton.UseSelectable = true;
+            this.metroTextBox3.CustomButton.Visible = false;
+            this.metroTextBox3.Lines = new string[] {
+        "metroTextBox3"};
             this.metroTextBox3.Location = new System.Drawing.Point(207, 153);
+            this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.PasswordChar = '\0';
+            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox3.SelectedText = "";
+            this.metroTextBox3.SelectionLength = 0;
+            this.metroTextBox3.SelectionStart = 0;
+            this.metroTextBox3.ShortcutsEnabled = true;
             this.metroTextBox3.Size = new System.Drawing.Size(127, 23);
             this.metroTextBox3.TabIndex = 8;
             this.metroTextBox3.Text = "metroTextBox3";
             this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox3.UseSelectable = true;
+            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel3
             // 
@@ -526,6 +732,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear Flields";
             this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClear.UseSelectable = true;
             // 
             // metroLabel1
             // 
@@ -546,6 +753,7 @@
             this.metroComboBox1.Size = new System.Drawing.Size(121, 30);
             this.metroComboBox1.TabIndex = 2;
             this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox1.UseSelectable = true;
             // 
             // metroLabel12
             // 
@@ -564,6 +772,7 @@
             this.BtnCClear.TabIndex = 26;
             this.BtnCClear.Text = "Clear Flields";
             this.BtnCClear.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.BtnCClear.UseSelectable = true;
             // 
             // btnCSubmit
             // 
@@ -573,6 +782,7 @@
             this.btnCSubmit.TabIndex = 27;
             this.btnCSubmit.Text = "Submit Account";
             this.btnCSubmit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnCSubmit.UseSelectable = true;
             // 
             // metroLabel13
             // 
@@ -619,6 +829,7 @@
             this.metroComboBox2.Size = new System.Drawing.Size(121, 30);
             this.metroComboBox2.TabIndex = 35;
             this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox2.UseSelectable = true;
             // 
             // metroLabel17
             // 
@@ -653,6 +864,7 @@
             this.metroButton7.TabIndex = 64;
             this.metroButton7.Text = "Update Account";
             this.metroButton7.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton7.UseSelectable = true;
             // 
             // btnUpdateCrypto
             // 
@@ -662,6 +874,7 @@
             this.btnUpdateCrypto.TabIndex = 62;
             this.btnUpdateCrypto.Text = "Update Account";
             this.btnUpdateCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpdateCrypto.UseSelectable = true;
             // 
             // dgvCrypto
             // 
@@ -675,11 +888,34 @@
             // 
             // txtWaletName
             // 
+            // 
+            // 
+            // 
+            this.txtWaletName.CustomButton.Image = null;
+            this.txtWaletName.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtWaletName.CustomButton.Name = "";
+            this.txtWaletName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtWaletName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtWaletName.CustomButton.TabIndex = 1;
+            this.txtWaletName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtWaletName.CustomButton.UseSelectable = true;
+            this.txtWaletName.CustomButton.Visible = false;
+            this.txtWaletName.Lines = new string[0];
             this.txtWaletName.Location = new System.Drawing.Point(194, 81);
+            this.txtWaletName.MaxLength = 32767;
             this.txtWaletName.Name = "txtWaletName";
+            this.txtWaletName.PasswordChar = '\0';
+            this.txtWaletName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtWaletName.SelectedText = "";
+            this.txtWaletName.SelectionLength = 0;
+            this.txtWaletName.SelectionStart = 0;
+            this.txtWaletName.ShortcutsEnabled = true;
             this.txtWaletName.Size = new System.Drawing.Size(127, 23);
             this.txtWaletName.TabIndex = 60;
             this.txtWaletName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtWaletName.UseSelectable = true;
+            this.txtWaletName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtWaletName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel25
             // 
@@ -700,6 +936,7 @@
             this.cbCryptoType.Size = new System.Drawing.Size(121, 30);
             this.cbCryptoType.TabIndex = 58;
             this.cbCryptoType.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbCryptoType.UseSelectable = true;
             // 
             // metroLabel26
             // 
@@ -719,6 +956,7 @@
             this.btnAddCrypto.TabIndex = 56;
             this.btnAddCrypto.Text = "Submit Account";
             this.btnAddCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddCrypto.UseSelectable = true;
             this.btnAddCrypto.Click += new System.EventHandler(this.btnAddCrypto_Click);
             // 
             // btnClearCrypto
@@ -729,15 +967,39 @@
             this.btnClearCrypto.TabIndex = 55;
             this.btnClearCrypto.Text = "Clear Flields";
             this.btnClearCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearCrypto.UseSelectable = true;
             this.btnClearCrypto.Click += new System.EventHandler(this.btnClearCrypto_Click);
             // 
             // txtWalletCode
             // 
+            // 
+            // 
+            // 
+            this.txtWalletCode.CustomButton.Image = null;
+            this.txtWalletCode.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtWalletCode.CustomButton.Name = "";
+            this.txtWalletCode.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtWalletCode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtWalletCode.CustomButton.TabIndex = 1;
+            this.txtWalletCode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtWalletCode.CustomButton.UseSelectable = true;
+            this.txtWalletCode.CustomButton.Visible = false;
+            this.txtWalletCode.Lines = new string[0];
             this.txtWalletCode.Location = new System.Drawing.Point(194, 131);
+            this.txtWalletCode.MaxLength = 32767;
             this.txtWalletCode.Name = "txtWalletCode";
+            this.txtWalletCode.PasswordChar = '\0';
+            this.txtWalletCode.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtWalletCode.SelectedText = "";
+            this.txtWalletCode.SelectionLength = 0;
+            this.txtWalletCode.SelectionStart = 0;
+            this.txtWalletCode.ShortcutsEnabled = true;
             this.txtWalletCode.Size = new System.Drawing.Size(127, 23);
             this.txtWalletCode.TabIndex = 54;
             this.txtWalletCode.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtWalletCode.UseSelectable = true;
+            this.txtWalletCode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtWalletCode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel28
             // 
@@ -751,11 +1013,34 @@
             // 
             // txtEFTRefernce
             // 
+            // 
+            // 
+            // 
+            this.txtEFTRefernce.CustomButton.Image = null;
+            this.txtEFTRefernce.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtEFTRefernce.CustomButton.Name = "";
+            this.txtEFTRefernce.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtEFTRefernce.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtEFTRefernce.CustomButton.TabIndex = 1;
+            this.txtEFTRefernce.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtEFTRefernce.CustomButton.UseSelectable = true;
+            this.txtEFTRefernce.CustomButton.Visible = false;
+            this.txtEFTRefernce.Lines = new string[0];
             this.txtEFTRefernce.Location = new System.Drawing.Point(184, 126);
+            this.txtEFTRefernce.MaxLength = 32767;
             this.txtEFTRefernce.Name = "txtEFTRefernce";
+            this.txtEFTRefernce.PasswordChar = '\0';
+            this.txtEFTRefernce.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtEFTRefernce.SelectedText = "";
+            this.txtEFTRefernce.SelectionLength = 0;
+            this.txtEFTRefernce.SelectionStart = 0;
+            this.txtEFTRefernce.ShortcutsEnabled = true;
             this.txtEFTRefernce.Size = new System.Drawing.Size(127, 23);
             this.txtEFTRefernce.TabIndex = 40;
             this.txtEFTRefernce.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtEFTRefernce.UseSelectable = true;
+            this.txtEFTRefernce.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtEFTRefernce.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnDeletEFT
             // 
@@ -765,6 +1050,7 @@
             this.btnDeletEFT.TabIndex = 64;
             this.btnDeletEFT.Text = "Delete Account";
             this.btnDeletEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeletEFT.UseSelectable = true;
             this.btnDeletEFT.Click += new System.EventHandler(this.btnDeletEFT_Click);
             // 
             // btnUpdateEFT
@@ -775,6 +1061,7 @@
             this.btnUpdateEFT.TabIndex = 63;
             this.btnUpdateEFT.Text = "Update Account";
             this.btnUpdateEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpdateEFT.UseSelectable = true;
             this.btnUpdateEFT.Click += new System.EventHandler(this.btnUpdateEFT_Click);
             // 
             // dgvEFT
@@ -789,11 +1076,34 @@
             // 
             // txtEFTAccNum
             // 
+            // 
+            // 
+            // 
+            this.txtEFTAccNum.CustomButton.Image = null;
+            this.txtEFTAccNum.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtEFTAccNum.CustomButton.Name = "";
+            this.txtEFTAccNum.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtEFTAccNum.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtEFTAccNum.CustomButton.TabIndex = 1;
+            this.txtEFTAccNum.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtEFTAccNum.CustomButton.UseSelectable = true;
+            this.txtEFTAccNum.CustomButton.Visible = false;
+            this.txtEFTAccNum.Lines = new string[0];
             this.txtEFTAccNum.Location = new System.Drawing.Point(180, 35);
+            this.txtEFTAccNum.MaxLength = 32767;
             this.txtEFTAccNum.Name = "txtEFTAccNum";
+            this.txtEFTAccNum.PasswordChar = '\0';
+            this.txtEFTAccNum.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtEFTAccNum.SelectedText = "";
+            this.txtEFTAccNum.SelectionLength = 0;
+            this.txtEFTAccNum.SelectionStart = 0;
+            this.txtEFTAccNum.ShortcutsEnabled = true;
             this.txtEFTAccNum.Size = new System.Drawing.Size(127, 23);
             this.txtEFTAccNum.TabIndex = 52;
             this.txtEFTAccNum.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtEFTAccNum.UseSelectable = true;
+            this.txtEFTAccNum.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtEFTAccNum.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel30
             // 
@@ -814,6 +1124,7 @@
             this.cbEFTAccType.Size = new System.Drawing.Size(121, 30);
             this.cbEFTAccType.TabIndex = 49;
             this.cbEFTAccType.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbEFTAccType.UseSelectable = true;
             // 
             // metroLabel31
             // 
@@ -833,6 +1144,7 @@
             this.btnAddEFT.TabIndex = 42;
             this.btnAddEFT.Text = "Submit Account";
             this.btnAddEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddEFT.UseSelectable = true;
             this.btnAddEFT.Click += new System.EventHandler(this.btnAddEFT_Click);
             // 
             // btnClearEFT
@@ -843,6 +1155,7 @@
             this.btnClearEFT.TabIndex = 41;
             this.btnClearEFT.Text = "Clear Flields";
             this.btnClearEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearEFT.UseSelectable = true;
             this.btnClearEFT.Click += new System.EventHandler(this.btnClearEFT_Click);
             // 
             // metroLabel32
@@ -867,13 +1180,17 @@
             this.tabPersonalDetails.Controls.Add(this.txtBName);
             this.tabPersonalDetails.Controls.Add(this.metroLabel44);
             this.tabPersonalDetails.HorizontalScrollbarBarColor = true;
-            this.tabPersonalDetails.Location = new System.Drawing.Point(4, 39);
+            this.tabPersonalDetails.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabPersonalDetails.HorizontalScrollbarSize = 10;
+            this.tabPersonalDetails.Location = new System.Drawing.Point(4, 38);
             this.tabPersonalDetails.Name = "tabPersonalDetails";
-            this.tabPersonalDetails.Size = new System.Drawing.Size(979, 322);
+            this.tabPersonalDetails.Size = new System.Drawing.Size(979, 323);
             this.tabPersonalDetails.TabIndex = 0;
             this.tabPersonalDetails.Text = "Personal Information";
             this.tabPersonalDetails.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabPersonalDetails.VerticalScrollbarBarColor = true;
+            this.tabPersonalDetails.VerticalScrollbarHighlightOnWheel = false;
+            this.tabPersonalDetails.VerticalScrollbarSize = 10;
             // 
             // btnUpdateBPI
             // 
@@ -883,6 +1200,7 @@
             this.btnUpdateBPI.TabIndex = 27;
             this.btnUpdateBPI.Text = "Updaet Beneficiary";
             this.btnUpdateBPI.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnUpdateBPI.UseSelectable = true;
             this.btnUpdateBPI.Click += new System.EventHandler(this.btnUpdateBPI_Click);
             // 
             // btnAddB
@@ -893,15 +1211,39 @@
             this.btnAddB.TabIndex = 25;
             this.btnAddB.Text = "Add Beneficiary";
             this.btnAddB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddB.UseSelectable = true;
             this.btnAddB.Click += new System.EventHandler(this.btnAddB_Click);
             // 
             // txtBBranchCode
             // 
+            // 
+            // 
+            // 
+            this.txtBBranchCode.CustomButton.Image = null;
+            this.txtBBranchCode.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtBBranchCode.CustomButton.Name = "";
+            this.txtBBranchCode.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBBranchCode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBBranchCode.CustomButton.TabIndex = 1;
+            this.txtBBranchCode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBBranchCode.CustomButton.UseSelectable = true;
+            this.txtBBranchCode.CustomButton.Visible = false;
+            this.txtBBranchCode.Lines = new string[0];
             this.txtBBranchCode.Location = new System.Drawing.Point(207, 112);
+            this.txtBBranchCode.MaxLength = 32767;
             this.txtBBranchCode.Name = "txtBBranchCode";
+            this.txtBBranchCode.PasswordChar = '\0';
+            this.txtBBranchCode.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBBranchCode.SelectedText = "";
+            this.txtBBranchCode.SelectionLength = 0;
+            this.txtBBranchCode.SelectionStart = 0;
+            this.txtBBranchCode.ShortcutsEnabled = true;
             this.txtBBranchCode.Size = new System.Drawing.Size(127, 23);
             this.txtBBranchCode.TabIndex = 22;
             this.txtBBranchCode.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtBBranchCode.UseSelectable = true;
+            this.txtBBranchCode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBBranchCode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel35
             // 
@@ -915,11 +1257,34 @@
             // 
             // txtBID
             // 
+            // 
+            // 
+            // 
+            this.txtBID.CustomButton.Image = null;
+            this.txtBID.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtBID.CustomButton.Name = "";
+            this.txtBID.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBID.CustomButton.TabIndex = 1;
+            this.txtBID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBID.CustomButton.UseSelectable = true;
+            this.txtBID.CustomButton.Visible = false;
+            this.txtBID.Lines = new string[0];
             this.txtBID.Location = new System.Drawing.Point(207, 74);
+            this.txtBID.MaxLength = 32767;
             this.txtBID.Name = "txtBID";
+            this.txtBID.PasswordChar = '\0';
+            this.txtBID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBID.SelectedText = "";
+            this.txtBID.SelectionLength = 0;
+            this.txtBID.SelectionStart = 0;
+            this.txtBID.ShortcutsEnabled = true;
             this.txtBID.Size = new System.Drawing.Size(127, 23);
             this.txtBID.TabIndex = 6;
             this.txtBID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtBID.UseSelectable = true;
+            this.txtBID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtBID.Click += new System.EventHandler(this.txtBID_Click);
             // 
             // metroLabel43
@@ -940,15 +1305,39 @@
             this.btnClearBPI.TabIndex = 4;
             this.btnClearBPI.Text = "Clear Flields";
             this.btnClearBPI.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearBPI.UseSelectable = true;
             this.btnClearBPI.Click += new System.EventHandler(this.btnClearBPI_Click);
             // 
             // txtBName
             // 
+            // 
+            // 
+            // 
+            this.txtBName.CustomButton.Image = null;
+            this.txtBName.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtBName.CustomButton.Name = "";
+            this.txtBName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBName.CustomButton.TabIndex = 1;
+            this.txtBName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBName.CustomButton.UseSelectable = true;
+            this.txtBName.CustomButton.Visible = false;
+            this.txtBName.Lines = new string[0];
             this.txtBName.Location = new System.Drawing.Point(207, 35);
+            this.txtBName.MaxLength = 32767;
             this.txtBName.Name = "txtBName";
+            this.txtBName.PasswordChar = '\0';
+            this.txtBName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBName.SelectedText = "";
+            this.txtBName.SelectionLength = 0;
+            this.txtBName.SelectionStart = 0;
+            this.txtBName.ShortcutsEnabled = true;
             this.txtBName.Size = new System.Drawing.Size(127, 23);
             this.txtBName.TabIndex = 3;
             this.txtBName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtBName.UseSelectable = true;
+            this.txtBName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel44
             // 
@@ -968,6 +1357,7 @@
             this.BtnDeletCrypto.TabIndex = 63;
             this.BtnDeletCrypto.Text = "Delete Account";
             this.BtnDeletCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.BtnDeletCrypto.UseSelectable = true;
             this.BtnDeletCrypto.Click += new System.EventHandler(this.BtnDeletCrypto_Click);
             // 
             // tabCryptoDetail
@@ -984,13 +1374,17 @@
             this.tabCryptoDetail.Controls.Add(this.txtWalletCode);
             this.tabCryptoDetail.Controls.Add(this.metroLabel28);
             this.tabCryptoDetail.HorizontalScrollbarBarColor = true;
-            this.tabCryptoDetail.Location = new System.Drawing.Point(4, 39);
+            this.tabCryptoDetail.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabCryptoDetail.HorizontalScrollbarSize = 10;
+            this.tabCryptoDetail.Location = new System.Drawing.Point(4, 38);
             this.tabCryptoDetail.Name = "tabCryptoDetail";
-            this.tabCryptoDetail.Size = new System.Drawing.Size(979, 322);
+            this.tabCryptoDetail.Size = new System.Drawing.Size(979, 323);
             this.tabCryptoDetail.TabIndex = 3;
             this.tabCryptoDetail.Text = "CryptoCurrency Acount";
             this.tabCryptoDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabCryptoDetail.VerticalScrollbarBarColor = true;
+            this.tabCryptoDetail.VerticalScrollbarHighlightOnWheel = false;
+            this.tabCryptoDetail.VerticalScrollbarSize = 10;
             // 
             // tcBAcounts
             // 
@@ -1003,6 +1397,7 @@
             this.tcBAcounts.Size = new System.Drawing.Size(987, 365);
             this.tcBAcounts.TabIndex = 17;
             this.tcBAcounts.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tcBAcounts.UseSelectable = true;
             // 
             // tabEFTDetail
             // 
@@ -1020,21 +1415,48 @@
             this.tabEFTDetail.Controls.Add(this.txtEFTRefernce);
             this.tabEFTDetail.Controls.Add(this.metroLabel32);
             this.tabEFTDetail.HorizontalScrollbarBarColor = true;
-            this.tabEFTDetail.Location = new System.Drawing.Point(4, 39);
+            this.tabEFTDetail.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabEFTDetail.HorizontalScrollbarSize = 10;
+            this.tabEFTDetail.Location = new System.Drawing.Point(4, 38);
             this.tabEFTDetail.Name = "tabEFTDetail";
-            this.tabEFTDetail.Size = new System.Drawing.Size(979, 322);
+            this.tabEFTDetail.Size = new System.Drawing.Size(979, 323);
             this.tabEFTDetail.TabIndex = 2;
             this.tabEFTDetail.Text = "EFT Information";
             this.tabEFTDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabEFTDetail.VerticalScrollbarBarColor = true;
+            this.tabEFTDetail.VerticalScrollbarHighlightOnWheel = false;
+            this.tabEFTDetail.VerticalScrollbarSize = 10;
             // 
             // txtAccHolder
             // 
+            // 
+            // 
+            // 
+            this.txtAccHolder.CustomButton.Image = null;
+            this.txtAccHolder.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtAccHolder.CustomButton.Name = "";
+            this.txtAccHolder.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAccHolder.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAccHolder.CustomButton.TabIndex = 1;
+            this.txtAccHolder.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAccHolder.CustomButton.UseSelectable = true;
+            this.txtAccHolder.CustomButton.Visible = false;
+            this.txtAccHolder.Lines = new string[0];
             this.txtAccHolder.Location = new System.Drawing.Point(184, 166);
+            this.txtAccHolder.MaxLength = 32767;
             this.txtAccHolder.Name = "txtAccHolder";
+            this.txtAccHolder.PasswordChar = '\0';
+            this.txtAccHolder.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAccHolder.SelectedText = "";
+            this.txtAccHolder.SelectionLength = 0;
+            this.txtAccHolder.SelectionStart = 0;
+            this.txtAccHolder.ShortcutsEnabled = true;
             this.txtAccHolder.Size = new System.Drawing.Size(127, 23);
             this.txtAccHolder.TabIndex = 66;
             this.txtAccHolder.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtAccHolder.UseSelectable = true;
+            this.txtAccHolder.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAccHolder.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel24
             // 
@@ -1079,6 +1501,7 @@
             this.btnBeneficiary.TabIndex = 7;
             this.btnBeneficiary.Text = "Benefchiary";
             this.btnBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnBeneficiary.UseSelectable = true;
             this.btnBeneficiary.Click += new System.EventHandler(this.btnBeneficiary_Click);
             // 
             // btnScheduel
@@ -1090,6 +1513,7 @@
             this.btnScheduel.TabIndex = 6;
             this.btnScheduel.Text = "View Scheduel";
             this.btnScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnScheduel.UseSelectable = true;
             this.btnScheduel.Click += new System.EventHandler(this.btnScheduel_Click);
             // 
             // btnHistory
@@ -1101,6 +1525,7 @@
             this.btnHistory.TabIndex = 5;
             this.btnHistory.Text = "View History";
             this.btnHistory.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHistory.UseSelectable = true;
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnPayment
@@ -1112,6 +1537,7 @@
             this.btnPayment.TabIndex = 4;
             this.btnPayment.Text = "Make Payment";
             this.btnPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnPayment.UseSelectable = true;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnProfile
@@ -1123,6 +1549,7 @@
             this.btnProfile.TabIndex = 3;
             this.btnProfile.Text = "Profile";
             this.btnProfile.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnProfile.UseSelectable = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
@@ -1134,6 +1561,7 @@
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnHome.UseSelectable = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // lblHeading
@@ -1160,18 +1588,6 @@
             this.lblP500.Text = "Project 500";
             this.lblP500.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblUser.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblUser.Location = new System.Drawing.Point(230, 55);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(52, 25);
-            this.lblUser.TabIndex = 15;
-            this.lblUser.Text = "User";
-            this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // tcBeneficiary
             // 
             this.tcBeneficiary.Controls.Add(this.tabBeneficiary);
@@ -1181,6 +1597,7 @@
             this.tcBeneficiary.Size = new System.Drawing.Size(987, 304);
             this.tcBeneficiary.TabIndex = 18;
             this.tcBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tcBeneficiary.UseSelectable = true;
             // 
             // tabBeneficiary
             // 
@@ -1190,13 +1607,17 @@
             this.tabBeneficiary.Controls.Add(this.txtSearchBName);
             this.tabBeneficiary.Controls.Add(this.metroLabel29);
             this.tabBeneficiary.HorizontalScrollbarBarColor = true;
-            this.tabBeneficiary.Location = new System.Drawing.Point(4, 39);
+            this.tabBeneficiary.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabBeneficiary.HorizontalScrollbarSize = 10;
+            this.tabBeneficiary.Location = new System.Drawing.Point(4, 38);
             this.tabBeneficiary.Name = "tabBeneficiary";
-            this.tabBeneficiary.Size = new System.Drawing.Size(979, 261);
+            this.tabBeneficiary.Size = new System.Drawing.Size(979, 262);
             this.tabBeneficiary.TabIndex = 0;
             this.tabBeneficiary.Text = "Lister Beneficiarys";
             this.tabBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabBeneficiary.VerticalScrollbarBarColor = true;
+            this.tabBeneficiary.VerticalScrollbarHighlightOnWheel = false;
+            this.tabBeneficiary.VerticalScrollbarSize = 10;
             this.tabBeneficiary.Click += new System.EventHandler(this.tabBeneficiary_Click);
             // 
             // btnDeleteB
@@ -1207,6 +1628,7 @@
             this.btnDeleteB.TabIndex = 64;
             this.btnDeleteB.Text = "Delete Beneficiary";
             this.btnDeleteB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeleteB.UseSelectable = true;
             this.btnDeleteB.Click += new System.EventHandler(this.btnDeleteB_Click);
             // 
             // dgvBeneficiary
@@ -1227,15 +1649,39 @@
             this.btnSeachB.TabIndex = 25;
             this.btnSeachB.Text = "Search Beneficiary";
             this.btnSeachB.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnSeachB.UseSelectable = true;
             this.btnSeachB.Click += new System.EventHandler(this.btnSeachB_Click);
             // 
             // txtSearchBName
             // 
+            // 
+            // 
+            // 
+            this.txtSearchBName.CustomButton.Image = null;
+            this.txtSearchBName.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txtSearchBName.CustomButton.Name = "";
+            this.txtSearchBName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSearchBName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearchBName.CustomButton.TabIndex = 1;
+            this.txtSearchBName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearchBName.CustomButton.UseSelectable = true;
+            this.txtSearchBName.CustomButton.Visible = false;
+            this.txtSearchBName.Lines = new string[0];
             this.txtSearchBName.Location = new System.Drawing.Point(207, 35);
+            this.txtSearchBName.MaxLength = 32767;
             this.txtSearchBName.Name = "txtSearchBName";
+            this.txtSearchBName.PasswordChar = '\0';
+            this.txtSearchBName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearchBName.SelectedText = "";
+            this.txtSearchBName.SelectionLength = 0;
+            this.txtSearchBName.SelectionStart = 0;
+            this.txtSearchBName.ShortcutsEnabled = true;
             this.txtSearchBName.Size = new System.Drawing.Size(127, 23);
             this.txtSearchBName.TabIndex = 3;
             this.txtSearchBName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtSearchBName.UseSelectable = true;
+            this.txtSearchBName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearchBName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel29
             // 
@@ -1247,17 +1693,42 @@
             this.metroLabel29.Text = "Beneficiary Name";
             this.metroLabel29.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // lblCompanyName
+            // 
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblCompanyName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblCompanyName.Location = new System.Drawing.Point(322, 50);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(148, 25);
+            this.lblCompanyName.TabIndex = 63;
+            this.lblCompanyName.Text = "company name";
+            this.lblCompanyName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblUser.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblUser.Location = new System.Drawing.Point(237, 66);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(52, 25);
+            this.lblUser.TabIndex = 62;
+            this.lblUser.Text = "User";
+            this.lblUser.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // Benenficiarys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1136, 812);
+            this.Controls.Add(this.lblCompanyName);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.tcBeneficiary);
             this.Controls.Add(this.tcBAcounts);
             this.Controls.Add(this.navpan);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblP500);
-            this.Controls.Add(this.lblUser);
             this.Name = "Benenficiarys";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Benenficiarys_Load);
@@ -1384,7 +1855,6 @@
         private MetroFramework.Controls.MetroButton btnHome;
         private MetroFramework.Controls.MetroLabel lblHeading;
         private MetroFramework.Controls.MetroLabel lblP500;
-        private MetroFramework.Controls.MetroLabel lblUser;
         private MetroFramework.Controls.MetroTabControl tcBeneficiary;
         private MetroFramework.Controls.MetroTabPage tabBeneficiary;
         private System.Windows.Forms.DataGridView dgvBeneficiary;
@@ -1394,5 +1864,7 @@
         private MetroFramework.Controls.MetroButton btnDeleteB;
         private MetroFramework.Controls.MetroTextBox txtAccHolder;
         private MetroFramework.Controls.MetroLabel metroLabel24;
+        private MetroFramework.Controls.MetroLabel lblCompanyName;
+        private MetroFramework.Controls.MetroLabel lblUser;
     }
 }

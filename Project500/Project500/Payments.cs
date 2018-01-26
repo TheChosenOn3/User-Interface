@@ -15,8 +15,11 @@ namespace Project500
     {
         Payment payment = new Payment();
         List<Payment> PaymentList = new List<Payment>();
-       
 
+        public Payments(User user)
+        {
+            InitializeComponent();
+        }
         public Payments()
         {
             InitializeComponent();

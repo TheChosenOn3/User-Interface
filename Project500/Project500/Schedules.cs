@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities1;
 
 namespace Project500
 {
@@ -20,7 +21,10 @@ namespace Project500
         {
             InitializeComponent();
         }
-
+        public Schedules(User user)
+        {
+            InitializeComponent();
+        }
         private void Schedules_Load(object sender, EventArgs e)
         {
 

@@ -33,7 +33,7 @@ namespace Project500
             User _user = UserController.CheckLogin(username, passworrd);
             if (_user.RsaID!=null)
             {
-                Main main = new Main();
+                Main main = new Main(_user);
                 this.Hide();
                 main.Show();
 
