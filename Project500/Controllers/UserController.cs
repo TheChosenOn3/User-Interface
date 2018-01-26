@@ -19,7 +19,7 @@ namespace Controllers
             //path += username + "/" + pass;
             //var response = client.GetStringAsync(path).Result;
             //_user = (User)JsonConvert.DeserializeObject<User>(response);
-            User _user = new User("ethan", "1234", "kilina", "0989788433", "SouthAfrika/Gouteng/pretoria/Erasmuskloof/kasuka/123", "ethankilian5@gmail.com", "1234", "Active", "Sybrin");
+            User _user = new User("ethan","1234", "kilina", "0989788433", "SouthAfrika/Gouteng/pretoria/Erasmuskloof/kasuka/123", "ethankilian5@gmail.com", "1234", "Active", "Sybrin");
 
             return _user;
          

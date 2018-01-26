@@ -9,13 +9,13 @@ namespace Entities1
         string Id;
         string waletaddress;
         string waletName;
-        string amount;
+        float amount;
         string beneficiaryId;
         string userId;
 
      
         public string WaletName { get => waletName; set => waletName = value; }
-        public string Amount { get => amount; set => amount = value; }
+        public float Amount { get => amount; set => amount = value; }
         public string BeneficiaryId { get => beneficiaryId; set => beneficiaryId = value; }
         public string UserId { get => userId; set => userId = value; }
         public string Waletaddress { get => waletaddress; set => waletaddress = value; }

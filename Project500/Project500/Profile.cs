@@ -26,6 +26,7 @@ namespace Project500
         string WalletID = "234567890";
         Card Card = new Card();
         PaymentAccount EFT = new PaymentAccount();
+        Crypto wallet = new Crypto();
 
 
         public Profile()
@@ -39,8 +40,11 @@ namespace Project500
         }
 
         private void Profile_Load(object sender, EventArgs e)
-        {//populate mar dei random fields van btc
-            
+        {
+            //populate mar dei random fields van btc
+            txtWalletAmount.Text = Waletammount.ToString();
+            txtWalletCode.Text = WalletID;
+            txtWalletName.Text = Waletname;
 
             UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchBenPaymentAcount(user.RsaID);
@@ -62,6 +66,7 @@ namespace Project500
             string StrNum = a[3];
             string City = a[2];
             string Country = a[0];
+
             txtCountry.Text = Country;
             txtCity.Text = City;
             txtProvince.Text = Province;
@@ -140,7 +145,7 @@ namespace Project500
             txtEFTNum.Text = "";
             txtEFTReference.Text = "";
             txtEFTHolder.Text = "";
-            cbPaymentType.SelectedItem = "";
+            cbPaymentType.SelectedIndex = -1;
         }
         //cler personal info boxes
         public void ClearPI() {
@@ -173,53 +178,46 @@ namespace Project500
         // add new card account
         public bool SendUserCardAcc()
         {
-            makecard();
-            //send new user Card acount to daniel
+            CardController.AddCard(makecard());
             return true;
         }
         // update card
         public bool SendUserCardAccUp()
         {
-            makecard();
-            //send new user Card acount to daniel to update
+            CardController.UpdateCard( makecard());
             return true;
         }
         //make new eft  
         public PaymentAccount makeneweft() {
             AccountTypes Acounttype = new AccountTypes();
-            switch (EFT.TypeAcc)
+            switch (cbPaymentType.SelectedIndex)
             {
-                case AccountTypes.Savings:
+                case 0:
                     Acounttype = AccountTypes.Savings;
                     break;
-                case AccountTypes.Cheque:
+                case 1:
                     Acounttype = AccountTypes.Cheque;
                     break;
-                case AccountTypes.Credit:
+                case 2:
                     Acounttype = AccountTypes.Credit;
                     break;
                 default:
                     break;
             }
-            PaymentAccount neweft = new PaymentAccount(txtEFTNum.Text, txtEFTHolder.Text, txtEFTReference.Text, Acounttype, "11111", "11111");
+            PaymentAccount neweft = new PaymentAccount(txtEFTNum.Text, txtEFTHolder.Text, txtEFTReference.Text, Acounttype,"",user.RsaID);
             return neweft;
         }
         // add new eft acount 
-
-        public bool SendUserEFTAcc() {
-            makeneweft();
-            //send new user eft acount to daniel
+        public bool SendUserEFTAcc()
+        {
+            PaymentsAccountController.AddUserPaymentAcount(makeneweft());
             return true;
-
         }
         // updaet new eft acount 
-        
         public bool SendUserEFTAccUp()
         {
-            makeneweft();
-            //send new user eft acount to daniel to update
+            PaymentsAccountController.AddUserPaymentAcount(makeneweft());
             return true;
-
         }
         private void navpan_Paint(object sender, PaintEventArgs e)
         {
@@ -233,42 +231,42 @@ namespace Project500
 
         private void btnBeneficiary_Click(object sender, EventArgs e)
         {
-            Benenficiarys beneficiarys = new Benenficiarys();
+            Benenficiarys beneficiarys = new Benenficiarys(user);
             this.Hide();
             beneficiarys.Show();
         }
 
         private void btnScheduel_Click(object sender, EventArgs e)
         {
-            Schedules scheduels = new Schedules();
+            Schedules scheduels = new Schedules(user);
             this.Hide();
             scheduels.Show();
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            History history = new History();
+            History history = new History(user);
             this.Hide();
             history.Show();
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            Payments payments = new Payments();
+            Payments payments = new Payments(user);
             this.Hide();
             payments.Show();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            Profile profile = new Profile();
+            Profile profile = new Profile(user);
             this.Hide();
             profile.Show();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
+            Main main = new Main(user);
             this.Hide();
             main.Show();
         }
@@ -439,12 +437,18 @@ namespace Project500
 
         private void metroButton5_Click(object sender, EventArgs e)
         {
+            Waletname = txtWalletName.Text.Trim();
+            Waletammount += float.Parse(txtWalletAmount.Text.Trim());
+            txtWalletCode.Text = WalletID;
+            txtWalletName.Text = Waletname;
+            txtWalletAmount.Text = Waletammount.ToString();
+
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            wallet = new Crypto(Waletname, txtWalletCode.Text, txtWalletAmount.Text);
         }
 
         private void metroTextBox14_Click(object sender, EventArgs e)
@@ -474,7 +478,9 @@ namespace Project500
 
         private void metroButton4_Click(object sender, EventArgs e)
         {
-
+            txtWalletName.Text = "";
+            txtWalletCode.Text = "";
+            txtWalletAmount.Text = "";
         }
 
         private void metroTextBox16_Click(object sender, EventArgs e)
@@ -494,10 +500,8 @@ namespace Project500
 
         private void metroButton6_Click(object sender, EventArgs e)
         {
-
-            //send thrue Card to ddelete to daniel
+            CardController.DeleteCard(Card.CardNr);
             UserCardList.Remove(Card);
-            FillUserCardDatagrid(UserCardList);
             ClearCard();
             FillUserCardDatagrid(UserCardList);
         }
@@ -567,16 +571,16 @@ namespace Project500
         }
 
         private void btnCSubmit_Click(object sender, EventArgs e)
-        {
+        {///cehck if it alreddy exis
+            //check for aclidation
             SendUserCardAcc();
-            UserCardList.Add(Card);
+            UserCardList.Add(makecard());
             ClearCard();
             FillUserCardDatagrid(UserCardList);
         }
 
         private void BtnCClear_Click(object sender, EventArgs e)
         {
-
             ClearCard();
         }
 
@@ -620,19 +624,68 @@ namespace Project500
 
         private void metroButton9_Click(object sender, EventArgs e)
         {
-            //sent eft to delete
 
-            UserEFTList.Remove(EFT);
-            FillUserEFTDatagrid(UserEFTList);
-            ClearEFT();
+            // check the vields for validation checks
+            bool go = false;
+            foreach (PaymentAccount item in UserEFTList)
+            {
+                if (txtEFTNum.Text == item.AccountNumber)
+                {
+                    PaymentsAccountController.DeleteUserPaymentAcount(EFT.AccountNumber);
+                    UserEFTList.Remove(EFT);
+                    FillUserEFTDatagrid(UserEFTList);
+                    ClearEFT();
+                    go = true;
+                    break;
+                }
+            }
+            if (go != true)
+            {
+                MessageBox.Show("Sorry the Account deos not exsist that you are trying to delete");
+
+            }
         }
 
         private void metroButton10_Click(object sender, EventArgs e)
         {
-            SendUserEFTAccUp();
-            ///the update of the list 
-            FillUserEFTDatagrid(UserEFTList);
-            ClearEFT();
+            // check the vields for validation checks
+            bool go = false;
+            PaymentAccount eftup = new PaymentAccount();
+            foreach (PaymentAccount item in UserEFTList)
+            {
+                if (txtEFTNum.Text == item.AccountNumber)
+                {
+                    UserEFTList.Remove(eftup);
+                    AccountTypes Acounttype = new AccountTypes();
+                    switch (cbPaymentType.SelectedIndex)
+                    {
+                        case 0:
+                            Acounttype = AccountTypes.Savings;
+                            break;
+                        case 1:
+                            Acounttype = AccountTypes.Cheque;
+                            break;
+                        case 2:
+                            Acounttype = AccountTypes.Credit;
+                            break;
+                        default:
+                            break;
+                    }
+                    UserEFTList.Add(new PaymentAccount(txtEFTNum.Text.Trim(), txtEFTHolder.Text.Trim(), txtEFTReference.Text.Trim(), Acounttype, "", user.RsaID));
+                    //rtgfdsgrgdf4terfds34erwfsd34erwfd
+                    SendUserEFTAccUp();
+                    FillUserEFTDatagrid(UserEFTList);
+                    ClearEFT();
+                    go = true;
+                    break;
+                }
+            }
+            if (go !=true)
+            {
+                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+
+            }
+           
         }
 
         private void tabEFTDetail_Click(object sender, EventArgs e)
@@ -661,11 +714,28 @@ namespace Project500
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
-        {
-            SendUserEFTAcc();
-            UserEFTList.Add(EFT);
-            FillUserEFTDatagrid(UserEFTList);
-            ClearEFT();
+        {// check if card alreddy existes
+            bool go = false;
+            foreach (PaymentAccount item in UserEFTList)
+            {
+                if (txtEFTNum.Text == item.AccountNumber)
+                {
+                    go = true;
+                    break;
+                }
+            }
+            if (go == false)
+            {
+                SendUserEFTAcc();
+                UserEFTList.Add(makeneweft());
+                FillUserEFTDatagrid(UserEFTList);
+                ClearEFT();
+             }
+            else
+            {
+                MessageBox.Show("Sorry the Accountalreddy exists");
+            }
+  
         }
 
         private void metroButton2_Click(object sender, EventArgs e)

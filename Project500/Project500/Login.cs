@@ -32,14 +32,15 @@ namespace Project500
             
             if (username == "" || passworrd == "")
             {
-                MessageBox.Show("Credentials are wrong");
+                MessageBox.Show("enter all the fields");
 
             }
             else {
-                User _user = UserController.CheckLogin(username, passworrd);
-                if (_user.RsaID != null)
-                {
-                    Main main = new Main(_user);
+                User user = UserController.CheckLogin(username, passworrd);
+                if (user.RsaID != null)
+                {//dummy user to use for now
+                    
+                    Main main = new Main(user);
                     this.Hide();
                     main.Show();
 

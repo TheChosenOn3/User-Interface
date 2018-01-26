@@ -11,16 +11,16 @@ namespace Controllers
     public class CardController
     {
         static HttpClient client;
-        public static bool AddCard()
+        public static bool AddCard(Card newcard)
         {
             return true;
 
         }
-        public static bool DeleteCard()
+        public static bool DeleteCard(string CardNum)
         {
             return true;
         }
-        public static bool UpdateCard()
+        public static bool UpdateCard(Card UpCard)
         {
             return true;
         }

@@ -41,7 +41,7 @@ namespace Project500
 
         private void Benenficiarys_Load(object sender, EventArgs e)
         {
-           
+            
             FillBeneficiaryDatagrid(BeneficiaryList);
             //demo population
        
@@ -84,44 +84,31 @@ namespace Project500
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            this.Hide();
-            main.Show();
+            
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            Profile profile = new Profile();
-            this.Hide();
-            profile.Show();
+            
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            Payments payments = new Payments();
-            this.Hide();
-            payments.Show();
+           
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            History history = new History();
-            this.Hide();
-            history.Show();
         }
 
         private void btnScheduel_Click(object sender, EventArgs e)
         {
-            Schedules scheduels = new Schedules();
-            this.Hide();
-            scheduels.Show();
+        
         }
 
         private void btnBeneficiary_Click(object sender, EventArgs e)
         {
-            Benenficiarys beneficiarys = new Benenficiarys();
-            this.Hide();
-            beneficiarys.Show();
+           
         }
 
         private void btnSeachB_Click(object sender, EventArgs e)
@@ -286,6 +273,49 @@ namespace Project500
         private void metroLabel24_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnHomeNew_Click(object sender, EventArgs e)
+        {
+            Main main = new Main(user);
+            this.Hide();
+            main.Show();
+        }
+
+        private void btnPaymentNew_Click(object sender, EventArgs e)
+        {
+            Payments payments = new Payments(user);
+            this.Hide();
+            payments.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile(user);
+            this.Hide();
+            profile.Show();
+        }
+
+        private void btnHistoryNew_Click(object sender, EventArgs e)
+        {
+            History history = new History(user);
+            this.Hide();
+            history.Show();
+
+        }
+
+        private void btnBeneficiaryNew_Click(object sender, EventArgs e)
+        {
+            Benenficiarys beneficiarys = new Benenficiarys(user);
+            this.Hide();
+            beneficiarys.Show();
+        }
+
+        private void btnScheduleNew_Click(object sender, EventArgs e)
+        {
+            Schedules scheduels = new Schedules(user);
+            this.Hide();
+            scheduels.Show();
         }
     }
 }

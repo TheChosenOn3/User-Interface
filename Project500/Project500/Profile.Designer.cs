@@ -73,11 +73,9 @@
             this.tabCryptoDetail = new MetroFramework.Controls.MetroTabPage();
             this.txtWalletAmount = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.btnDeleteCrypto = new MetroFramework.Controls.MetroButton();
             this.btnUpateCrypto = new MetroFramework.Controls.MetroButton();
             this.txtWalletName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.btnAddCrypto = new MetroFramework.Controls.MetroButton();
             this.btnClearCrypto = new MetroFramework.Controls.MetroButton();
             this.txtWalletCode = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
@@ -154,7 +152,7 @@
             this.tabUserRegister.Controls.Add(this.tabCardDetail);
             this.tabUserRegister.Location = new System.Drawing.Point(181, 110);
             this.tabUserRegister.Name = "tabUserRegister";
-            this.tabUserRegister.SelectedIndex = 1;
+            this.tabUserRegister.SelectedIndex = 3;
             this.tabUserRegister.Size = new System.Drawing.Size(911, 629);
             this.tabUserRegister.TabIndex = 11;
             this.tabUserRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -196,9 +194,9 @@
             this.tabPersonalDetail.HorizontalScrollbarBarColor = true;
             this.tabPersonalDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabPersonalDetail.HorizontalScrollbarSize = 10;
-            this.tabPersonalDetail.Location = new System.Drawing.Point(4, 41);
+            this.tabPersonalDetail.Location = new System.Drawing.Point(4, 42);
             this.tabPersonalDetail.Name = "tabPersonalDetail";
-            this.tabPersonalDetail.Size = new System.Drawing.Size(903, 584);
+            this.tabPersonalDetail.Size = new System.Drawing.Size(903, 583);
             this.tabPersonalDetail.TabIndex = 0;
             this.tabPersonalDetail.Text = "Personal Information";
             this.tabPersonalDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -829,11 +827,9 @@
             // 
             this.tabCryptoDetail.Controls.Add(this.txtWalletAmount);
             this.tabCryptoDetail.Controls.Add(this.metroLabel13);
-            this.tabCryptoDetail.Controls.Add(this.btnDeleteCrypto);
             this.tabCryptoDetail.Controls.Add(this.btnUpateCrypto);
             this.tabCryptoDetail.Controls.Add(this.txtWalletName);
             this.tabCryptoDetail.Controls.Add(this.metroLabel19);
-            this.tabCryptoDetail.Controls.Add(this.btnAddCrypto);
             this.tabCryptoDetail.Controls.Add(this.btnClearCrypto);
             this.tabCryptoDetail.Controls.Add(this.txtWalletCode);
             this.tabCryptoDetail.Controls.Add(this.metroLabel21);
@@ -892,20 +888,9 @@
             this.metroLabel13.Text = "Wallet Amount";
             this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // btnDeleteCrypto
-            // 
-            this.btnDeleteCrypto.Location = new System.Drawing.Point(216, 270);
-            this.btnDeleteCrypto.Name = "btnDeleteCrypto";
-            this.btnDeleteCrypto.Size = new System.Drawing.Size(119, 44);
-            this.btnDeleteCrypto.TabIndex = 63;
-            this.btnDeleteCrypto.Text = "Delete Account";
-            this.btnDeleteCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnDeleteCrypto.UseSelectable = true;
-            this.btnDeleteCrypto.Click += new System.EventHandler(this.metroButton8_Click);
-            // 
             // btnUpateCrypto
             // 
-            this.btnUpateCrypto.Location = new System.Drawing.Point(36, 270);
+            this.btnUpateCrypto.Location = new System.Drawing.Point(223, 200);
             this.btnUpateCrypto.Name = "btnUpateCrypto";
             this.btnUpateCrypto.Size = new System.Drawing.Size(119, 44);
             this.btnUpateCrypto.TabIndex = 62;
@@ -956,17 +941,6 @@
             this.metroLabel19.Text = "Wallet Name";
             this.metroLabel19.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel19.Click += new System.EventHandler(this.metroLabel19_Click);
-            // 
-            // btnAddCrypto
-            // 
-            this.btnAddCrypto.Location = new System.Drawing.Point(216, 200);
-            this.btnAddCrypto.Name = "btnAddCrypto";
-            this.btnAddCrypto.Size = new System.Drawing.Size(119, 44);
-            this.btnAddCrypto.TabIndex = 56;
-            this.btnAddCrypto.Text = "Submit Account";
-            this.btnAddCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnAddCrypto.UseSelectable = true;
-            this.btnAddCrypto.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // btnClearCrypto
             // 
@@ -1370,7 +1344,7 @@
             // 
             // btnDeleteCard
             // 
-            this.btnDeleteCard.Location = new System.Drawing.Point(213, 416);
+            this.btnDeleteCard.Location = new System.Drawing.Point(206, 346);
             this.btnDeleteCard.Name = "btnDeleteCard";
             this.btnDeleteCard.Size = new System.Drawing.Size(119, 44);
             this.btnDeleteCard.TabIndex = 65;
@@ -1381,7 +1355,7 @@
             // 
             // btnUpdateCard
             // 
-            this.btnUpdateCard.Location = new System.Drawing.Point(29, 416);
+            this.btnUpdateCard.Location = new System.Drawing.Point(22, 346);
             this.btnUpdateCard.Name = "btnUpdateCard";
             this.btnUpdateCard.Size = new System.Drawing.Size(119, 44);
             this.btnUpdateCard.TabIndex = 64;
@@ -1871,7 +1845,6 @@
         private MetroFramework.Controls.MetroTabPage tabCryptoDetail;
         private MetroFramework.Controls.MetroTextBox txtWalletName;
         private MetroFramework.Controls.MetroLabel metroLabel19;
-        private MetroFramework.Controls.MetroButton btnAddCrypto;
         private MetroFramework.Controls.MetroButton btnClearCrypto;
         private MetroFramework.Controls.MetroTextBox txtWalletCode;
         private MetroFramework.Controls.MetroLabel metroLabel21;
@@ -1895,7 +1868,6 @@
         private MetroFramework.Controls.MetroButton btnClearEFT;
         private MetroFramework.Controls.MetroTextBox txtEFTReference;
         private MetroFramework.Controls.MetroLabel metroLabel23;
-        private MetroFramework.Controls.MetroButton btnDeleteCrypto;
         private MetroFramework.Controls.MetroButton btnUpateCrypto;
         private MetroFramework.Controls.MetroButton btnDeleteCard;
         private MetroFramework.Controls.MetroButton btnUpdateCard;
