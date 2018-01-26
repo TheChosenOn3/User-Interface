@@ -134,7 +134,7 @@ namespace Project500
             txtEFTNum.Text = "";
             txtEFTReference.Text = "";
             txtEFTHolder.Text = "";
-            cmbPaymentType.SelectedItem = "";
+            cbPaymentType.SelectedItem = "";
         }
         //cler personal info boxes
         public void ClearPI() {
@@ -599,13 +599,13 @@ namespace Project500
             switch (EFT.TypeAcc)
             {
                 case AccountTypes.Savings:
-                    cmbPaymentType.SelectedIndex = 0;
+                    cbPaymentType.SelectedIndex = 0;
                     break;
                 case AccountTypes.Cheque:
-                    cmbPaymentType.SelectedIndex = 1;
+                    cbPaymentType.SelectedIndex = 1;
                     break;
                 case AccountTypes.Credit:
-                    cmbPaymentType.SelectedIndex = 2;
+                    cbPaymentType.SelectedIndex = 2;
                     break;
                 default:
                     break;

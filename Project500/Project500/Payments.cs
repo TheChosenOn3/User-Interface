@@ -188,15 +188,15 @@ namespace Project500
 
         private void chxInterval_CheckedChanged(object sender, EventArgs e)
         {
-            if (chxInterval.Checked)
+            if (checkInter.Checked)
             {
                 lblInterval.Visible = true;
-                cbxInterval.Visible = true;
+                txtInterval.Visible = true;
             }
             else
             {
                 lblInterval.Visible = false;
-                cbxInterval.Visible = false;
+                txtInterval.Visible = false;
             }
         }
     }

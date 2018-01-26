@@ -38,15 +38,7 @@ namespace Controllers
             //    //wegfs
             //    //ewfa
             //wesdf
-            //u
-
-
-       
-
-
-
-
-
+    
 
             List<Card> UserCardList = new List<Card>();
             UserCardList.Add(new Card("262464", "EthanKilian", "321", DateTime.Now, "11111"));
