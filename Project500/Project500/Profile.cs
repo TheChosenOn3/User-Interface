@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities1;
+using Controllers;
 
 namespace Project500
 {
@@ -16,8 +17,10 @@ namespace Project500
         
         //dummy data
         User user = new User("ethan", "1234567890123", "kilina", "0989788433", "SouthAfrika/Gouteng/pretoria/Erasmuskloof/kasuka/123", "ethankilian5@gmail.com", "1234", "Active", "Sybrin");
+
         List<PaymentAccount> UserEFTList = new List<PaymentAccount>();
         List<Card> UserCardList = new List<Card>();
+     
         Card Card = new Card();
         PaymentAccount EFT = new PaymentAccount();
 
@@ -26,52 +29,52 @@ namespace Project500
         {
             InitializeComponent();
         }
-        public Profile(User user)
+        public Profile(User _user)
         {
             InitializeComponent();
+            user = _user;
         }
 
         private void Profile_Load(object sender, EventArgs e)
         {
             //dummy data
-            UserCardList.Add(new Card("262464", "EthanKilian", "321", DateTime.Now));
-            UserCardList.Add(new Card("2222", "EthanKilian", "222", DateTime.Now));
-            UserCardList.Add(new Card("33123", "EthanKilian", "111", DateTime.Now));
-            UserEFTList.Add(new PaymentAccount("09423", "Ethan", "EFTCheck", AccountTypes.Cheque, "11111"));
-            UserEFTList.Add(new PaymentAccount("33333", "Ethan", "EFTCheck", AccountTypes.Cheque, "11111"));
-            UserEFTList.Add(new PaymentAccount("11111", "Ethan", "EFTDebit", AccountTypes.Credit, "11111"));
-            UserEFTList.Add(new PaymentAccount("0934", "Ethan", "EFTDebit", AccountTypes.Credit, "11111"));
-
-
+            UserCardList = CardController.RetrveCards(user.RsaID);
+            UserEFTList = PaymentsAccountController.RetrveAcounts(user.RsaID);
+          //fill datagrids
+            FillUserEFTDatagrid(UserEFTList);
+            FillUserCardDatagrid(UserCardList);
+            popID();
+        }
+        //populate UPI feilds
+        public void popID() {
             string address = user.Address;
+            string[] a = address.Split('/');
             // split address into fields
-            string Province = "";
-            string Suburb = "";
-            string Streer = "";
-            string StrNum = "";
-            string City = "";
-            string Country = "";
-            txtCountry.Text = "";
+          
+            string Province = a[1];
+            string Suburb = a[5];
+            string Streer = a[4];
+            string StrNum = a[3];
+            string City = a[2];
+            string Country = a[0];
+            txtCountry.Text = Country;
             txtCity.Text = City;
-            txtProvince.Text = Province ;
+            txtProvince.Text = Province;
             txtSuburb.Text = Suburb;
             txtStreet.Text = Streer;
             txtStreetNumber.Text = StrNum;
             txtName.Text = user.Name;
             txtID.Text = user.RsaID;
-            txtSurname.Text = user.Surname ;
+            txtSurname.Text = user.Surname;
             txtCellNum.Text = user.CellNr;
             txtEmail.Text = user.Email;
             txtPassword.Text = user.Password;
-            //txtBusinessName.Text = user.BusinessName;
+            txtBusinessName.Text = user.BusinessName;
 
-            //fill datagrids
-            FillUserEFTDatagrid(UserEFTList);
-            FillUserCardDatagrid(UserCardList);
         }
 
         // method to populate user eft dgv
-        //("09423", "Ethan", "EFTCheck", AccountTypes.Cheque, "12324"
+     
         public void FillUserEFTDatagrid(List<PaymentAccount> EFTDataGridList)
         {
 
@@ -93,7 +96,7 @@ namespace Project500
 
         }
         // method to pop user card dgv
-        // UserCardList.Add(new Card("262464", "EthanKilian", "321", DateTime.Now));
+     
         public void FillUserCardDatagrid(List<Card> CardDataGridList)
         {
 
@@ -148,16 +151,16 @@ namespace Project500
             txtBusinessName.Text = "";
         }
         //make new user
-        public bool CreateNewUer() {
-            //txtcity changed
+        public User CreateNewUer()
+        {
             String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
             User user = new User(txtName.Text, txtID.Text, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, txtPassword.Text, "Active", txtBusinessName.Text);
-            // send user to daniel to update
-            return true;
+            return user;
+           
 
         }
         //make new card
-        public Card makecard() { Card newcard = new Card(txtCardNum.Text, txtCardHolder.Text, txtCVV.Text, DateTime.Now);
+        public Card makecard() { Card newcard = new Card(txtCardNum.Text, txtCardHolder.Text, txtCVV.Text, DateTime.Now, "11111");
             return newcard;
         }
 
@@ -192,7 +195,7 @@ namespace Project500
                 default:
                     break;
             }
-            PaymentAccount neweft = new PaymentAccount(txtEFTNum.Text, txtEFTHolder.Text, txtEFTReference.Text, Acounttype, "11111");
+            PaymentAccount neweft = new PaymentAccount(txtEFTNum.Text, txtEFTHolder.Text, txtEFTReference.Text, Acounttype, "11111", "11111");
             return neweft;
         }
         // add new eft acount 
@@ -296,9 +299,11 @@ namespace Project500
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-           ClearPI();
-            // UserController.registerUser(user);
-          
+          // validate feilds  
+            UserController.UpdateUser(CreateNewUer());
+            ClearPI();
+
+
         }
 
         private void metroTextBox11_Click(object sender, EventArgs e)
@@ -594,13 +599,13 @@ namespace Project500
             switch (EFT.TypeAcc)
             {
                 case AccountTypes.Savings:
-                    cmbPaymentType.SelectedItem = 1;
+                    cmbPaymentType.SelectedIndex = 0;
                     break;
                 case AccountTypes.Cheque:
-                    cmbPaymentType.SelectedItem = 2;
+                    cmbPaymentType.SelectedIndex = 1;
                     break;
                 case AccountTypes.Credit:
-                    cmbPaymentType.SelectedItem = 3;
+                    cmbPaymentType.SelectedIndex = 2;
                     break;
                 default:
                     break;

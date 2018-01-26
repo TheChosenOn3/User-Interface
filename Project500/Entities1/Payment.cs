@@ -10,6 +10,7 @@ namespace Entities1
     }
     public class Payment
     {
+        string Id;
         private string scheduleNr;
 
         public string ScheduleNr
@@ -100,6 +101,8 @@ namespace Entities1
             get { return userID; }
             set { userID = value; }
         }
+
+        public string Id1 { get => Id; set => Id = value; }
 
         public Payment(string ScheduleNr, string Description, string BeneficairyID, DateTime PayDate, float Amount, string Interval, string Status, string PaymentNumber, PaymentType TypePayment, bool Recurring, DateTime DateCreated, string UserID)
         {

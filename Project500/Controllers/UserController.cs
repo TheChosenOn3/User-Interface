@@ -46,6 +46,14 @@ namespace Controllers
 
 
         }
+        public static bool UpdateUser(User newUser)
+        {
+            
+            return true;//something went wrong
+
+
+
+        }
 
 
 
