@@ -95,12 +95,16 @@ namespace Project500
         private void btnRegister_Click(object sender, EventArgs e)
         {
 
-            String Address = txtStreetNumber.Text + ", " + txtStreet.Text + ", " + txtSuburb.Text + ", " + txtCity.Text + ", " + txtProvince.Text + ", " + txtCountry.Text;
+            String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
             User user = new User(txtName.Text,txtID.Text,txtSurname.Text,txtCellNum.Text,Address,txtEmail.Text,txtPassword.Text,"Active",txtBusiness.Text);
-        
-            Main main = new Main();
-            this.Hide();
-            main.Show();
+            //UserController.registerUser(user);
+            if (true)
+            {
+                Main main = new Main(user);
+                this.Hide();
+                main.Show();
+            }
+         
         }
 
         private void btnClear_Click(object sender, EventArgs e)

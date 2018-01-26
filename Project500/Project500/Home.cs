@@ -29,11 +29,9 @@ namespace Project500
 
         private void btnregister_Click(object sender, EventArgs e)
         {
-            User user = new User {Name="Danie" };
-            UserController.registerUser(user);
-            //Register register = new Register();
-            //register.Show();
-            //this.Hide();
+            Register register = new Register();
+            register.Show();
+            this.Hide();
         }
 
         private void btnlogin_Click(object sender, EventArgs e)

@@ -24,22 +24,18 @@ namespace Project500
         PaymentAccount Crypto = new PaymentAccount();
         List<PaymentAccount> BenEFTList = new List<PaymentAccount>();
         PaymentAccount EFT = new PaymentAccount();
-     
-       
+        User user = new User("ethan", "1234567890123", "kilina", "0989788433", "Gouteng_pretoria_kasuka_123", "ethankilian5@gmail.com", "1234", "Active", "Sybrin");
+        
+        public Benenficiarys(User _user)
+        {
+            user = _user;
+            InitializeComponent();
 
+        }
         public Benenficiarys()
         {
             InitializeComponent();
-            //demo population
-            BeneficiaryList.Add(new Beneficiary("12324", "Sybrin", "pretoria"));
-            BeneficiaryList.Add(new Beneficiary("1134", "EOH", "pretoria"));
-            BeneficiaryList.Add(new Beneficiary("1345", "Emin", "pretoria"));
-            BeneficiaryList.Add(new Beneficiary("12345", "Seop", "pretoria"));
-            BeneficiaryList.Add(new Beneficiary("23423", "BC", "pretoria"));
-            BenEFTList.Add(new PaymentAccount("09423","Ethan","EFTCheck", AccountTypes.Cheque, "12324"));
-            BenEFTList.Add(new PaymentAccount("33333", "Daniel", "EFTCheck", AccountTypes.Cheque, "12324"));
-            BenEFTList.Add(new PaymentAccount("11111", "Daniel", "EFTDebit", AccountTypes.Credit, "12324"));
-            BenEFTList.Add(new PaymentAccount("0934", "Jason", "EFTDebit", AccountTypes.Credit, "1134"));
+           
 
         }
 
@@ -47,23 +43,33 @@ namespace Project500
         {
            
             FillBeneficiaryDatagrid(BeneficiaryList);
+            //demo population
+            BeneficiaryList.Add(new Beneficiary("12324", "Sybrin", "pretoria"));
+            BeneficiaryList.Add(new Beneficiary("1134", "EOH", "pretoria"));
+            BeneficiaryList.Add(new Beneficiary("1345", "Emin", "pretoria"));
+            BeneficiaryList.Add(new Beneficiary("12345", "Seop", "pretoria"));
+            BeneficiaryList.Add(new Beneficiary("23423", "BC", "pretoria"));
+            BenEFTList.Add(new PaymentAccount("09423", "Ethan", "EFTCheck", AccountTypes.Cheque, "12324"));
+            BenEFTList.Add(new PaymentAccount("33333", "Daniel", "EFTCheck", AccountTypes.Cheque, "12324"));
+            BenEFTList.Add(new PaymentAccount("11111", "Daniel", "EFTDebit", AccountTypes.Credit, "12324"));
+            BenEFTList.Add(new PaymentAccount("0934", "Jason", "EFTDebit", AccountTypes.Credit, "1134"));
         }
 
         // method to populate datagrid beneficharys
         public void FillBeneficiaryDatagrid(List<Beneficiary> BenDataGridList) {
-           
+
             DataTable bentable = ConvertListToDataTable(BeneficiaryList);
             dgvBeneficiary.DataSource = bentable;
-             DataTable ConvertListToDataTable(List<Beneficiary> benlist)
+            DataTable ConvertListToDataTable(List<Beneficiary> benlist)
             {
                 DataTable table = new DataTable();
                 table.Columns.Add("Beneficairy Nme");
                 table.Columns.Add("Beneficiary Branch");
                 foreach (Beneficiary item in benlist)
-                { 
-                    table.Rows.Add(item.BeneficairyName,item.BeneficiaryBranch);
+                {
+                    table.Rows.Add(item.BeneficairyName, item.BeneficiaryBranch);
                 }
-                  return table;
+                return table;
             }
 
         }
@@ -140,7 +146,7 @@ namespace Project500
             int index = e.RowIndex;
             ben = BeneficiaryList[index];
             //BenEFTList =
-            
+
 
             //BenCryptoList =
             txtBName.Text = ben.BeneficairyName;

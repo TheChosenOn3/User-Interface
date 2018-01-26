@@ -14,12 +14,13 @@ namespace Project500
 {
     public partial class Main : MetroFramework.Forms.MetroForm
     {
-       
-        public Main(User user)
+        User user = new User();
+        public Main(User _user)
         {
             InitializeComponent();
+            user = _user;
         }
-
+       
         public Main()
         {
             InitializeComponent();
@@ -28,7 +29,9 @@ namespace Project500
 
         private void Main_Load(object sender, EventArgs e)
         {
-
+            lblHeading.Text = user.Name;
+            lblCompanyName.Text = user.BusinessName;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
