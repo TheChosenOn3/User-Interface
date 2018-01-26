@@ -280,5 +280,20 @@ namespace Project500
         {
 
         }
+
+        private void lblBeneficiaryDetails_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAccHolder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

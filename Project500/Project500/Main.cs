@@ -29,8 +29,8 @@ namespace Project500
 
         private void Main_Load(object sender, EventArgs e)
         {
-            lblHeading.Text = user.Name;
-            lblCompanyName.Text = user.BusinessName;
+            //lblHeading.Text = user.Name;
+            //lblCompanyName.Text = user.BusinessName;
             
         }
 

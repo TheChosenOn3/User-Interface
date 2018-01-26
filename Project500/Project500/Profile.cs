@@ -63,7 +63,7 @@ namespace Project500
             txtCellNum.Text = user.CellNr;
             txtEmail.Text = user.Email;
             txtPassword.Text = user.Password;
-            txtBusinessName.Text = user.BusinessName;
+            //txtBusinessName.Text = user.BusinessName;
 
             //fill datagrids
             FillUserEFTDatagrid(UserEFTList);
@@ -149,6 +149,7 @@ namespace Project500
         }
         //make new user
         public bool CreateNewUer() {
+            //txtcity changed
             String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
             User user = new User(txtName.Text, txtID.Text, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, txtPassword.Text, "Active", txtBusinessName.Text);
             // send user to daniel to update
