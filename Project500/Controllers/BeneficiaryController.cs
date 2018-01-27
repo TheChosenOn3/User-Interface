@@ -32,7 +32,7 @@ namespace Controllers
             return true;
 
         }
-        public static bool DeleteBeneficiary(Beneficiary beneficairy)
+        public static bool DeleteBeneficiary(string beneficairyId)
         {
             return true;
 

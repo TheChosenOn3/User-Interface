@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities1;
+using Controllers;
 
     
 
@@ -19,13 +20,24 @@ namespace Project500
         
         
         List<Beneficiary> BeneficiaryList = new List<Beneficiary>();
-        List<PaymentAccount> BenCryptoList = new List<PaymentAccount>();
+        List<Beneficiary> BeneficiaryListS = new List<Beneficiary>();
+        List<Crypto> BenCryptoList = new List<Crypto>();
+        List<Crypto> BenCryptoListS = new List<Crypto>();
         Beneficiary ben = new Beneficiary();
-        PaymentAccount Crypto = new PaymentAccount();
+        Crypto cryptotemp = new Crypto();
+        Crypto crypto = new Crypto();
         List<PaymentAccount> BenEFTList = new List<PaymentAccount>();
+        List<PaymentAccount> BenEFTListS = new List<PaymentAccount>();
+        PaymentAccount EFTtemp = new PaymentAccount();
         PaymentAccount EFT = new PaymentAccount();
-        User user = new User("ethan", "1234567890123", "kilina", "0989788433", "Gouteng_pretoria_kasuka_123", "ethankilian5@gmail.com", "1234", "Active", "Sybrin");
-        
+        User user = new User();
+
+        string BenName = "";
+        string BenId = "";
+        string BenBranchCode = "";
+
+
+
         public Benenficiarys(User _user)
         {
             user = _user;
@@ -41,8 +53,9 @@ namespace Project500
 
         private void Benenficiarys_Load(object sender, EventArgs e)
         {
-            
+            BeneficiaryList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             FillBeneficiaryDatagrid(BeneficiaryList);
+          
             //demo population
        
         }
@@ -50,7 +63,7 @@ namespace Project500
         // method to populate datagrid beneficharys
         public void FillBeneficiaryDatagrid(List<Beneficiary> BenDataGridList) {
 
-            DataTable bentable = ConvertListToDataTable(BeneficiaryList);
+            DataTable bentable = ConvertListToDataTable(BenDataGridList);
             dgvBeneficiary.DataSource = bentable;
             DataTable ConvertListToDataTable(List<Beneficiary> benlist)
             {
@@ -66,16 +79,97 @@ namespace Project500
 
         }
         // method to populate crypto datagrid of beneficiary
-        public void FillCryptoDatagrid(string selectedben, List<PaymentAccount> CryptoList)
+        public void FillCryptoDatagrid(Beneficiary selectedben)
         {
-            BindingSource CryptoBind = new BindingSource();
-            CryptoBind.Add(CryptoList);
-            dgvCrypto.DataSource = CryptoBind;
+
+            
+            // BenCryptoListS = CryptoController.GetCrypto(selectedben.BeneficairyID);
+
+            BenCryptoListS.Clear();
+            foreach (Crypto item in BenCryptoList)
+            {
+                if (item.BeneficiaryId == selectedben.BeneficairyID)
+                {
+                    BenCryptoListS.Add(item);
+                }
+
+            }
+
+            DataTable Cryptable = ConvertListToDataTable(BenCryptoListS);
+            dgvCrypto.DataSource = Cryptable;
+            DataTable ConvertListToDataTable(List<Crypto> cryplist)
+            {
+                DataTable table = new DataTable();
+                table.Columns.Add("Walet Name");
+                table.Columns.Add("Walet Address");
+                foreach (Crypto item in cryplist)
+                {
+                    
+                    table.Rows.Add(item.WaletName, item.Waletaddress);
+                }
+                return table;
+            }
         }
         // method to populate eft datagrid of beneficiary
-        public void FillEFTDatagrid(string selectedben, List<PaymentAccount> EFTList)
+        public void FillEFTDatagrid(Beneficiary selectedben)
         {
-         
+          
+           
+            //  BenEFTListS = PaymentsAccountController.SearchBenPaymentAcount(selectedben.BeneficairyID);
+            BenEFTListS.Clear();
+            foreach (PaymentAccount item in BenEFTList)
+            {
+                
+                if (item.BeneficiaryID == selectedben.BeneficairyID)
+                {
+
+                    BenEFTListS.Add(item);
+                }
+
+            }
+
+            DataTable EFTtable = ConvertListToDataTable(BenEFTListS);
+            dgvEFT.DataSource = EFTtable;
+            DataTable ConvertListToDataTable(List<PaymentAccount> Acclist)
+            {
+                DataTable table = new DataTable();
+                table.Columns.Add("Account Number");
+                table.Columns.Add("Account Holder");
+                table.Columns.Add("Reference");
+                table.Columns.Add("Account Type");
+                foreach (PaymentAccount item in Acclist)
+                {
+                    
+                    table.Rows.Add(item.AccountNumber, item.AccountHolder, item.Reference, item.TypeAcc);
+                }
+                return table;
+            }
+
+        }
+
+        public void ClearBens() {
+       
+            txtBName.Text = "";
+            txtBID.Text = "";
+            txtBBranchCode.Text = "";
+            txtEFTAccNum.Text = "";
+            txtEFTRefernce.Text = "";
+            txtWaletName.Text = "";
+            txtWalletCode.Text = "";
+            txtAccHolder.Text = "";
+            cbEFTAccType.SelectedIndex = -1;
+            ben = null;
+            dgvEFT.DataSource = null;
+            dgvCrypto.DataSource = null;
+            btnUpdateBPI.Visible = false;
+            btnUpdateEFT.Visible = false;
+            btnUpdateCrypto.Visible = false;
+            BtnDeletCrypto.Visible = false;
+            btnDeletEFT.Visible = false;
+            btnDeleteB.Visible = false;
+
+
+
         }
         private void txtBID_Click(object sender, EventArgs e)
         {
@@ -113,10 +207,18 @@ namespace Project500
 
         private void btnSeachB_Click(object sender, EventArgs e)
         {
+           BenName = txtSearchBName.Text.Trim();
+            BeneficiaryListS.Clear();
+            foreach (Beneficiary item in BeneficiaryList)
+            {
+                if (item.BeneficairyName == txtSearchBName.Text.Trim())
+                {
+                    BeneficiaryListS.Add(item);
+                }
+            }
 
-            FillBeneficiaryDatagrid(BeneficiaryList);
-            // Clear eft datagrid
-            // clear crypto datagrid
+            FillBeneficiaryDatagrid(BeneficiaryListS);
+            ClearBens();
         }
 
         private void dgvBeneficiary_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -137,25 +239,40 @@ namespace Project500
 
         private void btnDeleteB_Click(object sender, EventArgs e)
         {
-            //send benID to detle
+            BeneficiaryController.DeleteBeneficiary(ben.BeneficairyID);
+            BeneficiaryList.Remove(ben);
             FillBeneficiaryDatagrid(BeneficiaryList);
-            txtBName.Text = "";
-            txtBID.Text = "";
-            txtBBranchCode.Text = "";
-            ben = null;
-            // Clear eft datagrid
-            // clear crypto datagrid
+            ClearBens();
         }
 
         private void btnAddB_Click(object sender, EventArgs e)
         {
-            ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text,user.Id);
-            txtBName.Text = "";
-            txtBID.Text = "";
-            txtBBranchCode.Text = "";
-            FillBeneficiaryDatagrid(BeneficiaryList);
-
+            bool go = false;
+            foreach (Beneficiary item in BeneficiaryList)
+            {
+                if (txtBID.Text.Trim() == item.BeneficairyID)
+                {
+                    go = true;
+                    break;
+                }
+            }
+            if (go == false)
+            {
+                ben = new Beneficiary(txtBID.Text.Trim(), txtBName.Text.Trim(), txtBBranchCode.Text.Trim(), user.Id);
+                BeneficiaryList.Add(ben);
+                ClearBens();
+                FillBeneficiaryDatagrid(BeneficiaryList);
+                BeneficiaryController.AddBeneficiary(ben);
+            }
+            else
+            {
+                MessageBox.Show("Sorry the Beneficairy with this ID alreddy exists");
+            }
         }
+
+       
+
+        
 
         private void btnClearBPI_Click(object sender, EventArgs e)
         {
@@ -166,12 +283,32 @@ namespace Project500
 
         private void btnUpdateBPI_Click(object sender, EventArgs e)
         {
-            // cehck if ben alreddy exist then update
-            ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text,user.Id);
-            txtBName.Text = "";
-            txtBID.Text = "";
-            txtBBranchCode.Text = "";
-            FillBeneficiaryDatagrid(BeneficiaryList);
+            bool go = false;
+             Beneficiary Benn = new Beneficiary();
+            foreach (Beneficiary item in BeneficiaryList)
+            {
+                if (item.BeneficairyID == txtBID.Text.Trim())
+                {
+                    BeneficiaryList.Remove(item);
+                    ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text, user.Id);
+                    BeneficiaryList.Add(ben);
+                    BeneficiaryController.UpdateBeneficiary(ben);
+                    txtBName.Text = "";
+                    txtBID.Text = "";
+                    txtBBranchCode.Text = "";
+                    FillBeneficiaryDatagrid(BeneficiaryList);
+                    ClearBens();
+                    go = true;
+                    break;
+
+                }
+
+            }
+            if (go != true)
+            {
+                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+            }
+
 
         }
 
@@ -183,19 +320,75 @@ namespace Project500
 
         private void btnAddCrypto_Click(object sender, EventArgs e)
         {
-            // add caount type (enum)
-            //  EFT = new PaymentAccount(txtEFTAccNum.Text, txtAccHolder.Text, txtEFTRefernce.Text,);
-            txtAccHolder.Text = "";
-            txtEFTAccNum.Text = "";
-            txtEFTRefernce.Text = "";
-            // clear eft combobox
-            //BenEFTList= get update EFT list
-            FillEFTDatagrid(ben.BeneficairyName, BenEFTList);
+
+            bool go = false;
+            foreach (Crypto item in BenCryptoList)
+            {
+                if (txtWalletCode.Text.Trim() == item.Waletaddress)
+                {
+                    go = true;
+                    break;
+                }
+            }
+            if (go == false)
+            {
+                Crypto crypto = new Crypto(txtWaletName.Text.Trim(), txtWalletCode.Text.Trim(),ben.BeneficairyID);
+                   BenCryptoList.Add(crypto);
+                CryptoController.AddCrypto(crypto);
+                FillCryptoDatagrid(ben);
+                txtWaletName.Text = "";
+                txtWalletCode.Text = "";
+               
+            }
+            else
+            {
+                MessageBox.Show("Sorry the Accountalreddy exists");
+            }
+
         }
 
         private void btnUpdateEFT_Click(object sender, EventArgs e)
         {
+            bool go = false;
+            PaymentAccount eftup = new PaymentAccount();
+            foreach (PaymentAccount item in BenEFTList)
+            {
+                if (txtEFTAccNum.Text == item.AccountNumber)
+                {
+                    BenEFTList.Remove(item);
+                    AccountTypes Acounttype = new AccountTypes();
+                    switch (cbEFTAccType.SelectedIndex)
+                    {
+                        case 0:
+                            Acounttype = AccountTypes.Savings;
+                            break;
+                        case 1:
+                            Acounttype = AccountTypes.Cheque;
+                            break;
+                        case 2:
+                            Acounttype = AccountTypes.Credit;
+                            break;
+                        default:
+                            break;
+                    }
+                    BenEFTList.Add(new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,""));
+                    PaymentsAccountController.UpdateBenPaymentAcount(EFT);
+                    
+                    FillEFTDatagrid(ben);
+                    txtEFTAccNum.Text = "";
+                    txtAccHolder.Text = "";
+                    txtEFTRefernce.Text = "";
+                    cbEFTAccType.SelectedIndex = -1;
 
+                      go = true;
+                    break;
+                }
+            }
+            if (go != true)
+            {
+                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+
+            }
         }
 
         private void btnClearCrypto_Click(object sender, EventArgs e)
@@ -208,7 +401,13 @@ namespace Project500
 
         private void BtnDeletCrypto_Click(object sender, EventArgs e)
         {
-            
+            txtWaletName.Text = "";
+            txtWalletCode.Text = "";
+            CryptoController.DeleteCrypto(EFT.BeneficiaryID);
+            BenCryptoList.Remove(crypto);
+            BenCryptoListS.Remove(crypto);
+            FillCryptoDatagrid(ben);
+            /// deos not permanently deleet but as soon daniels pice is in it will i think
 
         }
 
@@ -217,7 +416,7 @@ namespace Project500
             txtAccHolder.Text = "";
             txtEFTAccNum.Text = "";
             txtEFTRefernce.Text = "";
-            // clear eft combobox
+            cbEFTAccType.SelectedIndex = -1;
         }
 
         private void dgvEFT_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -233,26 +432,59 @@ namespace Project500
 
         private void btnAddEFT_Click(object sender, EventArgs e)
         {
-            // add caount type (enum)
-            //  EFT = new PaymentAccount(txtEFTAccNum.Text, txtAccHolder.Text, txtEFTRefernce.Text,);
-            txtAccHolder.Text = "";
-            txtEFTAccNum.Text = "";
-            txtEFTRefernce.Text = "";
-            // clear eft combobox
-            //BenEFTList= get update EFT list
-            FillEFTDatagrid(ben.BeneficairyName,BenEFTList);
+            bool go = false;
+            foreach (PaymentAccount item in BenEFTList)
+            {
+                if (txtEFTAccNum.Text.Trim() == item.AccountNumber)
+                {
+                    go = true;
+                    break;
+                }
+            }
+            if (go == false)
+            {
+                AccountTypes Acounttype = new AccountTypes();
+                switch (cbEFTAccType.SelectedIndex)
+                {
+                    case 0:
+                        Acounttype = AccountTypes.Savings;
+                        break;
+                    case 1:
+                        Acounttype = AccountTypes.Cheque;
+                        break;
+                    case 2:
+                        Acounttype = AccountTypes.Credit;
+                        break;
+                    default:
+                        break;
+                }
+                EFT = new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID, "");
+                BenEFTList.Add(EFT);
+                PaymentsAccountController.AddBenPaymentAcount(EFT);
+                FillEFTDatagrid(ben);
+                txtEFTAccNum.Text = "";
+                txtAccHolder.Text = "";
+                txtEFTRefernce.Text = "";
+                cbEFTAccType.SelectedIndex = -1;
+            }
+            else
+            {
+                MessageBox.Show("Sorry the Accountalreddy exists");
+            }
+
         }
 
         private void btnDeletEFT_Click(object sender, EventArgs e)
         {
-            //  EFT = selected from datagrid
-            // send to delte
             txtAccHolder.Text = "";
             txtEFTAccNum.Text = "";
             txtEFTRefernce.Text = "";
-            // clear eft combobox
-            //BenEFTList= get update EFT list
-            FillEFTDatagrid(ben.BeneficairyName, BenEFTList);
+            cbEFTAccType.SelectedIndex = -1;
+            PaymentsAccountController.DeleteBenPaymentAcount(EFT.BeneficiaryID);
+            BenEFTList.Remove(EFT);
+            BenEFTListS.Remove(EFT);
+            FillEFTDatagrid(ben);
+            /// deos not permanently deleet but as soon daniels pice is in it will i think
         }
 
         private void tabBeneficiary_Click(object sender, EventArgs e)
@@ -316,6 +548,111 @@ namespace Project500
             Schedules scheduels = new Schedules(user);
             this.Hide();
             scheduels.Show();
+        }
+
+        private void btnSeAllBeneficairys_Click(object sender, EventArgs e)
+        {
+            FillBeneficiaryDatagrid(BeneficiaryList);
+            ClearBens();
+            
+        }
+
+        private void dgvBeneficiary_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+           Beneficiary ben1 = BeneficiaryList[index];
+            ClearBens();
+            ben = ben1;
+            txtBBranchCode.Text = ben.BeneficiaryBranch;
+            txtBID.Text = ben.BeneficairyID;
+            txtBName.Text = ben.BeneficairyName;
+            BenCryptoList = CryptoController.GetCrypto(ben.BeneficairyID);
+            BenEFTList = PaymentsAccountController.SearchBenPaymentAcount(ben.BeneficairyID);
+            FillCryptoDatagrid(ben);
+            FillEFTDatagrid(ben);
+            btnUpdateBPI.Visible = true;
+            btnDeleteB.Visible = true;
+          
+
+        }
+
+        private void dgvEFT_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            EFTtemp = BenEFTListS[index];
+            foreach (PaymentAccount item in BenEFTList)
+            {
+                if (EFTtemp == item)
+                {
+                    EFT = item;
+                }
+
+            }
+            switch (EFT.TypeAcc)
+            {
+                case AccountTypes.Savings:
+                    cbEFTAccType.SelectedIndex = 0;
+                    break;
+                case AccountTypes.Cheque:
+                    cbEFTAccType.SelectedIndex = 1;
+                    break;
+                case AccountTypes.Credit:
+                    cbEFTAccType.SelectedIndex = 2;
+                    break;
+                default:
+                    break;
+            }
+            txtAccHolder.Text = EFT.AccountHolder;
+            txtEFTAccNum.Text = EFT.AccountNumber;
+            txtEFTRefernce.Text = EFT.Reference;
+            btnUpdateEFT.Visible = true;
+            btnDeletEFT.Visible = true;
+
+        }
+
+        private void dgvCrypto_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            cryptotemp = BenCryptoListS[index];
+            foreach (Crypto item in BenCryptoList)
+            {
+                if (cryptotemp == item)
+                {
+                    crypto = item;
+                }
+
+            }
+            txtWaletName.Text = crypto.WaletName;
+            txtWalletCode.Text = crypto.Waletaddress;
+            BtnDeletCrypto.Visible = true;
+            btnUpdateCrypto.Visible = true;
+        }
+
+        private void btnUpdateCrypto_Click(object sender, EventArgs e)
+        {
+            bool go = false;
+            Crypto crypto = new Crypto();
+            foreach (Crypto item in BenCryptoList)
+            {
+                if (txtWalletCode.Text == item.Waletaddress)
+                {
+                    BenCryptoList.Remove(item);
+                    BenCryptoList.Add(new Crypto(txtWaletName.Text.Trim(), txtWaletName.Text.Trim(),ben.BeneficairyID));
+                    CryptoController.UpateCrypto(crypto);
+
+                    FillCryptoDatagrid(ben);
+                    txtWaletName.Text = "";
+                    txtWalletCode.Text = "";
+
+                      go = true;
+                    break;
+                }
+            }
+            if (go != true)
+            {
+                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+
+            }
         }
     }
 }

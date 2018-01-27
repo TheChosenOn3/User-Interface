@@ -27,7 +27,7 @@ namespace Entities1
         }
         public Crypto(string WaletName, string Waletaddress, string BeneficiaryId)
         {
-            this.waletaddress = WaletName;
+            this.waletName = WaletName;
             this.waletaddress = Waletaddress;
             this.amount = Amount;
             this.userId = UserId;

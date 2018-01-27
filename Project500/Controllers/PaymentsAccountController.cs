@@ -29,6 +29,8 @@ namespace Controllers
             UserEFTList.Add(new PaymentAccount("0934", "JasonAA", "EFTDebit", AccountTypes.Credit, "1134", "1234"));
             return UserEFTList;
         }
+     
+      
         public static bool DeleteUserPaymentAcount(string UserAccID)
         {
             return true;
@@ -52,14 +54,12 @@ namespace Controllers
 
 
         }
-        public static bool UpdateBenPaymentAcount(Beneficiary benAcount)
+        public static bool UpdateBenPaymentAcount(PaymentAccount benAcount)
         {
             return true;
 
-
-
         }
-        public static bool AddBenPaymentAcount(Beneficiary benAcount)
+        public static bool AddBenPaymentAcount(PaymentAccount benAcount)
         {
             return true;
 

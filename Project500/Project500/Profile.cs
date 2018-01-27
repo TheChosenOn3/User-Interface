@@ -99,15 +99,15 @@ namespace Project500
                 table.Columns.Add("Account Type");
                 foreach (PaymentAccount item in EFTlist)
                 {
-                    table.Rows.Add(item.AccountNumber,item.AccountHolder, item.Reference, item.TypeAcc);
+                    table.Rows.Add(item.AccountNumber, item.AccountHolder, item.Reference, item.TypeAcc);
                 }
                 return table;
-                //eryhfse54r
+               
             }
 
         }
         // method to pop user card dgv
-     
+
         public void FillUserCardDatagrid(List<Card> CardDataGridList)
         {
 
@@ -500,24 +500,11 @@ namespace Project500
 
         private void metroButton6_Click(object sender, EventArgs e)
         {
-            bool go = false;
-            foreach (Card item in UserCardList)
-            {
-                if (txtCardNum.Text.Trim() == item.CardNr)
-                {
-                    CardController.DeleteCard(Card.CardNr);
+            CardController.DeleteCard(Card.CardNr);
                     UserCardList.Remove(Card);
                     ClearCard();
                     FillUserCardDatagrid(UserCardList);
-                    go = true;
-                    break;
-                }
-            }
-            if (go != true)
-            {
-                MessageBox.Show("Sorry the Account deos not exsist that you are trying to delete");
-            }
-
+                
         }
 
         private void metroButton7_Click(object sender, EventArgs e)
@@ -530,7 +517,7 @@ namespace Project500
                 if (txtCardNum.Text == item.CardNr)
                 {
                     UserCardList.Remove(item);
-                    UserCardList.Add(new Card(txtCardNum.Text.Trim(),txtCardHolder.Text.Trim(),txtCVV.Text.Trim(),DateTime.Now,user.RsaID));
+                    UserCardList.Add(new Card(txtCardNum.Text.Trim(), txtCardHolder.Text.Trim(), txtCVV.Text.Trim(), DateTime.Now, user.RsaID));
                     SendUserCardAccUp();
                     ClearCard();
                     FillUserCardDatagrid(UserCardList);
@@ -669,27 +656,11 @@ namespace Project500
 
         private void metroButton9_Click(object sender, EventArgs e)
         {
-
-            // check the vields for validation checks
-            bool go = false;
-            foreach (PaymentAccount item in UserEFTList)
-            {
-                if (txtEFTNum.Text == item.AccountNumber)
-                {
-                    PaymentsAccountController.DeleteUserPaymentAcount(EFT.AccountNumber);
+            PaymentsAccountController.DeleteUserPaymentAcount(EFT.AccountNumber);
                     UserEFTList.Remove(EFT);
                     FillUserEFTDatagrid(UserEFTList);
                     ClearEFT();
-                    go = true;
-                    break;
-                }
-            }
-            if (go != true)
-            {
-                MessageBox.Show("Sorry the Account deos not exsist that you are trying to delete");
-
-            }
-        }
+             }
 
         private void metroButton10_Click(object sender, EventArgs e)
         {
