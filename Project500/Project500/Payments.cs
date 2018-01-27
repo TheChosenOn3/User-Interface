@@ -200,5 +200,13 @@ namespace Project500
                 txtInterval.Visible = false;
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you wish to exit this application?", "Exit Project 500", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
     }
