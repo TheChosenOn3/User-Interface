@@ -240,23 +240,42 @@ namespace Project500
 
         private void btnExacutePayment_Click(object sender, EventArgs e)
         {
-           if (PaymentsController.AddPyaments(payment))
+            if (payment.Recurring == true)
             {
-                foreach (Payment item in PaymentList)
+                if (recuringControllercs.AddPyaments(payment))
                 {
-                    if (payment.PaymentNumber == item.PaymentNumber)
+                    foreach (Payment item in PaymentList)
                     {
-                        item.Status = "Submitted";
-                    }
-                    else
-                    {
-                        item.Status = "Failed";
+                        if (payment.PaymentNumber == item.PaymentNumber)
+                        {
+                            item.Status = "Submitted";
+                        }
+                        else
+                        {
+                            item.Status = "Failed";
+                        }
                     }
                 }
-           }
 
-            
-
+            }
+            else
+            {
+                if (PaymentsController.AddPyaments(payment))
+                {
+                    foreach (Payment item in PaymentList)
+                    {
+                        if (payment.PaymentNumber == item.PaymentNumber)
+                        {
+                            item.Status = "Submitted";
+                        }
+                        else
+                        {
+                            item.Status = "Failed";
+                        }
+                    }
+                }
+            }
+        
             FillPaymentDatagrid(PaymentList);
 
             ClearFields();
@@ -406,21 +425,25 @@ namespace Project500
                 {
                     MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
                 }
-                if (usertype == "Cry")
-                {
-                    typepay = PaymentType.Crypto;
-                }
-                else if(usertype == "Car")
-                {
-                    typepay = PaymentType.Card;
-                }
                 else
                 {
-                    typepay = PaymentType.EFT;
+                    if (usertype == "Cry")
+                    {
+                        typepay = PaymentType.Crypto;
+                    }
+                    else if (usertype == "Car")
+                    {
+                        typepay = PaymentType.Card;
+                    }
+                    else
+                    {
+                        typepay = PaymentType.EFT;
+                    }
+                    PaymentList.Add(new Payment("12", txtDescription.Text.Trim(), beneficiary.BeneficairyID, dtpPayDate.Value, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", "123", typepay, recur, DateTime.Now, user.RsaID));
+                    //add payment
+                    FillPaymentDatagrid(PaymentList);
                 }
-                PaymentList.Add(new Payment("12",txtDescription.Text.Trim(),beneficiary.BeneficairyID,dtpPayDate.Value,float.Parse(txtAmount.Text.Trim()),txtInterval.Text.Trim(),"Pending","123",typepay, recur, DateTime.Now,user.RsaID));
-                //add payment
-                FillPaymentDatagrid(PaymentList);
+               
                
             }
          

@@ -48,6 +48,11 @@ namespace Controllers
             return true;
 
         }
+        public static bool AddPyaments(Payment NewPayments)
+        {
+            return true;
+
+        }
 
     }
 }
