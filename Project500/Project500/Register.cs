@@ -379,6 +379,7 @@ namespace Project500
             {
                 tabCRegister.SelectTab(1);
                 this.AcceptButton = btnNextLogin;
+                txtStreetNumber.Focus();
             }
 
           
@@ -544,6 +545,7 @@ namespace Project500
                 Address = country + "/" + province + "/" + City + "/" + suurb + "/" + street + "/" + streetnum;
                 tabCRegister.SelectTab(2);
                 this.AcceptButton = metroButton2;
+                txtEmail.Focus();
             }
            
            
