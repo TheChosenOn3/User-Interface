@@ -153,6 +153,7 @@ namespace Project500
             Payments payments = new Payments(user);
             this.Hide();
             payments.Show();
+            //ref
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
