@@ -60,12 +60,12 @@ namespace Project500
 
         private void Payments_Load(object sender, EventArgs e)
         {
-            PaymentList = PaymentsController.GetPayments(user.RsaID);
+          
+
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             UserCardList = CardController.RetrveCards(user.RsaID);
             FillBeneficiaryDatagrid(BeneficairyList);
-
             popUcb();
 
         }
@@ -132,14 +132,15 @@ namespace Project500
         }
         public void FillPaymentDatagrid(List<Payment> paylist)
         {
-            dgvAddedPayments.DataSource = null;
+            
             DataTable paytable = ConvertListToDataTable(paylist);
-            dgvBeneficiarys.DataSource = paytable;
+            dgvAddedPayments.DataSource = paytable;
             DataTable ConvertListToDataTable(List<Payment> list)
             {
                 DataTable table = new DataTable();
-                table.Columns.Add("Beneficairy Nme");
-              
+                table.Columns.Add("payment number");
+                table.Columns.Add("Beneficairy Name");
+
                 table.Columns.Add("Description");
                 table.Columns.Add("paydate");
                 table.Columns.Add("Amont");
@@ -150,7 +151,9 @@ namespace Project500
 
                 foreach (Payment item in list)
                 {
-                    table.Rows.Add();
+                    MessageBox.Show(item.BeneficairyID);
+                    table.Rows.Add(item.PaymentNumber,item.BeneficairyID,item.Description,item.PayDate.ToString(),item.Amount,item.Interval,item.Status,item.TypePayment);
+
                 }
                 return table;
             }
@@ -208,36 +211,61 @@ namespace Project500
 
         private void btnDeletePayment_Click(object sender, EventArgs e)
         {
-            //payment= get selected payment from datagrid
-            // send payment to delete
-            // get new list to fill datagrid
            
-            ClearFields();
+            PaymentList.Remove(payment);
+            FillPaymentDatagrid(PaymentList);
+           
         }
 
         private void btnRetryPayment_Click(object sender, EventArgs e)
         {
-            //payment= get selected payment from datagrid
-            // check for valid
-            // send payment to rety
-          
-            ClearFields();
+            if (PaymentsController.UpdatePyaments(payment))
+            {
+                foreach (Payment item in PaymentList)
+                {
+                    if (payment.PaymentNumber == item.PaymentNumber)
+                    {
+                        item.Status = "Approved";
+                    }
+                    else
+                    {
+                        item.Status = "Declined";
+                    }
+                }
 
-        }
+            }
+            FillPaymentDatagrid(PaymentList);
+
+          }
 
         private void btnExacutePayment_Click(object sender, EventArgs e)
         {
-            //payment= get selected payment from datagrid
-            // check for valid
-            // send payment to add
-           
+           if (PaymentsController.AddPyaments(payment))
+            {
+                foreach (Payment item in PaymentList)
+                {
+                    if (payment.PaymentNumber == item.PaymentNumber)
+                    {
+                        item.Status = "Approved";
+                    }
+                    else
+                    {
+                        item.Status = "Declined";
+                    }
+                }
+           }
+
+            
+
+            FillPaymentDatagrid(PaymentList);
+
             ClearFields();
         }
 
         private void btnDeleteAllPayment_Click(object sender, EventArgs e)
         {
-            // clear all datagrids
-            ClearFields();
+            PaymentList.Clear();
+            FillPaymentDatagrid(PaymentList);
 
         }
 
@@ -261,19 +289,57 @@ namespace Project500
 
         private void btnRetryAllPayment_Click(object sender, EventArgs e)
         {
-            // cehck for valid
-            //sent true   PaymentList =     all in datagrid
-            // keep the failed ones
-           
+            
+            List<Payment> newpaylist = PaymentList;
+            foreach (Payment item in newpaylist)
+            {
+                if (PaymentsController.UpdatePyaments(item))
+                {
+                    foreach (Payment item1 in PaymentList)
+                    {
+                        if (item.PaymentNumber == item1.PaymentNumber)
+                        {
+                            item1.Status = "Approved";
+                        }
+                        else
+                        {
+                            item1.Status = "Declined";
+                        }
+                    }
+
+                }
+
+            }
+
+            FillPaymentDatagrid(PaymentList);
+
             ClearFields();
         }
 
         private void btnExacuteAllPayment_Click(object sender, EventArgs e)
         {
-            // check for valid
-            //sent true   PaymentList =     all in datagrid
-            // keep the failed ones
-            ClearFields();
+            List<Payment> newpaylist = PaymentList;
+            foreach (Payment item in newpaylist)
+            {
+                if (PaymentsController.AddPyaments(item))
+                {
+                    foreach (Payment item1 in PaymentList)
+                    {
+                        if (item.PaymentNumber == item1.PaymentNumber)
+                        {
+                            item1.Status = "Approved";
+                        }
+                        else
+                        {
+                            item1.Status = "Declined";
+                        }
+                    }
+
+                }
+
+            }
+
+            FillPaymentDatagrid(PaymentList);
         }
 
         private void dgvAddedPayments_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -306,20 +372,22 @@ namespace Project500
 
         private void btnAddPayment_Click(object sender, EventArgs e)
         {
-            // caheck valid
             
 
-
-
-
-
-            //
-
-
-
             payment = new Payment();
+            PaymentType typepay = new PaymentType();
+            bool recur = false;
+          
+            if (checkInter.Checked)
+            {
+                recur = true;
 
-            if (txtAmount.Text == "" || cbBAccType.SelectedIndex == -1 || cbxPaymentType.SelectedIndex == -1 || txtBName.Text == "" || txtDescription.Text == "" || txtBName.Text == "")
+            }
+            if (recur == true && txtInterval.Text == "")
+            {
+                MessageBox.Show("please fill in a interval if you want payment to be recuuring otherwize untick the box ");
+            }
+            else if (txtAmount.Text == "" || cbBAccType.SelectedIndex == -1 || cbxPaymentType.SelectedIndex == -1 || txtDescription.Text == "" || txtBName.Text == "")
             {
                 MessageBox.Show("please fill in all fields and select a beneficairy");
             }
@@ -329,8 +397,7 @@ namespace Project500
             }
             else if (cbBAccType.SelectedIndex != -1 && cbxPaymentType.SelectedIndex != -1)
             {
-                string finalusertypr = "";
-                string finalbentypr = "";
+                
                 string benected = cbBAccType.SelectedItem.ToString();
                 string userlected = cbxPaymentType.SelectedItem.ToString();
                 string usertype = userlected.Substring(0, 3);
@@ -339,21 +406,25 @@ namespace Project500
                 {
                     MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
                 }
-                
-
-
-
+                if (usertype == "Cry")
+                {
+                    typepay = PaymentType.Crypto;
+                }
+                else if(usertype == "Car")
+                {
+                    typepay = PaymentType.Card;
+                }
+                else
+                {
+                    typepay = PaymentType.EFT;
+                }
+                PaymentList.Add(new Payment("12",txtDescription.Text.Trim(),beneficiary.BeneficairyID,dtpPayDate.Value,float.Parse(txtAmount.Text.Trim()),txtInterval.Text.Trim(),"Pending","123",typepay, recur, DateTime.Now,user.RsaID));
                 //add payment
-                ClearFields();
+                FillPaymentDatagrid(PaymentList);
+               
             }
-            else
-            {
-                
-
-            }
-        
-          
-            // add ne payment to datagrid payments
+         
+          // add ne payment to datagrid payments
            
         }
 
@@ -409,6 +480,7 @@ namespace Project500
            
             if (BeneficiaryListS.Count == 0)
             {
+               
                 beneficiary = BeneficairyList[index];
             }
             else
@@ -445,6 +517,13 @@ namespace Project500
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dgvAddedPayments_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            payment = PaymentList[index];
+          
         }
     }
     }

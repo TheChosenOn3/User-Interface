@@ -119,7 +119,7 @@
             this.tcCurrentpayment.Controls.Add(this.metroTabPage1);
             this.tcCurrentpayment.Location = new System.Drawing.Point(186, 431);
             this.tcCurrentpayment.Name = "tcCurrentpayment";
-            this.tcCurrentpayment.SelectedIndex = 0;
+            this.tcCurrentpayment.SelectedIndex = 1;
             this.tcCurrentpayment.Size = new System.Drawing.Size(906, 307);
             this.tcCurrentpayment.TabIndex = 19;
             this.tcCurrentpayment.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -381,9 +381,9 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 42);
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(898, 261);
+            this.metroTabPage1.Size = new System.Drawing.Size(898, 262);
             this.metroTabPage1.TabIndex = 1;
             this.metroTabPage1.Text = "Associate Beneficiaries";
             this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -598,6 +598,7 @@
             this.dgvAddedPayments.Size = new System.Drawing.Size(899, 236);
             this.dgvAddedPayments.TabIndex = 82;
             this.dgvAddedPayments.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dgvAddedPayments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddedPayments_CellContentClick_1);
             // 
             // btnRetryPayment
             // 
