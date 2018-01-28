@@ -53,6 +53,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblHome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRucuring = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tcNotifications.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -93,6 +94,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.btnRucuring);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.btnProfileImage);
             this.panel1.Controls.Add(this.panel7);
@@ -326,7 +328,7 @@
             this.lblHome.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHome.Location = new System.Drawing.Point(369, 34);
             this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(132, 22);
+            this.lblHome.Size = new System.Drawing.Size(174, 30);
             this.lblHome.TabIndex = 1;
             this.lblHome.Text = "Home Screen";
             // 
@@ -339,6 +341,23 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnRucuring
+            // 
+            this.btnRucuring.FlatAppearance.BorderSize = 0;
+            this.btnRucuring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRucuring.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRucuring.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRucuring.Image = ((System.Drawing.Image)(resources.GetObject("btnRucuring.Image")));
+            this.btnRucuring.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRucuring.Location = new System.Drawing.Point(12, 518);
+            this.btnRucuring.Name = "btnRucuring";
+            this.btnRucuring.Size = new System.Drawing.Size(164, 71);
+            this.btnRucuring.TabIndex = 9;
+            this.btnRucuring.Text = " Recurings";
+            this.btnRucuring.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRucuring.UseVisualStyleBackColor = true;
+            this.btnRucuring.Click += new System.EventHandler(this.btnRucuring_Click);
             // 
             // Main
             // 
@@ -385,5 +404,6 @@
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnRucuring;
     }
 }
