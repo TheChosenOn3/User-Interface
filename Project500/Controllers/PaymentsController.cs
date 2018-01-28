@@ -17,6 +17,7 @@ namespace Controllers
             PaymentList.Add(new Payment("3", "payment3", "12324", DateTime.Now, 100, "1", "Schedueld", "333", PaymentType.Card, true, DateTime.Now, "1234"));
             PaymentList.Add(new Payment("4", "payment4", "12324", DateTime.Now, 100,"1", "Schedueld", "444", PaymentType.Card, true, DateTime.Now, "1234"));
             PaymentList.Add(new Payment("5", "payment5", "12324", DateTime.Now, 100, "0", "pending", "555", PaymentType.Card, false, DateTime.Now, "1234"));
+            // mision "n if statement vir as danielo net vir history moet search of net vir scheaduel
             return PaymentList;
         }
         public static List<Payment> GetFilterPayments(string BenId, string Status,PaymentType Type, DateTime Begin, DateTime End)
@@ -27,6 +28,8 @@ namespace Controllers
             PaymentList.Add(new Payment("3", "payment3", "12324", DateTime.Now, 100, "1", "Schedueld", "333", PaymentType.Card, true, DateTime.Now, "1234"));
             PaymentList.Add(new Payment("4", "payment4", "12324", DateTime.Now, 100, "1", "Schedueld", "444", PaymentType.Card, true, DateTime.Now, "1234"));
             PaymentList.Add(new Payment("5", "payment5", "12324", DateTime.Now, 100, "0", "pending", "555", PaymentType.Card, false, DateTime.Now, "1234"));
+            // mision "n if statement vir as danielo net vir history moet search of net vir scheaduel
+        
             return PaymentList;
         }
         public static List<Payment> GetFilterPaymentsNoType(string BenId, string Status, DateTime Begin, DateTime End)
@@ -37,6 +40,7 @@ namespace Controllers
             PaymentList.Add(new Payment("3", "payment3", "12324", DateTime.Now, 100, "1", "Schedueld", "333", PaymentType.Card, true, DateTime.Now, "1234"));
             PaymentList.Add(new Payment("4", "payment4", "12324", DateTime.Now, 100, "1", "Schedueld", "444", PaymentType.Card, true, DateTime.Now, "1234"));
             PaymentList.Add(new Payment("5", "payment5", "12324", DateTime.Now, 100, "0", "pending", "555", PaymentType.Card, false, DateTime.Now, "1234"));
+            // mision "n if statement vir as danielo net vir history moet search of net vir scheaduel
             return PaymentList;
         }
 

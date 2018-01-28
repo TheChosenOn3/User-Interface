@@ -40,7 +40,7 @@ namespace Project500
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
+            Main main = new Main(user);
             this.Hide();
             main.Show();
         }

@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.tcFilterPayments = new MetroFramework.Controls.MetroTabControl();
             this.tabFilterPayments = new MetroFramework.Controls.MetroTabPage();
+            this.cmbStaus = new System.Windows.Forms.ComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
@@ -53,6 +54,7 @@
             this.dgvPayments = new MetroFramework.Controls.MetroGrid();
             this.tcCurrentPayment = new MetroFramework.Controls.MetroTabControl();
             this.tabCurrentPayment = new MetroFramework.Controls.MetroTabPage();
+            this.BtnRety = new MetroFramework.Controls.MetroButton();
             this.btnRemakePayment = new MetroFramework.Controls.MetroButton();
             this.btnGenerateReport = new MetroFramework.Controls.MetroButton();
             this.rteDecription = new System.Windows.Forms.RichTextBox();
@@ -78,8 +80,6 @@
             this.btnHomeNew = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnViewAll = new MetroFramework.Controls.MetroButton();
-            this.cmbStaus = new System.Windows.Forms.ComboBox();
-            this.BtnRety = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tcFilterPayments.SuspendLayout();
             this.tabFilterPayments.SuspendLayout();
@@ -136,6 +136,19 @@
             this.tabFilterPayments.VerticalScrollbarBarColor = true;
             this.tabFilterPayments.VerticalScrollbarHighlightOnWheel = false;
             this.tabFilterPayments.VerticalScrollbarSize = 11;
+            // 
+            // cmbStaus
+            // 
+            this.cmbStaus.FormattingEnabled = true;
+            this.cmbStaus.Items.AddRange(new object[] {
+            "Approved",
+            "Declined",
+            "Pending"});
+            this.cmbStaus.Location = new System.Drawing.Point(29, 126);
+            this.cmbStaus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbStaus.Name = "cmbStaus";
+            this.cmbStaus.Size = new System.Drawing.Size(253, 24);
+            this.cmbStaus.TabIndex = 82;
             // 
             // metroLabel3
             // 
@@ -237,10 +250,10 @@
             // 
             // 
             this.txtBName.CustomButton.Image = null;
-            this.txtBName.CustomButton.Location = new System.Drawing.Point(364, 1);
+            this.txtBName.CustomButton.Location = new System.Drawing.Point(273, 1);
             this.txtBName.CustomButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBName.CustomButton.Name = "";
-            this.txtBName.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtBName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtBName.CustomButton.TabIndex = 1;
             this.txtBName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -310,38 +323,38 @@
             this.dgvPayments.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPayments.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvPayments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPayments.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPayments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPayments.EnableHeadersVisualStyles = false;
             this.dgvPayments.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvPayments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvPayments.Location = new System.Drawing.Point(4, 11);
-            this.dgvPayments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPayments.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPayments.Name = "dgvPayments";
             this.dgvPayments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayments.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayments.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPayments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPayments.Size = new System.Drawing.Size(1171, 213);
@@ -381,6 +394,18 @@
             this.tabCurrentPayment.VerticalScrollbarBarColor = true;
             this.tabCurrentPayment.VerticalScrollbarHighlightOnWheel = false;
             this.tabCurrentPayment.VerticalScrollbarSize = 11;
+            // 
+            // BtnRety
+            // 
+            this.BtnRety.Location = new System.Drawing.Point(1051, 51);
+            this.BtnRety.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnRety.Name = "BtnRety";
+            this.BtnRety.Size = new System.Drawing.Size(119, 39);
+            this.BtnRety.TabIndex = 83;
+            this.BtnRety.Text = "RetryPayment";
+            this.BtnRety.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.BtnRety.UseSelectable = true;
+            this.BtnRety.Click += new System.EventHandler(this.BtnRety_Click);
             // 
             // btnRemakePayment
             // 
@@ -431,7 +456,7 @@
             this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.ForeColor = System.Drawing.Color.White;
             this.panel8.Location = new System.Drawing.Point(248, 5);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1208, 123);
             this.panel8.TabIndex = 65;
@@ -451,7 +476,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, -17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 155);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -477,16 +502,17 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnHomeNew);
             this.panel1.Location = new System.Drawing.Point(0, 5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 903);
             this.panel1.TabIndex = 64;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Red;
             this.panel9.Location = new System.Drawing.Point(0, 790);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(13, 81);
             this.panel9.TabIndex = 8;
@@ -500,7 +526,7 @@
             this.btnProfileImage.Image = ((System.Drawing.Image)(resources.GetObject("btnProfileImage.Image")));
             this.btnProfileImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfileImage.Location = new System.Drawing.Point(21, 4);
-            this.btnProfileImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProfileImage.Margin = new System.Windows.Forms.Padding(4);
             this.btnProfileImage.Name = "btnProfileImage";
             this.btnProfileImage.Size = new System.Drawing.Size(215, 87);
             this.btnProfileImage.TabIndex = 8;
@@ -512,7 +538,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel7.Location = new System.Drawing.Point(0, 543);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(13, 81);
             this.panel7.TabIndex = 7;
@@ -522,7 +548,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel6.Location = new System.Drawing.Point(0, 459);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(13, 81);
             this.panel6.TabIndex = 5;
@@ -532,7 +558,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel5.Location = new System.Drawing.Point(0, 375);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(13, 81);
             this.panel5.TabIndex = 4;
@@ -541,7 +567,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel4.Location = new System.Drawing.Point(0, 293);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(13, 80);
             this.panel4.TabIndex = 3;
@@ -551,7 +577,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel3.Location = new System.Drawing.Point(0, 210);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(13, 74);
             this.panel3.TabIndex = 3;
@@ -566,7 +592,7 @@
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.Location = new System.Drawing.Point(21, 790);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(219, 87);
             this.btnExit.TabIndex = 6;
@@ -584,7 +610,7 @@
             this.btnBeneficiaryNew.Image = ((System.Drawing.Image)(resources.GetObject("btnBeneficiaryNew.Image")));
             this.btnBeneficiaryNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBeneficiaryNew.Location = new System.Drawing.Point(21, 543);
-            this.btnBeneficiaryNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBeneficiaryNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnBeneficiaryNew.Name = "btnBeneficiaryNew";
             this.btnBeneficiaryNew.Size = new System.Drawing.Size(219, 87);
             this.btnBeneficiaryNew.TabIndex = 5;
@@ -597,7 +623,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel2.Location = new System.Drawing.Point(0, 116);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(13, 87);
             this.panel2.TabIndex = 2;
@@ -612,7 +638,7 @@
             this.btnScheduleNew.Image = ((System.Drawing.Image)(resources.GetObject("btnScheduleNew.Image")));
             this.btnScheduleNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnScheduleNew.Location = new System.Drawing.Point(21, 459);
-            this.btnScheduleNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScheduleNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleNew.Name = "btnScheduleNew";
             this.btnScheduleNew.Size = new System.Drawing.Size(219, 87);
             this.btnScheduleNew.TabIndex = 4;
@@ -630,7 +656,7 @@
             this.btnHistoryNew.Image = ((System.Drawing.Image)(resources.GetObject("btnHistoryNew.Image")));
             this.btnHistoryNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistoryNew.Location = new System.Drawing.Point(21, 375);
-            this.btnHistoryNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistoryNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnHistoryNew.Name = "btnHistoryNew";
             this.btnHistoryNew.Size = new System.Drawing.Size(219, 87);
             this.btnHistoryNew.TabIndex = 3;
@@ -648,7 +674,7 @@
             this.btnPaymentNew.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentNew.Image")));
             this.btnPaymentNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPaymentNew.Location = new System.Drawing.Point(21, 293);
-            this.btnPaymentNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPaymentNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnPaymentNew.Name = "btnPaymentNew";
             this.btnPaymentNew.Size = new System.Drawing.Size(219, 87);
             this.btnPaymentNew.TabIndex = 2;
@@ -666,7 +692,7 @@
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(21, 210);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 75);
             this.button2.TabIndex = 1;
@@ -684,7 +710,7 @@
             this.btnHomeNew.Image = ((System.Drawing.Image)(resources.GetObject("btnHomeNew.Image")));
             this.btnHomeNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHomeNew.Location = new System.Drawing.Point(21, 116);
-            this.btnHomeNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHomeNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnHomeNew.Name = "btnHomeNew";
             this.btnHomeNew.Size = new System.Drawing.Size(219, 87);
             this.btnHomeNew.TabIndex = 0;
@@ -716,31 +742,6 @@
             this.btnViewAll.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnViewAll.UseSelectable = true;
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
-            // 
-            // cmbStaus
-            // 
-            this.cmbStaus.FormattingEnabled = true;
-            this.cmbStaus.Items.AddRange(new object[] {
-            "Approved",
-            "Declined",
-            "Pending"});
-            this.cmbStaus.Location = new System.Drawing.Point(29, 126);
-            this.cmbStaus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbStaus.Name = "cmbStaus";
-            this.cmbStaus.Size = new System.Drawing.Size(253, 24);
-            this.cmbStaus.TabIndex = 82;
-            // 
-            // BtnRety
-            // 
-            this.BtnRety.Location = new System.Drawing.Point(1051, 51);
-            this.BtnRety.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnRety.Name = "BtnRety";
-            this.BtnRety.Size = new System.Drawing.Size(119, 39);
-            this.BtnRety.TabIndex = 83;
-            this.BtnRety.Text = "RetryPayment";
-            this.BtnRety.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.BtnRety.UseSelectable = true;
-            this.BtnRety.Click += new System.EventHandler(this.BtnRety_Click);
             // 
             // History
             // 

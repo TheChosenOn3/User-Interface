@@ -99,18 +99,7 @@ namespace Project500
             DateTime StartDate = dtpStart.Value;
           
             
-            switch (cbPaymenttype.SelectedIndex)
-            {
-              case  0 :
-                    paymentType = PaymentType.Crypto;
-                    break;
-                case 1:
-                    paymentType = PaymentType.EFT;
-                    break;
-                case 2:
-                    paymentType = PaymentType.Card;
-                    break;
-            }
+          
         
 
 
@@ -184,7 +173,15 @@ namespace Project500
         private void dgvPayments_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            payment = PaymentList[index];
+          Payment  payment1 = PaymentListS[index];
+            foreach (Payment item in PaymentList)
+            {
+                if (item == payment1)
+                {
+                    payment = payment1;
+                }
+
+            }
             genratedes();
             }
 
@@ -220,17 +217,31 @@ namespace Project500
             }
             else
             {
+              
+
                 if (cbPaymenttype.SelectedIndex == -1)
                 {
                     MessageBox.Show("no type");
-                    PaymentListS = PaymentsController.GetFilterPaymentsNoType("11", getstatus(cmbStaus.SelectedIndex), dtpStart.Value, dtpEnd.Value);
-                    FillPaymentsDatagrid(PaymentListS);
+                    PaymentList = PaymentsController.GetFilterPaymentsNoType("11", getstatus(cmbStaus.SelectedIndex), dtpStart.Value, dtpEnd.Value);
+                    FillPaymentsDatagrid(PaymentList);
                 }
                 else
                 {
+                    switch (cbPaymenttype.SelectedIndex)
+                    {
+                        case 0:
+                            paymentType = PaymentType.Crypto;
+                            break;
+                        case 1:
+                            paymentType = PaymentType.EFT;
+                            break;
+                        case 2:
+                            paymentType = PaymentType.Card;
+                            break;
+                    }
                     MessageBox.Show("typ");
-                    PaymentListS = PaymentsController.GetFilterPayments("11", getstatus(cmbStaus.SelectedIndex), paymentType, dtpStart.Value, dtpEnd.Value);
-                    FillPaymentsDatagrid(PaymentListS);
+                    PaymentList = PaymentsController.GetFilterPayments("11", getstatus(cmbStaus.SelectedIndex), paymentType, dtpStart.Value, dtpEnd.Value);
+                    FillPaymentsDatagrid(PaymentList);
                 }
                 
             
@@ -263,6 +274,11 @@ namespace Project500
                                                   Date created : {6}       Description : {7}               
                                                   interval : {8}           Status : {9}          Type : {10}  ", payment.PaymentNumber, payment.ScheduleNr, payment.UserID, payment.BeneficairyID, payment.Amount, payment.PayDate, payment.DateCreated, payment.Description, payment.Interval, payment.Status, payment.TypePayment);
 
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
