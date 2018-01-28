@@ -229,7 +229,7 @@ namespace Project500
                     }
                     else
                     {
-                        item.Status = "Declined";
+                        item.Status = "Failed";
                     }
                 }
 
@@ -250,7 +250,7 @@ namespace Project500
                     }
                     else
                     {
-                        item.Status = "Declined";
+                        item.Status = "Failed";
                     }
                 }
            }
@@ -303,7 +303,7 @@ namespace Project500
                         }
                         else
                         {
-                            item1.Status = "Declined";
+                            item1.Status = "Failed";
                         }
                     }
 
@@ -331,7 +331,7 @@ namespace Project500
                         }
                         else
                         {
-                            item1.Status = "Declined";
+                            item1.Status = "Failed";
                         }
                     }
 
