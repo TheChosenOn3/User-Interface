@@ -152,12 +152,19 @@ namespace Project500
                 table.Columns.Add("Interval");
                 table.Columns.Add("Status");
                 table.Columns.Add("type");
-               
 
+                string bennnaem = "";
                 foreach (Payment item in list)
                 {
-                  
-                    table.Rows.Add(item.PaymentNumber,item.BeneficairyID,item.Description,item.PayDate.ToString(),item.Amount,item.Interval,item.Status,item.TypePayment);
+                    foreach (Beneficiary benitem in BeneficairyList)
+                    {
+                        if (item.BeneficairyID == benitem.BeneficairyID )
+                        {
+                            bennnaem = benitem.BeneficairyName;
+                        }
+                    }
+
+                    table.Rows.Add(item.PaymentNumber, bennnaem, item.Description,item.PayDate.ToString(),item.Amount,item.Interval,item.Status,item.TypePayment);
 
                 }
                 return table;
@@ -446,7 +453,7 @@ namespace Project500
             {
                 MessageBox.Show("please fill in a interval if you want payment to be recuuring otherwize untick the box ");
             }
-            else if(txtInterval.Text.Length != 5)
+            else if(recur == true&& txtInterval.Text.Length != 5)
             {
                 MessageBox.Show("your interval must be int he correct format ");
 

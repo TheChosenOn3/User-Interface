@@ -203,7 +203,7 @@ namespace Project500
             {
                 MessageBox.Show("please fill in a interval if you want payment to be recuuring otherwize untick the box ");
             }
-            else if (txtInterval.Text.Length != 5)
+            else if (recur == true && txtInterval.Text.Length != 5)
             {
                 MessageBox.Show("your interval must be int he correct format ");
 
