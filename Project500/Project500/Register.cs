@@ -378,7 +378,7 @@ namespace Project500
             else
             {
                 tabCRegister.SelectTab(1);
-                this.AcceptButton = btnNextLogin_Click(sender, e);
+                this.AcceptButton = btnNextLogin;
             }
 
           
@@ -541,8 +541,9 @@ namespace Project500
             }
             else
             {
-                 Address = country + "/" + province + "/" + City + "/" + suurb + "/" + street + "/" + streetnum;
+                Address = country + "/" + province + "/" + City + "/" + suurb + "/" + street + "/" + streetnum;
                 tabCRegister.SelectTab(2);
+                this.AcceptButton = metroButton2;
             }
            
            
