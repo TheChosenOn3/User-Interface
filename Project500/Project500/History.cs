@@ -59,11 +59,18 @@ namespace Project500
                 table.Columns.Add("Status");
                 table.Columns.Add("type");
 
-
+                string bennnaem = "";
                 foreach (Payment item in list)
                 {
+                    foreach (Beneficiary benitem in BeneficairyList)
+                    {
+                        if (item.BeneficairyID == benitem.BeneficairyID)
+                        {
+                            bennnaem = benitem.BeneficairyName;
+                        }
+                    }
                     
-                    table.Rows.Add(item.PaymentNumber, item.BeneficairyID, item.Description, item.PayDate.ToString(), item.Amount, item.Interval, item.Status, item.TypePayment);
+                    table.Rows.Add(item.PaymentNumber, bennnaem, item.Description, item.PayDate.ToString(), item.Amount, item.Interval, item.Status, item.TypePayment);
 
                 }
                 return table;
