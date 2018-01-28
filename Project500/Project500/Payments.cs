@@ -151,7 +151,7 @@ namespace Project500
 
                 foreach (Payment item in list)
                 {
-                    MessageBox.Show(item.BeneficairyID);
+                  
                     table.Rows.Add(item.PaymentNumber,item.BeneficairyID,item.Description,item.PayDate.ToString(),item.Amount,item.Interval,item.Status,item.TypePayment);
 
                 }
