@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controllers;
 using Entities1;
+using MetroFramework;
+
 namespace Project500
 {
     public partial class Login : MetroFramework.Forms.MetroForm
@@ -32,14 +34,14 @@ namespace Project500
             
             if (username == "" || passworrd == "")
             {
-                MessageBox.Show("enter all the fields");
-
+                MetroMessageBox.Show(this, "Username and Password Cannot be Blank!", "Input Error");
             }
-            else {
+            else
+            {
                 User user = UserController.CheckLogin(username, passworrd);
                 if (user.RsaID != null)
-                {//dummy user to use for now
-                    
+                {
+                    //dummy user to use for now
                     Main main = new Main(user);
                     this.Hide();
                     main.Show();
@@ -47,7 +49,7 @@ namespace Project500
                 }
                 else
                 {
-                    MessageBox.Show("Credentials are wrong");
+                    MetroMessageBox.Show(this, "Username or Password is Incorrect", "Login Failed!");
                 }
             }
 

@@ -49,9 +49,9 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblHeader.Location = new System.Drawing.Point(242, 103);
+            this.lblHeader.Location = new System.Drawing.Point(255, 102);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(115, 25);
+            this.lblHeader.Size = new System.Drawing.Size(109, 25);
             this.lblHeader.TabIndex = 50;
             this.lblHeader.Text = "Login Details";
             this.lblHeader.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -105,7 +105,7 @@
             this.txtPassword.Location = new System.Drawing.Point(201, 243);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
@@ -145,7 +145,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Location = new System.Drawing.Point(201, 150);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(76, 20);
+            this.lblUsername.Size = new System.Drawing.Size(71, 19);
             this.lblUsername.TabIndex = 55;
             this.lblUsername.Text = "Username:";
             this.lblUsername.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -155,7 +155,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Location = new System.Drawing.Point(201, 220);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(69, 20);
+            this.lblPassword.Size = new System.Drawing.Size(66, 19);
             this.lblPassword.TabIndex = 56;
             this.lblPassword.Text = "Password:";
             this.lblPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
