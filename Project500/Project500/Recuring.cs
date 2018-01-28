@@ -194,11 +194,18 @@ namespace Project500
             if (checkInter.Checked)
             {
                 recur = true;
+                lblInterval.Visible = true;
+                txtInterval.Visible = true;
 
             }
             if (recur == true && txtInterval.Text == "")
             {
                 MessageBox.Show("please fill in a interval if you want payment to be recuuring otherwize untick the box ");
+            }
+            else if (txtInterval.Text.Length != 5)
+            {
+                MessageBox.Show("your interval must be int he correct format ");
+
             }
             else if (txtAmount.Text == "" || cbBAcounType.SelectedIndex == -1 || cbuserpaymentmethod.SelectedIndex == -1 || txtDescription.Text == "" || txtBname.Text == "")
             {
@@ -232,7 +239,7 @@ namespace Project500
                     typepay = PaymentType.EFT;
                 }
 
-                Payment newPayment = new Payment("12", txtDescription.Text.Trim(), beneficiary.BeneficairyID, dtpPaymentdate.Value, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), payment.Status, payment.PaymentNumber, typepay, recur, DateTime.Now, user.RsaID);
+                Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, dtpPaymentdate.Value, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), payment.Status, payment.PaymentNumber, typepay, recur, DateTime.Now, user.RsaID);
                 PaymentsController.UpdatePyaments(newPayment);
                 foreach (Payment item in PaymentList)
                 {
@@ -280,10 +287,21 @@ namespace Project500
             }
             else
             {
+                string benidtosearc = "";
+                foreach (Beneficiary item in BeneficairyList)
+                {
+                    if (txtFBName.Text.Trim() == item.BeneficairyName)
+                    {
+                        benidtosearc = item.BeneficairyID;
+                    }
+
+                }
+
+
                 if (cbFPaymentMethod.SelectedIndex == -1)
                 {
-                    MessageBox.Show("no type");
-                    PaymentListS = PaymentsController.GetFilterPaymentsNoType("11", "Schedueld", dtpFStart.Value, dtpFEnd.Value);
+                   
+                    PaymentListS = PaymentsController.GetFilterPaymentsNoType(benidtosearc, "", dtpFStart.Value, dtpFEnd.Value);
                     FillPaymentsDatagrid(PaymentListS);
                 }
                 else
@@ -301,8 +319,8 @@ namespace Project500
                             break;
                     }
 
-                    MessageBox.Show("typ");
-                    PaymentListS = PaymentsController.GetFilterPayments("11", "Schedueld", paymentType, dtpFStart.Value, dtpFEnd.Value);
+                    // make shure this is shap at daniels side
+                    PaymentListS = PaymentsController.GetFilterPayments(benidtosearc, "", paymentType, dtpFStart.Value, dtpFEnd.Value);
                     FillPaymentsDatagrid(PaymentListS);
                 }
 
@@ -318,6 +336,7 @@ namespace Project500
             cbFPaymentMethod.SelectedIndex = -1;
             dtpFEnd.Value = DateTime.Now;
             dtpFStart.Value = DateTime.Now;
+            FillPaymentsDatagrid(PaymentList);
 
         }
 
@@ -466,6 +485,16 @@ namespace Project500
             }
 
             BenbjectListe.Clear();
+        }
+
+        private void btnUpdatePayment_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFilter_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

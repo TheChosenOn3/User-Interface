@@ -119,7 +119,7 @@
             this.tcCurrentpayment.Controls.Add(this.metroTabPage1);
             this.tcCurrentpayment.Location = new System.Drawing.Point(186, 431);
             this.tcCurrentpayment.Name = "tcCurrentpayment";
-            this.tcCurrentpayment.SelectedIndex = 1;
+            this.tcCurrentpayment.SelectedIndex = 0;
             this.tcCurrentpayment.Size = new System.Drawing.Size(906, 307);
             this.tcCurrentpayment.TabIndex = 19;
             this.tcCurrentpayment.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -166,6 +166,7 @@
             this.checkInter.Text = "Recurring Payment";
             this.checkInter.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.checkInter.UseSelectable = true;
+            this.checkInter.Visible = false;
             // 
             // txtInterval
             // 
@@ -195,6 +196,7 @@
             this.txtInterval.TabIndex = 83;
             this.txtInterval.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtInterval.UseSelectable = true;
+            this.txtInterval.Visible = false;
             this.txtInterval.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtInterval.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 

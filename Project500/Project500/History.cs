@@ -92,7 +92,7 @@ namespace Project500
         private void History_Load(object sender, EventArgs e)
         {
             PaymentListF = PaymentsController.GetPayments(user.RsaID);
-            foreach (Payment item in PaymentList)
+            foreach (Payment item in PaymentListF)
             {
                 if (item.Status == "Declined"|| item.Status == "Approved" ||item.Status == "Submitted")
                 {
@@ -198,7 +198,7 @@ namespace Project500
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
-            FillPaymentsDatagrid(PaymentsController.GetPayments(user.RsaID));
+            FillPaymentsDatagrid(PaymentList);
         }
         public void clearall() {
             txtBName.Text = "";
@@ -221,12 +221,21 @@ namespace Project500
             }
             else
             {
-              
+                string benidtosearc = "";
 
+                foreach (Beneficiary item in BeneficairyList)
+                {
+                    if (txtBName.Text.Trim() == item.BeneficairyName)
+                    {
+                        benidtosearc = item.BeneficairyID;
+                    }
+
+                }
+                
                 if (cbPaymenttype.SelectedIndex == -1)
                 {
-                    MessageBox.Show("no type");
-                    PaymentList = PaymentsController.GetFilterPaymentsNoType("11", getstatus(cmbStaus.SelectedIndex), dtpStart.Value, dtpEnd.Value);
+                   
+                    PaymentList = PaymentsController.GetFilterPaymentsNoType(benidtosearc, getstatus(cmbStaus.SelectedIndex), dtpStart.Value, dtpEnd.Value);
                     FillPaymentsDatagrid(PaymentList);
                 }
                 else
@@ -243,8 +252,8 @@ namespace Project500
                             paymentType = PaymentType.Card;
                             break;
                     }
-                    MessageBox.Show("typ");
-                    PaymentList = PaymentsController.GetFilterPayments("11", getstatus(cmbStaus.SelectedIndex), paymentType, dtpStart.Value, dtpEnd.Value);
+                   
+                    PaymentList = PaymentsController.GetFilterPayments(benidtosearc, getstatus(cmbStaus.SelectedIndex), paymentType, dtpStart.Value, dtpEnd.Value);
                     FillPaymentsDatagrid(PaymentList);
                 }
                 

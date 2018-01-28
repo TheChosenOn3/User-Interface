@@ -35,8 +35,12 @@ namespace Project500
         float Amount1 = 0;
         string interval = "";
         DateTime paymentdate = DateTime.Now;
+        Random rnd = new Random();
+        Random rnd1 = new Random();
+        Random rnd2 = new Random();
+     
 
-       
+
         string Waletname = "BTCACC";
         float Waletammount = 11234;
         string WalletID = "234567890";
@@ -66,6 +70,7 @@ namespace Project500
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             UserCardList = CardController.RetrveCards(user.RsaID);
             FillBeneficiaryDatagrid(BeneficairyList);
+           
             popUcb();
 
         }
@@ -226,6 +231,7 @@ namespace Project500
                     if (payment.PaymentNumber == item.PaymentNumber)
                     {
                         item.Status = "Submitted";
+                        MessageBox.Show("payment exacuted sucsessfully");
                     }
                     else
                     {
@@ -233,6 +239,10 @@ namespace Project500
                     }
                 }
 
+            }
+            else
+            {
+                MessageBox.Show("could not connect to server");
             }
             FillPaymentDatagrid(PaymentList);
 
@@ -249,12 +259,17 @@ namespace Project500
                         if (payment.PaymentNumber == item.PaymentNumber)
                         {
                             item.Status = "Submitted";
+                            MessageBox.Show("payment exacuted sucsessfully");
                         }
                         else
                         {
                             item.Status = "Failed";
                         }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("could not connect to server");
                 }
 
             }
@@ -297,18 +312,19 @@ namespace Project500
         {
            
             txtAmount.Text = "";
-    
             txtDescription.Text = "";
             txtInterval.Text = "";
             cbBAccType.SelectedIndex = -1;
             dtpPayDate.Value = DateTime.Now;
             checkInter.Checked = false;
+            lblInterval.Visible = false;
+            txtInterval.Visible = false;
 
         }
 
         private void btnRetryAllPayment_Click(object sender, EventArgs e)
         {
-            
+            bool issusck = false;
             List<Payment> newpaylist = PaymentList;
             foreach (Payment item in newpaylist)
             {
@@ -318,6 +334,7 @@ namespace Project500
                     {
                         if (item.PaymentNumber == item1.PaymentNumber)
                         {
+                            issusck = true;
                             item1.Status = "Submitted";
                         }
                         else
@@ -329,6 +346,16 @@ namespace Project500
                 }
 
             }
+            if (issusck == false)
+            {
+                
+                    MessageBox.Show("could not connect to server");
+                
+            }
+            else
+            {
+                MessageBox.Show("All payments exacuted sucsessfully");
+            }
 
             FillPaymentDatagrid(PaymentList);
 
@@ -337,6 +364,7 @@ namespace Project500
 
         private void btnExacuteAllPayment_Click(object sender, EventArgs e)
         {
+            bool issusck = false;
             List<Payment> newpaylist = PaymentList;
             foreach (Payment item in newpaylist)
             {
@@ -356,6 +384,16 @@ namespace Project500
 
                 }
 
+            }
+            if (issusck == false)
+            {
+
+                MessageBox.Show("could not connect to server");
+
+            }
+            else
+            {
+                MessageBox.Show("All payments exacuted sucsessfully");
             }
 
             FillPaymentDatagrid(PaymentList);
@@ -400,11 +438,18 @@ namespace Project500
             if (checkInter.Checked)
             {
                 recur = true;
+                lblInterval.Visible = true;
+                txtInterval.Visible = true;
 
             }
             if (recur == true && txtInterval.Text == "")
             {
                 MessageBox.Show("please fill in a interval if you want payment to be recuuring otherwize untick the box ");
+            }
+            else if(txtInterval.Text.Length != 5)
+            {
+                MessageBox.Show("your interval must be int he correct format ");
+
             }
             else if (txtAmount.Text == "" || cbBAccType.SelectedIndex == -1 || cbxPaymentType.SelectedIndex == -1 || txtDescription.Text == "" || txtBName.Text == "")
             {
@@ -439,9 +484,16 @@ namespace Project500
                     {
                         typepay = PaymentType.EFT;
                     }
-                    PaymentList.Add(new Payment("12", txtDescription.Text.Trim(), beneficiary.BeneficairyID, dtpPayDate.Value, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", "123", typepay, recur, DateTime.Now, user.RsaID));
+                    int PaymentNum1 = rnd.Next(1, 1000);
+                    int PaymentNum2 = rnd.Next(1, 1000);
+                    int SchedueldNum = rnd.Next(1, 1000);
+                    string paynum = PaymentNum1.ToString() + PaymentNum2.ToString();
+
+                    PaymentList.Add(new Payment(SchedueldNum.ToString(), txtDescription.Text.Trim(), beneficiary.BeneficairyID, dtpPayDate.Value, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", paynum, typepay, recur, DateTime.Now, user.RsaID));
                     //add payment
                     FillPaymentDatagrid(PaymentList);
+                    ClearFields();
+                    
                 }
                
                
