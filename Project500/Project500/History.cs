@@ -184,7 +184,7 @@ namespace Project500
         private void dgvPayments_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-          Payment  payment1 = PaymentListS[index];
+          Payment  payment1 = PaymentList[index];
             foreach (Payment item in PaymentList)
             {
                 if (item == payment1)
