@@ -17,6 +17,7 @@ namespace Project500
     {
         List<Payment> PaymentList = new List<Payment>();
         List<Payment> PaymentListS = new List<Payment>();
+        List<Payment> PaymentListF = new List<Payment>();
         List<Beneficiary> BeneficairyList = new List<Beneficiary>();
         List<PaymentAccount> BenPaymentAccountList = new List<PaymentAccount>();
         List<PaymentAccount> BenPaymentListS = new List<PaymentAccount>();
@@ -106,7 +107,15 @@ namespace Project500
         private void Schedules_Load(object sender, EventArgs e)
         {
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
-            PaymentList = PaymentsController.GetPayments(user.RsaID);
+            PaymentListF = PaymentsController.GetPayments(user.RsaID);
+            foreach (Payment   item in PaymentListF)
+            {
+                if (item.PayDate > DateTime.Now)
+                {
+                    PaymentList.Add(item);
+                }
+              
+            }
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             UserCardList = CardController.RetrveCards(user.RsaID);
             FillPaymentsDatagrid(PaymentList);

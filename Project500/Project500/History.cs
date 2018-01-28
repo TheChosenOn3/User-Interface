@@ -16,6 +16,7 @@ namespace Project500
     {
         List<Payment> PaymentList = new List<Payment>();
         List<Payment> PaymentListS = new List<Payment>();
+        List<Payment> PaymentListF = new List<Payment>();
         List<Beneficiary> BeneficairyList = new List<Beneficiary>();
         List<PaymentAccount> BenPaymentAccountList = new List<PaymentAccount>();
         List<PaymentAccount> BenPaymentListS = new List<PaymentAccount>();
@@ -90,20 +91,23 @@ namespace Project500
         }
         private void History_Load(object sender, EventArgs e)
         {
-            PaymentList = PaymentsController.GetPayments(user.RsaID);
+            PaymentListF = PaymentsController.GetPayments(user.RsaID);
+            foreach (Payment item in PaymentList)
+            {
+                if (item.Status == "Declined"|| item.Status == "Approved" ||item.Status == "Submitted")
+                {
+                    PaymentList.Add(item);
+                }
+
+            }
             FillPaymentsDatagrid(PaymentList);
         
             string BenName = txtBName.Text.Trim();
           
             DateTime EndDate = dtpEnd.Value;
             DateTime StartDate = dtpStart.Value;
-          
-            
-          
-        
 
-
-        }
+          }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -278,6 +282,156 @@ namespace Project500
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tcFilterPayments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabFilterPayments_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbStaus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpEnd_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpStart_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tcPayments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tcCurrentPayment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabCurrentPayment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rteDecription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblProfile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnProfileImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

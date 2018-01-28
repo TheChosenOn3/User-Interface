@@ -108,6 +108,7 @@
             this.tcFilterPayments.TabIndex = 20;
             this.tcFilterPayments.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tcFilterPayments.UseSelectable = true;
+            this.tcFilterPayments.SelectedIndexChanged += new System.EventHandler(this.tcFilterPayments_SelectedIndexChanged);
             // 
             // tabFilterPayments
             // 
@@ -136,6 +137,7 @@
             this.tabFilterPayments.VerticalScrollbarBarColor = true;
             this.tabFilterPayments.VerticalScrollbarHighlightOnWheel = false;
             this.tabFilterPayments.VerticalScrollbarSize = 11;
+            this.tabFilterPayments.Click += new System.EventHandler(this.tabFilterPayments_Click);
             // 
             // cmbStaus
             // 
@@ -149,6 +151,7 @@
             this.cmbStaus.Name = "cmbStaus";
             this.cmbStaus.Size = new System.Drawing.Size(253, 24);
             this.cmbStaus.TabIndex = 82;
+            this.cmbStaus.SelectedIndexChanged += new System.EventHandler(this.cmbStaus_SelectedIndexChanged);
             // 
             // metroLabel3
             // 
@@ -159,6 +162,7 @@
             this.metroLabel3.TabIndex = 81;
             this.metroLabel3.Text = "Status";
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
             // 
             // metroLabel4
             // 
@@ -169,6 +173,7 @@
             this.metroLabel4.TabIndex = 80;
             this.metroLabel4.Text = "End Date";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
             // 
             // dtpEnd
             // 
@@ -177,6 +182,7 @@
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(225, 22);
             this.dtpEnd.TabIndex = 79;
+            this.dtpEnd.ValueChanged += new System.EventHandler(this.dtpEnd_ValueChanged);
             // 
             // metroLabel6
             // 
@@ -187,6 +193,7 @@
             this.metroLabel6.TabIndex = 78;
             this.metroLabel6.Text = "Payment Method";
             this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel6.Click += new System.EventHandler(this.metroLabel6_Click);
             // 
             // cbPaymenttype
             // 
@@ -223,6 +230,7 @@
             this.metroLabel1.TabIndex = 65;
             this.metroLabel1.Text = "Start Date";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
             // 
             // dtpStart
             // 
@@ -231,6 +239,7 @@
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(225, 22);
             this.dtpStart.TabIndex = 64;
+            this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
             // 
             // btnClearFields
             // 
@@ -276,6 +285,7 @@
             this.txtBName.UseSelectable = true;
             this.txtBName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBName.Click += new System.EventHandler(this.txtBName_Click);
             // 
             // metroLabel29
             // 
@@ -286,6 +296,7 @@
             this.metroLabel29.TabIndex = 2;
             this.metroLabel29.Text = "Beneficiary Name";
             this.metroLabel29.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel29.Click += new System.EventHandler(this.metroLabel29_Click);
             // 
             // tcPayments
             // 
@@ -298,6 +309,7 @@
             this.tcPayments.TabIndex = 21;
             this.tcPayments.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tcPayments.UseSelectable = true;
+            this.tcPayments.SelectedIndexChanged += new System.EventHandler(this.tcPayments_SelectedIndexChanged);
             // 
             // metroTabPage1
             // 
@@ -315,6 +327,7 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 11;
+            this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
             // 
             // dgvPayments
             // 
@@ -373,6 +386,7 @@
             this.tcCurrentPayment.TabIndex = 22;
             this.tcCurrentPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tcCurrentPayment.UseSelectable = true;
+            this.tcCurrentPayment.SelectedIndexChanged += new System.EventHandler(this.tcCurrentPayment_SelectedIndexChanged);
             // 
             // tabCurrentPayment
             // 
@@ -394,6 +408,7 @@
             this.tabCurrentPayment.VerticalScrollbarBarColor = true;
             this.tabCurrentPayment.VerticalScrollbarHighlightOnWheel = false;
             this.tabCurrentPayment.VerticalScrollbarSize = 11;
+            this.tabCurrentPayment.Click += new System.EventHandler(this.tabCurrentPayment_Click);
             // 
             // BtnRety
             // 
@@ -429,6 +444,7 @@
             this.btnGenerateReport.Text = "Generate report";
             this.btnGenerateReport.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnGenerateReport.UseSelectable = true;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
             // rteDecription
             // 
@@ -438,6 +454,7 @@
             this.rteDecription.Size = new System.Drawing.Size(673, 96);
             this.rteDecription.TabIndex = 80;
             this.rteDecription.Text = "";
+            this.rteDecription.TextChanged += new System.EventHandler(this.rteDecription_TextChanged);
             // 
             // metroLabel2
             // 
@@ -448,6 +465,7 @@
             this.metroLabel2.TabIndex = 79;
             this.metroLabel2.Text = "Description";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
             // panel8
             // 
@@ -460,6 +478,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1208, 123);
             this.panel8.TabIndex = 65;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // lblProfile
             // 
@@ -471,6 +490,7 @@
             this.lblProfile.Size = new System.Drawing.Size(202, 30);
             this.lblProfile.TabIndex = 1;
             this.lblProfile.Text = "Payment History";
+            this.lblProfile.Click += new System.EventHandler(this.lblProfile_Click);
             // 
             // pictureBox1
             // 
@@ -482,6 +502,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -516,6 +537,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(13, 81);
             this.panel9.TabIndex = 8;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // btnProfileImage
             // 
@@ -533,6 +555,7 @@
             this.btnProfileImage.Text = " Username";
             this.btnProfileImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProfileImage.UseVisualStyleBackColor = true;
+            this.btnProfileImage.Click += new System.EventHandler(this.btnProfileImage_Click);
             // 
             // panel7
             // 
@@ -543,6 +566,7 @@
             this.panel7.Size = new System.Drawing.Size(13, 81);
             this.panel7.TabIndex = 7;
             this.panel7.Visible = false;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // panel6
             // 
@@ -553,6 +577,7 @@
             this.panel6.Size = new System.Drawing.Size(13, 81);
             this.panel6.TabIndex = 5;
             this.panel6.Visible = false;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel5
             // 
@@ -562,6 +587,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(13, 81);
             this.panel5.TabIndex = 4;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel4
             // 
@@ -572,6 +598,7 @@
             this.panel4.Size = new System.Drawing.Size(13, 80);
             this.panel4.TabIndex = 3;
             this.panel4.Visible = false;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel3
             // 
@@ -582,6 +609,7 @@
             this.panel3.Size = new System.Drawing.Size(13, 74);
             this.panel3.TabIndex = 3;
             this.panel3.Visible = false;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnExit
             // 
@@ -628,6 +656,7 @@
             this.panel2.Size = new System.Drawing.Size(13, 87);
             this.panel2.TabIndex = 2;
             this.panel2.Visible = false;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnScheduleNew
             // 
@@ -730,6 +759,7 @@
             this.label1.Size = new System.Drawing.Size(263, 30);
             this.label1.TabIndex = 66;
             this.label1.Text = "Payment Information";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnViewAll
             // 
