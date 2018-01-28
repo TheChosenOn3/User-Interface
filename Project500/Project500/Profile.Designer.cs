@@ -29,17 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.tabUserRegister = new MetroFramework.Controls.MetroTabControl();
             this.tabPersonalDetail = new MetroFramework.Controls.MetroTabPage();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblAddressInfo = new System.Windows.Forms.Label();
+            this.lblPersonalInfo = new System.Windows.Forms.Label();
             this.txtBusinessName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
             this.txtProvince = new MetroFramework.Controls.MetroTextBox();
@@ -71,6 +76,15 @@
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tabCryptoDetail = new MetroFramework.Controls.MetroTabPage();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtWalletAmount = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.btnUpateCrypto = new MetroFramework.Controls.MetroButton();
@@ -80,6 +94,7 @@
             this.txtWalletCode = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
             this.tabEFTDetail = new MetroFramework.Controls.MetroTabPage();
+            this.label8 = new System.Windows.Forms.Label();
             this.dgvEFT = new MetroFramework.Controls.MetroGrid();
             this.txtEFTHolder = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
@@ -94,6 +109,11 @@
             this.txtEFTReference = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.tabCardDetail = new MetroFramework.Controls.MetroTabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dgvCard = new MetroFramework.Controls.MetroGrid();
             this.btnDeleteCard = new MetroFramework.Controls.MetroButton();
             this.btnUpdateCard = new MetroFramework.Controls.MetroButton();
@@ -126,42 +146,22 @@
             this.btnPaymentNew = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnHomeNew = new System.Windows.Forms.Button();
-            this.lblPersonalInfo = new System.Windows.Forms.Label();
-            this.lblAddressInfo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tabUserRegister.SuspendLayout();
             this.tabPersonalDetail.SuspendLayout();
             this.tabCryptoDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabEFTDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEFT)).BeginInit();
             this.tabCardDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCard)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // metroStyleManager1
@@ -235,6 +235,58 @@
             this.tabPersonalDetail.VerticalScrollbarSize = 10;
             this.tabPersonalDetail.Click += new System.EventHandler(this.tabPersonalDetail_Click);
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DimGray;
+            this.panel12.Location = new System.Drawing.Point(12, 330);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(869, 10);
+            this.panel12.TabIndex = 77;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.DimGray;
+            this.panel11.Location = new System.Drawing.Point(12, 152);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(869, 10);
+            this.panel11.TabIndex = 76;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 344);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 23);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Account Information";
+            // 
+            // lblAddressInfo
+            // 
+            this.lblAddressInfo.AutoSize = true;
+            this.lblAddressInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddressInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressInfo.ForeColor = System.Drawing.Color.White;
+            this.lblAddressInfo.Location = new System.Drawing.Point(16, 168);
+            this.lblAddressInfo.Name = "lblAddressInfo";
+            this.lblAddressInfo.Size = new System.Drawing.Size(204, 23);
+            this.lblAddressInfo.TabIndex = 33;
+            this.lblAddressInfo.Text = "Address Information";
+            // 
+            // lblPersonalInfo
+            // 
+            this.lblPersonalInfo.AutoSize = true;
+            this.lblPersonalInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblPersonalInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonalInfo.ForeColor = System.Drawing.Color.White;
+            this.lblPersonalInfo.Location = new System.Drawing.Point(16, 10);
+            this.lblPersonalInfo.Name = "lblPersonalInfo";
+            this.lblPersonalInfo.Size = new System.Drawing.Size(209, 23);
+            this.lblPersonalInfo.TabIndex = 32;
+            this.lblPersonalInfo.Text = "Personal Information";
+            // 
             // txtBusinessName
             // 
             // 
@@ -271,7 +323,7 @@
             this.metroLabel26.AutoSize = true;
             this.metroLabel26.Location = new System.Drawing.Point(289, 91);
             this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel26.Size = new System.Drawing.Size(104, 20);
             this.metroLabel26.TabIndex = 30;
             this.metroLabel26.Text = "Business Name";
             this.metroLabel26.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -312,7 +364,7 @@
             this.metroLabel24.AutoSize = true;
             this.metroLabel24.Location = new System.Drawing.Point(289, 257);
             this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel24.Size = new System.Drawing.Size(63, 20);
             this.metroLabel24.TabIndex = 28;
             this.metroLabel24.Text = "Province";
             this.metroLabel24.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -353,7 +405,7 @@
             this.metroLabel25.AutoSize = true;
             this.metroLabel25.Location = new System.Drawing.Point(19, 257);
             this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(31, 19);
+            this.metroLabel25.Size = new System.Drawing.Size(32, 20);
             this.metroLabel25.TabIndex = 26;
             this.metroLabel25.Text = "City";
             this.metroLabel25.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -406,7 +458,7 @@
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.Location = new System.Drawing.Point(590, 36);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel11.Size = new System.Drawing.Size(88, 20);
             this.metroLabel11.TabIndex = 23;
             this.metroLabel11.Text = "Cell Number";
             this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -431,6 +483,7 @@
             this.txtID.MaxLength = 32767;
             this.txtID.Name = "txtID";
             this.txtID.PasswordChar = '\0';
+            this.txtID.ReadOnly = true;
             this.txtID.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtID.SelectedText = "";
             this.txtID.SelectionLength = 0;
@@ -449,7 +502,7 @@
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.Location = new System.Drawing.Point(291, 36);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(78, 20);
             this.metroLabel10.TabIndex = 21;
             this.metroLabel10.Text = "ID Number";
             this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -492,7 +545,7 @@
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.Location = new System.Drawing.Point(19, 194);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(101, 20);
             this.metroLabel9.TabIndex = 19;
             this.metroLabel9.Text = "Street Number";
             this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -535,7 +588,7 @@
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.Location = new System.Drawing.Point(291, 194);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(87, 20);
             this.metroLabel8.TabIndex = 17;
             this.metroLabel8.Text = "Street Name";
             this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -578,7 +631,7 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(590, 194);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(53, 20);
             this.metroLabel7.TabIndex = 15;
             this.metroLabel7.Text = "Suburb";
             this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -621,7 +674,7 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(590, 257);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(59, 20);
             this.metroLabel6.TabIndex = 13;
             this.metroLabel6.Text = "Country";
             this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -664,7 +717,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(260, 436);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(115, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(119, 20);
             this.metroLabel5.TabIndex = 11;
             this.metroLabel5.Text = "Confirm Password";
             this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -707,7 +760,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(19, 436);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(66, 20);
             this.metroLabel4.TabIndex = 9;
             this.metroLabel4.Text = "Password";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -750,7 +803,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(19, 372);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(42, 20);
             this.metroLabel3.TabIndex = 7;
             this.metroLabel3.Text = "Email";
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -793,7 +846,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(19, 91);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(64, 20);
             this.metroLabel2.TabIndex = 5;
             this.metroLabel2.Text = "Surname";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -847,7 +900,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(19, 36);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(47, 20);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Name";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -875,9 +928,9 @@
             this.tabCryptoDetail.HorizontalScrollbarBarColor = true;
             this.tabCryptoDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabCryptoDetail.HorizontalScrollbarSize = 10;
-            this.tabCryptoDetail.Location = new System.Drawing.Point(4, 41);
+            this.tabCryptoDetail.Location = new System.Drawing.Point(4, 42);
             this.tabCryptoDetail.Name = "tabCryptoDetail";
-            this.tabCryptoDetail.Size = new System.Drawing.Size(903, 584);
+            this.tabCryptoDetail.Size = new System.Drawing.Size(903, 583);
             this.tabCryptoDetail.TabIndex = 3;
             this.tabCryptoDetail.Text = "Cryptocurrency Wallet";
             this.tabCryptoDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -885,6 +938,107 @@
             this.tabCryptoDetail.VerticalScrollbarHighlightOnWheel = false;
             this.tabCryptoDetail.VerticalScrollbarSize = 10;
             this.tabCryptoDetail.Click += new System.EventHandler(this.tabCryptoDetail_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DimGray;
+            this.panel10.Location = new System.Drawing.Point(25, 259);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(856, 10);
+            this.panel10.TabIndex = 75;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(385, 284);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(175, 30);
+            this.label6.TabIndex = 74;
+            this.label6.Text = "Wallet Details";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(710, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 30);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "Litecoin";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(409, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 30);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "Etherium";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(121, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 30);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "Bitcoin";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(21, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(327, 30);
+            this.label2.TabIndex = 70;
+            this.label2.Text = "Supported Cryptocurrency";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(619, 99);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(257, 141);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 69;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(331, 99);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 68;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(25, 100);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(270, 141);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 67;
+            this.pictureBox2.TabStop = false;
             // 
             // txtWalletAmount
             // 
@@ -922,7 +1076,7 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.Location = new System.Drawing.Point(331, 317);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel13.Size = new System.Drawing.Size(99, 20);
             this.metroLabel13.TabIndex = 65;
             this.metroLabel13.Text = "Wallet Amount";
             this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -975,7 +1129,7 @@
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.Location = new System.Drawing.Point(331, 380);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(85, 19);
+            this.metroLabel19.Size = new System.Drawing.Size(88, 20);
             this.metroLabel19.TabIndex = 59;
             this.metroLabel19.Text = "Wallet Name";
             this.metroLabel19.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1030,7 +1184,7 @@
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.Location = new System.Drawing.Point(331, 441);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel21.Size = new System.Drawing.Size(83, 20);
             this.metroLabel21.TabIndex = 53;
             this.metroLabel21.Text = "Wallet Code";
             this.metroLabel21.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1055,9 +1209,9 @@
             this.tabEFTDetail.HorizontalScrollbarBarColor = true;
             this.tabEFTDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabEFTDetail.HorizontalScrollbarSize = 10;
-            this.tabEFTDetail.Location = new System.Drawing.Point(4, 41);
+            this.tabEFTDetail.Location = new System.Drawing.Point(4, 42);
             this.tabEFTDetail.Name = "tabEFTDetail";
-            this.tabEFTDetail.Size = new System.Drawing.Size(903, 584);
+            this.tabEFTDetail.Size = new System.Drawing.Size(903, 583);
             this.tabEFTDetail.TabIndex = 2;
             this.tabEFTDetail.Text = "EFT Account Information";
             this.tabEFTDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1065,6 +1219,18 @@
             this.tabEFTDetail.VerticalScrollbarHighlightOnWheel = false;
             this.tabEFTDetail.VerticalScrollbarSize = 10;
             this.tabEFTDetail.Click += new System.EventHandler(this.tabEFTDetail_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(355, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(243, 30);
+            this.label8.TabIndex = 68;
+            this.label8.Text = "Listed EFT Accounts";
             // 
             // dgvEFT
             // 
@@ -1147,7 +1313,7 @@
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.Location = new System.Drawing.Point(83, 201);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(100, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(106, 20);
             this.metroLabel17.TabIndex = 65;
             this.metroLabel17.Text = "Account Holder";
             this.metroLabel17.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1211,7 +1377,7 @@
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.Location = new System.Drawing.Point(83, 269);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(87, 19);
+            this.metroLabel18.Size = new System.Drawing.Size(94, 20);
             this.metroLabel18.TabIndex = 50;
             this.metroLabel18.Text = "Account Type";
             this.metroLabel18.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1238,7 +1404,7 @@
             this.metroLabel22.AutoSize = true;
             this.metroLabel22.Location = new System.Drawing.Point(82, 56);
             this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(109, 19);
+            this.metroLabel22.Size = new System.Drawing.Size(116, 20);
             this.metroLabel22.TabIndex = 43;
             this.metroLabel22.Text = "Account Number";
             this.metroLabel22.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1303,7 +1469,7 @@
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.Location = new System.Drawing.Point(82, 125);
             this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel23.Size = new System.Drawing.Size(73, 20);
             this.metroLabel23.TabIndex = 39;
             this.metroLabel23.Text = "Reference";
             this.metroLabel23.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1332,9 +1498,9 @@
             this.tabCardDetail.HorizontalScrollbarBarColor = true;
             this.tabCardDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabCardDetail.HorizontalScrollbarSize = 10;
-            this.tabCardDetail.Location = new System.Drawing.Point(4, 41);
+            this.tabCardDetail.Location = new System.Drawing.Point(4, 42);
             this.tabCardDetail.Name = "tabCardDetail";
-            this.tabCardDetail.Size = new System.Drawing.Size(903, 584);
+            this.tabCardDetail.Size = new System.Drawing.Size(903, 583);
             this.tabCardDetail.TabIndex = 1;
             this.tabCardDetail.Text = "Credit/Debit Cards";
             this.tabCardDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1342,6 +1508,60 @@
             this.tabCardDetail.VerticalScrollbarHighlightOnWheel = false;
             this.tabCardDetail.VerticalScrollbarSize = 10;
             this.tabCardDetail.Click += new System.EventHandler(this.tabCardDetail_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(388, 182);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(156, 30);
+            this.label9.TabIndex = 78;
+            this.label9.Text = "Listed Cards";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.DimGray;
+            this.panel13.Location = new System.Drawing.Point(16, 158);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(869, 10);
+            this.panel13.TabIndex = 77;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(170, 55);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(118, 69);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 70;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(28, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(211, 30);
+            this.label7.TabIndex = 69;
+            this.label7.Text = "Supported Cards";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(32, 55);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(118, 69);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 68;
+            this.pictureBox5.TabStop = false;
             // 
             // dgvCard
             // 
@@ -1414,7 +1634,7 @@
             // 
             this.dtpED.Location = new System.Drawing.Point(85, 439);
             this.dtpED.Name = "dtpED";
-            this.dtpED.Size = new System.Drawing.Size(223, 20);
+            this.dtpED.Size = new System.Drawing.Size(223, 22);
             this.dtpED.TabIndex = 37;
             this.dtpED.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -1455,7 +1675,7 @@
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.Location = new System.Drawing.Point(85, 349);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel16.Size = new System.Drawing.Size(84, 20);
             this.metroLabel16.TabIndex = 33;
             this.metroLabel16.Text = "Card Holder";
             this.metroLabel16.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1466,7 +1686,7 @@
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.Location = new System.Drawing.Point(85, 417);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel15.Size = new System.Drawing.Size(87, 20);
             this.metroLabel15.TabIndex = 31;
             this.metroLabel15.Text = "Expirey Date";
             this.metroLabel15.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1509,7 +1729,7 @@
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.Location = new System.Drawing.Point(85, 282);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(34, 19);
+            this.metroLabel14.Size = new System.Drawing.Size(36, 20);
             this.metroLabel14.TabIndex = 29;
             this.metroLabel14.Text = "CVV";
             this.metroLabel14.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1576,7 +1796,7 @@
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.Location = new System.Drawing.Point(85, 215);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel12.Size = new System.Drawing.Size(86, 20);
             this.metroLabel12.TabIndex = 4;
             this.metroLabel12.Text = "Card Numer";
             this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1599,7 +1819,7 @@
             this.lblProfile.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfile.Location = new System.Drawing.Point(408, 33);
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(105, 22);
+            this.lblProfile.Size = new System.Drawing.Size(142, 30);
             this.lblProfile.TabIndex = 1;
             this.lblProfile.Text = "User Profile";
             // 
@@ -1832,225 +2052,6 @@
             this.btnHomeNew.UseVisualStyleBackColor = true;
             this.btnHomeNew.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // lblPersonalInfo
-            // 
-            this.lblPersonalInfo.AutoSize = true;
-            this.lblPersonalInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblPersonalInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonalInfo.ForeColor = System.Drawing.Color.White;
-            this.lblPersonalInfo.Location = new System.Drawing.Point(16, 10);
-            this.lblPersonalInfo.Name = "lblPersonalInfo";
-            this.lblPersonalInfo.Size = new System.Drawing.Size(169, 21);
-            this.lblPersonalInfo.TabIndex = 32;
-            this.lblPersonalInfo.Text = "Personal Information";
-            // 
-            // lblAddressInfo
-            // 
-            this.lblAddressInfo.AutoSize = true;
-            this.lblAddressInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblAddressInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressInfo.ForeColor = System.Drawing.Color.White;
-            this.lblAddressInfo.Location = new System.Drawing.Point(16, 168);
-            this.lblAddressInfo.Name = "lblAddressInfo";
-            this.lblAddressInfo.Size = new System.Drawing.Size(167, 21);
-            this.lblAddressInfo.TabIndex = 33;
-            this.lblAddressInfo.Text = "Address Information";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 344);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 21);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Account Information";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(25, 100);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(270, 141);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 67;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(331, 99);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 68;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(619, 99);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(257, 141);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 69;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(21, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 22);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Supported Cryptocurrency";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(121, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 22);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Bitcoin";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(409, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 22);
-            this.label4.TabIndex = 72;
-            this.label4.Text = "Etherium";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(710, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 22);
-            this.label5.TabIndex = 73;
-            this.label5.Text = "Litecoin";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(385, 284);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 22);
-            this.label6.TabIndex = 74;
-            this.label6.Text = "Wallet Details";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(32, 55);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(118, 69);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 68;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(28, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 22);
-            this.label7.TabIndex = 69;
-            this.label7.Text = "Supported Cards";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(170, 55);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(118, 69);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 70;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.DimGray;
-            this.panel10.Location = new System.Drawing.Point(25, 259);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(856, 10);
-            this.panel10.TabIndex = 75;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.DimGray;
-            this.panel11.Location = new System.Drawing.Point(12, 152);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(869, 10);
-            this.panel11.TabIndex = 76;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.DimGray;
-            this.panel12.Location = new System.Drawing.Point(12, 330);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(869, 10);
-            this.panel12.TabIndex = 77;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.DimGray;
-            this.panel13.Location = new System.Drawing.Point(16, 158);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(869, 10);
-            this.panel13.TabIndex = 77;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(355, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(187, 22);
-            this.label8.TabIndex = 68;
-            this.label8.Text = "Listed EFT Accounts";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(388, 182);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 22);
-            this.label9.TabIndex = 78;
-            this.label9.Text = "Listed Cards";
-            // 
             // Profile
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2067,21 +2068,21 @@
             this.tabPersonalDetail.PerformLayout();
             this.tabCryptoDetail.ResumeLayout(false);
             this.tabCryptoDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabEFTDetail.ResumeLayout(false);
             this.tabEFTDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEFT)).EndInit();
             this.tabCardDetail.ResumeLayout(false);
             this.tabCardDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCard)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }

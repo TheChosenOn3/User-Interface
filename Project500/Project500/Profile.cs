@@ -17,6 +17,7 @@ namespace Project500
 
         //dummy data
         User user = new User();
+        User newuser = new User();
         List<PaymentAccount> UserEFTList = new List<PaymentAccount>();
         List<Card> UserCardList = new List<Card>();
         List<Crypto> UserCryptoList = new List<Crypto>();
@@ -165,8 +166,8 @@ namespace Project500
         public User CreateNewUer()
         {
             String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
-            User user = new User(txtName.Text, txtID.Text, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, txtPassword.Text, "Active", txtBusinessName.Text);
-            return user;
+             newuser = new User(txtName.Text,user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, txtPassword.Text, "Active", txtBusinessName.Text);
+            return newuser;
            
 
         }
@@ -303,11 +304,15 @@ namespace Project500
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-          // validate feilds  
-            UserController.UpdateUser(CreateNewUer());
-            ClearPI();
-
-
+            // validate feilds  
+            if (UserController.UpdateUser(CreateNewUer()))
+            {
+                MessageBox.Show("sccount succsessfully updaated");
+                user = CreateNewUer();
+                ClearPI();
+            }
+          
+         
         }
 
         private void metroTextBox11_Click(object sender, EventArgs e)
