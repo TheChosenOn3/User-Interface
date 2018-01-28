@@ -258,7 +258,7 @@ namespace Project500
             }
             if (go == false)
             {
-                ben = new Beneficiary(txtBID.Text.Trim(), txtBName.Text.Trim(), txtBBranchCode.Text.Trim(), user.Id);
+                ben = new Beneficiary(txtBID.Text.Trim(), txtBName.Text.Trim(), txtBBranchCode.Text.Trim(), user.RsaID);
                 BeneficiaryList.Add(ben);
                 ClearBens();
                 FillBeneficiaryDatagrid(BeneficiaryList);
@@ -290,7 +290,7 @@ namespace Project500
                 if (item.BeneficairyID == txtBID.Text.Trim())
                 {
                     BeneficiaryList.Remove(item);
-                    ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text, user.Id);
+                    ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text, user.RsaID);
                     BeneficiaryList.Add(ben);
                     BeneficiaryController.UpdateBeneficiary(ben);
                     txtBName.Text = "";
@@ -371,7 +371,7 @@ namespace Project500
                         default:
                             break;
                     }
-                    BenEFTList.Add(new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,""));
+                    BenEFTList.Add(new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,user.RsaID));
                     PaymentsAccountController.UpdateBenPaymentAcount(EFT);
                     
                     FillEFTDatagrid(ben);
@@ -458,7 +458,7 @@ namespace Project500
                     default:
                         break;
                 }
-                EFT = new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID, "");
+                EFT = new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,user.RsaID);
                 BenEFTList.Add(EFT);
                 PaymentsAccountController.AddBenPaymentAcount(EFT);
                 FillEFTDatagrid(ben);
@@ -560,7 +560,17 @@ namespace Project500
         private void dgvBeneficiary_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-           Beneficiary ben1 = BeneficiaryList[index];
+            Beneficiary ben1 = null;
+            if (BeneficiaryListS.Count ==0)
+            {
+                ben1 = BeneficiaryList[index];
+            }
+            else
+            {
+                 ben1 = BeneficiaryListS[index];
+                BeneficiaryListS.Clear();
+            }
+         
             ClearBens();
             ben = ben1;
             txtBBranchCode.Text = ben.BeneficiaryBranch;
@@ -666,6 +676,11 @@ namespace Project500
             {
                 Application.Exit();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
