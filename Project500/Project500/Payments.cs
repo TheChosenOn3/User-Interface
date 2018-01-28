@@ -225,7 +225,7 @@ namespace Project500
                 {
                     if (payment.PaymentNumber == item.PaymentNumber)
                     {
-                        item.Status = "Approved";
+                        item.Status = "Submitted";
                     }
                     else
                     {
@@ -246,7 +246,7 @@ namespace Project500
                 {
                     if (payment.PaymentNumber == item.PaymentNumber)
                     {
-                        item.Status = "Approved";
+                        item.Status = "Submitted";
                     }
                     else
                     {
@@ -299,7 +299,7 @@ namespace Project500
                     {
                         if (item.PaymentNumber == item1.PaymentNumber)
                         {
-                            item1.Status = "Approved";
+                            item1.Status = "Submitted";
                         }
                         else
                         {
@@ -327,7 +327,7 @@ namespace Project500
                     {
                         if (item.PaymentNumber == item1.PaymentNumber)
                         {
-                            item1.Status = "Approved";
+                            item1.Status = "Submitted";
                         }
                         else
                         {
