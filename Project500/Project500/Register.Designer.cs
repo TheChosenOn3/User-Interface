@@ -90,7 +90,7 @@
             this.tabCRegister.Location = new System.Drawing.Point(3, 59);
             this.tabCRegister.Margin = new System.Windows.Forms.Padding(2);
             this.tabCRegister.Name = "tabCRegister";
-            this.tabCRegister.SelectedIndex = 0;
+            this.tabCRegister.SelectedIndex = 2;
             this.tabCRegister.Size = new System.Drawing.Size(384, 251);
             this.tabCRegister.TabIndex = 10;
             this.tabCRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -790,7 +790,7 @@
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmPassword.MaxLength = 32767;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '\0';
+            this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtConfirmPassword.SelectedText = "";
             this.txtConfirmPassword.SelectionLength = 0;
@@ -823,7 +823,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
