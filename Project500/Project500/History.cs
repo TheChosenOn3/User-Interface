@@ -241,13 +241,19 @@ namespace Project500
                     {
                         benidtosearc = item.BeneficairyID;
                     }
+                    //ewqqwe
 
                 }
-                
+                List<Payment> paylistfilter = new List<Payment>();
+                paylistfilter = PaymentList;
                 if (cbPaymenttype.SelectedIndex == -1)
                 {
-                   
-                    PaymentList = PaymentsController.GetFilterPaymentsNoType(benidtosearc, getstatus(cmbStaus.SelectedIndex), dtpStart.Value, dtpEnd.Value);
+                    
+                    foreach (Payment item in paylistfilter)
+                    {
+                        PaymentList.Add(item);
+                    }
+
                     FillPaymentsDatagrid(PaymentList);
                 }
                 else
@@ -264,8 +270,11 @@ namespace Project500
                             paymentType = PaymentType.Card;
                             break;
                     }
-                   
-                    PaymentList = PaymentsController.GetFilterPayments(benidtosearc, getstatus(cmbStaus.SelectedIndex), paymentType, dtpStart.Value, dtpEnd.Value);
+
+                    foreach (Payment item in paylistfilter)
+                    {
+                        PaymentList.Add(item);
+                    }
                     FillPaymentsDatagrid(PaymentList);
                 }
                 
