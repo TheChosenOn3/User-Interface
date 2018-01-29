@@ -53,11 +53,13 @@ namespace Project500
         public Profile()
         {
             InitializeComponent();
+            tabUserRegister.SelectTab(0);
         }
         public Profile(User _user)
         {
             InitializeComponent();
             user = _user;
+            tabUserRegister.SelectTab(0);
         }
 
         private void Profile_Load(object sender, EventArgs e)

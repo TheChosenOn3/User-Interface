@@ -612,5 +612,19 @@ namespace Project500
 
             BenbjectListe.Clear();
         }
+
+        private void checkInter_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkInter.Checked)
+            {
+                lblInterval.Visible = true;
+                txtInterval.Visible = true;
+            }
+            else
+            {
+                lblInterval.Visible = false;
+                txtInterval.Visible = false;
+            }
+        }
     }
     }

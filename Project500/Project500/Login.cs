@@ -18,13 +18,14 @@ namespace Project500
         public Login()
         {
             InitializeComponent();
-            
+            txtUsername.Focus();
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+            txtUsername.Focus();
+            txtUsername.Select();
 
-         
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
