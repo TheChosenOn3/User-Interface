@@ -231,7 +231,7 @@ namespace Project500
         }
 
         private void btnRetryPayment_Click(object sender, EventArgs e)
-        {
+        {//rt
             if (PaymentsController.UpdatePyaments(payment))
             {
                 foreach (Payment item in PaymentList)
