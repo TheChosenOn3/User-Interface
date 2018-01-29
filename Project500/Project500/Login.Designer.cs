@@ -34,7 +34,6 @@
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
-            this.btnBack = new MetroFramework.Controls.MetroButton();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.lblUsername = new MetroFramework.Controls.MetroLabel();
             this.lblPassword = new MetroFramework.Controls.MetroLabel();
@@ -115,22 +114,11 @@
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(181, 335);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(99, 30);
-            this.btnBack.TabIndex = 53;
-            this.btnBack.Text = "Back";
-            this.btnBack.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnBack.UseSelectable = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(328, 335);
+            this.btnLogin.Location = new System.Drawing.Point(246, 333);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(99, 30);
+            this.btnLogin.Size = new System.Drawing.Size(122, 42);
             this.btnLogin.TabIndex = 54;
             this.btnLogin.Text = "Login";
             this.btnLogin.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -224,7 +212,6 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Name = "Login";
@@ -246,7 +233,6 @@
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroTextBox txtUsername;
         private MetroFramework.Controls.MetroTextBox txtPassword;
-        private MetroFramework.Controls.MetroButton btnBack;
         private MetroFramework.Controls.MetroButton btnLogin;
         private MetroFramework.Controls.MetroLabel lblUsername;
         private MetroFramework.Controls.MetroLabel lblPassword;
