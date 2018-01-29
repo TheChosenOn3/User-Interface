@@ -41,7 +41,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblProfile = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblregisteraccount = new MetroFramework.Controls.MetroLabel();
+            this.lblLinkToRegister = new MetroFramework.Controls.MetroLink();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -187,21 +188,38 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // metroLabel1
+            // lblregisteraccount
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(256, 267);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel1.TabIndex = 66;
-            this.metroLabel1.Text = "metroLabel1";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lblregisteraccount.AutoSize = true;
+            this.lblregisteraccount.Location = new System.Drawing.Point(236, 259);
+            this.lblregisteraccount.Name = "lblregisteraccount";
+            this.lblregisteraccount.Size = new System.Drawing.Size(144, 19);
+            this.lblregisteraccount.TabIndex = 66;
+            this.lblregisteraccount.Text = "Don\'t have an Account?";
+            this.lblregisteraccount.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblLinkToRegister
+            // 
+            this.lblLinkToRegister.BackColor = System.Drawing.Color.Transparent;
+            this.lblLinkToRegister.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.lblLinkToRegister.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.lblLinkToRegister.Location = new System.Drawing.Point(206, 281);
+            this.lblLinkToRegister.Name = "lblLinkToRegister";
+            this.lblLinkToRegister.Size = new System.Drawing.Size(204, 29);
+            this.lblLinkToRegister.TabIndex = 67;
+            this.lblLinkToRegister.Text = "Click Here to Register!";
+            this.lblLinkToRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblLinkToRegister.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lblLinkToRegister.UseSelectable = true;
+            this.lblLinkToRegister.UseStyleColors = true;
+            this.lblLinkToRegister.Click += new System.EventHandler(this.lblLinkToRegister_Click);
             // 
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(613, 418);
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.lblLinkToRegister);
+            this.Controls.Add(this.lblregisteraccount);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
@@ -235,6 +253,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblregisteraccount;
+        private MetroFramework.Controls.MetroLink lblLinkToRegister;
     }
 }

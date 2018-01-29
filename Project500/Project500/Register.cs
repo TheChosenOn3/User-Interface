@@ -51,9 +51,9 @@ namespace Project500
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Home main = new Home();
+            Login LoginForm = new Login();
+            LoginForm.Show();
             this.Hide();
-            main.Show();
         }
 
         private void tabCryptoDetail_Click(object sender, EventArgs e)

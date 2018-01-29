@@ -82,5 +82,12 @@ namespace Project500
         {
 
         }
+
+        private void lblLinkToRegister_Click(object sender, EventArgs e)
+        {
+            Register RegisterForm = new Register();
+            RegisterForm.Show();
+            this.Hide();
+        }
     }
 }
