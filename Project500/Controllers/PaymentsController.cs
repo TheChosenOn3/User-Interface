@@ -15,7 +15,17 @@ namespace Controllers
         public static string path = Connection.url + "Payment/";
         public static List<Payment> GetPayments(string UserId)
         {
+            List<Payment> PaymentList = new List<Payment>();
+            client = new HttpClient();
+            path += UserId;
+            var response = client.GetStringAsync(path).Result;
+            PaymentList = JsonConvert.DeserializeObject<List<Payment>>(response);
 
+            return PaymentList;
+        }
+
+        public static List<Payment> GetSchedueldPayments(string UserId)
+        {
             List<Payment> PaymentList = new List<Payment>();
             client = new HttpClient();
             path += UserId;

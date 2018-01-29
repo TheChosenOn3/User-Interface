@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entities1;
 using Controllers;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace Project500
 {
@@ -616,5 +617,51 @@ namespace Project500
                 txtInterval.Visible = false;
             }
         }
+
+        private void btnBatch_Click(object sender, EventArgs e)
+        {
+            List<Payment> batchlist = new List<Payment>();
+            StreamReader reader = new StreamReader("C: /Users/Ekilian/source/repos/User - Interface/Project500/ReadTest.csv");
+
+           
+                List<string> headerList = null;
+                List<Payment> paylist = new List<Payment>();
+
+
+                while (!reader.EndOfStream)
+
+                {
+                    Payment payment = new Payment();
+                    var line = reader.ReadLine();
+                    string[] values = null;
+                    values = line.Split(',');
+
+                    payment.Amount = float.Parse(values[0]);
+                    payment.BeneficairyID = values[1];
+                    payment.DateCreated = Convert.ToDateTime(values[2]);
+                    payment.Description = values[3];
+                    payment.Interval = values[4];
+                    payment.PayDate = Convert.ToDateTime(values[5]);
+                    payment.PaymentNumber = values[6];
+                    payment.Recurring = Convert.ToBoolean(values[7]);
+                    payment.ScheduleNr = values[8];
+                    payment.Status = values[9];
+                    paylist.Add(payment);
+                    MessageBox.Show(payment.Amount.ToString());
+                    payment.TypePayment = PaymentType.Card;
+                    payment.UserID = "1";
+                batchlist.Add(payment);
+
+
+                }
+            foreach (var item in batchlist)
+            {
+                PaymentList.Add(item);
+            }
+            FillPaymentDatagrid(PaymentList);
+
+            }
+            // Read sample data from CSV file
+        }
     }
-    }
+    
