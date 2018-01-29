@@ -992,6 +992,7 @@
             this.ClientSize = new System.Drawing.Size(685, 457);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.tabCRegister);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
             this.Padding = new System.Windows.Forms.Padding(16, 60, 16, 16);

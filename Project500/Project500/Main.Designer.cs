@@ -35,6 +35,7 @@
             this.tcNotifications = new MetroFramework.Controls.MetroTabControl();
             this.tabNotifications = new MetroFramework.Controls.MetroTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRucuring = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnProfileImage = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblHome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRucuring = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tcNotifications.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -114,6 +114,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 734);
             this.panel1.TabIndex = 2;
+            // 
+            // btnRucuring
+            // 
+            this.btnRucuring.FlatAppearance.BorderSize = 0;
+            this.btnRucuring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRucuring.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRucuring.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRucuring.Image = ((System.Drawing.Image)(resources.GetObject("btnRucuring.Image")));
+            this.btnRucuring.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRucuring.Location = new System.Drawing.Point(12, 518);
+            this.btnRucuring.Name = "btnRucuring";
+            this.btnRucuring.Size = new System.Drawing.Size(164, 71);
+            this.btnRucuring.TabIndex = 9;
+            this.btnRucuring.Text = " Recurings";
+            this.btnRucuring.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRucuring.UseVisualStyleBackColor = true;
+            this.btnRucuring.Click += new System.EventHandler(this.btnRucuring_Click);
             // 
             // panel9
             // 
@@ -328,7 +345,7 @@
             this.lblHome.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHome.Location = new System.Drawing.Point(369, 34);
             this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(174, 30);
+            this.lblHome.Size = new System.Drawing.Size(132, 22);
             this.lblHome.TabIndex = 1;
             this.lblHome.Text = "Home Screen";
             // 
@@ -342,23 +359,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnRucuring
-            // 
-            this.btnRucuring.FlatAppearance.BorderSize = 0;
-            this.btnRucuring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRucuring.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRucuring.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRucuring.Image = ((System.Drawing.Image)(resources.GetObject("btnRucuring.Image")));
-            this.btnRucuring.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRucuring.Location = new System.Drawing.Point(12, 518);
-            this.btnRucuring.Name = "btnRucuring";
-            this.btnRucuring.Size = new System.Drawing.Size(164, 71);
-            this.btnRucuring.TabIndex = 9;
-            this.btnRucuring.Text = " Recurings";
-            this.btnRucuring.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRucuring.UseVisualStyleBackColor = true;
-            this.btnRucuring.Click += new System.EventHandler(this.btnRucuring_Click);
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -367,6 +367,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tcNotifications);
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Main_Load);
