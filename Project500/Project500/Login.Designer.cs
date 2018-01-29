@@ -142,9 +142,9 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Location = new System.Drawing.Point(200, 131);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(71, 19);
+            this.lblUsername.Size = new System.Drawing.Size(44, 19);
             this.lblUsername.TabIndex = 55;
-            this.lblUsername.Text = "Username:";
+            this.lblUsername.Text = "Email:";
             this.lblUsername.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // lblPassword

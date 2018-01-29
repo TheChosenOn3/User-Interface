@@ -50,8 +50,7 @@
     <ApplicationIcon>2d942cc6-baff-43a5-b317-dfdabfec238a.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>Project500.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework">
