@@ -97,9 +97,7 @@ namespace Project500
 
         private void btnRucuring_Click(object sender, EventArgs e)
         {
-            Recuring Recur = new Recuring(user);
-            this.Hide();
-            Recur.Show();
+          
         }
     }
 }

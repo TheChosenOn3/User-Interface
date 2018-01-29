@@ -3,28 +3,41 @@ using System.Collections.Generic;
 using System.Text;
 using Entities1;
 using System.Net.Http;
-
+using Controllers;
+using Newtonsoft.Json;
 
 namespace Controllers
 {
    
     public class BeneficiaryController
     {
+        
+
         static HttpClient client;
+        public static string path = Connection.url + "Beneficiary/";
 
         public static List<Beneficiary> GetBeneficiarys(string UserId)
         {
             List<Beneficiary> BeneficiaryList = new List<Beneficiary>();
-            BeneficiaryList.Add(new Beneficiary("12324", "Sybrin", "pretoria", "1234"));
-            BeneficiaryList.Add(new Beneficiary("1134", "EOH", "pretoria", "1234"));
-            BeneficiaryList.Add(new Beneficiary("1345", "Emin", "pretoria", "1234"));
-            BeneficiaryList.Add(new Beneficiary("12345", "Seop", "pretoria", "1234"));
-            BeneficiaryList.Add(new Beneficiary("23423", "BC", "pretoria", "1234"));
+            client = new HttpClient();
+            path += UserId;
+            var response = client.GetStringAsync(path).Result;
+            BeneficiaryList = JsonConvert.DeserializeObject<List<Beneficiary>>(response);
+
             return BeneficiaryList;
         }
 
-        public static bool AddBeneficiary(Beneficiary beneficairy) {
-            return true;
+        public static bool AddBeneficiary(Beneficiary beneficairy)
+        {
+            HttpClient _client = new HttpClient();
+            string jsonString = JsonConvert.SerializeObject(beneficairy);
+            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            HttpResponseMessage someVar = _client.PostAsync(path, content).Result;//handle if resonse codes fail
+            if (someVar.IsSuccessStatusCode)
+            {
+                return true;//Beneficiary Added to DB successfuly
+            }
+            return false;//something went wrong
 
         }
         public static bool UpdateBeneficiary(Beneficiary beneficairy)
@@ -37,5 +50,9 @@ namespace Controllers
             return true;
 
         }
+
+
+
+
     }
 }

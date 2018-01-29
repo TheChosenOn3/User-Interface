@@ -258,31 +258,7 @@ namespace Project500
 
         private void btnExacutePayment_Click(object sender, EventArgs e)
         {
-            if (payment.Recurring == true)
-            {
-                if (recuringControllercs.AddPyaments(payment))
-                {
-                    foreach (Payment item in PaymentList)
-                    {
-                        if (payment.PaymentNumber == item.PaymentNumber)
-                        {
-                            item.Status = "Submitted";
-                            MessageBox.Show("payment exacuted sucsessfully");
-                        }
-                        else
-                        {
-                            item.Status = "Failed";
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("could not connect to server");
-                }
-
-            }
-            else
-            {
+           
                 if (PaymentsController.AddPyaments(payment))
                 {
                     foreach (Payment item in PaymentList)
@@ -297,7 +273,7 @@ namespace Project500
                         }
                     }
                 }
-            }
+            
         
             FillPaymentDatagrid(PaymentList);
 
@@ -496,8 +472,9 @@ namespace Project500
                     int PaymentNum2 = rnd.Next(1, 1000);
                     int SchedueldNum = rnd.Next(1, 1000);
                     string paynum = PaymentNum1.ToString() + PaymentNum2.ToString();
-
-                    PaymentList.Add(new Payment(SchedueldNum.ToString(), txtDescription.Text.Trim(), beneficiary.BeneficairyID, dtpPayDate.Value, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", paynum, typepay, recur, DateTime.Now, user.RsaID));
+                    string Paydate1 = dtpPayDate.Value.ToString("dd/MM/yyyy");
+                    
+                    PaymentList.Add(new Payment(SchedueldNum.ToString(), txtDescription.Text.Trim(), beneficiary.BeneficairyID, Convert.ToDateTime(Paydate1), float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", paynum, typepay, recur, DateTime.Now, user.RsaID));
                     //add payment
                     FillPaymentDatagrid(PaymentList);
                     ClearFields();
