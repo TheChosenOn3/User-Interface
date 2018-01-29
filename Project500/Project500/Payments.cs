@@ -471,7 +471,20 @@ namespace Project500
                     int PaymentNum1 = rnd.Next(1, 1000);
                     int PaymentNum2 = rnd.Next(1, 1000);
                     int SchedueldNum = rnd.Next(1, 1000);
-                    string paynum = PaymentNum1.ToString() + PaymentNum2.ToString();
+                    string paynum = PaymentNum1.ToString() + PaymentNum2.ToString() + SchedueldNum.ToString();
+                    string ScheDNum = SchedueldNum.ToString();
+                    foreach (Payment item in PaymentList)
+                    {
+                        if (paynum == item.PaymentNumber)
+                        {
+                            paynum += "9";
+                        }
+                        if (ScheDNum == item.ScheduleNr)
+                        {
+                            ScheDNum += "9";
+                        }
+
+                    }
                     string Paydate1 = dtpPayDate.Value.ToString("dd/MM/yyyy");
                     
                     PaymentList.Add(new Payment(SchedueldNum.ToString(), txtDescription.Text.Trim(), beneficiary.BeneficairyID, Convert.ToDateTime(Paydate1), float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", paynum, typepay, recur, DateTime.Now, user.RsaID));
