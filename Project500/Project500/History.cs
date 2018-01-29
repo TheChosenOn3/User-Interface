@@ -47,7 +47,6 @@ namespace Project500
         {
             tcPayments.TabPages.Add("RecurHistory", "Recurring Payment History");
             
-            
         }
 
         public void HideExtraPayments(string RefenceID)
