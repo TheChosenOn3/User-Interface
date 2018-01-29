@@ -89,5 +89,14 @@ namespace Project500
             RegisterForm.Show();
             this.Hide();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MetroMessageBox.Show(this,"Are you sure you wish to Exit this application?","Exit Project 500",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
+        }
     }
 }

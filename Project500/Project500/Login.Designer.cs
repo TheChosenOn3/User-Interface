@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblregisteraccount = new MetroFramework.Controls.MetroLabel();
             this.lblLinkToRegister = new MetroFramework.Controls.MetroLink();
+            this.btnExit = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,7 +117,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(246, 333);
+            this.btnLogin.Location = new System.Drawing.Point(326, 334);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(122, 42);
             this.btnLogin.TabIndex = 54;
@@ -160,7 +161,7 @@
             // 
             this.lblProfile.AutoSize = true;
             this.lblProfile.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfile.Location = new System.Drawing.Point(252, 37);
+            this.lblProfile.Location = new System.Drawing.Point(252, 39);
             this.lblProfile.Name = "lblProfile";
             this.lblProfile.Size = new System.Drawing.Size(116, 22);
             this.lblProfile.TabIndex = 1;
@@ -202,18 +203,30 @@
             this.lblLinkToRegister.UseStyleColors = true;
             this.lblLinkToRegister.Click += new System.EventHandler(this.lblLinkToRegister_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(168, 334);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(122, 42);
+            this.btnExit.TabIndex = 68;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnExit.UseSelectable = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(613, 418);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblLinkToRegister);
             this.Controls.Add(this.lblregisteraccount);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.panel8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Resizable = false;
@@ -242,5 +255,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lblregisteraccount;
         private MetroFramework.Controls.MetroLink lblLinkToRegister;
+        private MetroFramework.Controls.MetroButton btnExit;
     }
 }

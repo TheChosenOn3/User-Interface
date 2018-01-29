@@ -69,18 +69,19 @@ namespace Project500
 
             UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchBenPaymentAcount(user.RsaID);
-            
-          //fill datagrids
+
+            //fill datagrids
             FillUserEFTDatagrid(UserEFTList);
             FillUserCardDatagrid(UserCardList);
             popID();
         }
         //populate UPI feilds
-        public void popID() {
+        public void popID()
+        {
             string address = user.Address;
             string[] a = address.Split('/');
             // split address into fields
-          
+
             string Province = a[1];
             string Suburb = a[5];
             string Streer = a[4];
@@ -105,7 +106,7 @@ namespace Project500
         }
 
         // method to populate user eft dgv
-     
+
         public void FillUserEFTDatagrid(List<PaymentAccount> EFTDataGridList)
         {
 
@@ -123,7 +124,7 @@ namespace Project500
                     table.Rows.Add(item.AccountNumber, item.AccountHolder, item.Reference, item.TypeAcc);
                 }
                 return table;
-               
+
             }
 
         }
@@ -143,7 +144,7 @@ namespace Project500
                 table.Columns.Add("Expirey Date");
                 foreach (Card item in Cardlist)
                 {
-                    table.Rows.Add(item.CardNr,item.AccountHolder,item.Cvv,item.Expiry.ToString());
+                    table.Rows.Add(item.CardNr, item.AccountHolder, item.Cvv, item.Expiry.ToString());
                 }
                 return table;
             }
@@ -161,7 +162,8 @@ namespace Project500
         }
         /// clear eft boxes
         /// 
-        public void ClearEFT() {
+        public void ClearEFT()
+        {
 
             txtEFTNum.Text = "";
             txtEFTReference.Text = "";
@@ -169,7 +171,8 @@ namespace Project500
             cbPaymentType.SelectedIndex = -1;
         }
         //cler personal info boxes
-        public void ClearPI() {
+        public void ClearPI()
+        {
             txtProvince.Text = "";
             txtSuburb.Text = "";
             txtStreet.Text = "";
@@ -186,13 +189,15 @@ namespace Project500
         public User CreateNewUer()
         {
             String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
-             newuser = new User(txtName.Text,user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, txtPassword.Text, "Active", txtBusinessName.Text);
+            newuser = new User(txtName.Text, user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, txtPassword.Text, "Active", txtBusinessName.Text);
             return newuser;
-           
+
 
         }
         //make new card
-        public Card makecard() { Card newcard = new Card(txtCardNum.Text, txtCardHolder.Text, txtCVV.Text, DateTime.Now, "11111");
+        public Card makecard()
+        {
+            Card newcard = new Card(txtCardNum.Text, txtCardHolder.Text, txtCVV.Text, DateTime.Now, "11111");
             return newcard;
         }
 
@@ -205,11 +210,12 @@ namespace Project500
         // update card
         public bool SendUserCardAccUp()
         {
-            CardController.UpdateCard( makecard());
+            CardController.UpdateCard(makecard());
             return true;
         }
         //make new eft  
-        public PaymentAccount makeneweft() {
+        public PaymentAccount makeneweft()
+        {
             AccountTypes Acounttype = new AccountTypes();
             switch (cbPaymentType.SelectedIndex)
             {
@@ -225,7 +231,7 @@ namespace Project500
                 default:
                     break;
             }
-            PaymentAccount neweft = new PaymentAccount(txtEFTNum.Text, txtEFTHolder.Text, txtEFTReference.Text, Acounttype,"",user.RsaID);
+            PaymentAccount neweft = new PaymentAccount(txtEFTNum.Text, txtEFTHolder.Text, txtEFTReference.Text, Acounttype, "", user.RsaID);
             return neweft;
         }
         // add new eft acount 
@@ -319,7 +325,7 @@ namespace Project500
 
         private void tabCRegister_SelectedIndexChanged(object sender, EventArgs e)
         {
-                
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -606,8 +612,8 @@ namespace Project500
                 user = CreateNewUer();
                 ClearPI();
             }
-          
-         
+
+
         }
 
         private void metroTextBox11_Click(object sender, EventArgs e)
@@ -712,7 +718,7 @@ namespace Project500
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-           ClearPI();
+            ClearPI();
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)
@@ -801,10 +807,10 @@ namespace Project500
         private void metroButton6_Click(object sender, EventArgs e)
         {
             CardController.DeleteCard(Card.CardNr);
-                    UserCardList.Remove(Card);
-                    ClearCard();
-                    FillUserCardDatagrid(UserCardList);
-                
+            UserCardList.Remove(Card);
+            ClearCard();
+            FillUserCardDatagrid(UserCardList);
+
         }
 
         private void metroButton7_Click(object sender, EventArgs e)
@@ -957,10 +963,10 @@ namespace Project500
         private void metroButton9_Click(object sender, EventArgs e)
         {
             PaymentsAccountController.DeleteUserPaymentAcount(EFT.AccountNumber);
-                    UserEFTList.Remove(EFT);
-                    FillUserEFTDatagrid(UserEFTList);
-                    ClearEFT();
-             }
+            UserEFTList.Remove(EFT);
+            FillUserEFTDatagrid(UserEFTList);
+            ClearEFT();
+        }
 
         private void metroButton10_Click(object sender, EventArgs e)
         {
@@ -996,12 +1002,12 @@ namespace Project500
                     break;
                 }
             }
-            if (go !=true)
+            if (go != true)
             {
                 MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
 
             }
-           
+
         }
 
         private void tabEFTDetail_Click(object sender, EventArgs e)
@@ -1046,17 +1052,17 @@ namespace Project500
                 UserEFTList.Add(makeneweft());
                 FillUserEFTDatagrid(UserEFTList);
                 ClearEFT();
-             }
+            }
             else
             {
                 MessageBox.Show("Sorry the Accountalreddy exists");
             }
-  
+
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            
+
 
             ClearEFT();
         }
@@ -1078,7 +1084,7 @@ namespace Project500
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you wish to exit this application?", "Exit Project 500",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you wish to exit this application?", "Exit Project 500", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
