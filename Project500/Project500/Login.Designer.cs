@@ -54,6 +54,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.BackColor = System.Drawing.Color.Black;
             // 
             // 
             // 

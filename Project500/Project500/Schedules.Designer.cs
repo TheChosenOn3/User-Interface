@@ -362,6 +362,7 @@
             this.dgvScheduels.TabIndex = 80;
             this.dgvScheduels.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dgvScheduels.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScheduels_CellContentClick);
+            this.dgvScheduels.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScheduels_RowEnter);
             // 
             // btnDelete
             // 
@@ -394,7 +395,7 @@
             this.tcCurerntScheduel.Location = new System.Drawing.Point(191, 516);
             this.tcCurerntScheduel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcCurerntScheduel.Name = "tcCurerntScheduel";
-            this.tcCurerntScheduel.SelectedIndex = 0;
+            this.tcCurerntScheduel.SelectedIndex = 1;
             this.tcCurerntScheduel.Size = new System.Drawing.Size(897, 222);
             this.tcCurerntScheduel.TabIndex = 24;
             this.tcCurerntScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -730,6 +731,7 @@
             this.dgvBeneficiary.Size = new System.Drawing.Size(361, 127);
             this.dgvBeneficiary.TabIndex = 86;
             this.dgvBeneficiary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBeneficiary_CellContentClick);
+            this.dgvBeneficiary.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBeneficiary_RowEnter);
             // 
             // txtBname
             // 

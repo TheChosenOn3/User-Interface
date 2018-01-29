@@ -1456,6 +1456,7 @@
             this.dgvCrypto.TabIndex = 64;
             this.dgvCrypto.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dgvCrypto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCrypto_CellContentClick_1);
+            this.dgvCrypto.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCrypto_RowEnter);
             // 
             // BtnDeletCrypto
             // 
@@ -1479,7 +1480,7 @@
             this.tcBAcounts.Location = new System.Drawing.Point(186, 392);
             this.tcBAcounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcBAcounts.Name = "tcBAcounts";
-            this.tcBAcounts.SelectedIndex = 0;
+            this.tcBAcounts.SelectedIndex = 2;
             this.tcBAcounts.Size = new System.Drawing.Size(902, 346);
             this.tcBAcounts.TabIndex = 17;
             this.tcBAcounts.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1571,6 +1572,7 @@
             this.dgvEFT.TabIndex = 67;
             this.dgvEFT.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dgvEFT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEFT_CellContentClick_1);
+            this.dgvEFT.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEFT_RowEnter);
             // 
             // txtAccHolder
             // 
@@ -1714,6 +1716,7 @@
             this.dgvBeneficiary.TabIndex = 65;
             this.dgvBeneficiary.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dgvBeneficiary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBeneficiary_CellContentClick_1);
+            this.dgvBeneficiary.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBeneficiary_RowEnter);
             // 
             // btnDeleteB
             // 

@@ -183,18 +183,8 @@ namespace Project500
 
         private void dgvPayments_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-          Payment  payment1 = PaymentList[index];
-            foreach (Payment item in PaymentList)
-            {
-                if (item == payment1)
-                {
-                    payment = payment1;
-                }
-
-            }
-            genratedes();
-            }
+            
+        }
 
         private void btnRemakePayment_Click(object sender, EventArgs e)
         {
@@ -232,7 +222,7 @@ namespace Project500
 
                 foreach (Beneficiary item in BeneficairyList)
                 {
-                    if (txtBName.Text.Trim() == item.BeneficairyName)
+                    if (item.BeneficairyName.IndexOf(txtBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
                         benidtosearc = item.BeneficairyID;
                     }
@@ -450,6 +440,21 @@ namespace Project500
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvPayments_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            Payment payment1 = PaymentList[index];
+            foreach (Payment item in PaymentList)
+            {
+                if (item == payment1)
+                {
+                    payment = payment1;
+                }
+
+            }
+            genratedes();
         }
     }
 }
