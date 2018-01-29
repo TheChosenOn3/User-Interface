@@ -114,7 +114,7 @@ namespace Project500
         private void Schedules_Load(object sender, EventArgs e)
         {
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
-            PaymentListF = PaymentsController.GetPayments(user.RsaID);
+            PaymentListF = PaymentsController.GetSchedueldPayments(user.RsaID);
             foreach (Payment   item in PaymentListF)
             {
                 if (item.PayDate > DateTime.Now || item.Recurring == true)
@@ -334,7 +334,7 @@ namespace Project500
 
                     }
                     //maby need to make new controller vor scheadualed table
-                    PaymentListS = PaymentsController.GetPayments(user.RsaID);
+               
                    
                   
                 }
