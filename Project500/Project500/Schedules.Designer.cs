@@ -320,6 +320,7 @@
             // dgvScheduels
             // 
             this.dgvScheduels.AllowUserToResizeRows = false;
+            this.dgvScheduels.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvScheduels.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvScheduels.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvScheduels.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -357,7 +358,7 @@
             this.dgvScheduels.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvScheduels.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvScheduels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvScheduels.Size = new System.Drawing.Size(760, 173);
+            this.dgvScheduels.Size = new System.Drawing.Size(748, 173);
             this.dgvScheduels.TabIndex = 80;
             this.dgvScheduels.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dgvScheduels.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScheduels_CellContentClick);
