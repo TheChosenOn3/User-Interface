@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities1;
 using Controllers;
+using MetroFramework;
 
 namespace Project500
 {
@@ -40,6 +41,20 @@ namespace Project500
         {
             InitializeComponent();
         }
+
+        //Method to Generate an Extra tab to display linked payments of a recurring Payment.
+        public void ShowExtraPayments(string RefenceID)
+        {
+            tcPayments.TabPages.Add("RecurHistory", "Recurring Payment History");
+            
+            
+        }
+
+        public void HideExtraPayments(string RefenceID)
+        {
+
+        }
+
         // method to populate datagrid Added payments
         public void FillPaymentsDatagrid(List<Payment> PaymentDataGridList)
         {
@@ -101,7 +116,7 @@ namespace Project500
             PaymentListF = PaymentsController.GetPayments(user.RsaID);
             foreach (Payment item in PaymentListF)
             {
-                if (item.Status == "Declined"|| item.Status == "Approved" ||item.Status == "Submitted")
+                if (item.Status == "Declined"|| item.Status == "Approved" || item.Status == "Submitted")
                 {
                     PaymentList.Add(item);
                 }
