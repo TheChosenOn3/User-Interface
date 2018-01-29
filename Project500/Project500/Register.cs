@@ -41,7 +41,7 @@ namespace Project500
         public Register()
         {
             InitializeComponent();
-
+            tabCRegister.SelectTab(0);
         }
 
         private void Register_Load(object sender, EventArgs e)
@@ -554,6 +554,11 @@ namespace Project500
         private void btnBackAddress_Click(object sender, EventArgs e)
         {
             tabCRegister.SelectTab(1);
+        }
+
+        private void tabCRegister_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

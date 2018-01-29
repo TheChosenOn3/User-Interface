@@ -77,5 +77,10 @@ namespace Project500
         {
 
         }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
