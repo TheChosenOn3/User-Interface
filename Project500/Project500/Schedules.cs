@@ -117,7 +117,7 @@ namespace Project500
             PaymentListF = PaymentsController.GetPayments(user.RsaID);
             foreach (Payment   item in PaymentListF)
             {
-                if (item.PayDate > DateTime.Now)
+                if (item.PayDate > DateTime.Now || item.Recurring == true)
                 {
                     PaymentList.Add(item);
                 }
@@ -307,7 +307,7 @@ namespace Project500
 
                 if (cbFPaymentMethod.SelectedIndex == -1)
                 {
-                    MessageBox.Show("no type");
+                   
                     PaymentListS = PaymentsController.GetFilterPaymentsNoType(benidtosearc, "Schedueled", dtpFStart.Value, dtpFEnd.Value);
                     FillPaymentsDatagrid(PaymentListS);
                 }
@@ -326,7 +326,7 @@ namespace Project500
                             break;
                     }
 
-                    MessageBox.Show("typ");
+                   
                     PaymentListS = PaymentsController.GetFilterPayments(benidtosearc, "Schedueled", paymentType, dtpFStart.Value, dtpFEnd.Value);
                     FillPaymentsDatagrid(PaymentListS);
                 }
