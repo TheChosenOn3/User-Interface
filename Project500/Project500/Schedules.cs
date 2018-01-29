@@ -308,29 +308,66 @@ namespace Project500
 
                 if (cbFPaymentMethod.SelectedIndex == -1)
                 {
+                    if (benidtosearc == "")
+                    {
+                        foreach (Payment item in PaymentListS)
+                        {
+                            if (item.PayDate >= dtpFStart.Value && item.PayDate <= dtpFEnd.Value )
+                            {
+                                PaymentList.Add(item);
+                            }
+
+                        }
+
+                    }
+                    else
+                    {
+                        foreach (Payment item in PaymentListS)
+                        {
+                            if (item.PayDate >= dtpFStart.Value && item.PayDate <= dtpFEnd.Value && item.BeneficairyID == benidtosearc)
+                            {
+                                PaymentList.Add(item);
+                            }
+
+                        }
+
+                    }
+                    //maby need to make new controller vor scheadualed table
+                    PaymentListS = PaymentsController.GetPayments(user.RsaID);
                    
-                    PaymentListS = PaymentsController.GetFilterPaymentsNoType(benidtosearc, "Schedueled", dtpFStart.Value, dtpFEnd.Value);
-                    FillPaymentsDatagrid(PaymentListS);
+                  
                 }
                 else
                 {
-                    switch (cbFPaymentMethod.SelectedIndex)
+                
+                    if (benidtosearc == "")
                     {
-                        case 0:
-                            paymentType = PaymentType.Crypto;
-                            break;
-                        case 1:
-                            paymentType = PaymentType.EFT;
-                            break;
-                        case 2:
-                            paymentType = PaymentType.Card;
-                            break;
-                    }
+                        foreach (Payment item in PaymentListS)
+                        {
+                            if (cbFPaymentMethod.SelectedIndex.ToString() == item.TypePayment.ToString() && item.PayDate >= dtpFStart.Value && item.PayDate <= dtpFEnd.Value)
+                            {
+                                PaymentList.Add(item);
+                            }
 
-                   
-                    PaymentListS = PaymentsController.GetFilterPayments(benidtosearc, "Schedueled", paymentType, dtpFStart.Value, dtpFEnd.Value);
-                    FillPaymentsDatagrid(PaymentListS);
+                        }
+
+                    }
+                    else
+                    {
+                        foreach (Payment item in PaymentListS)
+                        {
+                            if (cbFPaymentMethod.SelectedIndex.ToString() == item.TypePayment.ToString() && item.PayDate >= dtpFStart.Value && item.PayDate <= dtpFEnd.Value && item.BeneficairyID == benidtosearc)
+                            {
+                                PaymentList.Add(item);
+                            }
+
+                        }
+
+                    }
+                    
+                  
                 }
+                FillPaymentsDatagrid(PaymentListS);
             }
 
         }

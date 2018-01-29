@@ -41,6 +41,14 @@ namespace Controllers
             return true;//something went wrong
             //awe
         }
+        
+       public static List<User> GetUser()
+        {
+            List<User> a = new List<User>();
+
+            return a;//something went wrong
+            //awe
+        }
 
 
 

@@ -115,7 +115,7 @@ namespace Project500
             PaymentListF = PaymentsController.GetPayments(user.RsaID);
             foreach (Payment item in PaymentListF)
             {
-                if (item.Status == "Declined"|| item.Status == "Approved" || item.Status == "Submitted")
+                if (item.PayDate < DateTime.Now)
                 {
                     PaymentList.Add(item);
                 }
@@ -245,40 +245,139 @@ namespace Project500
                 }
                 List<Payment> paylistfilter = new List<Payment>();
                 paylistfilter = PaymentList;
+                // begin
                 if (cbPaymenttype.SelectedIndex == -1)
                 {
-                    
-                    foreach (Payment item in paylistfilter)
+                    if (benidtosearc == "")
                     {
-                        PaymentList.Add(item);
-                    }
+                        if (cmbStaus.SelectedIndex == -1)
+                        {
+                            foreach (Payment item in PaymentListS)
+                            {
+                                if (item.PayDate >= dtpStart.Value && item.PayDate <= dtpEnd.Value)
+                                {
+                                    PaymentList.Add(item);
+                                }
 
-                    FillPaymentsDatagrid(PaymentList);
+                            }
+
+                        }
+                        else
+                        {
+                            foreach (Payment item in PaymentListS)
+                            {
+                                if (item.PayDate >= dtpStart.Value && item.PayDate <= dtpEnd.Value && item.Status ==cmbStaus.SelectedIndex.ToString())
+                                {
+                                    PaymentList.Add(item);
+                                }
+
+                            }
+
+
+                        }
+
+
+                    }
+                    else
+                    {
+                        if (cmbStaus.SelectedIndex == -1)
+                        {
+                            foreach (Payment item in PaymentListS)
+                            {
+                                if (item.PayDate >= dtpStart.Value && item.PayDate <= dtpEnd.Value && item.BeneficairyID == benidtosearc)
+                                {
+                                    PaymentList.Add(item);
+                                }
+
+                            }
+
+                        }
+                        else
+                        {
+                            foreach (Payment item in PaymentListS)
+                            {
+                                if (item.PayDate >= dtpStart.Value && item.PayDate <= dtpEnd.Value && item.Status == cmbStaus.SelectedIndex.ToString() && item.BeneficairyID == benidtosearc)
+                                {
+                                    PaymentList.Add(item);
+                                }
+
+                            }
+
+
+                        }
+
+                    }
+                    //maby need to make new controller vor scheadualed table
+               
+
+
                 }
                 else
                 {
-                    switch (cbPaymenttype.SelectedIndex)
+                    if (benidtosearc == "")
                     {
-                        case 0:
-                            paymentType = PaymentType.Crypto;
-                            break;
-                        case 1:
-                            paymentType = PaymentType.EFT;
-                            break;
-                        case 2:
-                            paymentType = PaymentType.Card;
-                            break;
-                    }
+                        if (cmbStaus.SelectedIndex == -1)
+                        {
+                            foreach (Payment item in PaymentListS)
+                            {
+                                if (item.PayDate >= dtpStart.Value && item.PayDate <= dtpEnd.Value && cbPaymenttype.SelectedItem.ToString() == item.TypePayment.ToString())
+                                {
+                                    PaymentList.Add(item);
+                                }
 
-                    foreach (Payment item in paylistfilter)
-                    {
-                        PaymentList.Add(item);
+                            }
+
+                        }
+                        else
+                        {
+                            foreach (Payment item in PaymentListS)
+                            {
+                                if (item.PayDate >= dtpStart.Value && item.PayDate <= dtpEnd.Value && item.Status == cmbStaus.SelectedIndex.ToString() && cbPaymenttype.SelectedItem.ToString() == item.TypePayment.ToString())
+                                {
+                                    PaymentList.Add(item);
+                                }
+
+                            }
+
+
+                        }
+
+
                     }
-                    FillPaymentsDatagrid(PaymentList);
+                    else
+                    {
+                        if (cmbStaus.SelectedIndex == -1)
+                        {
+                            foreach (Payment item in PaymentListS)
+                            {
+                                if (item.PayDate >= dtpStart.Value && item.PayDate <= dtpEnd.Value && item.BeneficairyID == benidtosearc && cbPaymenttype.SelectedItem.ToString() == item.TypePayment.ToString())
+                                {
+                                    PaymentList.Add(item);
+                                }
+
+                            }
+
+                        }
+                        else
+                        {
+                            foreach (Payment item in PaymentListS)
+                            {
+                                if (item.PayDate >= dtpStart.Value && item.PayDate <= dtpEnd.Value && item.Status == cmbStaus.SelectedIndex.ToString() && item.BeneficairyID == benidtosearc && cbPaymenttype.SelectedItem.ToString() == item.TypePayment.ToString())
+                                {
+                                    PaymentList.Add(item);
+                                }
+
+                            }
+
+
+                        }
+
+                    }
+                    //maby need to make new controller vor scheadualed table
+
                 }
-                
-            
 
+                FillPaymentsDatagrid(PaymentList);
             }
           
         }
