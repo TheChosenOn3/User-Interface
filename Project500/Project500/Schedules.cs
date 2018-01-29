@@ -246,9 +246,10 @@ namespace Project500
                 {
                     typepay = PaymentType.EFT;
                 }
-            
-               
-                Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, dtpPaymentdate.Value, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), payment.Status, payment.PaymentNumber, typepay, recur, DateTime.Now, user.RsaID);
+
+                string Paydate1 = dtpPaymentdate.Value.ToString("dd/MM/yyyy");
+
+                Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Convert.ToDateTime(Paydate1), float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), payment.Status, payment.PaymentNumber, typepay, recur, DateTime.Now, user.RsaID);
                 PaymentsController.UpdatePyaments(newPayment);
                 foreach (Payment item in PaymentList)
                 {
