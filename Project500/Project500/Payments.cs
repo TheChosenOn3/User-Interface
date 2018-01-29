@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities1;
 using Controllers;
+using System.Text.RegularExpressions;
 
 namespace Project500
 {
@@ -545,7 +546,7 @@ namespace Project500
             BeneficiaryListS.Clear();
             foreach (Beneficiary item in BeneficairyList)
             {
-                if (item.BeneficairyName == txtBName.Text.Trim())
+                if (item.BeneficairyName.IndexOf(txtBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                 {
                     BeneficiaryListS.Add(item);
                 }
@@ -558,31 +559,6 @@ namespace Project500
 
         private void dgvBeneficiarys_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-           
-            if (BeneficiaryListS.Count == 0)
-            {
-               
-                beneficiary = BeneficairyList[index];
-            }
-            else
-            {
-                beneficiary = BeneficiaryListS[index];
-                BeneficiaryListS.Clear();
-            }
-            txtBName.Text = beneficiary.BeneficairyName;
-           
-           
-             BenbjectListe = PopSelectedBenAcount(PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID), CryptoController.GetCrypto(beneficiary.BeneficairyID));
-            List<string> remove = new List<string>();
-            cbBAccType.Items.Clear();
-            foreach (string item in BenbjectListe)
-            {
-                cbBAccType.Items.Add(item);
-
-            }
-          
-            BenbjectListe.Clear();
 
         }
 
@@ -606,6 +582,49 @@ namespace Project500
             int index = e.RowIndex;
             payment = PaymentList[index];
           
+        }
+
+        private void dgvBeneficiarys_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+
+            if (BeneficiaryListS.Count == 0)
+            {
+
+                beneficiary = BeneficairyList[index];
+            }
+            else
+            {
+                beneficiary = BeneficiaryListS[index];
+                BeneficiaryListS.Clear();
+            }
+            txtBName.Text = beneficiary.BeneficairyName;
+
+
+            BenbjectListe = PopSelectedBenAcount(PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID), CryptoController.GetCrypto(beneficiary.BeneficairyID));
+            List<string> remove = new List<string>();
+            cbBAccType.Items.Clear();
+            foreach (string item in BenbjectListe)
+            {
+                cbBAccType.Items.Add(item);
+
+            }
+
+            BenbjectListe.Clear();
+        }
+
+        private void checkInter_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkInter.Checked)
+            {
+                lblInterval.Visible = true;
+                txtInterval.Visible = true;
+            }
+            else
+            {
+                lblInterval.Visible = false;
+                txtInterval.Visible = false;
+            }
         }
     }
     }

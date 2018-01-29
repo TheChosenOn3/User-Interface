@@ -209,9 +209,10 @@ namespace Project500
         {
            BenName = txtSearchBName.Text.Trim();
             BeneficiaryListS.Clear();
+
             foreach (Beneficiary item in BeneficiaryList)
             {
-                if (item.BeneficairyName == txtSearchBName.Text.Trim())
+                if (item.BeneficairyName.IndexOf(txtSearchBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                 {
                     BeneficiaryListS.Add(item);
                 }
@@ -559,83 +560,20 @@ namespace Project500
 
         private void dgvBeneficiary_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            Beneficiary ben1 = null;
-            if (BeneficiaryListS.Count ==0)
-            {
-                ben1 = BeneficiaryList[index];
-            }
-            else
-            {
-                 ben1 = BeneficiaryListS[index];
-                BeneficiaryListS.Clear();
-            }
-         
-            ClearBens();
-            ben = ben1;
-            txtBBranchCode.Text = ben.BeneficiaryBranch;
-            txtBID.Text = ben.BeneficairyID;
-            txtBName.Text = ben.BeneficairyName;
-            BenCryptoList = CryptoController.GetCrypto(ben.BeneficairyID);
-            BenEFTList = PaymentsAccountController.SearchBenPaymentAcount(ben.BeneficairyID);
-            FillCryptoDatagrid(ben);
-            FillEFTDatagrid(ben);
-            btnUpdateBPI.Visible = true;
-            btnDeleteB.Visible = true;
+            
           
 
         }
 
         private void dgvEFT_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            EFTtemp = BenEFTListS[index];
-            foreach (PaymentAccount item in BenEFTList)
-            {
-                if (EFTtemp == item)
-                {
-                    EFT = item;
-                }
-
-            }
-            switch (EFT.TypeAcc)
-            {
-                case AccountTypes.Savings:
-                    cbEFTAccType.SelectedIndex = 0;
-                    break;
-                case AccountTypes.Cheque:
-                    cbEFTAccType.SelectedIndex = 1;
-                    break;
-                case AccountTypes.Credit:
-                    cbEFTAccType.SelectedIndex = 2;
-                    break;
-                default:
-                    break;
-            }
-            txtAccHolder.Text = EFT.AccountHolder;
-            txtEFTAccNum.Text = EFT.AccountNumber;
-            txtEFTRefernce.Text = EFT.Reference;
-            btnUpdateEFT.Visible = true;
-            btnDeletEFT.Visible = true;
+            
 
         }
 
         private void dgvCrypto_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            cryptotemp = BenCryptoListS[index];
-            foreach (Crypto item in BenCryptoList)
-            {
-                if (cryptotemp == item)
-                {
-                    crypto = item;
-                }
-
-            }
-            txtWaletName.Text = crypto.WaletName;
-            txtWalletCode.Text = crypto.Waletaddress;
-            BtnDeletCrypto.Visible = true;
-            btnUpdateCrypto.Visible = true;
+            
         }
 
         private void btnUpdateCrypto_Click(object sender, EventArgs e)
@@ -681,6 +619,84 @@ namespace Project500
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dgvBeneficiary_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            Beneficiary ben1 = null;
+            if (BeneficiaryListS.Count == 0)
+            {
+                ben1 = BeneficiaryList[index];
+            }
+            else
+            {
+                ben1 = BeneficiaryListS[index];
+                BeneficiaryListS.Clear();
+            }
+
+            ClearBens();
+            ben = ben1;
+            txtBBranchCode.Text = ben.BeneficiaryBranch;
+            txtBID.Text = ben.BeneficairyID;
+            txtBName.Text = ben.BeneficairyName;
+            BenCryptoList = CryptoController.GetCrypto(ben.BeneficairyID);
+            BenEFTList = PaymentsAccountController.SearchBenPaymentAcount(ben.BeneficairyID);
+            FillCryptoDatagrid(ben);
+            FillEFTDatagrid(ben);
+            btnUpdateBPI.Visible = true;
+            btnDeleteB.Visible = true;
+        }
+
+        private void dgvEFT_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            EFTtemp = BenEFTListS[index];
+            foreach (PaymentAccount item in BenEFTList)
+            {
+                if (EFTtemp == item)
+                {
+                    EFT = item;
+                }
+
+            }
+            switch (EFT.TypeAcc)
+            {
+                case AccountTypes.Savings:
+                    cbEFTAccType.SelectedIndex = 0;
+                    break;
+                case AccountTypes.Cheque:
+                    cbEFTAccType.SelectedIndex = 1;
+                    break;
+                case AccountTypes.Credit:
+                    cbEFTAccType.SelectedIndex = 2;
+                    break;
+                default:
+                    break;
+            }
+            txtAccHolder.Text = EFT.AccountHolder;
+            txtEFTAccNum.Text = EFT.AccountNumber;
+            txtEFTRefernce.Text = EFT.Reference;
+            btnUpdateEFT.Visible = true;
+            btnDeletEFT.Visible = true;
+        }
+
+        private void dgvCrypto_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            cryptotemp = BenCryptoListS[index];
+            foreach (Crypto item in BenCryptoList)
+            {
+                if (cryptotemp == item)
+                {
+                    crypto = item;
+                }
+
+            }
+            txtWaletName.Text = crypto.WaletName;
+            txtWalletCode.Text = crypto.Waletaddress;
+            BtnDeletCrypto.Visible = true;
+            btnUpdateCrypto.Visible = true;
         }
     }
 }

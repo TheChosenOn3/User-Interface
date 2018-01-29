@@ -53,11 +53,13 @@ namespace Project500
         public Profile()
         {
             InitializeComponent();
+            tabUserRegister.SelectTab(0);
         }
         public Profile(User _user)
         {
             InitializeComponent();
             user = _user;
+            tabUserRegister.SelectTab(0);
         }
 
         private void Profile_Load(object sender, EventArgs e)
@@ -839,12 +841,7 @@ namespace Project500
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {////edit the ep date
-            int index = e.RowIndex;
-            Card = UserCardList[index];
-            txtCardHolder.Text = Card.AccountHolder;
-            txtCVV.Text = Card.Cvv;
-            txtCardNum.Text = Card.CardNr;
-            dtpED.Value = DateTime.Now;
+            
 
         }
 
@@ -939,25 +936,7 @@ namespace Project500
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            EFT = UserEFTList[index];
-            txtEFTNum.Text = EFT.AccountNumber;
-            txtEFTReference.Text = EFT.Reference;
-            txtEFTHolder.Text = EFT.AccountHolder;
-            switch (EFT.TypeAcc)
-            {
-                case AccountTypes.Savings:
-                    cbPaymentType.SelectedIndex = 0;
-                    break;
-                case AccountTypes.Cheque:
-                    cbPaymentType.SelectedIndex = 1;
-                    break;
-                case AccountTypes.Credit:
-                    cbPaymentType.SelectedIndex = 2;
-                    break;
-                default:
-                    break;
-            }
+            
         }
 
         private void metroButton9_Click(object sender, EventArgs e)
@@ -1087,6 +1066,39 @@ namespace Project500
             if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you wish to exit this application?", "Exit Project 500", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void dgvCard_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            Card = UserCardList[index];
+            txtCardHolder.Text = Card.AccountHolder;
+            txtCVV.Text = Card.Cvv;
+            txtCardNum.Text = Card.CardNr;
+            dtpED.Value = DateTime.Now;
+        }
+
+        private void dgvEFT_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            EFT = UserEFTList[index];
+            txtEFTNum.Text = EFT.AccountNumber;
+            txtEFTReference.Text = EFT.Reference;
+            txtEFTHolder.Text = EFT.AccountHolder;
+            switch (EFT.TypeAcc)
+            {
+                case AccountTypes.Savings:
+                    cbPaymentType.SelectedIndex = 0;
+                    break;
+                case AccountTypes.Cheque:
+                    cbPaymentType.SelectedIndex = 1;
+                    break;
+                case AccountTypes.Credit:
+                    cbPaymentType.SelectedIndex = 2;
+                    break;
+                default:
+                    break;
             }
         }
     }

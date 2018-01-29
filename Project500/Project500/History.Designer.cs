@@ -378,6 +378,7 @@
             this.dgvPayments.TabIndex = 2;
             this.dgvPayments.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dgvPayments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayments_CellContentClick);
+            this.dgvPayments.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayments_RowEnter);
             // 
             // tcCurrentPayment
             // 
@@ -428,7 +429,7 @@
             // 
             // btnRemakePayment
             // 
-            this.btnRemakePayment.Location = new System.Drawing.Point(627, 68);
+            this.btnRemakePayment.Location = new System.Drawing.Point(592, 71);
             this.btnRemakePayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemakePayment.Name = "btnRemakePayment";
             this.btnRemakePayment.Size = new System.Drawing.Size(135, 32);
@@ -440,7 +441,7 @@
             // 
             // btnGenerateReport
             // 
-            this.btnGenerateReport.Location = new System.Drawing.Point(627, 28);
+            this.btnGenerateReport.Location = new System.Drawing.Point(592, 31);
             this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(135, 32);
@@ -452,7 +453,7 @@
             // 
             // rteDecription
             // 
-            this.rteDecription.Location = new System.Drawing.Point(97, 26);
+            this.rteDecription.Location = new System.Drawing.Point(18, 31);
             this.rteDecription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rteDecription.Name = "rteDecription";
             this.rteDecription.Size = new System.Drawing.Size(506, 79);
@@ -463,7 +464,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(97, 5);
+            this.metroLabel2.Location = new System.Drawing.Point(18, 10);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(74, 19);

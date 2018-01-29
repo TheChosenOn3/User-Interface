@@ -54,6 +54,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.BackColor = System.Drawing.Color.Black;
             // 
             // 
             // 
@@ -67,7 +68,7 @@
             this.txtUsername.CustomButton.UseSelectable = true;
             this.txtUsername.CustomButton.Visible = false;
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(200, 157);
+            this.txtUsername.Location = new System.Drawing.Point(201, 158);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -98,7 +99,7 @@
             this.txtPassword.CustomButton.UseSelectable = true;
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(200, 224);
+            this.txtPassword.Location = new System.Drawing.Point(201, 225);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -117,7 +118,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(326, 334);
+            this.btnLogin.Location = new System.Drawing.Point(327, 335);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(122, 42);
             this.btnLogin.TabIndex = 54;
@@ -129,7 +130,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(200, 131);
+            this.lblUsername.Location = new System.Drawing.Point(201, 132);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(44, 19);
             this.lblUsername.TabIndex = 55;
@@ -139,7 +140,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(200, 201);
+            this.lblPassword.Location = new System.Drawing.Point(201, 202);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(66, 19);
             this.lblPassword.TabIndex = 56;
@@ -161,7 +162,7 @@
             // 
             this.lblProfile.AutoSize = true;
             this.lblProfile.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfile.Location = new System.Drawing.Point(252, 39);
+            this.lblProfile.Location = new System.Drawing.Point(245, 39);
             this.lblProfile.Name = "lblProfile";
             this.lblProfile.Size = new System.Drawing.Size(116, 22);
             this.lblProfile.TabIndex = 1;
@@ -180,7 +181,7 @@
             // lblregisteraccount
             // 
             this.lblregisteraccount.AutoSize = true;
-            this.lblregisteraccount.Location = new System.Drawing.Point(236, 259);
+            this.lblregisteraccount.Location = new System.Drawing.Point(237, 260);
             this.lblregisteraccount.Name = "lblregisteraccount";
             this.lblregisteraccount.Size = new System.Drawing.Size(144, 19);
             this.lblregisteraccount.TabIndex = 66;
@@ -192,7 +193,7 @@
             this.lblLinkToRegister.BackColor = System.Drawing.Color.Transparent;
             this.lblLinkToRegister.FontSize = MetroFramework.MetroLinkSize.Tall;
             this.lblLinkToRegister.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.lblLinkToRegister.Location = new System.Drawing.Point(206, 281);
+            this.lblLinkToRegister.Location = new System.Drawing.Point(207, 282);
             this.lblLinkToRegister.Name = "lblLinkToRegister";
             this.lblLinkToRegister.Size = new System.Drawing.Size(204, 29);
             this.lblLinkToRegister.TabIndex = 67;
@@ -205,7 +206,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(168, 334);
+            this.btnExit.Location = new System.Drawing.Point(169, 335);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(122, 42);
             this.btnExit.TabIndex = 68;
@@ -216,6 +217,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(613, 418);
             this.Controls.Add(this.btnExit);
