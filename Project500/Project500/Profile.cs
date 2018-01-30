@@ -113,10 +113,10 @@ namespace Project500
             txtCellNum.Text = user.CellNr;
             txtEmail.Text = user.Email;
 
-            string password1 = EncryptData.ConvertHexToString(user.Password, System.Text.Encoding.Unicode);
-            string password2 = EncryptData.Decrypt(password1);
+            //string password1 = EncryptData.ConvertHexToString(user.Password, System.Text.Encoding.Unicode);
+            //string password2 = EncryptData.Decrypt(password1);
 
-            txtPassword.Text = password2;
+            //txtPassword.Text = password2;
             txtBusinessName.Text = user.BusinessName;
 
         }
@@ -205,7 +205,7 @@ namespace Project500
         public User CreateNewUer()
         {
             String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
-            newuser = new User(txtName.Text, user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, txtPassword.Text, "Active", txtBusinessName.Text);
+            newuser = new User(txtName.Text, user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, password, "Active", txtBusinessName.Text);
             return newuser;
 
 
