@@ -69,6 +69,7 @@ namespace Project500
 
              UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
+            //sf
             txtWalletName.Text = UserCrypto.WaletName;
             txtWalletCode.Text = UserCrypto.Waletaddress;
             txtWalletAmount.Text = UserCrypto.Amount.ToString();
