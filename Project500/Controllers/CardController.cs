@@ -7,44 +7,26 @@ using Newtonsoft.Json;
 
 namespace Controllers
 {
-    
+
     public class CardController
     {
-        static HttpClient client;
+        public static string Control = "Card/";
+
         public static bool AddCard(Card newcard)
         {
-            return true;
-
+            return ControllerHandler<Card>.Insert(newcard, Control);
         }
         public static bool DeleteCard(string CardNum)
         {
-            return true;
+            return ControllerHandler<Card>.Delete(Control + CardNum);
         }
         public static bool UpdateCard(Card UpCard)
         {
-            return true;
+            return ControllerHandler<Card>.Update(UpCard, Control);
         }
         public static List<Card> RetrveCards(string userId)
         {
-          
-            //    string path = "http://localhost:49860/api/Card/";
-            //    client = new HttpClient();
-            //List<Card> cards = new List<Card>();
-            ////string jsonString = JsonConvert.SerializeObject(us);
-            //path += userId;
-            //    var response = client.GetStringAsync(path).Result;
-            //cards = (List<Card>)JsonConvert.DeserializeObject(response);
-            //    return cards;
-            //    //wegfs
-            //    //ewfa
-            //wesdf
-    
-            List<Card> UserCardList = new List<Card>();
-            UserCardList.Add(new Card("262464", "EthanKilian", "321", DateTime.Now, "1234"));
-            UserCardList.Add(new Card("2222", "EthanKilian", "222", DateTime.Now, "1234"));
-            UserCardList.Add(new Card("33123", "EthanKilian", "111", DateTime.Now, "1234"));
-
-            return UserCardList;
+            return ControllerHandler<Card>.Search(Control + userId);
         }
     }
 }

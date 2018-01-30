@@ -15,6 +15,9 @@ namespace Project500
 {
     public partial class Login : MetroFramework.Forms.MetroForm
     {
+        //Global Variables
+        int IncorrectLoginCount = 0;
+
         public Login()
         {
             InitializeComponent();
@@ -32,27 +35,52 @@ namespace Project500
         {
             string username = txtUsername.Text.Trim();
             string passworrd = txtPassword.Text.Trim();
-            
-            if (username == "" || passworrd == "")
+
+            if (IncorrectLoginCount > 2)
             {
-                MetroMessageBox.Show(this, "Username and Password Cannot be Blank!", "Input Error");
+                MetroMessageBox.Show(this, "Your Account has been locked! Contact Administrator to Unlock your account and change you password!", "Account Lock!");
             }
             else
             {
-                User user = UserController.CheckLogin(username, passworrd);
-                if (user.RsaID != null)
+                if (username == "" || passworrd == "")
                 {
-                    //dummy user to use for now
-                    Main main = new Main(user);
-                    this.Hide();
-                    main.Show();
-
+                    MetroMessageBox.Show(this, "Username and Password Cannot be Blank!", "Input Error");
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, "Username or Password is Incorrect", "Login Failed!");
+                    User user = UserController.CheckEmailExist(username, passworrd);
+                    if (user.Email == null)
+                    {
+                        MetroMessageBox.Show(this, "Username or Password Does not exist!", "Incorrect Login!");
+                    }
+                    else if (user.RsaID == null && user.Email != null)
+                    {
+                        MetroMessageBox.Show(this, "Username or Password Does not exist!", "Incorrect Login!");
+                        IncorrectLoginCount++;
+
+                        if (IncorrectLoginCount > 2)
+                        {
+                            //Lock Account on DB
+                        }
+                    }
+                    else if (user.RsaID != null && user.Email != null)
+                    {
+                        if (user.AccountStatus == "Locked")
+                        {
+                            MetroMessageBox.Show(this, "Your Account has been locked! Contact Administrator to Unlock your account and change you password!", "Account Lock!");
+                        }
+                        else
+                        {
+                            Main main = new Main(user);
+                            this.Hide();
+                            main.Show();
+                        }
+                        
+                    }
                 }
             }
+
+            
 
         }
 

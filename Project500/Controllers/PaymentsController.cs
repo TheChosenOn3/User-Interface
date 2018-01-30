@@ -7,63 +7,26 @@ using Newtonsoft.Json;
 
 namespace Controllers
 {
-   
+
     public class PaymentsController
     {
+        public static string Control = "Payment/";
 
-        static HttpClient client;
-        public static string path = Connection.url + "Payment/";
         public static List<Payment> GetPayments(string UserId)
         {
-            List<History> PaymentList = new List<History>();
-            client = new HttpClient();
-           string  path1 = Connection.url + "History/";
-            path1 += UserId;
-            var response = client.GetStringAsync(path1).Result;
-            PaymentList = JsonConvert.DeserializeObject<List<History>>(response);
-            List<Payment> payList = new List<Payment>();
-            foreach (var item in payList)
-            {
-                payList.Add(new Payment(item.ScheduleNr, item.Description, item.BeneficairyID, item.PayDate, item.Amount, item.Interval, item.Status, item.PaymentNumber, item.TypePayment, item.Recurring, item.DateCreated, item.UserID));
-            }
-
-            return payList;
+            return ControllerHandler<Payment>.Search(Control + UserId);
         }
-
-        public static List<Payment> GetSchedueldPayments(string UserId)
-        {
-            List<Payment> PaymentList = new List<Payment>();
-            client = new HttpClient();
-           // path += UserId;
-            var response = client.GetStringAsync(path+ UserId).Result;
-            PaymentList = JsonConvert.DeserializeObject<List<Payment>>(response);
-
-            return PaymentList;
-        }
-
         public static bool AddPyaments(Payment NewPayments)
         {
-            HttpClient _client = new HttpClient();
-            string jsonString = JsonConvert.SerializeObject(NewPayments);
-            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-            HttpResponseMessage someVar = _client.PostAsync(path, content).Result;//handle if resonse codes fail
-            if (someVar.IsSuccessStatusCode)
-            {
-                return true;//Beneficiary Added to DB successfuly
-            }
-            return false;//something went wrong
-
+            return ControllerHandler<Payment>.Insert(NewPayments, Control);
         }
-        public static bool DeletePyaments(Payment NewPayments)
+        public static bool DeletePyaments(string id)
         {
-            return true;
-
+            return ControllerHandler<Payment>.Delete(Control + id);
         }
         public static bool UpdatePyaments(Payment NewPayments)
         {
-            return true;
-
+            return ControllerHandler<Payment>.Update(NewPayments, Control);
         }
-
     }
 }

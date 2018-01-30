@@ -51,6 +51,7 @@ namespace Project500
                 table.Columns.Add("Interval");
                 table.Columns.Add("Status");
                 table.Columns.Add("type");
+
                 foreach (Payment item in list)
                 {
                     string bennnaem = "";
@@ -58,7 +59,8 @@ namespace Project500
                     {
                         if (item.BeneficairyID == benitem.BeneficairyID)
                         {
-                            bennnaem = benitem.BeneficairyName;
+                            bennnaem = benitem.BeneficairyName.ToString() ;
+                            break;
                         }
                     }
                     table.Rows.Add(item.PaymentNumber, bennnaem, item.Description, item.PayDate.ToString(), item.Amount, item.Interval, item.Status, item.TypePayment);
@@ -114,7 +116,7 @@ namespace Project500
         private void Schedules_Load(object sender, EventArgs e)
         {
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
-            PaymentListF = PaymentsController.GetSchedueldPayments(user.RsaID);
+            PaymentListF = PaymentsController.GetPayments(user.RsaID);
             foreach (Payment   item in PaymentListF)
             {
                 DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
@@ -396,8 +398,9 @@ namespace Project500
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            //kyk of die id wat deer stuur ioj, us
            
-            if (PaymentsController.DeletePyaments(payment))
+            if (PaymentsController.DeletePyaments(payment.ScheduleNr))
             {
                 PaymentList.Remove(payment);
                 FillPaymentsDatagrid(PaymentList);
@@ -415,8 +418,8 @@ namespace Project500
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
             foreach (Payment item in PaymentList)
-            {
-                if (PaymentsController.DeletePyaments(payment))
+            {//kyk of num reg sis
+                if (PaymentsController.DeletePyaments(payment.ScheduleNr))
                 {
                     PaymentList.Remove(item);
                     

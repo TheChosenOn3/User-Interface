@@ -35,7 +35,7 @@ namespace Project500
         string Address = "";
 
         // get list to check if user exist 
-        List<User> userlist = UserController.GetUser();
+      
 
 
         public Register()
@@ -170,17 +170,7 @@ namespace Project500
                 tabCRegister.SelectTab(1);
                 tabCRegister.SelectTab(2);
             }
-            else
-            {
-                foreach (User item in userlist)
-                {
-                    if ( item.Email == Email)
-                    {
-                        MetroMessageBox.Show(this,"Your Provided Email is Already in Use!", "Email Already in Use");
-                        cool = false;
-                    }
-                }
-            }
+           
 
             if (cool)
             {
@@ -188,9 +178,8 @@ namespace Project500
 
                 if (UserController.registerUser(user))
                 {// dummy user so fields stay shap in rest of forms
-                    User _user = new User("ethan", "1234", "kilina", "0989788433", "SouthAfrika/Gouteng/pretoria/Erasmuskloof/kasuka/123", "ethankilian5@gmail.com", "1234", "Active", "Sybrin");
-                    // take underscore away
-                    Main main = new Main(_user);
+                     // take underscore away
+                    Main main = new Main(user);
                     this.Hide();
                     main.Show();
                 }

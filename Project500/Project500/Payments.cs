@@ -451,7 +451,16 @@ namespace Project500
                 string userlected = cbxPaymentType.SelectedItem.ToString();
                 string usertype = userlected.Substring(0, 3);
                 string bentype = benected.Substring(0, 3);
-                if (usertype != bentype)
+
+                if (usertype != "Car" && bentype !="EFT" )
+                {
+                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
+                }
+                else if (usertype != "EFT" && bentype != "EFT")
+                {
+                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
+                }
+                else if (usertype != "Cry" && bentype != "Cry")
                 {
                     MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
                 }
