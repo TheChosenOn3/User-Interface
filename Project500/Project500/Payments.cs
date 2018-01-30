@@ -11,6 +11,7 @@ using Entities1;
 using Controllers;
 using System.Text.RegularExpressions;
 using System.IO;
+using MetroFramework;
 
 namespace Project500
 {
@@ -242,7 +243,7 @@ namespace Project500
                     if (payment.PaymentNumber == item.PaymentNumber)
                     {
                         item.Status = "Submitted";
-                        MessageBox.Show("payment exacuted sucsessfully");
+                        MetroMessageBox.Show(this, "Payment Scheduled Successfully!", "Success");
                     }
                     else
                     {
@@ -253,7 +254,7 @@ namespace Project500
             }
             else
             {
-                MessageBox.Show("could not connect to server");
+                MetroMessageBox.Show(this, "Unable to retrieve data from server, Server is offline!", "Connection Issues");
             }
             FillPaymentDatagrid(PaymentList);
 
@@ -335,13 +336,11 @@ namespace Project500
             }
             if (issusck == false)
             {
-
-                MessageBox.Show("could not connect to server");
-
+                MetroMessageBox.Show(this, "Unable to retrieve data from server, Server is offline!", "Connection Issues");
             }
             else
             {
-                MessageBox.Show("All payments exacuted sucsessfully");
+                MetroMessageBox.Show(this, "Payment Scheduled Successfully!", "Success");
             }
 
             FillPaymentDatagrid(PaymentList);
@@ -374,13 +373,11 @@ namespace Project500
             }
             if (issusck == false)
             {
-
-                MessageBox.Show("could not connect to server");
-
+                MetroMessageBox.Show(this, "Unable to retrieve data from server, Server is offline!", "Connection Issues");
             }
             else
             {
-                MessageBox.Show("All payments exacuted sucsessfully");
+                MetroMessageBox.Show(this, "Payment Scheduled Successfully!", "Success");
             }
 
             FillPaymentDatagrid(PaymentList);
@@ -410,8 +407,6 @@ namespace Project500
 
         private void btnAddPayment_Click(object sender, EventArgs e)
         {
-
-
             payment = new Payment();
             PaymentType typepay = new PaymentType();
             bool recur = false;
@@ -425,20 +420,19 @@ namespace Project500
             }
             if (recur == true && txtInterval.Text == "")
             {
-                MessageBox.Show("please fill in a interval if you want payment to be recuuring otherwize untick the box ");
+                MetroMessageBox.Show(this, "Recurring Payment Selected, but Interval for Recurring Payment is blank, Please Enter a Interval with the following format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed", "Interval Input Error");
             }
             else if (recur == true && txtInterval.Text.Length != 5)
             {
-                MessageBox.Show("your interval must be int he correct format ");
-
+                MetroMessageBox.Show(this, "Your Interval for a Recurring Payment is incorrect, please you the following format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed", "Interval Input Error");
             }
             else if (txtAmount.Text == "" || cbBAccType.SelectedIndex == -1 || cbxPaymentType.SelectedIndex == -1 || txtDescription.Text == "" || txtBName.Text == "")
             {
-                MessageBox.Show("please fill in all fields and select a beneficairy");
+                MetroMessageBox.Show(this, "Fill in all fields to Add a Payment to Execute", "Blank Fields Input Error");
             }
             else if (checkInter.Checked == true && txtInterval.Text == "")
             {
-                MessageBox.Show("please select a interval if you want payment to be recuring");
+                MetroMessageBox.Show(this, "Please Select Proper Interval for a Recurring Payment, with format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed","Interval Input Error");
             }
             else if (cbBAccType.SelectedIndex != -1 && cbxPaymentType.SelectedIndex != -1)
             {
@@ -532,7 +526,7 @@ namespace Project500
                 
                 else
                 {
-                    MessageBox.Show("Your paymtnt types need to mach");
+                    MetroMessageBox.Show(this, "Your Payment type and Beneficiary Payment Type Does Not Match!","Payment Type Input Error");
                 }
 
 
@@ -565,7 +559,7 @@ namespace Project500
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you wish to exit this application?", "Exit Project 500", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MetroMessageBox.Show(this, "Are you sure you wish to exit this application?", "Exit Project 500", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Login LoginForm = new Login();
                 LoginForm.Show();

@@ -59,6 +59,7 @@ namespace Project500
             InitializeComponent();
             user = _user;
             tabUserRegister.SelectTab(0);
+            btnProfileImage.Text = " " + user.Name;
         }
 
         private void Profile_Load(object sender, EventArgs e)
@@ -1091,7 +1092,9 @@ namespace Project500
         {
             if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you wish to exit this application?", "Exit Project 500", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Application.Exit();
+                Login LoginForm = new Login();
+                LoginForm.Show();
+                this.Hide();
             }
         }
 
