@@ -116,7 +116,7 @@ namespace Project500
         }
         private void History_Load(object sender, EventArgs e)
         {
-            PaymentListF = PaymentsController.GetPayments(user.RsaID);
+            PaymentListF = HistoryController.getHistory(user.RsaID);
 
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             foreach (Payment item in PaymentListF)
