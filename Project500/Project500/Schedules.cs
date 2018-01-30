@@ -117,7 +117,9 @@ namespace Project500
             PaymentListF = PaymentsController.GetSchedueldPayments(user.RsaID);
             foreach (Payment   item in PaymentListF)
             {
-                if (item.PayDate > DateTime.Now || item.Recurring == true)
+                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                if (payDate > DateTime.Now || item.Recurring == true)
                 {
                     PaymentList.Add(item);
                 }
@@ -249,7 +251,7 @@ namespace Project500
 
                 string Paydate1 = dtpPaymentdate.Value.ToString("dd/MM/yyyy");
 
-                Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Convert.ToDateTime(Paydate1), float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), payment.Status, payment.PaymentNumber, typepay, recur, DateTime.Now, user.RsaID);
+                Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), payment.Status, payment.PaymentNumber, typepay, recur, DateTime.Now.ToString(), user.RsaID);
                 PaymentsController.UpdatePyaments(newPayment);
                 foreach (Payment item in PaymentList)
                 {
@@ -284,7 +286,7 @@ namespace Project500
             txtAmount.Text = payment.Amount.ToString();
             txtDescription.Text = payment.Description;
             txtInterval.Text = payment.Interval;
-            dtpPaymentdate.Value = payment.PayDate;
+            dtpPaymentdate.Value = Convert.ToDateTime(payment.PayDate); //Paste Groot value as die uit fok.
             FillBeneficiaryDatagrid(BeneficairyList);
             FillBeneficiaryDatagrid(BeneficairyList);
         }
@@ -313,7 +315,9 @@ namespace Project500
                     {
                         foreach (Payment item in PaymentListS)
                         {
-                            if (item.PayDate >= dtpFStart.Value && item.PayDate <= dtpFEnd.Value )
+                            DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                            if (payDate >= dtpFStart.Value && payDate <= dtpFEnd.Value )
                             {
                                 PaymentList.Add(item);
                             }
@@ -325,7 +329,9 @@ namespace Project500
                     {
                         foreach (Payment item in PaymentListS)
                         {
-                            if (item.PayDate >= dtpFStart.Value && item.PayDate <= dtpFEnd.Value && item.BeneficairyID == benidtosearc)
+                            DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                            if (payDate >= dtpFStart.Value && payDate <= dtpFEnd.Value && item.BeneficairyID == benidtosearc)
                             {
                                 PaymentList.Add(item);
                             }
@@ -345,7 +351,9 @@ namespace Project500
                     {
                         foreach (Payment item in PaymentListS)
                         {
-                            if (cbFPaymentMethod.SelectedIndex.ToString() == item.TypePayment.ToString() && item.PayDate >= dtpFStart.Value && item.PayDate <= dtpFEnd.Value)
+                            DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                            if (cbFPaymentMethod.SelectedIndex.ToString() == item.TypePayment.ToString() && payDate >= dtpFStart.Value && payDate <= dtpFEnd.Value)
                             {
                                 PaymentList.Add(item);
                             }
@@ -357,7 +365,9 @@ namespace Project500
                     {
                         foreach (Payment item in PaymentListS)
                         {
-                            if (cbFPaymentMethod.SelectedIndex.ToString() == item.TypePayment.ToString() && item.PayDate >= dtpFStart.Value && item.PayDate <= dtpFEnd.Value && item.BeneficairyID == benidtosearc)
+                            DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                            if (cbFPaymentMethod.SelectedIndex.ToString() == item.TypePayment.ToString() && payDate >= dtpFStart.Value && payDate <= dtpFEnd.Value && item.BeneficairyID == benidtosearc)
                             {
                                 PaymentList.Add(item);
                             }
@@ -472,7 +482,8 @@ namespace Project500
             txtAmount.Text = payment.Amount.ToString();
             txtDescription.Text = payment.Description;
             txtInterval.Text = payment.Interval;
-            dtpPaymentdate.Value = payment.PayDate;
+            
+            dtpPaymentdate.Value = DateTime.ParseExact(payment.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             FillBeneficiaryDatagrid(BeneficairyList);
             FillBeneficiaryDatagrid(BeneficairyList);
         }

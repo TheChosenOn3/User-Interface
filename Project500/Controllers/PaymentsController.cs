@@ -15,21 +15,27 @@ namespace Controllers
         public static string path = Connection.url + "Payment/";
         public static List<Payment> GetPayments(string UserId)
         {
-            List<Payment> PaymentList = new List<Payment>();
+            List<History> PaymentList = new List<History>();
             client = new HttpClient();
-            path += UserId;
-            var response = client.GetStringAsync(path).Result;
-            PaymentList = JsonConvert.DeserializeObject<List<Payment>>(response);
+           string  path1 = Connection.url + "History/";
+            path1 += UserId;
+            var response = client.GetStringAsync(path1).Result;
+            PaymentList = JsonConvert.DeserializeObject<List<History>>(response);
+            List<Payment> payList = new List<Payment>();
+            foreach (var item in payList)
+            {
+                payList.Add(new Payment(item.ScheduleNr, item.Description, item.BeneficairyID, item.PayDate, item.Amount, item.Interval, item.Status, item.PaymentNumber, item.TypePayment, item.Recurring, item.DateCreated, item.UserID));
+            }
 
-            return PaymentList;
+            return payList;
         }
 
         public static List<Payment> GetSchedueldPayments(string UserId)
         {
             List<Payment> PaymentList = new List<Payment>();
             client = new HttpClient();
-            path += UserId;
-            var response = client.GetStringAsync(path).Result;
+           // path += UserId;
+            var response = client.GetStringAsync(path+ UserId).Result;
             PaymentList = JsonConvert.DeserializeObject<List<Payment>>(response);
 
             return PaymentList;

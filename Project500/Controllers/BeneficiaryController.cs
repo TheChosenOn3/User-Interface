@@ -25,12 +25,12 @@ namespace Controllers
             // putq iff to check if the list is enpty
             List<Beneficiary> BeneficiaryList = new List<Beneficiary>();
             client = new HttpClient();
-            path += UserId;
+           // path += UserId;
 
             try
             {
-                var response = client.GetStringAsync(path).Result;
-                BeneficiaryList = JsonConvert.DeserializeObject<List<Beneficiary>>(response);
+                var response = client.GetStringAsync(path+UserId).Result;
+                BeneficiaryList = (List<Beneficiary>)JsonConvert.DeserializeObject<List<Beneficiary>>(response);
             }
             catch (Exception)
             {

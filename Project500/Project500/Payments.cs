@@ -16,12 +16,12 @@ namespace Project500
 {
     public partial class Payments : MetroFramework.Forms.MetroForm
     {
-      
+
         List<Payment> PaymentList = new List<Payment>();
         List<Beneficiary> BeneficairyList = new List<Beneficiary>();
-        List<PaymentAccount> BenPaymentAccountList = new List<PaymentAccount>(); 
-         List<PaymentAccount> BenPaymentListS = new List<PaymentAccount>();
-            List<Beneficiary> BeneficiaryListS = new List<Beneficiary>();
+        List<PaymentAccount> BenPaymentAccountList = new List<PaymentAccount>();
+        List<PaymentAccount> BenPaymentListS = new List<PaymentAccount>();
+        List<Beneficiary> BeneficiaryListS = new List<Beneficiary>();
         List<PaymentAccount> UserPaymentAccountList = new List<PaymentAccount>();
         List<Card> UserCardList = new List<Card>();
         List<Crypto> BeneficairyCrypoList = new List<Crypto>();
@@ -40,7 +40,7 @@ namespace Project500
         Random rnd = new Random();
         Random rnd1 = new Random();
         Random rnd2 = new Random();
-     
+
 
 
         string Waletname = "BTCACC";
@@ -66,13 +66,13 @@ namespace Project500
 
         private void Payments_Load(object sender, EventArgs e)
         {
-          
+
 
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             UserCardList = CardController.RetrveCards(user.RsaID);
             FillBeneficiaryDatagrid(BeneficairyList);
-           
+
             popUcb();
 
         }
@@ -96,7 +96,7 @@ namespace Project500
 
             }
 
-            
+
 
         }
         public List<string> PopSelectedBenAcount(List<PaymentAccount> beneftlist, List<Crypto> bencryptolist)
@@ -139,7 +139,7 @@ namespace Project500
         }
         public void FillPaymentDatagrid(List<Payment> paylist)
         {
-            
+
             DataTable paytable = ConvertListToDataTable(paylist);
             dgvAddedPayments.DataSource = paytable;
             DataTable ConvertListToDataTable(List<Payment> list)
@@ -160,13 +160,13 @@ namespace Project500
                 {
                     foreach (Beneficiary benitem in BeneficairyList)
                     {
-                        if (item.BeneficairyID == benitem.BeneficairyID )
+                        if (item.BeneficairyID == benitem.BeneficairyID)
                         {
                             bennnaem = benitem.BeneficairyName;
                         }
                     }
 
-                    table.Rows.Add(item.PaymentNumber, bennnaem, item.Description,item.PayDate.ToString(),item.Amount,item.Interval,item.Status,item.TypePayment);
+                    table.Rows.Add(item.PaymentNumber, bennnaem, item.Description, item.PayDate.ToString(), item.Amount, item.Interval, item.Status, item.TypePayment);
 
                 }
                 return table;
@@ -225,10 +225,10 @@ namespace Project500
 
         private void btnDeletePayment_Click(object sender, EventArgs e)
         {
-           
+
             PaymentList.Remove(payment);
             FillPaymentDatagrid(PaymentList);
-           
+
         }
 
         private void btnRetryPayment_Click(object sender, EventArgs e)
@@ -255,27 +255,27 @@ namespace Project500
             }
             FillPaymentDatagrid(PaymentList);
 
-          }
+        }
 
         private void btnExacutePayment_Click(object sender, EventArgs e)
         {
-           
-                if (PaymentsController.AddPyaments(payment))
+
+            if (PaymentsController.AddPyaments(payment))
+            {
+                foreach (Payment item in PaymentList)
                 {
-                    foreach (Payment item in PaymentList)
+                    if (payment.PaymentNumber == item.PaymentNumber)
                     {
-                        if (payment.PaymentNumber == item.PaymentNumber)
-                        {
-                            item.Status = "Submitted";
-                        }
-                        else
-                        {
-                            item.Status = "Failed";
-                        }
+                        item.Status = "Submitted";
+                    }
+                    else
+                    {
+                        item.Status = "Failed";
                     }
                 }
-            
-        
+            }
+
+
             FillPaymentDatagrid(PaymentList);
 
             ClearFields();
@@ -295,7 +295,7 @@ namespace Project500
         }
         public void ClearFields()
         {
-           
+
             txtAmount.Text = "";
             txtDescription.Text = "";
             txtInterval.Text = "";
@@ -333,9 +333,9 @@ namespace Project500
             }
             if (issusck == false)
             {
-                
-                    MessageBox.Show("could not connect to server");
-                
+
+                MessageBox.Show("could not connect to server");
+
             }
             else
             {
@@ -386,8 +386,8 @@ namespace Project500
 
         private void dgvAddedPayments_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {// gwet payment SELECTED FROM DATAGRID
-            // fill ben 
-          //  txtAmount.Text = payment.Amount
+         // fill ben 
+         //  txtAmount.Text = payment.Amount
             txtBName.Text = payment.BeneficairyID;
             txtDescription.Text = payment.Description;
             //txtInterval.Text = payment.Interval;
@@ -407,19 +407,19 @@ namespace Project500
             // send thru name  in txtBName.Text
             //get bens acounts
             // populate datagrid benacount
-            
+
 
 
         }
 
         private void btnAddPayment_Click(object sender, EventArgs e)
         {
-            
+
 
             payment = new Payment();
             PaymentType typepay = new PaymentType();
             bool recur = false;
-          
+
             if (checkInter.Checked)
             {
                 recur = true;
@@ -431,7 +431,7 @@ namespace Project500
             {
                 MessageBox.Show("please fill in a interval if you want payment to be recuuring otherwize untick the box ");
             }
-            else if(recur == true&& txtInterval.Text.Length != 5)
+            else if (recur == true && txtInterval.Text.Length != 5)
             {
                 MessageBox.Show("your interval must be int he correct format ");
 
@@ -446,7 +446,7 @@ namespace Project500
             }
             else if (cbBAccType.SelectedIndex != -1 && cbxPaymentType.SelectedIndex != -1)
             {
-                
+
                 string benected = cbBAccType.SelectedItem.ToString();
                 string userlected = cbxPaymentType.SelectedItem.ToString();
                 string usertype = userlected.Substring(0, 3);
@@ -487,26 +487,26 @@ namespace Project500
 
                     }
                     string Paydate1 = dtpPayDate.Value.ToString("dd/MM/yyyy");
-                    
-                    PaymentList.Add(new Payment(SchedueldNum.ToString(), txtDescription.Text.Trim(), beneficiary.BeneficairyID, Convert.ToDateTime(Paydate1), float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", paynum, typepay, recur, DateTime.Now, user.RsaID));
+
+                    PaymentList.Add(new Payment(SchedueldNum.ToString(), txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", paynum, typepay, recur, DateTime.Now.ToString(), user.RsaID));
                     //add payment
                     FillPaymentDatagrid(PaymentList);
                     ClearFields();
-                    
+
                 }
-               
-               
+
+
             }
-         
-          // add ne payment to datagrid payments
-           
+
+            // add ne payment to datagrid payments
+
         }
 
-        
+
 
         private void chxInterval_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void chxInterval_CheckedChanged(object sender, EventArgs e)
@@ -544,7 +544,7 @@ namespace Project500
             }
 
             FillBeneficiaryDatagrid(BeneficiaryListS);
-          
+
 
         }
 
@@ -555,10 +555,11 @@ namespace Project500
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
-           FillBeneficiaryDatagrid(BeneficairyList);
-             ClearBens();
+            FillBeneficiaryDatagrid(BeneficairyList);
+            ClearBens();
         }
-        public void ClearBens() {
+        public void ClearBens()
+        {
             txtBName.Text = "";
             cbBAccType.SelectedIndex = -1;
         }
@@ -572,7 +573,7 @@ namespace Project500
         {
             int index = e.RowIndex;
             payment = PaymentList[index];
-          
+
         }
 
         private void dgvBeneficiarys_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -620,46 +621,45 @@ namespace Project500
 
         private void btnBatch_Click(object sender, EventArgs e)
         {
-            List<Payment> batchlist = new List<Payment>();
-            StreamReader reader = new StreamReader("ReadTest.csv");
-
-           
-                List<string> headerList = null;
-                List<Payment> paylist = new List<Payment>();
+            //List<Payment> batchlist = new List<Payment>();
+            //StreamReader reader = new StreamReader("ReadTest.csv");
 
 
-                while (!reader.EndOfStream)
+            //    List<string> headerList = null;
+            //    List<Payment> paylist = new List<Payment>();
 
-                {
-                    Payment payment = new Payment();
-                    var line = reader.ReadLine();
-                    string[] values = null;
-                    values = line.Split(',');
 
-                    payment.Amount = float.Parse(values[0]);
-                    payment.BeneficairyID = values[1];
-                    payment.DateCreated = Convert.ToDateTime(values[2]);
-                    payment.Description = values[3];
-                    payment.Interval = values[4];
-                    payment.PayDate = Convert.ToDateTime(values[5]);
-                    payment.PaymentNumber = values[6];
-                    payment.Recurring = Convert.ToBoolean(values[7]);
-                    payment.ScheduleNr = values[8];
-                    payment.Status = values[9];
-                    paylist.Add(payment);
-                    MessageBox.Show(payment.Amount.ToString());
-                    payment.TypePayment = PaymentType.Card;
-                    payment.UserID = "1";
-                    batchlist.Add(payment);
-                }
-            foreach (var item in batchlist)
-            {
-                PaymentList.Add(item);
-            }
-            FillPaymentDatagrid(PaymentList);
+            //    while (!reader.EndOfStream)
 
-            }
+            //    {
+            //        Payment payment = new Payment();
+            //        var line = reader.ReadLine();
+            //        string[] values = null;
+            //        values = line.Split(',');
+
+            //        payment.Amount = float.Parse(values[0]);
+            //        payment.BeneficairyID = values[1];
+            //        payment.DateCreated = Convert.ToDateTime(values[2]);
+            //        payment.Description = values[3];
+            //        payment.Interval = values[4];
+            //        payment.PayDate = Convert.ToDateTime(values[5]);
+            //        payment.PaymentNumber = values[6];
+            //        payment.Recurring = Convert.ToBoolean(values[7]);
+            //        payment.ScheduleNr = values[8];
+            //        payment.Status = values[9];
+            //        paylist.Add(payment);
+            //        MessageBox.Show(payment.Amount.ToString());
+            //        payment.TypePayment = PaymentType.Card;
+            //        payment.UserID = "1";
+            //        batchlist.Add(payment);
+            //    }
+            //foreach (var item in batchlist)
+            //{
+            //    PaymentList.Add(item);
+            //}
+            //FillPaymentDatagrid(PaymentList);
+
             // Read sample data from CSV file
         }
     }
-    
+}

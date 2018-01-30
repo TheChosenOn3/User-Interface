@@ -891,7 +891,7 @@
             // btnUpdateCrypto
             // 
             this.btnUpdateCrypto.Location = new System.Drawing.Point(300, 149);
-            this.btnUpdateCrypto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateCrypto.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateCrypto.Name = "btnUpdateCrypto";
             this.btnUpdateCrypto.Size = new System.Drawing.Size(107, 36);
             this.btnUpdateCrypto.TabIndex = 62;
@@ -907,10 +907,10 @@
             // 
             // 
             this.txtWaletName.CustomButton.Image = null;
-            this.txtWaletName.CustomButton.Location = new System.Drawing.Point(173, 1);
-            this.txtWaletName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtWaletName.CustomButton.Location = new System.Drawing.Point(231, 1);
+            this.txtWaletName.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtWaletName.CustomButton.Name = "";
-            this.txtWaletName.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtWaletName.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtWaletName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtWaletName.CustomButton.TabIndex = 1;
             this.txtWaletName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -918,7 +918,7 @@
             this.txtWaletName.CustomButton.Visible = false;
             this.txtWaletName.Lines = new string[0];
             this.txtWaletName.Location = new System.Drawing.Point(31, 34);
-            this.txtWaletName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtWaletName.Margin = new System.Windows.Forms.Padding(2);
             this.txtWaletName.MaxLength = 32767;
             this.txtWaletName.Name = "txtWaletName";
             this.txtWaletName.PasswordChar = '\0';
@@ -948,7 +948,7 @@
             // btnAddCrypto
             // 
             this.btnAddCrypto.Location = new System.Drawing.Point(172, 213);
-            this.btnAddCrypto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCrypto.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCrypto.Name = "btnAddCrypto";
             this.btnAddCrypto.Size = new System.Drawing.Size(108, 36);
             this.btnAddCrypto.TabIndex = 56;
@@ -960,7 +960,7 @@
             // btnClearCrypto
             // 
             this.btnClearCrypto.Location = new System.Drawing.Point(31, 213);
-            this.btnClearCrypto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearCrypto.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearCrypto.Name = "btnClearCrypto";
             this.btnClearCrypto.Size = new System.Drawing.Size(108, 36);
             this.btnClearCrypto.TabIndex = 55;
@@ -975,10 +975,10 @@
             // 
             // 
             this.txtWalletCode.CustomButton.Image = null;
-            this.txtWalletCode.CustomButton.Location = new System.Drawing.Point(173, 1);
-            this.txtWalletCode.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtWalletCode.CustomButton.Location = new System.Drawing.Point(231, 1);
+            this.txtWalletCode.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtWalletCode.CustomButton.Name = "";
-            this.txtWalletCode.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtWalletCode.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtWalletCode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtWalletCode.CustomButton.TabIndex = 1;
             this.txtWalletCode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -986,7 +986,7 @@
             this.txtWalletCode.CustomButton.Visible = false;
             this.txtWalletCode.Lines = new string[0];
             this.txtWalletCode.Location = new System.Drawing.Point(31, 96);
-            this.txtWalletCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtWalletCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtWalletCode.MaxLength = 32767;
             this.txtWalletCode.Name = "txtWalletCode";
             this.txtWalletCode.PasswordChar = '\0';
@@ -1020,10 +1020,10 @@
             // 
             // 
             this.txtEFTRefernce.CustomButton.Image = null;
-            this.txtEFTRefernce.CustomButton.Location = new System.Drawing.Point(169, 1);
-            this.txtEFTRefernce.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEFTRefernce.CustomButton.Location = new System.Drawing.Point(225, 1);
+            this.txtEFTRefernce.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtEFTRefernce.CustomButton.Name = "";
-            this.txtEFTRefernce.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtEFTRefernce.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtEFTRefernce.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtEFTRefernce.CustomButton.TabIndex = 1;
             this.txtEFTRefernce.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1031,7 +1031,7 @@
             this.txtEFTRefernce.CustomButton.Visible = false;
             this.txtEFTRefernce.Lines = new string[0];
             this.txtEFTRefernce.Location = new System.Drawing.Point(25, 148);
-            this.txtEFTRefernce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEFTRefernce.Margin = new System.Windows.Forms.Padding(2);
             this.txtEFTRefernce.MaxLength = 32767;
             this.txtEFTRefernce.Name = "txtEFTRefernce";
             this.txtEFTRefernce.PasswordChar = '\0';
@@ -1050,7 +1050,7 @@
             // btnDeletEFT
             // 
             this.btnDeletEFT.Location = new System.Drawing.Point(308, 14);
-            this.btnDeletEFT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeletEFT.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeletEFT.Name = "btnDeletEFT";
             this.btnDeletEFT.Size = new System.Drawing.Size(114, 36);
             this.btnDeletEFT.TabIndex = 64;
@@ -1063,7 +1063,7 @@
             // btnUpdateEFT
             // 
             this.btnUpdateEFT.Location = new System.Drawing.Point(308, 66);
-            this.btnUpdateEFT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateEFT.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateEFT.Name = "btnUpdateEFT";
             this.btnUpdateEFT.Size = new System.Drawing.Size(114, 36);
             this.btnUpdateEFT.TabIndex = 63;
@@ -1079,10 +1079,10 @@
             // 
             // 
             this.txtEFTAccNum.CustomButton.Image = null;
-            this.txtEFTAccNum.CustomButton.Location = new System.Drawing.Point(168, 1);
-            this.txtEFTAccNum.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEFTAccNum.CustomButton.Location = new System.Drawing.Point(224, 1);
+            this.txtEFTAccNum.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtEFTAccNum.CustomButton.Name = "";
-            this.txtEFTAccNum.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtEFTAccNum.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtEFTAccNum.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtEFTAccNum.CustomButton.TabIndex = 1;
             this.txtEFTAccNum.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1090,7 +1090,7 @@
             this.txtEFTAccNum.CustomButton.Visible = false;
             this.txtEFTAccNum.Lines = new string[0];
             this.txtEFTAccNum.Location = new System.Drawing.Point(26, 35);
-            this.txtEFTAccNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEFTAccNum.Margin = new System.Windows.Forms.Padding(2);
             this.txtEFTAccNum.MaxLength = 32767;
             this.txtEFTAccNum.Name = "txtEFTAccNum";
             this.txtEFTAccNum.PasswordChar = '\0';
@@ -1126,7 +1126,7 @@
             "Cheque",
             "Credit"});
             this.cbEFTAccType.Location = new System.Drawing.Point(26, 87);
-            this.cbEFTAccType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEFTAccType.Margin = new System.Windows.Forms.Padding(2);
             this.cbEFTAccType.Name = "cbEFTAccType";
             this.cbEFTAccType.Size = new System.Drawing.Size(242, 29);
             this.cbEFTAccType.TabIndex = 49;
@@ -1147,7 +1147,7 @@
             // btnAddEFT
             // 
             this.btnAddEFT.Location = new System.Drawing.Point(229, 255);
-            this.btnAddEFT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddEFT.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddEFT.Name = "btnAddEFT";
             this.btnAddEFT.Size = new System.Drawing.Size(114, 36);
             this.btnAddEFT.TabIndex = 42;
@@ -1159,7 +1159,7 @@
             // btnClearEFT
             // 
             this.btnClearEFT.Location = new System.Drawing.Point(58, 255);
-            this.btnClearEFT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearEFT.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearEFT.Name = "btnClearEFT";
             this.btnClearEFT.Size = new System.Drawing.Size(114, 36);
             this.btnClearEFT.TabIndex = 41;
@@ -1194,7 +1194,7 @@
             this.tabPersonalDetails.HorizontalScrollbarHighlightOnWheel = false;
             this.tabPersonalDetails.HorizontalScrollbarSize = 8;
             this.tabPersonalDetails.Location = new System.Drawing.Point(4, 41);
-            this.tabPersonalDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPersonalDetails.Margin = new System.Windows.Forms.Padding(2);
             this.tabPersonalDetails.Name = "tabPersonalDetails";
             this.tabPersonalDetails.Size = new System.Drawing.Size(894, 301);
             this.tabPersonalDetails.TabIndex = 0;
@@ -1207,7 +1207,7 @@
             // btnUpdateBPI
             // 
             this.btnUpdateBPI.Location = new System.Drawing.Point(662, 17);
-            this.btnUpdateBPI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateBPI.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateBPI.Name = "btnUpdateBPI";
             this.btnUpdateBPI.Size = new System.Drawing.Size(121, 36);
             this.btnUpdateBPI.TabIndex = 27;
@@ -1220,7 +1220,7 @@
             // btnAddB
             // 
             this.btnAddB.Location = new System.Drawing.Point(462, 234);
-            this.btnAddB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddB.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddB.Name = "btnAddB";
             this.btnAddB.Size = new System.Drawing.Size(121, 36);
             this.btnAddB.TabIndex = 25;
@@ -1235,10 +1235,10 @@
             // 
             // 
             this.txtBBranchCode.CustomButton.Image = null;
-            this.txtBBranchCode.CustomButton.Location = new System.Drawing.Point(200, 1);
-            this.txtBBranchCode.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBBranchCode.CustomButton.Location = new System.Drawing.Point(266, 1);
+            this.txtBBranchCode.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtBBranchCode.CustomButton.Name = "";
-            this.txtBBranchCode.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtBBranchCode.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtBBranchCode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtBBranchCode.CustomButton.TabIndex = 1;
             this.txtBBranchCode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1246,7 +1246,7 @@
             this.txtBBranchCode.CustomButton.Visible = false;
             this.txtBBranchCode.Lines = new string[0];
             this.txtBBranchCode.Location = new System.Drawing.Point(299, 166);
-            this.txtBBranchCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBBranchCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtBBranchCode.MaxLength = 32767;
             this.txtBBranchCode.Name = "txtBBranchCode";
             this.txtBBranchCode.PasswordChar = '\0';
@@ -1279,10 +1279,10 @@
             // 
             // 
             this.txtBID.CustomButton.Image = null;
-            this.txtBID.CustomButton.Location = new System.Drawing.Point(199, 1);
-            this.txtBID.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBID.CustomButton.Location = new System.Drawing.Point(265, 1);
+            this.txtBID.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtBID.CustomButton.Name = "";
-            this.txtBID.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtBID.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtBID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtBID.CustomButton.TabIndex = 1;
             this.txtBID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1290,7 +1290,7 @@
             this.txtBID.CustomButton.Visible = false;
             this.txtBID.Lines = new string[0];
             this.txtBID.Location = new System.Drawing.Point(300, 102);
-            this.txtBID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBID.Margin = new System.Windows.Forms.Padding(2);
             this.txtBID.MaxLength = 32767;
             this.txtBID.Name = "txtBID";
             this.txtBID.PasswordChar = '\0';
@@ -1321,7 +1321,7 @@
             // btnClearBPI
             // 
             this.btnClearBPI.Location = new System.Drawing.Point(300, 234);
-            this.btnClearBPI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearBPI.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearBPI.Name = "btnClearBPI";
             this.btnClearBPI.Size = new System.Drawing.Size(121, 36);
             this.btnClearBPI.TabIndex = 4;
@@ -1336,10 +1336,10 @@
             // 
             // 
             this.txtBName.CustomButton.Image = null;
-            this.txtBName.CustomButton.Location = new System.Drawing.Point(199, 1);
-            this.txtBName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBName.CustomButton.Location = new System.Drawing.Point(265, 1);
+            this.txtBName.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtBName.CustomButton.Name = "";
-            this.txtBName.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtBName.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtBName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtBName.CustomButton.TabIndex = 1;
             this.txtBName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1347,7 +1347,7 @@
             this.txtBName.CustomButton.Visible = false;
             this.txtBName.Lines = new string[0];
             this.txtBName.Location = new System.Drawing.Point(300, 38);
-            this.txtBName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBName.Margin = new System.Windows.Forms.Padding(2);
             this.txtBName.MaxLength = 32767;
             this.txtBName.Name = "txtBName";
             this.txtBName.PasswordChar = '\0';
@@ -1390,7 +1390,7 @@
             this.tabCryptoDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabCryptoDetail.HorizontalScrollbarSize = 8;
             this.tabCryptoDetail.Location = new System.Drawing.Point(4, 41);
-            this.tabCryptoDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabCryptoDetail.Margin = new System.Windows.Forms.Padding(2);
             this.tabCryptoDetail.Name = "tabCryptoDetail";
             this.tabCryptoDetail.Size = new System.Drawing.Size(894, 301);
             this.tabCryptoDetail.TabIndex = 3;
@@ -1461,7 +1461,7 @@
             // BtnDeletCrypto
             // 
             this.BtnDeletCrypto.Location = new System.Drawing.Point(300, 75);
-            this.BtnDeletCrypto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDeletCrypto.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDeletCrypto.Name = "BtnDeletCrypto";
             this.BtnDeletCrypto.Size = new System.Drawing.Size(107, 36);
             this.BtnDeletCrypto.TabIndex = 63;
@@ -1478,7 +1478,7 @@
             this.tcBAcounts.Controls.Add(this.tabEFTDetail);
             this.tcBAcounts.Controls.Add(this.tabCryptoDetail);
             this.tcBAcounts.Location = new System.Drawing.Point(186, 392);
-            this.tcBAcounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcBAcounts.Margin = new System.Windows.Forms.Padding(2);
             this.tcBAcounts.Name = "tcBAcounts";
             this.tcBAcounts.SelectedIndex = 2;
             this.tcBAcounts.Size = new System.Drawing.Size(902, 346);
@@ -1506,7 +1506,7 @@
             this.tabEFTDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabEFTDetail.HorizontalScrollbarSize = 8;
             this.tabEFTDetail.Location = new System.Drawing.Point(4, 41);
-            this.tabEFTDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabEFTDetail.Margin = new System.Windows.Forms.Padding(2);
             this.tabEFTDetail.Name = "tabEFTDetail";
             this.tabEFTDetail.Size = new System.Drawing.Size(894, 301);
             this.tabEFTDetail.TabIndex = 2;
@@ -1580,10 +1580,10 @@
             // 
             // 
             this.txtAccHolder.CustomButton.Image = null;
-            this.txtAccHolder.CustomButton.Location = new System.Drawing.Point(169, 1);
-            this.txtAccHolder.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAccHolder.CustomButton.Location = new System.Drawing.Point(225, 1);
+            this.txtAccHolder.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtAccHolder.CustomButton.Name = "";
-            this.txtAccHolder.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtAccHolder.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtAccHolder.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccHolder.CustomButton.TabIndex = 1;
             this.txtAccHolder.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1591,7 +1591,7 @@
             this.txtAccHolder.CustomButton.Visible = false;
             this.txtAccHolder.Lines = new string[0];
             this.txtAccHolder.Location = new System.Drawing.Point(25, 210);
-            this.txtAccHolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAccHolder.Margin = new System.Windows.Forms.Padding(2);
             this.txtAccHolder.MaxLength = 32767;
             this.txtAccHolder.Name = "txtAccHolder";
             this.txtAccHolder.PasswordChar = '\0';
@@ -1628,7 +1628,7 @@
             // 
             this.tcBeneficiary.Controls.Add(this.tabBeneficiary);
             this.tcBeneficiary.Location = new System.Drawing.Point(185, 105);
-            this.tcBeneficiary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcBeneficiary.Margin = new System.Windows.Forms.Padding(2);
             this.tcBeneficiary.Name = "tcBeneficiary";
             this.tcBeneficiary.SelectedIndex = 0;
             this.tcBeneficiary.Size = new System.Drawing.Size(907, 252);
@@ -1648,7 +1648,7 @@
             this.tabBeneficiary.HorizontalScrollbarHighlightOnWheel = false;
             this.tabBeneficiary.HorizontalScrollbarSize = 8;
             this.tabBeneficiary.Location = new System.Drawing.Point(4, 38);
-            this.tabBeneficiary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabBeneficiary.Margin = new System.Windows.Forms.Padding(2);
             this.tabBeneficiary.Name = "tabBeneficiary";
             this.tabBeneficiary.Size = new System.Drawing.Size(899, 210);
             this.tabBeneficiary.TabIndex = 0;
@@ -1662,7 +1662,7 @@
             // btnSeAllBeneficairys
             // 
             this.btnSeAllBeneficairys.Location = new System.Drawing.Point(487, 99);
-            this.btnSeAllBeneficairys.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeAllBeneficairys.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeAllBeneficairys.Name = "btnSeAllBeneficairys";
             this.btnSeAllBeneficairys.Size = new System.Drawing.Size(114, 40);
             this.btnSeAllBeneficairys.TabIndex = 66;
@@ -1673,6 +1673,9 @@
             // 
             // dgvBeneficiary
             // 
+            this.dgvBeneficiary.AllowUserToAddRows = false;
+            this.dgvBeneficiary.AllowUserToDeleteRows = false;
+            this.dgvBeneficiary.AllowUserToResizeColumns = false;
             this.dgvBeneficiary.AllowUserToResizeRows = false;
             this.dgvBeneficiary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBeneficiary.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -1722,7 +1725,7 @@
             // 
             this.btnDeleteB.Highlight = true;
             this.btnDeleteB.Location = new System.Drawing.Point(710, 113);
-            this.btnDeleteB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteB.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteB.Name = "btnDeleteB";
             this.btnDeleteB.Size = new System.Drawing.Size(139, 51);
             this.btnDeleteB.Style = MetroFramework.MetroColorStyle.Red;
@@ -1736,7 +1739,7 @@
             // btnSeachB
             // 
             this.btnSeachB.Location = new System.Drawing.Point(723, 19);
-            this.btnSeachB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeachB.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeachB.Name = "btnSeachB";
             this.btnSeachB.Size = new System.Drawing.Size(114, 52);
             this.btnSeachB.TabIndex = 25;
@@ -1751,10 +1754,10 @@
             // 
             // 
             this.txtSearchBName.CustomButton.Image = null;
-            this.txtSearchBName.CustomButton.Location = new System.Drawing.Point(154, 1);
-            this.txtSearchBName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchBName.CustomButton.Location = new System.Drawing.Point(205, 1);
+            this.txtSearchBName.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchBName.CustomButton.Name = "";
-            this.txtSearchBName.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtSearchBName.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtSearchBName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSearchBName.CustomButton.TabIndex = 1;
             this.txtSearchBName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1762,7 +1765,7 @@
             this.txtSearchBName.CustomButton.Visible = false;
             this.txtSearchBName.Lines = new string[0];
             this.txtSearchBName.Location = new System.Drawing.Point(430, 40);
-            this.txtSearchBName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchBName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchBName.MaxLength = 32767;
             this.txtSearchBName.Name = "txtSearchBName";
             this.txtSearchBName.PasswordChar = '\0';
@@ -2064,7 +2067,7 @@
             this.Controls.Add(this.tcBeneficiary);
             this.Controls.Add(this.tcBAcounts);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Benenficiarys";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;

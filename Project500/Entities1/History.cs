@@ -4,13 +4,9 @@ using System.Text;
 
 namespace Entities1
 {
-   public  enum PaymentType
+    public class History
     {
-        Card=1,EFT,Crypto
-    }
-    public class Payment
-    {
-        string Id;
+        public string Id { get; set; }
         private string scheduleNr;
 
         public string ScheduleNr
@@ -94,39 +90,11 @@ namespace Entities1
         }
         private string userID;
 
-    
-
         public string UserID
         {
             get { return userID; }
             set { userID = value; }
         }
-
-        public string Id1 { get => Id; set => Id = value; }
-
-        public Payment(string ScheduleNr, string Description, string BeneficairyID, string PayDate, float Amount, string Interval, string Status, string PaymentNumber, PaymentType TypePayment, bool Recurring, string DateCreated, string UserID)
-        {
-            this.scheduleNr = ScheduleNr;
-            this.description = Description;
-            this.beneficiaryID = BeneficairyID;
-            this.payDate = PayDate;
-            this.amount = Amount;
-            this.interval = Interval;
-            this.status = Status;
-            this.paymentNumber = PaymentNumber;
-            this.typePayment = TypePayment;
-            this.recurring = Recurring;
-            this.dateCreated = DateCreated;
-            this.userID = UserID;
-        }
-
-
-
-        public Payment()
-        {
-
-        }
-
 
 
 
