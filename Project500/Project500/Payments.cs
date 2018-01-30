@@ -592,7 +592,7 @@ namespace Project500
 
         private void dgvBeneficiarys_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
+            cbBAccType.SelectedIndex = -1;
         }
 
         private void btnShowAll_Click(object sender, EventArgs e)
@@ -619,6 +619,7 @@ namespace Project500
 
         private void dgvBeneficiarys_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            cbBAccType.SelectedIndex = -1;
             int index = e.RowIndex;
 
           

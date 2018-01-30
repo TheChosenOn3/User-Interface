@@ -63,11 +63,20 @@ namespace Project500
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            //huj
             //populate mar dei random fields van btc
            
-            UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
+           
+            if (CryptoController.GetUserCrypto(user.RsaID) != null)
+            {
+                UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
+            }
+            else
+            {
+                UserCrypto = new Crypto("", "", 0, "", user.RsaID);
+            }
 
-             UserCardList = CardController.RetrveCards(user.RsaID);
+            UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             //sf
             txtWalletName.Text = UserCrypto.WaletName;
@@ -103,7 +112,11 @@ namespace Project500
             txtSurname.Text = user.Surname;
             txtCellNum.Text = user.CellNr;
             txtEmail.Text = user.Email;
-            txtPassword.Text = user.Password;
+
+            //string password1 = EncryptData.ConvertHexToString(user.Password, System.Text.Encoding.Unicode);
+            //string password2 = EncryptData.Decrypt(password1);
+
+            //txtPassword.Text = password2;
             txtBusinessName.Text = user.BusinessName;
 
         }
@@ -192,7 +205,7 @@ namespace Project500
         public User CreateNewUer()
         {
             String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
-            newuser = new User(txtName.Text, user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, txtPassword.Text, "Active", txtBusinessName.Text);
+            newuser = new User(txtName.Text, user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, password, "Active", txtBusinessName.Text);
             return newuser;
 
 
@@ -353,8 +366,16 @@ namespace Project500
 
             //Account Details
             Email = txtEmail.Text.Trim();
-            password = txtPassword.Text.Trim();
-            convirmpassword = txtConfirmPassword.Text.Trim();
+            //password = txtPassword.Text.Trim();
+            //convirmpassword = txtConfirmPassword.Text.Trim();
+
+            string password1 = EncryptData.Encrypt(txtPassword.Text.Trim());
+
+            password = EncryptData.ConvertStringToHex(password1, System.Text.Encoding.Unicode);
+
+            string Confirm = EncryptData.Encrypt(txtConfirmPassword.Text.Trim());
+
+            convirmpassword = EncryptData.ConvertStringToHex(Confirm, System.Text.Encoding.Unicode);
 
             //Field Validation
             List<string> ErrorLog = new List<string>();
