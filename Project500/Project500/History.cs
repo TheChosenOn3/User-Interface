@@ -84,6 +84,7 @@ namespace Project500
                         if (item.BeneficairyID == benitem.BeneficairyID)
                         {
                             bennnaem = benitem.BeneficairyName;
+                            break;
                         }
                     }
                     
@@ -116,6 +117,8 @@ namespace Project500
         private void History_Load(object sender, EventArgs e)
         {
             PaymentListF = PaymentsController.GetPayments(user.RsaID);
+
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             foreach (Payment item in PaymentListF)
             {
                     PaymentList.Add(item);
