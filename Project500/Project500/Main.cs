@@ -1,4 +1,5 @@
-﻿using Entities1;
+﻿using Controllers;
+using Entities1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,8 @@ namespace Project500
 
         private void Main_Load(object sender, EventArgs e)
         {
-           
+            List<Notification> notList = NotificationController.getNotifications(user.RsaID);
+            dgvNotification.DataSource = notList;
             
         }
 

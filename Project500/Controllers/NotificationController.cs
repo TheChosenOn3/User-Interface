@@ -7,7 +7,7 @@ namespace Controllers
 {
    public class NotificationController
     {
-        static string Control = "Notification";
+        static string Control = "Notification/";
         public static List<Notification> getNotifications(string UserID)
         {
             return ControllerHandler<Notification>.Search(Control + UserID);
