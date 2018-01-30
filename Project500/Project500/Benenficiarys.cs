@@ -460,7 +460,7 @@ namespace Project500
                     default:
                         break;
                 }
-                EFT = new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,user.RsaID);
+                EFT = new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,"");
                 BenEFTList.Add(EFT);
                 PaymentsAccountController.AddBenPaymentAcount(EFT);
                 FillEFTDatagrid(ben);
