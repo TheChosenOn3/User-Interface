@@ -242,7 +242,7 @@ namespace Project500
                 {
                     if (payment.PaymentNumber == item.PaymentNumber)
                     {
-                        item.Status = "Submitted";
+                        item.Status = "Pending";
                         MetroMessageBox.Show(this, "Payment Scheduled Successfully!", "Success");
                     }
                     else
@@ -269,7 +269,7 @@ namespace Project500
                 {
                     if (payment.PaymentNumber == item.PaymentNumber)
                     {
-                        item.Status = "Submitted";
+                        item.Status = "Pending";
                     }
                     else
                     {
@@ -323,7 +323,7 @@ namespace Project500
                         if (item.PaymentNumber == item1.PaymentNumber)
                         {
                             issusck = true;
-                            item1.Status = "Submitted";
+                            item1.Status = "Pending";
                         }
                         else
                         {
@@ -360,7 +360,7 @@ namespace Project500
                     {
                         if (item.PaymentNumber == item1.PaymentNumber)
                         {
-                            item1.Status = "Submitted";
+                            item1.Status = "Pending";
                         }
                         else
                         {
