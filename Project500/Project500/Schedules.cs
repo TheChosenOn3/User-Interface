@@ -336,7 +336,8 @@ namespace Project500
             txtAmount.Text = payment.Amount.ToString();
             txtDescription.Text = payment.Description;
             txtInterval.Text = payment.Interval;
-            dtpPaymentdate.Value = Convert.ToDateTime(payment.PayDate); //Paste Groot value as die uit fok.
+          //  DateTime payDate = DateTime.ParseExact(processedPayment.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);//Convert Date format to correct 
+            dtpPaymentdate.Value = DateTime.ParseExact(payment.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture); //Paste Groot value as die uit fok.
             FillBeneficiaryDatagrid(BeneficairyList);
             FillBeneficiaryDatagrid(BeneficairyList);
         }
