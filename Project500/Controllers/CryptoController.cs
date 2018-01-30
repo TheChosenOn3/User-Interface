@@ -16,14 +16,19 @@ namespace Controllers
 
         public static List<Crypto> GetCrypto(string Beneficiaryid)
         {
-            return ControllerHandler<Crypto>.Search(Control + Beneficiaryid);
+            return ControllerHandler<Crypto>.Search(Control + Beneficiaryid + "/" + userType.Beneficiary);
         }
+
+
         public static Crypto GetUserCrypto(string UserId)
-        {// edit shit
+        {// eat shit
             client = new HttpClient();
-            Crypto crypt = null; 
-            var response = client.GetStringAsync(path + UserId).Result;
-            crypt = (Crypto)JsonConvert.DeserializeObject<Crypto>(response);
+            Crypto crypt = null;
+            List<Crypto> CryptoList = new List<Crypto>();
+            
+            var response = client.GetStringAsync(path + UserId + "/" + userType.Client).Result;
+            CryptoList = JsonConvert.DeserializeObject<List<Crypto>>(response);
+            crypt = CryptoList[0];
 
             return crypt;
         }

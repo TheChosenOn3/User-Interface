@@ -104,12 +104,12 @@ namespace Project500
 
             foreach (Crypto item in bencryptolist)
             {
-                BenbjectListe.Add("Crypto:" + item.WaletName);
+                BenbjectListe.Add("Crypto:" + item.Waletaddress);
 
             }
             foreach (PaymentAccount item in beneftlist)
             {
-                BenbjectListe.Add("EFT:" + item.Reference);
+                BenbjectListe.Add("EFT:" + item.AccountNumber);
             }
             return BenbjectListe;
 
@@ -385,15 +385,9 @@ namespace Project500
         }
 
         private void dgvAddedPayments_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {// gwet payment SELECTED FROM DATAGRID
-         // fill ben 
-         //  txtAmount.Text = payment.Amount
-            txtBName.Text = payment.BeneficairyID;
-            txtDescription.Text = payment.Description;
-            //txtInterval.Text = payment.Interval;
-            //set cbBAccType
-            //set cbUPaymentType
-            // set dtpPayDatae
+        {
+            int index = e.RowIndex;
+            payment = PaymentList[index];
         }
 
         private void dgvBeneficiarys_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -451,29 +445,19 @@ namespace Project500
                 string userlected = cbxPaymentType.SelectedItem.ToString();
                 string usertype = userlected.Substring(0, 3);
                 string bentype = benected.Substring(0, 3);
+                if ((usertype == "Car"&&bentype=="EFT")||(usertype == "EFT" && bentype == "EFT") || (usertype== "Cry" && bentype == "Cry"))
+                {
 
-                if (usertype != "Car" && bentype !="EFT" )
-                {
-                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
-                }
-                else if (usertype != "EFT" && bentype != "EFT")
-                {
-                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
-                }
-                else if (usertype != "Cry" && bentype != "Cry")
-                {
-                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
-                }
-                else
-                {
                     string UAccNum = "";
                     string BenAccNum = "";
-                    string selectPayAcc = benected.Substring(benected.IndexOf(":")+1,benected.Length- benected.IndexOf(":"));
-                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":"));
+                    int range1 = benected.IndexOf(":");
+                    string selectPayAcc = benected.Substring(range1+ 1, benected.Length - range1-1);
+                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":")-1);
+                  
                     if (usertype == "Cry")
                     {
 
-                        
+
                         typepay = PaymentType.Crypto;
                         foreach (Crypto item in BeneficairyCrypoList)
                         {
@@ -520,28 +504,33 @@ namespace Project500
                     int PaymentNum2 = rnd.Next(10, 1042);
                     int SchedueldNum = rnd.Next(11, 1022);
                     string Schedpaynum = PaymentNum1.ToString() + PaymentNum2.ToString() + SchedueldNum.ToString();
-                   
+
                     foreach (Payment item in PaymentList)
                     {
                         if (Schedpaynum == item.PaymentNumber)
                         {
                             Schedpaynum += "9";
                         }
-                     
+
 
                     }
-                  
-                  
 
-                      
-                        //uiykjhtgrfdluiykjthre;oluiyutreeliitytrerelyty
+
+
+
+                    //uiykjhtgrfdluiykjthre;oluiyutreeliitytrerelyty
                     string Paydate1 = dtpPayDate.Value.ToString("dd/MM/yyyy");
 
-                    PaymentList.Add(new Payment(Schedpaynum, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", UAccNum, typepay, recur, DateTime.Now.ToString(), user.RsaID,BenAccNum));
+                    PaymentList.Add(new Payment(Schedpaynum, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", UAccNum, typepay, recur, DateTime.Now.ToString(), user.RsaID, BenAccNum));
                     //add payment
                     FillPaymentDatagrid(PaymentList);
                     ClearFields();
 
+                }
+                
+                else
+                {
+                    MessageBox.Show("Your paymtnt types need to mach");
                 }
 
 
@@ -583,23 +572,23 @@ namespace Project500
         private void btnSearchB_Click_1(object sender, EventArgs e)
         {
             BenName = txtBName.Text.Trim();
-            BeneficiaryListS.Clear();
-            foreach (Beneficiary item in BeneficairyList)
+            BeneficiaryListS = BeneficairyList;
+            foreach (Beneficiary item in BeneficiaryListS)
             {
                 if (item.BeneficairyName.IndexOf(txtBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                 {
-                    BeneficiaryListS.Add(item);
+                    BeneficairyList.Add(item);
                 }
             }
 
-            FillBeneficiaryDatagrid(BeneficiaryListS);
+            FillBeneficiaryDatagrid(BeneficairyList);
 
 
         }
 
         private void dgvBeneficiarys_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void btnShowAll_Click(object sender, EventArgs e)
@@ -620,8 +609,7 @@ namespace Project500
 
         private void dgvAddedPayments_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            payment = PaymentList[index];
+            
 
         }
 
@@ -629,20 +617,16 @@ namespace Project500
         {
             int index = e.RowIndex;
 
-            if (BeneficiaryListS.Count == 0)
-            {
-
+          
                 beneficiary = BeneficairyList[index];
-            }
-            else
-            {
-                beneficiary = BeneficiaryListS[index];
-                BeneficiaryListS.Clear();
-            }
+         
             txtBName.Text = beneficiary.BeneficairyName;
 
 
-            BenbjectListe = PopSelectedBenAcount(PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID), CryptoController.GetCrypto(beneficiary.BeneficairyID));
+
+            BenPaymentAccountList = PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID);
+            
+            BenbjectListe = PopSelectedBenAcount(BenPaymentAccountList, CryptoController.GetCrypto(beneficiary.BeneficairyID));
             List<string> remove = new List<string>();
             cbBAccType.Items.Clear();
             foreach (string item in BenbjectListe)
@@ -709,6 +693,12 @@ namespace Project500
             //FillPaymentDatagrid(PaymentList);
 
             // Read sample data from CSV file
+        }
+
+        private void dgvAddedPayments_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            payment = PaymentList[index];
         }
     }
 }
