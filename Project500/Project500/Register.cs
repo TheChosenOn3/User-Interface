@@ -126,8 +126,9 @@ namespace Project500
             convirmpassword1 = EncryptData.Encrypt(txtConfirmPassword.Text.Trim());
             password = EncryptData.ConvertStringToHex(password1, System.Text.Encoding.Unicode);
             convirmpassword = EncryptData.ConvertStringToHex(convirmpassword1, System.Text.Encoding.Unicode);
-           // password = password1.Replace('/', '*');
-           //convirmpassword = convirmpassword1.Replace('/', '*');
+        
+            // password = password1.Replace('/', '*');
+            //convirmpassword = convirmpassword1.Replace('/', '*');
 
 
             List<string> ErrorLog = new List<string>();
@@ -181,7 +182,7 @@ namespace Project500
 
             if (cool)
             {
-                User user = new User(name, ID, surname, cell, Address, Email, password, "Active", buznessname);
+                User user = new User(txtName.Text, txtID.Text, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, password, "Active", txtBusiness.Text);
 
                 if (UserController.registerUser(user))
                 {// dummy user so fields stay shap in rest of forms

@@ -63,7 +63,10 @@ namespace Project500
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            //huj
             //populate mar dei random fields van btc
+           
+           
             if (CryptoController.GetUserCrypto(user.RsaID) != null)
             {
                 UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
@@ -72,9 +75,8 @@ namespace Project500
             {
                 UserCrypto = new Crypto("", "", 0, "", user.RsaID);
             }
-           
 
-             UserCardList = CardController.RetrveCards(user.RsaID);
+            UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             //sf
             txtWalletName.Text = UserCrypto.WaletName;
@@ -110,7 +112,11 @@ namespace Project500
             txtSurname.Text = user.Surname;
             txtCellNum.Text = user.CellNr;
             txtEmail.Text = user.Email;
-            txtPassword.Text = user.Password;
+
+            string password1 = EncryptData.ConvertHexToString(user.Password, System.Text.Encoding.Unicode);
+            string password2 = EncryptData.Decrypt(password1);
+
+            txtPassword.Text = password2;
             txtBusinessName.Text = user.BusinessName;
 
         }
@@ -360,8 +366,16 @@ namespace Project500
 
             //Account Details
             Email = txtEmail.Text.Trim();
-            password = txtPassword.Text.Trim();
-            convirmpassword = txtConfirmPassword.Text.Trim();
+            //password = txtPassword.Text.Trim();
+            //convirmpassword = txtConfirmPassword.Text.Trim();
+
+            string password1 = EncryptData.Encrypt(txtPassword.Text.Trim());
+
+            password = EncryptData.ConvertStringToHex(password1, System.Text.Encoding.Unicode);
+
+            string Confirm = EncryptData.Encrypt(txtConfirmPassword.Text.Trim());
+
+            convirmpassword = EncryptData.ConvertStringToHex(Confirm, System.Text.Encoding.Unicode);
 
             //Field Validation
             List<string> ErrorLog = new List<string>();
@@ -1077,9 +1091,7 @@ namespace Project500
         {
             if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you wish to exit this application?", "Exit Project 500", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Login LoginForm = new Login();
-                LoginForm.Show();
-                this.Hide();
+                Application.Exit();
             }
         }
 
