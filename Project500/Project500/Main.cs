@@ -15,6 +15,8 @@ namespace Project500
     public partial class Main : MetroFramework.Forms.MetroForm
     {
         User user = new User();
+        List<Notification> ClientNotifications = new List<Notification>();
+
         public Main(User _user)
         {
             InitializeComponent();
@@ -27,6 +29,10 @@ namespace Project500
             InitializeComponent();
         }
 
+        public void LoadNotificationDataGrid()
+        {
+            
+        }
 
         private void Main_Load(object sender, EventArgs e)
         {

@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.tcNotifications = new MetroFramework.Controls.MetroTabControl();
@@ -53,11 +56,14 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblHome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvNotification = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tcNotifications.SuspendLayout();
+            this.tabNotifications.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotification)).BeginInit();
             this.SuspendLayout();
             // 
             // metroStyleManager1
@@ -70,21 +76,22 @@
             this.tcNotifications.Location = new System.Drawing.Point(182, 100);
             this.tcNotifications.Name = "tcNotifications";
             this.tcNotifications.SelectedIndex = 0;
-            this.tcNotifications.Size = new System.Drawing.Size(897, 438);
+            this.tcNotifications.Size = new System.Drawing.Size(897, 628);
             this.tcNotifications.TabIndex = 60;
             this.tcNotifications.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tcNotifications.UseSelectable = true;
             // 
             // tabNotifications
             // 
+            this.tabNotifications.Controls.Add(this.dgvNotification);
             this.tabNotifications.HorizontalScrollbarBarColor = true;
             this.tabNotifications.HorizontalScrollbarHighlightOnWheel = false;
             this.tabNotifications.HorizontalScrollbarSize = 10;
             this.tabNotifications.Location = new System.Drawing.Point(4, 38);
             this.tabNotifications.Name = "tabNotifications";
-            this.tabNotifications.Size = new System.Drawing.Size(889, 396);
+            this.tabNotifications.Size = new System.Drawing.Size(889, 586);
             this.tabNotifications.TabIndex = 0;
-            this.tabNotifications.Text = "Yourr Daily Notofications";
+            this.tabNotifications.Text = "Payment Notifications";
             this.tabNotifications.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabNotifications.VerticalScrollbarBarColor = true;
             this.tabNotifications.VerticalScrollbarHighlightOnWheel = false;
@@ -340,6 +347,50 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvNotification
+            // 
+            this.dgvNotification.AllowUserToResizeRows = false;
+            this.dgvNotification.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvNotification.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvNotification.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvNotification.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNotification.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNotification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNotification.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvNotification.EnableHeadersVisualStyles = false;
+            this.dgvNotification.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvNotification.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvNotification.Location = new System.Drawing.Point(3, 3);
+            this.dgvNotification.Name = "dgvNotification";
+            this.dgvNotification.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNotification.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvNotification.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvNotification.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNotification.Size = new System.Drawing.Size(881, 573);
+            this.dgvNotification.TabIndex = 2;
+            this.dgvNotification.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -354,10 +405,12 @@
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.tcNotifications.ResumeLayout(false);
+            this.tabNotifications.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotification)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -386,5 +439,6 @@
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel9;
+        private MetroFramework.Controls.MetroGrid dgvNotification;
     }
 }
