@@ -63,20 +63,11 @@ namespace Project500
 
         private void Profile_Load(object sender, EventArgs e)
         {
-            //huj
             //populate mar dei random fields van btc
            
-           
-            if (CryptoController.GetUserCrypto(user.RsaID) != null)
-            {
-                UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
-            }
-            else
-            {
-                UserCrypto = new Crypto("", "", 0, "", user.RsaID);
-            }
+            UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
 
-            UserCardList = CardController.RetrveCards(user.RsaID);
+             UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             //sf
             txtWalletName.Text = UserCrypto.WaletName;
@@ -112,11 +103,7 @@ namespace Project500
             txtSurname.Text = user.Surname;
             txtCellNum.Text = user.CellNr;
             txtEmail.Text = user.Email;
-
-            string password1 = EncryptData.ConvertHexToString(user.Password, System.Text.Encoding.Unicode);
-            string password2 = EncryptData.Decrypt(password1);
-
-            txtPassword.Text = password2;
+            txtPassword.Text = user.Password;
             txtBusinessName.Text = user.BusinessName;
 
         }
@@ -366,16 +353,8 @@ namespace Project500
 
             //Account Details
             Email = txtEmail.Text.Trim();
-            //password = txtPassword.Text.Trim();
-            //convirmpassword = txtConfirmPassword.Text.Trim();
-
-            string password1 = EncryptData.Encrypt(txtPassword.Text.Trim());
-
-            password = EncryptData.ConvertStringToHex(password1, System.Text.Encoding.Unicode);
-
-            string Confirm = EncryptData.Encrypt(txtConfirmPassword.Text.Trim());
-
-            convirmpassword = EncryptData.ConvertStringToHex(Confirm, System.Text.Encoding.Unicode);
+            password = txtPassword.Text.Trim();
+            convirmpassword = txtConfirmPassword.Text.Trim();
 
             //Field Validation
             List<string> ErrorLog = new List<string>();
