@@ -18,7 +18,7 @@ namespace Controllers
         public static string Control = "Account/";
         public static List<PaymentAccount> SearchBenPaymentAcount(string BenId)
         {
-            return ControllerHandler<PaymentAccount>.Search(Control + BenId);
+            return ControllerHandler<PaymentAccount>.Search(Control + BenId + "/" + userType.Beneficiary);
         }
         public static List<PaymentAccount> SearchUserPaymentAcount(string UserId)
         {

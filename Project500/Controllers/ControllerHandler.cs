@@ -38,9 +38,9 @@ namespace Controllers
             HttpResponseMessage someVar = _client.DeleteAsync(path + control).Result;//handle if resonse codes fail
             if (someVar.IsSuccessStatusCode)
             {
-                return true;//Deleted successfuly
+                return true; //Deleted successfuly
             }
-            return false;//something went wrong
+            return false; //something went wrong
         }
 
         public static bool Update(T obj, string control)
