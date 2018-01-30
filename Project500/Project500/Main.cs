@@ -19,6 +19,7 @@ namespace Project500
         {
             InitializeComponent();
             user = _user;
+
         }
        
         public Main()

@@ -1414,6 +1414,9 @@
             // 
             // dgvCrypto
             // 
+            this.dgvCrypto.AllowUserToAddRows = false;
+            this.dgvCrypto.AllowUserToDeleteRows = false;
+            this.dgvCrypto.AllowUserToResizeColumns = false;
             this.dgvCrypto.AllowUserToResizeRows = false;
             this.dgvCrypto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvCrypto.BorderStyle = System.Windows.Forms.BorderStyle.None;

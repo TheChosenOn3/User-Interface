@@ -51,7 +51,7 @@ namespace Controllers
             HttpResponseMessage someVar = _client.PutAsync(path + control, content).Result;//handle if resonse codes fail
             if (someVar.IsSuccessStatusCode)
             {
-                return true;//Added to DB successfuly
+                return true;//Added to DB successfuly/
             }
             return false;//something went wrong
         }
