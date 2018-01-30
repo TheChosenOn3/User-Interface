@@ -112,6 +112,7 @@ namespace Project500
         {
             InitializeComponent();
             user = _user;
+            btnProfileImage.Text = " " + user.Name;
         }
         private void Schedules_Load(object sender, EventArgs e)
         {

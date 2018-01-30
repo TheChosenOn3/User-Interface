@@ -42,7 +42,7 @@ namespace Project500
         {
             user = _user;
             InitializeComponent();
-
+            btnProfileImage.Text = " " + user.Name;
         }
         public Benenficiarys()
         {

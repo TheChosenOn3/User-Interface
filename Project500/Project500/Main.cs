@@ -19,7 +19,7 @@ namespace Project500
         {
             InitializeComponent();
             user = _user;
-
+            btnProfileImage.Text = " " + user.Name;
         }
        
         public Main()
