@@ -40,10 +40,10 @@ namespace Project500
 
                 payment.Amount = float.Parse(values[0]);
                 payment.BeneficairyID = values[1];
-               // payment.DateCreated = Convert.ToDateTime(values[2]);
+                //payment.DateCreated = Convert.ToDateTime(values[2]);
                 payment.Description = values[3];
                 payment.Interval = values[4];
-               // payment.PayDate = Convert.ToDateTime(values[5]);
+                //payment.PayDate = Convert.ToDateTime(values[5]);
                 payment.PaymentNumber = values[6];
                 payment.Recurring = Convert.ToBoolean(values[7]);
                 payment.ScheduleNr = values[8];
