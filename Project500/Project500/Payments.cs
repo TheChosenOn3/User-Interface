@@ -625,7 +625,7 @@ namespace Project500
 
 
             BenPaymentAccountList = PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID);
-            
+           
             BenbjectListe = PopSelectedBenAcount(BenPaymentAccountList, CryptoController.GetCrypto(beneficiary.BeneficairyID));
             List<string> remove = new List<string>();
             cbBAccType.Items.Clear();

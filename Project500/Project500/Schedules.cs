@@ -92,12 +92,12 @@ namespace Project500
 
             foreach (Crypto item in bencryptolist)
             {
-                BenbjectListe.Add("Crypto " + item.WaletName);
+                BenbjectListe.Add("Crypto " + item.Waletaddress);
 
             }
             foreach (PaymentAccount item in beneftlist)
             {
-                BenbjectListe.Add("EFT " + item.Reference);
+                BenbjectListe.Add("EFT " + item.AccountNumber);
             }
             return BenbjectListe;
 
@@ -237,31 +237,21 @@ namespace Project500
                 string usertype = userlected.Substring(0, 3);
                 string bentype = benected.Substring(0, 3);
 
-                
 
-                if (usertype != "Car" && bentype != "EFT")
-                {
-                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
-                }
-                else if (usertype != "EFT" && bentype != "EFT")
-                {
-                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
-                }
-                else if (usertype != "Cry" && bentype != "Cry")
-                {
-                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
-                }
+
+                if ((usertype == "Car" && bentype == "EFT") || (usertype == "EFT" && bentype == "EFT") || (usertype == "Cry" && bentype == "Cry")) { }
                 else
                 {
                     string UAccNum = "";
                     string BenAccNum = "";
-                    string selectPayAcc = benected.Substring(benected.IndexOf(":") + 1, benected.Length - benected.IndexOf(":"));
-                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":"));
+                    int range1 = benected.IndexOf(":");
+                    string selectPayAcc = benected.Substring(range1 + 1, benected.Length - range1 - 1);
+                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":") - 1);
 
                     if (usertype == "Cry")
                     {
                         typepay = PaymentType.Crypto;
-                        
+
                         foreach (Crypto item in BeneficairyCrypoList)
                         {
                             if (item.Waletaddress == selectPayAcc)
@@ -273,7 +263,7 @@ namespace Project500
                     }
                     else if (usertype == "Car")
                     {
-                       
+
                         typepay = PaymentType.Card;
                         foreach (Card item in UserCardList)
                         {
@@ -307,6 +297,7 @@ namespace Project500
 
                     string Paydate1 = dtpPaymentdate.Value.ToString("dd/MM/yyyy");
                     ///////zswedxcfvghjnszxdcfvgbhjnmklyjrthegdsvyihywe'igfhawev9urv[o9wz8ebytm'p0czseurytipv98difoouvpgtvyf0ucqv4oi7brufaf,m[ivnycgfdm,xcihrtvns[mg,ci'drjzhg[c,em'rslkvhn[mcf,rdmetrvlkchjn.cj,mi.knmchmndulwgmh5dip[wcmuv,w,4iv;oeaw'
+
                     Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", UAccNum, typepay, recur, DateTime.Now.ToString(), user.RsaID, BenAccNum);
                     PaymentsController.UpdatePyaments(newPayment);
                     foreach (Payment item in PaymentList)
@@ -563,9 +554,9 @@ namespace Project500
                 BeneficiaryListS.Clear();
             }
             txtBname.Text = beneficiary.BeneficairyName;
+            BenPaymentAccountList = PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID);
 
-
-            BenbjectListe = PopSelectedBenAcount(PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID), CryptoController.GetCrypto(beneficiary.BeneficairyID));
+            BenbjectListe = PopSelectedBenAcount(BenPaymentAccountList, CryptoController.GetCrypto(beneficiary.BeneficairyID));
             List<string> remove = new List<string>();
             cbBAcounType.Items.Clear();
             foreach (string item in BenbjectListe)

@@ -162,7 +162,7 @@
             this.checkInter.ForeColor = System.Drawing.Color.Transparent;
             this.checkInter.Location = new System.Drawing.Point(585, 94);
             this.checkInter.Name = "checkInter";
-            this.checkInter.Size = new System.Drawing.Size(124, 15);
+            this.checkInter.Size = new System.Drawing.Size(133, 17);
             this.checkInter.TabIndex = 84;
             this.checkInter.Text = "Recurring Payment";
             this.checkInter.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -204,10 +204,10 @@
             // cbxPaymentType
             // 
             this.cbxPaymentType.FormattingEnabled = true;
-            this.cbxPaymentType.ItemHeight = 23;
+            this.cbxPaymentType.ItemHeight = 24;
             this.cbxPaymentType.Location = new System.Drawing.Point(14, 143);
             this.cbxPaymentType.Name = "cbxPaymentType";
-            this.cbxPaymentType.Size = new System.Drawing.Size(215, 29);
+            this.cbxPaymentType.Size = new System.Drawing.Size(215, 30);
             this.cbxPaymentType.TabIndex = 82;
             this.cbxPaymentType.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.cbxPaymentType.UseSelectable = true;
@@ -215,7 +215,7 @@
             // dtpPayDate
             // 
             this.dtpPayDate.Location = new System.Drawing.Point(511, 45);
-            this.dtpPayDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpPayDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtpPayDate.Name = "dtpPayDate";
             this.dtpPayDate.Size = new System.Drawing.Size(299, 30);
             this.dtpPayDate.TabIndex = 81;
@@ -239,7 +239,7 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(14, 120);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(109, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(114, 20);
             this.metroLabel6.TabIndex = 78;
             this.metroLabel6.Text = "Payment Method";
             this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -280,7 +280,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(14, 22);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(79, 20);
             this.metroLabel5.TabIndex = 75;
             this.metroLabel5.Text = "Description";
             this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -290,7 +290,7 @@
             this.lblInterval.AutoSize = true;
             this.lblInterval.Location = new System.Drawing.Point(510, 120);
             this.lblInterval.Name = "lblInterval";
-            this.lblInterval.Size = new System.Drawing.Size(90, 19);
+            this.lblInterval.Size = new System.Drawing.Size(96, 20);
             this.lblInterval.TabIndex = 71;
             this.lblInterval.Text = "Select Interval";
             this.lblInterval.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -301,7 +301,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(510, 22);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(90, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(95, 20);
             this.metroLabel1.TabIndex = 65;
             this.metroLabel1.Text = "Payment Date";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -366,7 +366,7 @@
             this.metroLabel29.AutoSize = true;
             this.metroLabel29.Location = new System.Drawing.Point(14, 71);
             this.metroLabel29.Name = "metroLabel29";
-            this.metroLabel29.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel29.Size = new System.Drawing.Size(58, 20);
             this.metroLabel29.TabIndex = 2;
             this.metroLabel29.Text = "Amount";
             this.metroLabel29.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -383,9 +383,9 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 42);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(898, 265);
+            this.metroTabPage1.Size = new System.Drawing.Size(898, 261);
             this.metroTabPage1.TabIndex = 1;
             this.metroTabPage1.Text = "Associate Beneficiaries";
             this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -499,7 +499,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(537, 79);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(162, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(174, 20);
             this.metroLabel3.TabIndex = 77;
             this.metroLabel3.Text = "Select Beneficiary Account";
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -509,7 +509,7 @@
             this.cbBAccType.FormattingEnabled = true;
             this.cbBAccType.Location = new System.Drawing.Point(537, 102);
             this.cbBAccType.Name = "cbBAccType";
-            this.cbBAccType.Size = new System.Drawing.Size(253, 21);
+            this.cbBAccType.Size = new System.Drawing.Size(253, 24);
             this.cbBAccType.TabIndex = 76;
             // 
             // metroLabel2
@@ -517,7 +517,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(537, 20);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(113, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(120, 20);
             this.metroLabel2.TabIndex = 75;
             this.metroLabel2.Text = "Beneficiary Name";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -696,7 +696,7 @@
             this.lblProfile.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfile.Location = new System.Drawing.Point(430, 31);
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(100, 22);
+            this.lblProfile.Size = new System.Drawing.Size(129, 30);
             this.lblProfile.TabIndex = 1;
             this.lblProfile.Text = "Payments";
             // 
