@@ -456,7 +456,7 @@ namespace Project500
                   
                     if (usertype == "Cry")
                     {
-
+                        UAccNum = userCrypto.Waletaddress;
 
                         typepay = PaymentType.Crypto;
                         foreach (Crypto item in BeneficairyCrypoList)
@@ -625,8 +625,8 @@ namespace Project500
 
 
             BenPaymentAccountList = PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID);
-           
-            BenbjectListe = PopSelectedBenAcount(BenPaymentAccountList, CryptoController.GetCrypto(beneficiary.BeneficairyID));
+            BeneficairyCrypoList = CryptoController.GetCrypto(beneficiary.BeneficairyID);
+            BenbjectListe = PopSelectedBenAcount(BenPaymentAccountList, BeneficairyCrypoList);
             List<string> remove = new List<string>();
             cbBAccType.Items.Clear();
             foreach (string item in BenbjectListe)

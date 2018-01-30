@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.tabUserRegister = new MetroFramework.Controls.MetroTabControl();
@@ -253,7 +253,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(15, 344);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 21);
+            this.label1.Size = new System.Drawing.Size(211, 23);
             this.label1.TabIndex = 34;
             this.label1.Text = "Account Information";
             // 
@@ -265,7 +265,7 @@
             this.lblAddressInfo.ForeColor = System.Drawing.Color.White;
             this.lblAddressInfo.Location = new System.Drawing.Point(16, 168);
             this.lblAddressInfo.Name = "lblAddressInfo";
-            this.lblAddressInfo.Size = new System.Drawing.Size(167, 21);
+            this.lblAddressInfo.Size = new System.Drawing.Size(204, 23);
             this.lblAddressInfo.TabIndex = 33;
             this.lblAddressInfo.Text = "Address Information";
             // 
@@ -277,7 +277,7 @@
             this.lblPersonalInfo.ForeColor = System.Drawing.Color.White;
             this.lblPersonalInfo.Location = new System.Drawing.Point(16, 10);
             this.lblPersonalInfo.Name = "lblPersonalInfo";
-            this.lblPersonalInfo.Size = new System.Drawing.Size(169, 21);
+            this.lblPersonalInfo.Size = new System.Drawing.Size(209, 23);
             this.lblPersonalInfo.TabIndex = 32;
             this.lblPersonalInfo.Text = "Personal Information";
             // 
@@ -317,7 +317,7 @@
             this.metroLabel26.AutoSize = true;
             this.metroLabel26.Location = new System.Drawing.Point(289, 91);
             this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel26.Size = new System.Drawing.Size(104, 20);
             this.metroLabel26.TabIndex = 30;
             this.metroLabel26.Text = "Business Name";
             this.metroLabel26.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -358,7 +358,7 @@
             this.metroLabel24.AutoSize = true;
             this.metroLabel24.Location = new System.Drawing.Point(289, 257);
             this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel24.Size = new System.Drawing.Size(63, 20);
             this.metroLabel24.TabIndex = 28;
             this.metroLabel24.Text = "Province";
             this.metroLabel24.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -399,7 +399,7 @@
             this.metroLabel25.AutoSize = true;
             this.metroLabel25.Location = new System.Drawing.Point(19, 257);
             this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(31, 19);
+            this.metroLabel25.Size = new System.Drawing.Size(32, 20);
             this.metroLabel25.TabIndex = 26;
             this.metroLabel25.Text = "City";
             this.metroLabel25.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -452,7 +452,7 @@
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.Location = new System.Drawing.Point(590, 36);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel11.Size = new System.Drawing.Size(88, 20);
             this.metroLabel11.TabIndex = 23;
             this.metroLabel11.Text = "Cell Number";
             this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -496,7 +496,7 @@
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.Location = new System.Drawing.Point(291, 36);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(78, 20);
             this.metroLabel10.TabIndex = 21;
             this.metroLabel10.Text = "ID Number";
             this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -539,7 +539,7 @@
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.Location = new System.Drawing.Point(19, 194);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(101, 20);
             this.metroLabel9.TabIndex = 19;
             this.metroLabel9.Text = "Street Number";
             this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -582,7 +582,7 @@
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.Location = new System.Drawing.Point(291, 194);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(87, 20);
             this.metroLabel8.TabIndex = 17;
             this.metroLabel8.Text = "Street Name";
             this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -625,7 +625,7 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(590, 194);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(53, 20);
             this.metroLabel7.TabIndex = 15;
             this.metroLabel7.Text = "Suburb";
             this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -668,7 +668,7 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(590, 257);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(59, 20);
             this.metroLabel6.TabIndex = 13;
             this.metroLabel6.Text = "Country";
             this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -711,7 +711,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(260, 436);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(115, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(119, 20);
             this.metroLabel5.TabIndex = 11;
             this.metroLabel5.Text = "Confirm Password";
             this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -754,7 +754,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(19, 436);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(66, 20);
             this.metroLabel4.TabIndex = 9;
             this.metroLabel4.Text = "Password";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -797,7 +797,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(19, 372);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(42, 20);
             this.metroLabel3.TabIndex = 7;
             this.metroLabel3.Text = "Email";
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -840,7 +840,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(19, 91);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(64, 20);
             this.metroLabel2.TabIndex = 5;
             this.metroLabel2.Text = "Surname";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -894,7 +894,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(19, 36);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(47, 20);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Name";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -945,7 +945,7 @@
             this.label6.ForeColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(385, 284);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 22);
+            this.label6.Size = new System.Drawing.Size(175, 30);
             this.label6.TabIndex = 74;
             this.label6.Text = "Wallet Details";
             // 
@@ -957,7 +957,7 @@
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(121, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 22);
+            this.label3.Size = new System.Drawing.Size(94, 30);
             this.label3.TabIndex = 71;
             this.label3.Text = "Bitcoin";
             // 
@@ -969,7 +969,7 @@
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(21, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 22);
+            this.label2.Size = new System.Drawing.Size(327, 30);
             this.label2.TabIndex = 70;
             this.label2.Text = "Supported Cryptocurrency";
             // 
@@ -1020,7 +1020,7 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.Location = new System.Drawing.Point(331, 317);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel13.Size = new System.Drawing.Size(99, 20);
             this.metroLabel13.TabIndex = 65;
             this.metroLabel13.Text = "Wallet Amount";
             this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1073,7 +1073,7 @@
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.Location = new System.Drawing.Point(331, 380);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(85, 19);
+            this.metroLabel19.Size = new System.Drawing.Size(88, 20);
             this.metroLabel19.TabIndex = 59;
             this.metroLabel19.Text = "Wallet Name";
             this.metroLabel19.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1128,7 +1128,7 @@
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.Location = new System.Drawing.Point(331, 441);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel21.Size = new System.Drawing.Size(83, 20);
             this.metroLabel21.TabIndex = 53;
             this.metroLabel21.Text = "Wallet Code";
             this.metroLabel21.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1153,9 +1153,9 @@
             this.tabEFTDetail.HorizontalScrollbarBarColor = true;
             this.tabEFTDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabEFTDetail.HorizontalScrollbarSize = 10;
-            this.tabEFTDetail.Location = new System.Drawing.Point(4, 41);
+            this.tabEFTDetail.Location = new System.Drawing.Point(4, 42);
             this.tabEFTDetail.Name = "tabEFTDetail";
-            this.tabEFTDetail.Size = new System.Drawing.Size(903, 584);
+            this.tabEFTDetail.Size = new System.Drawing.Size(903, 583);
             this.tabEFTDetail.TabIndex = 2;
             this.tabEFTDetail.Text = "EFT Account Information";
             this.tabEFTDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1172,7 +1172,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(355, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(187, 22);
+            this.label8.Size = new System.Drawing.Size(243, 30);
             this.label8.TabIndex = 68;
             this.label8.Text = "Listed EFT Accounts";
             // 
@@ -1183,37 +1183,37 @@
             this.dgvEFT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEFT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvEFT.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEFT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEFT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEFT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEFT.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEFT.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEFT.EnableHeadersVisualStyles = false;
             this.dgvEFT.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvEFT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvEFT.Location = new System.Drawing.Point(343, 56);
             this.dgvEFT.Name = "dgvEFT";
             this.dgvEFT.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEFT.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEFT.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEFT.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEFT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEFT.Size = new System.Drawing.Size(542, 299);
@@ -1258,7 +1258,7 @@
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.Location = new System.Drawing.Point(83, 201);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(100, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(106, 20);
             this.metroLabel17.TabIndex = 65;
             this.metroLabel17.Text = "Account Holder";
             this.metroLabel17.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1322,7 +1322,7 @@
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.Location = new System.Drawing.Point(83, 269);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(87, 19);
+            this.metroLabel18.Size = new System.Drawing.Size(94, 20);
             this.metroLabel18.TabIndex = 50;
             this.metroLabel18.Text = "Account Type";
             this.metroLabel18.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1349,7 +1349,7 @@
             this.metroLabel22.AutoSize = true;
             this.metroLabel22.Location = new System.Drawing.Point(82, 56);
             this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(109, 19);
+            this.metroLabel22.Size = new System.Drawing.Size(116, 20);
             this.metroLabel22.TabIndex = 43;
             this.metroLabel22.Text = "Account Number";
             this.metroLabel22.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1414,7 +1414,7 @@
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.Location = new System.Drawing.Point(82, 125);
             this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel23.Size = new System.Drawing.Size(73, 20);
             this.metroLabel23.TabIndex = 39;
             this.metroLabel23.Text = "Reference";
             this.metroLabel23.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1443,9 +1443,9 @@
             this.tabCardDetail.HorizontalScrollbarBarColor = true;
             this.tabCardDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabCardDetail.HorizontalScrollbarSize = 10;
-            this.tabCardDetail.Location = new System.Drawing.Point(4, 41);
+            this.tabCardDetail.Location = new System.Drawing.Point(4, 42);
             this.tabCardDetail.Name = "tabCardDetail";
-            this.tabCardDetail.Size = new System.Drawing.Size(903, 584);
+            this.tabCardDetail.Size = new System.Drawing.Size(903, 583);
             this.tabCardDetail.TabIndex = 1;
             this.tabCardDetail.Text = "Credit/Debit Cards";
             this.tabCardDetail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1462,7 +1462,7 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(388, 182);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 22);
+            this.label9.Size = new System.Drawing.Size(156, 30);
             this.label9.TabIndex = 78;
             this.label9.Text = "Listed Cards";
             // 
@@ -1493,7 +1493,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(28, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 22);
+            this.label7.Size = new System.Drawing.Size(211, 30);
             this.label7.TabIndex = 69;
             this.label7.Text = "Supported Cards";
             // 
@@ -1515,37 +1515,37 @@
             this.dgvCard.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCard.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCard.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCard.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCard.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCard.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCard.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCard.EnableHeadersVisualStyles = false;
             this.dgvCard.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvCard.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvCard.Location = new System.Drawing.Point(381, 215);
             this.dgvCard.Name = "dgvCard";
             this.dgvCard.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCard.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCard.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCard.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCard.Size = new System.Drawing.Size(504, 268);
@@ -1580,7 +1580,7 @@
             // 
             this.dtpED.Location = new System.Drawing.Point(85, 439);
             this.dtpED.Name = "dtpED";
-            this.dtpED.Size = new System.Drawing.Size(223, 20);
+            this.dtpED.Size = new System.Drawing.Size(223, 22);
             this.dtpED.TabIndex = 37;
             this.dtpED.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -1621,7 +1621,7 @@
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.Location = new System.Drawing.Point(85, 349);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel16.Size = new System.Drawing.Size(84, 20);
             this.metroLabel16.TabIndex = 33;
             this.metroLabel16.Text = "Card Holder";
             this.metroLabel16.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1632,7 +1632,7 @@
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.Location = new System.Drawing.Point(85, 417);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel15.Size = new System.Drawing.Size(87, 20);
             this.metroLabel15.TabIndex = 31;
             this.metroLabel15.Text = "Expirey Date";
             this.metroLabel15.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1675,7 +1675,7 @@
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.Location = new System.Drawing.Point(85, 282);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(34, 19);
+            this.metroLabel14.Size = new System.Drawing.Size(36, 20);
             this.metroLabel14.TabIndex = 29;
             this.metroLabel14.Text = "CVV";
             this.metroLabel14.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1742,7 +1742,7 @@
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.Location = new System.Drawing.Point(85, 215);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel12.Size = new System.Drawing.Size(86, 20);
             this.metroLabel12.TabIndex = 4;
             this.metroLabel12.Text = "Card Numer";
             this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1765,7 +1765,7 @@
             this.lblProfile.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfile.Location = new System.Drawing.Point(408, 33);
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(105, 22);
+            this.lblProfile.Size = new System.Drawing.Size(142, 30);
             this.lblProfile.TabIndex = 1;
             this.lblProfile.Text = "User Profile";
             // 
@@ -1801,6 +1801,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 734);
             this.panel1.TabIndex = 62;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel9
             // 

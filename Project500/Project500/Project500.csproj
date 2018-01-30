@@ -54,13 +54,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework">
-      <HintPath>..\..\..\..\..\Desktop\New folder\MetroFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\Documents\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Design">
-      <HintPath>..\..\..\..\..\Desktop\New folder\MetroFramework.Design.dll</HintPath>
+      <HintPath>..\..\..\..\..\Documents\MetroFramework.Design.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Fonts">
-      <HintPath>..\..\..\..\..\Desktop\New folder\MetroFramework.Fonts.dll</HintPath>
+      <HintPath>..\..\..\..\..\Documents\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>

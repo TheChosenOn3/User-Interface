@@ -64,12 +64,14 @@ namespace Project500
         private void Profile_Load(object sender, EventArgs e)
         {
             //populate mar dei random fields van btc
-
+           
             UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
 
              UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchBenPaymentAcount(user.RsaID);
-
+            txtWalletName.Text = UserCrypto.WaletName;
+            txtWalletCode.Text = UserCrypto.Waletaddress;
+            txtWalletAmount.Text = UserCrypto.Amount.ToString();
             //fill datagrids
             FillUserEFTDatagrid(UserEFTList);
             FillUserCardDatagrid(UserCardList);
@@ -1100,6 +1102,11 @@ namespace Project500
                 default:
                     break;
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
