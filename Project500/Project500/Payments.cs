@@ -621,7 +621,7 @@ namespace Project500
         private void btnBatch_Click(object sender, EventArgs e)
         {
             List<Payment> batchlist = new List<Payment>();
-            StreamReader reader = new StreamReader("C: /Users/Ekilian/source/repos/User - Interface/Project500/ReadTest.csv");
+            StreamReader reader = new StreamReader("ReadTest.csv");
 
            
                 List<string> headerList = null;
@@ -650,9 +650,7 @@ namespace Project500
                     MessageBox.Show(payment.Amount.ToString());
                     payment.TypePayment = PaymentType.Card;
                     payment.UserID = "1";
-                batchlist.Add(payment);
-
-
+                    batchlist.Add(payment);
                 }
             foreach (var item in batchlist)
             {

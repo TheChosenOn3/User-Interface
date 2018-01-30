@@ -14,12 +14,12 @@ namespace Entities1
             get { return cardNr; }
             set { cardNr = value; }
         }
-        private string accountHolder;
+        private string cardHolder;
 
-        public string AccountHolder
+        public string CardHolder
         {
-            get { return accountHolder; }
-            set { accountHolder = value; }
+            get { return cardHolder; }
+            set { cardHolder = value; }
         }
 
         private string cvv;
@@ -45,7 +45,7 @@ namespace Entities1
         public Card(string CardNr, string AccountHolder, string Cvv, DateTime Expiry,string UseId)
         {
             this.cardNr = CardNr;
-            this.accountHolder = AccountHolder;
+            this.cardHolder = CardHolder;
             this.cvv = Cvv;
             this.expiry = Expiry;
             this.userId = UserId;

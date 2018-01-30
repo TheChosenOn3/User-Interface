@@ -34,6 +34,7 @@
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.tabCRegister = new MetroFramework.Controls.MetroTabControl();
             this.tabPersonalDetail = new MetroFramework.Controls.MetroTabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnExitPersonal = new MetroFramework.Controls.MetroButton();
             this.btnNextAddress = new MetroFramework.Controls.MetroButton();
             this.txtBusiness = new MetroFramework.Controls.MetroTextBox();
@@ -47,6 +48,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.mtpAddress = new MetroFramework.Controls.MetroTabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnExitAddress = new MetroFramework.Controls.MetroButton();
             this.btnBackPersonal = new MetroFramework.Controls.MetroButton();
             this.btnNextLogin = new MetroFramework.Controls.MetroButton();
@@ -63,6 +65,7 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.mtpAccount = new MetroFramework.Controls.MetroTabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnExitLogin = new MetroFramework.Controls.MetroButton();
             this.btnBackAddress = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
@@ -75,9 +78,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblProfile = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.tabCRegister.SuspendLayout();
             this.tabPersonalDetail.SuspendLayout();
@@ -135,6 +135,18 @@
             this.tabPersonalDetail.VerticalScrollbarHighlightOnWheel = false;
             this.tabPersonalDetail.VerticalScrollbarSize = 8;
             this.tabPersonalDetail.Click += new System.EventHandler(this.tabPersonalDetail_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(249, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 22);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Personal Details";
             // 
             // btnExitPersonal
             // 
@@ -416,6 +428,18 @@
             this.mtpAddress.VerticalScrollbarSize = 8;
             this.mtpAddress.Click += new System.EventHandler(this.mtpAddress_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(257, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 22);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Address Details";
+            // 
             // btnExitAddress
             // 
             this.btnExitAddress.Location = new System.Drawing.Point(12, 262);
@@ -615,7 +639,7 @@
             // 
             // 
             this.txtSuburb.CustomButton.Image = null;
-            this.txtSuburb.CustomButton.Location = new System.Drawing.Point(150, 2);
+            this.txtSuburb.CustomButton.Location = new System.Drawing.Point(170, 2);
             this.txtSuburb.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtSuburb.CustomButton.Name = "";
             this.txtSuburb.CustomButton.Size = new System.Drawing.Size(13, 13);
@@ -648,7 +672,7 @@
             // 
             // 
             this.txtProvince.CustomButton.Image = null;
-            this.txtProvince.CustomButton.Location = new System.Drawing.Point(150, 2);
+            this.txtProvince.CustomButton.Location = new System.Drawing.Point(170, 2);
             this.txtProvince.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtProvince.CustomButton.Name = "";
             this.txtProvince.CustomButton.Size = new System.Drawing.Size(13, 13);
@@ -746,6 +770,19 @@
             this.mtpAccount.VerticalScrollbarBarColor = true;
             this.mtpAccount.VerticalScrollbarHighlightOnWheel = false;
             this.mtpAccount.VerticalScrollbarSize = 8;
+            this.mtpAccount.Click += new System.EventHandler(this.mtpAccount_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(264, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 22);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Account Details";
             // 
             // btnExitLogin
             // 
@@ -947,42 +984,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(249, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 22);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Personal Details";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(257, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 22);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Address Details";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(264, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 22);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Account Details";
             // 
             // Register
             // 

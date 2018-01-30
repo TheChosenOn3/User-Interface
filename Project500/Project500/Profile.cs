@@ -85,10 +85,10 @@ namespace Project500
             // split address into fields
 
             string Province = a[1];
-            string Suburb = a[5];
+            string Suburb = a[2];
             string Streer = a[4];
-            string StrNum = a[3];
-            string City = a[2];
+            string StrNum = a[5];
+            string City = a[3];
             string Country = a[0];
 
             txtCountry.Text = Country;
@@ -146,7 +146,7 @@ namespace Project500
                 table.Columns.Add("Expirey Date");
                 foreach (Card item in Cardlist)
                 {
-                    table.Rows.Add(item.CardNr, item.AccountHolder, item.Cvv, item.Expiry.ToString());
+                    table.Rows.Add(item.CardNr, item.CardHolder, item.Cvv, item.Expiry.ToString());
                 }
                 return table;
             }
@@ -747,6 +747,9 @@ namespace Project500
         {
             Waletname = txtWalletName.Text.Trim();
             Waletammount += float.Parse(txtWalletAmount.Text.Trim());
+
+            
+
             txtWalletCode.Text = WalletID;
             txtWalletName.Text = Waletname;
             txtWalletAmount.Text = Waletammount.ToString();
@@ -1073,7 +1076,7 @@ namespace Project500
         {
             int index = e.RowIndex;
             Card = UserCardList[index];
-            txtCardHolder.Text = Card.AccountHolder;
+            txtCardHolder.Text = Card.CardHolder;
             txtCVV.Text = Card.Cvv;
             txtCardNum.Text = Card.CardNr;
             dtpED.Value = DateTime.Now;

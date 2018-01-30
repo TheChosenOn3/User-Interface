@@ -18,11 +18,24 @@ namespace Controllers
 
         public static List<Beneficiary> GetBeneficiarys(string UserId)
         {
+            // putq iff to check if the list is enpty
+            // putq iff to check if the list is enpty
+            // putq iff to check if the list is enpty
+            // putq iff to check if the list is enpty
+            // putq iff to check if the list is enpty
             List<Beneficiary> BeneficiaryList = new List<Beneficiary>();
             client = new HttpClient();
             path += UserId;
-            var response = client.GetStringAsync(path).Result;
-            BeneficiaryList = JsonConvert.DeserializeObject<List<Beneficiary>>(response);
+
+            try
+            {
+                var response = client.GetStringAsync(path).Result;
+                BeneficiaryList = JsonConvert.DeserializeObject<List<Beneficiary>>(response);
+            }
+            catch (Exception)
+            {
+                BeneficiaryList = new List<Beneficiary>();
+            }
 
             return BeneficiaryList;
         }
