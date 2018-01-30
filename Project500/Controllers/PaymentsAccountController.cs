@@ -7,6 +7,12 @@ using System.Net.Http;
 
 namespace Controllers
 {
+    public enum userType
+    {
+        Client = 1,
+        Beneficiary
+    }
+
     public class PaymentsAccountController
     {
         public static string Control = "Account/";
@@ -16,7 +22,7 @@ namespace Controllers
         }
         public static List<PaymentAccount> SearchUserPaymentAcount(string UserId)
         {
-            return ControllerHandler<PaymentAccount>.Search(Control + UserId);
+            return ControllerHandler<PaymentAccount>.Search(Control + UserId + "/" + userType.Client);
         }
         public static bool DeleteUserPaymentAcount(string UserAccID)
         {

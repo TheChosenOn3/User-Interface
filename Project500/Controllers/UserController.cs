@@ -12,8 +12,10 @@ namespace Controllers
         public static string Control = "User/";
         static HttpClient client;
         public static string path = Connection.url + "User/";
+
         public static User CheckLogin(string username, string pass)
         {
+            path = Connection.url + "User/";
             client = new HttpClient();
             User _user = null;
             path += username + "/" + pass;
@@ -26,10 +28,11 @@ namespace Controllers
 
         public static User CheckEmailExist(string username, string pass)
         {
+            path = Connection.url + "User/";
             client = new HttpClient();
             User _user = null;
             //path += username;
-            var response = client.GetStringAsync(path + username).Result;
+            var response = client.GetStringAsync(path + username + "/").Result;
             bool Exists = JsonConvert.DeserializeObject<bool>(response);
 
             if (Exists)
