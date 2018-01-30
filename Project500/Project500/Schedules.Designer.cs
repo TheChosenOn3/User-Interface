@@ -155,6 +155,7 @@
             this.tabFilterScheduel.VerticalScrollbarBarColor = true;
             this.tabFilterScheduel.VerticalScrollbarHighlightOnWheel = false;
             this.tabFilterScheduel.VerticalScrollbarSize = 8;
+            this.tabFilterScheduel.Click += new System.EventHandler(this.tabFilterScheduel_Click);
             // 
             // metroLabel4
             // 
