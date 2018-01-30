@@ -6,6 +6,6 @@ namespace Controllers
 {
    public class Connection
     {
-        public static string url = "http://172.18.12.205/api/";
+        public static string url = "http://localhost:49860/api/";
     }
 }
