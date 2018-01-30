@@ -63,6 +63,7 @@ namespace Project500
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            //huj
             //populate mar dei random fields van btc
            
             UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
