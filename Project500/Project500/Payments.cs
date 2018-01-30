@@ -25,6 +25,7 @@ namespace Project500
         List<PaymentAccount> UserPaymentAccountList = new List<PaymentAccount>();
         List<Card> UserCardList = new List<Card>();
         List<Crypto> BeneficairyCrypoList = new List<Crypto>();
+
         List<Crypto> BeneficairyCrypoListS = new List<Crypto>();
         Payment payment = new Payment();
         Beneficiary beneficiary = new Beneficiary();
@@ -81,14 +82,14 @@ namespace Project500
         {
 
             // fill object list
-            UobjectListe.Add("Crypto");
+            UobjectListe.Add("Crypto:");
             foreach (PaymentAccount item in UserPaymentAccountList)
             {
-                UobjectListe.Add("EFT " + item.AccountNumber);
+                UobjectListe.Add("EFT:" + item.AccountNumber);
             }
             foreach (Card item in UserCardList)
             {
-                UobjectListe.Add("Card " + item.CardNr);
+                UobjectListe.Add("Card:" + item.CardNr);
             }
             foreach (string item in UobjectListe)
             {
@@ -104,12 +105,12 @@ namespace Project500
 
             foreach (Crypto item in bencryptolist)
             {
-                BenbjectListe.Add("Crypto " + item.WaletName);
+                BenbjectListe.Add("Crypto:" + item.WaletName);
 
             }
             foreach (PaymentAccount item in beneftlist)
             {
-                BenbjectListe.Add("EFT " + item.Reference);
+                BenbjectListe.Add("EFT:" + item.Reference);
             }
             return BenbjectListe;
 
@@ -466,38 +467,78 @@ namespace Project500
                 }
                 else
                 {
+                    string UAccNum = "";
+                    string BenAccNum = "";
+                    string selectPayAcc = benected.Substring(benected.IndexOf(":")+1,benected.Length- benected.IndexOf(":"));
+                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":"));
                     if (usertype == "Cry")
                     {
+
+                        
                         typepay = PaymentType.Crypto;
+                        foreach (Crypto item in BeneficairyCrypoList)
+                        {
+                            if (item.Waletaddress == selectPayAcc)
+                            {
+                                BenAccNum = item.Waletaddress;
+                            }
+
+                        }
                     }
                     else if (usertype == "Car")
                     {
                         typepay = PaymentType.Card;
+                        foreach (Card item in UserCardList)
+                        {
+                            if (item.CardNr == selectUser)
+                            {
+                                UAccNum = item.CardNr;
+                            }
+
+                        }
                     }
                     else
                     {
                         typepay = PaymentType.EFT;
+                        foreach (PaymentAccount item in UserPaymentAccountList)
+                        {
+                            if (item.AccountNumber == selectUser)
+                            {
+                                UAccNum = item.AccountNumber;
+                            }
+
+                        }
+                        foreach (PaymentAccount item in BenPaymentAccountList)
+                        {
+                            if (item.AccountNumber == selectPayAcc)
+                            {
+                                BenAccNum = item.AccountNumber;
+                            }
+
+                        }
                     }
-                    int PaymentNum1 = rnd.Next(1, 1000);
-                    int PaymentNum2 = rnd.Next(1, 1000);
-                    int SchedueldNum = rnd.Next(1, 1000);
-                    string paynum = PaymentNum1.ToString() + PaymentNum2.ToString() + SchedueldNum.ToString();
-                    string ScheDNum = SchedueldNum.ToString();
+                    int PaymentNum1 = rnd.Next(4, 1024);
+                    int PaymentNum2 = rnd.Next(10, 1042);
+                    int SchedueldNum = rnd.Next(11, 1022);
+                    string Schedpaynum = PaymentNum1.ToString() + PaymentNum2.ToString() + SchedueldNum.ToString();
+                   
                     foreach (Payment item in PaymentList)
                     {
-                        if (paynum == item.PaymentNumber)
+                        if (Schedpaynum == item.PaymentNumber)
                         {
-                            paynum += "9";
+                            Schedpaynum += "9";
                         }
-                        if (ScheDNum == item.ScheduleNr)
-                        {
-                            ScheDNum += "9";
-                        }
+                     
 
                     }
+                  
+                  
+
+                      
+                        //uiykjhtgrfdluiykjthre;oluiyutreeliitytrerelyty
                     string Paydate1 = dtpPayDate.Value.ToString("dd/MM/yyyy");
 
-                    PaymentList.Add(new Payment(SchedueldNum.ToString(), txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", paynum, typepay, recur, DateTime.Now.ToString(), user.RsaID));
+                    PaymentList.Add(new Payment(Schedpaynum, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", UAccNum, typepay, recur, DateTime.Now.ToString(), user.RsaID,BenAccNum));
                     //add payment
                     FillPaymentDatagrid(PaymentList);
                     ClearFields();

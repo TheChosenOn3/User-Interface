@@ -234,38 +234,93 @@ namespace Project500
                 string userlected = cbuserpaymentmethod.SelectedItem.ToString();
                 string usertype = userlected.Substring(0, 3);
                 string bentype = benected.Substring(0, 3);
-                if (usertype != bentype)
+
+                
+
+                if (usertype != "Car" && bentype != "EFT")
                 {
                     MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
                 }
-                if (usertype == "Cry")
+                else if (usertype != "EFT" && bentype != "EFT")
                 {
-                    typepay = PaymentType.Crypto;
+                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
                 }
-                else if (usertype == "Car")
+                else if (usertype != "Cry" && bentype != "Cry")
                 {
-                    typepay = PaymentType.Card;
+                    MessageBox.Show("your selected payment type needs to corispond with the beneficiarys type");
                 }
                 else
                 {
-                    typepay = PaymentType.EFT;
-                }
+                    string UAccNum = "";
+                    string BenAccNum = "";
+                    string selectPayAcc = benected.Substring(benected.IndexOf(":") + 1, benected.Length - benected.IndexOf(":"));
+                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":"));
 
-                string Paydate1 = dtpPaymentdate.Value.ToString("dd/MM/yyyy");
-
-                Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), payment.Status, payment.PaymentNumber, typepay, recur, DateTime.Now.ToString(), user.RsaID);
-                PaymentsController.UpdatePyaments(newPayment);
-                foreach (Payment item in PaymentList)
-                {
-                    if (item.PaymentNumber == payment.PaymentNumber)
+                    if (usertype == "Cry")
                     {
-                        PaymentList.Remove(item);
+                        typepay = PaymentType.Crypto;
+                        
+                        foreach (Crypto item in BeneficairyCrypoList)
+                        {
+                            if (item.Waletaddress == selectPayAcc)
+                            {
+                                BenAccNum = item.Waletaddress;
+                            }
 
-                        break;
+                        }
                     }
+                    else if (usertype == "Car")
+                    {
+                       
+                        typepay = PaymentType.Card;
+                        foreach (Card item in UserCardList)
+                        {
+                            if (item.CardNr == selectUser)
+                            {
+                                UAccNum = item.CardNr;
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        typepay = PaymentType.EFT;
+                        foreach (PaymentAccount item in UserPaymentAccountList)
+                        {
+                            if (item.AccountNumber == selectUser)
+                            {
+                                UAccNum = item.AccountNumber;
+                            }
+
+                        }
+                        foreach (PaymentAccount item in BenPaymentAccountList)
+                        {
+                            if (item.AccountNumber == selectPayAcc)
+                            {
+                                BenAccNum = item.AccountNumber;
+                            }
+
+                        }
+                    }
+
+                    string Paydate1 = dtpPaymentdate.Value.ToString("dd/MM/yyyy");
+                    ///////zswedxcfvghjnszxdcfvgbhjnmklyjrthegdsvyihywe'igfhawev9urv[o9wz8ebytm'p0czseurytipv98difoouvpgtvyf0ucqv4oi7brufaf,m[ivnycgfdm,xcihrtvns[mg,ci'drjzhg[c,em'rslkvhn[mcf,rdmetrvlkchjn.cj,mi.knmchmndulwgmh5dip[wcmuv,w,4iv;oeaw'
+                    Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", UAccNum, typepay, recur, DateTime.Now.ToString(), user.RsaID, BenAccNum);
+                    PaymentsController.UpdatePyaments(newPayment);
+                    foreach (Payment item in PaymentList)
+                    {
+                        if (item.PaymentNumber == payment.PaymentNumber)
+                        {
+                            PaymentList.Remove(item);
+
+                            break;
+                        }
+                    }
+                    PaymentList.Add(newPayment);
+                    FillPaymentsDatagrid(PaymentList);
+
                 }
-                PaymentList.Add(newPayment);
-                FillPaymentsDatagrid(PaymentList);
+             
 
             }
 

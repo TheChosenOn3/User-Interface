@@ -101,11 +101,14 @@ namespace Entities1
             get { return userID; }
             set { userID = value; }
         }
+        string beneficiaryAccount;
 
         public string Id1 { get => Id; set => Id = value; }
+        public string BeneficiaryAccount { get => beneficiaryAccount; set => beneficiaryAccount = value; }
 
-        public Payment(string ScheduleNr, string Description, string BeneficairyID, string PayDate, float Amount, string Interval, string Status, string PaymentNumber, PaymentType TypePayment, bool Recurring, string DateCreated, string UserID)
+        public Payment(string ScheduleNr, string Description, string BeneficairyID, string PayDate, float Amount, string Interval, string Status, string PaymentNumber, PaymentType TypePayment, bool Recurring, string DateCreated, string UserID,string BneneficiaryAccount)
         {
+            this.beneficiaryAccount = BeneficiaryAccount;
             this.scheduleNr = ScheduleNr;
             this.description = Description;
             this.beneficiaryID = BeneficairyID;

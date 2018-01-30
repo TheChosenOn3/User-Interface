@@ -239,8 +239,8 @@ namespace Project500
                     //ewqqwe
 
                 }
-                List<Payment> paylistfilter = new List<Payment>();
-                paylistfilter = PaymentList;
+                
+                PaymentListS = PaymentList;
                 // begin
                 if (cbPaymenttype.SelectedIndex == -1)
                 {
@@ -503,7 +503,7 @@ namespace Project500
 
         private void btnGenerateReport_Click(object sender, EventArgs e)
         {
-
+       
         }
 
         private void rteDecription_TextChanged(object sender, EventArgs e)
