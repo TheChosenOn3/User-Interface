@@ -1483,7 +1483,7 @@
             this.tcBAcounts.Location = new System.Drawing.Point(186, 392);
             this.tcBAcounts.Margin = new System.Windows.Forms.Padding(2);
             this.tcBAcounts.Name = "tcBAcounts";
-            this.tcBAcounts.SelectedIndex = 2;
+            this.tcBAcounts.SelectedIndex = 0;
             this.tcBAcounts.Size = new System.Drawing.Size(902, 346);
             this.tcBAcounts.TabIndex = 17;
             this.tcBAcounts.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1533,6 +1533,9 @@
             // 
             // dgvEFT
             // 
+            this.dgvEFT.AllowUserToAddRows = false;
+            this.dgvEFT.AllowUserToDeleteRows = false;
+            this.dgvEFT.AllowUserToResizeColumns = false;
             this.dgvEFT.AllowUserToResizeRows = false;
             this.dgvEFT.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvEFT.BorderStyle = System.Windows.Forms.BorderStyle.None;

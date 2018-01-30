@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entities1;
 using Controllers;
 using MetroFramework;
+using System.IO;
 
 namespace Project500
 {
@@ -501,9 +502,82 @@ namespace Project500
 
         }
 
+        //Generates Report from the Payments on the history datagridview
+        public void GenerateReportForPaymentsHistory()
+        {
+            string DesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string FinalPath = DesktopPath + "/Payments Report.csv";
+            string delimiter = ",";
+
+            int RowCount = int.Parse(dgvPayments.RowCount.ToString());
+
+            List<string[]> Output = new List<string[]>();
+
+            Output.Add(new string[] { "Payment Number", "Beneficiary Name", "Description", "Pay Date", "Amount", "Interval", "Status", "Type" });
+            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
+
+            int TotalPayments = 0;
+            int SuccessfulPayments = 0;
+            int FailedPayments = 0;
+
+            float TotalAmount = 0;
+            float TotalSuccessAmount = 0;
+            float TotalFailAmount = 0;
+
+            int Counter = 0;
+
+            foreach (DataGridViewRow item in dgvPayments.Rows)
+            {
+                if (Counter <= RowCount - 2)
+                {
+                    Output.Add(new string[] { item.Cells[0].Value.ToString(), item.Cells[1].Value.ToString(), item.Cells[2].Value.ToString(), item.Cells[3].Value.ToString(), item.Cells[4].Value.ToString(), item.Cells[5].Value.ToString(), item.Cells[6].Value.ToString(), item.Cells[7].Value.ToString(), });
+
+                    TotalPayments++;
+                    TotalAmount += float.Parse(item.Cells[4].Value.ToString());
+
+                    if (item.Cells[6].Value.ToString() == "Success")
+                    {
+                        SuccessfulPayments++;
+                        TotalSuccessAmount += float.Parse(item.Cells[4].Value.ToString());
+                    }
+                    else if (item.Cells[6].Value.ToString() == "Failed")
+                    {
+                        FailedPayments++;
+                        TotalFailAmount += float.Parse(item.Cells[4].Value.ToString());
+                    }
+
+                    Counter++;
+                }
+
+            }
+
+            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
+            Output.Add(new string[] { "Summary:", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Payments: ", TotalPayments.ToString(), "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount: ", TotalAmount.ToString(), "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Successful Payments: ", SuccessfulPayments.ToString(), "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount for Successful: ", TotalSuccessAmount.ToString(), "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Failed Payments: ", FailedPayments.ToString(), "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount for Failed: ", TotalFailAmount.ToString(), "", "", "", "", "", "" });
+
+            int length = Output.Count();
+            StringBuilder sb = new StringBuilder();
+
+            for (int index = 0; index < length; index++)
+            {
+                sb.AppendLine(string.Join(delimiter, Output[index]));
+            }
+
+            File.WriteAllText(FinalPath, sb.ToString());
+            MetroMessageBox.Show(this, "Payment has been saved on your desktop!", "Payment Report Saved");
+        }
+
         private void btnGenerateReport_Click(object sender, EventArgs e)
         {
-       
+            GenerateReportForPaymentsHistory();
         }
 
         private void rteDecription_TextChanged(object sender, EventArgs e)

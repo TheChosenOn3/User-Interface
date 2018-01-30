@@ -320,6 +320,9 @@
             // 
             // dgvScheduels
             // 
+            this.dgvScheduels.AllowUserToAddRows = false;
+            this.dgvScheduels.AllowUserToDeleteRows = false;
+            this.dgvScheduels.AllowUserToResizeColumns = false;
             this.dgvScheduels.AllowUserToResizeRows = false;
             this.dgvScheduels.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvScheduels.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -396,7 +399,7 @@
             this.tcCurerntScheduel.Location = new System.Drawing.Point(191, 516);
             this.tcCurerntScheduel.Margin = new System.Windows.Forms.Padding(2);
             this.tcCurerntScheduel.Name = "tcCurerntScheduel";
-            this.tcCurerntScheduel.SelectedIndex = 1;
+            this.tcCurerntScheduel.SelectedIndex = 0;
             this.tcCurerntScheduel.Size = new System.Drawing.Size(897, 222);
             this.tcCurerntScheduel.TabIndex = 24;
             this.tcCurerntScheduel.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -691,6 +694,9 @@
             // 
             // dgvBeneficiary
             // 
+            this.dgvBeneficiary.AllowUserToAddRows = false;
+            this.dgvBeneficiary.AllowUserToDeleteRows = false;
+            this.dgvBeneficiary.AllowUserToResizeColumns = false;
             this.dgvBeneficiary.AllowUserToResizeRows = false;
             this.dgvBeneficiary.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvBeneficiary.BorderStyle = System.Windows.Forms.BorderStyle.None;
