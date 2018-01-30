@@ -146,9 +146,10 @@ namespace Project500
             DataTable ConvertListToDataTable(List<Payment> list)
             {
                 DataTable table = new DataTable();
-                table.Columns.Add("payment number");
+                table.Columns.Add("Payment Number");
+                table.Columns.Add("Your Account");
                 table.Columns.Add("Beneficairy Name");
-
+                table.Columns.Add("Beneficairy Account");
                 table.Columns.Add("Description");
                 table.Columns.Add("paydate");
                 table.Columns.Add("Amont");
@@ -167,7 +168,7 @@ namespace Project500
                         }
                     }
 
-                    table.Rows.Add(item.PaymentNumber, bennnaem, item.Description, item.PayDate.ToString(), item.Amount, item.Interval, item.Status, item.TypePayment);
+                    table.Rows.Add(item.ScheduleNr,item.PaymentNumber, bennnaem,item.BeneficiaryAccount, item.Description, item.PayDate.ToString(), item.Amount, item.Interval, item.Status, item.TypePayment);
 
                 }
                 return table;
