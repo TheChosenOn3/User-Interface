@@ -68,7 +68,8 @@ namespace Project500
             UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
 
              UserCardList = CardController.RetrveCards(user.RsaID);
-            UserEFTList = PaymentsAccountController.SearchBenPaymentAcount(user.RsaID);
+            UserEFTList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
+            //sf
             txtWalletName.Text = UserCrypto.WaletName;
             txtWalletCode.Text = UserCrypto.Waletaddress;
             txtWalletAmount.Text = UserCrypto.Amount.ToString();
@@ -199,7 +200,9 @@ namespace Project500
         //make new card
         public Card makecard()
         {
-            Card newcard = new Card(txtCardNum.Text, txtCardHolder.Text, txtCVV.Text, DateTime.Now, "11111");
+            string someDate = dtpED.Value.ToString("MM/yyyy");
+            DateTime NewDate = DateTime.ParseExact(someDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            Card newcard = new Card(txtCardNum.Text,txtCardHolder.Text, txtCVV.Text, NewDate, user.RsaID);/////////////////ikujyhtgvrfoikujyht8kiju7yht
             return newcard;
         }
 
