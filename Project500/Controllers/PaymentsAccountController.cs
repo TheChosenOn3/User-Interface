@@ -30,6 +30,7 @@ namespace Controllers
         }
         public static bool UpdateUserPaymentAcount(PaymentAccount userAcount)
         {
+            userAcount.BeneficiaryID = null;
             return ControllerHandler<PaymentAccount>.Update(userAcount, Control);
         }
         public static bool AddUserPaymentAcount(PaymentAccount userAcount)
@@ -38,10 +39,12 @@ namespace Controllers
         }
         public static bool DeleteBenPaymentAcount(string BenAccID)
         {
+           
             return ControllerHandler<PaymentAccount>.Delete(Control + BenAccID);
         }
         public static bool UpdateBenPaymentAcount(PaymentAccount benAcount)
         {
+            benAcount.UserID = null;
             return ControllerHandler<PaymentAccount>.Update(benAcount, Control);
         }
         public static bool AddBenPaymentAcount(PaymentAccount benAcount)

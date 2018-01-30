@@ -25,13 +25,14 @@ namespace Entities1
         {
                 
         }
-        public Crypto(string WaletName, string Waletaddress, string BeneficiaryId)
+        public Crypto(string WaletName, string Waletaddress, float Amount, string BeneficiaryId,string UserId)
         {
+            this.amount = Amount;
+            this.userId = UserId;
             this.waletName = WaletName;
             this.waletaddress = Waletaddress;
             this.amount = Amount;
-            this.userId = UserId;
-            this.beneficiaryId = BeneficiaryId;
+             this.beneficiaryId = BeneficiaryId;
         }
     }
 }

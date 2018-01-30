@@ -40,11 +40,10 @@ namespace Project500
         User newuser = new User();
         List<PaymentAccount> UserEFTList = new List<PaymentAccount>();
         List<Card> UserCardList = new List<Card>();
-        List<Crypto> UserCryptoList = new List<Crypto>();
+        List<Crypto> BenCryptoList = new List<Crypto>();
+
         // wat de seop hier gebeer is nog onseker
-        string Waletname = "BTCACC";
-        float Waletammount = 1234;
-        string WalletID = "234567890";
+        Crypto UserCrypto = new Crypto();
         Card Card = new Card();
         PaymentAccount EFT = new PaymentAccount();
         Crypto wallet = new Crypto();
@@ -65,11 +64,10 @@ namespace Project500
         private void Profile_Load(object sender, EventArgs e)
         {
             //populate mar dei random fields van btc
-            txtWalletAmount.Text = Waletammount.ToString();
-            txtWalletCode.Text = WalletID;
-            txtWalletName.Text = Waletname;
 
-            UserCardList = CardController.RetrveCards(user.RsaID);
+            UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
+
+             UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchBenPaymentAcount(user.RsaID);
 
             //fill datagrids
@@ -745,21 +743,20 @@ namespace Project500
 
         private void metroButton5_Click(object sender, EventArgs e)
         {
-            Waletname = txtWalletName.Text.Trim();
-            Waletammount += float.Parse(txtWalletAmount.Text.Trim());
+           string  Waletname = txtWalletName.Text.Trim();
 
-            
 
-            txtWalletCode.Text = WalletID;
-            txtWalletName.Text = Waletname;
-            txtWalletAmount.Text = Waletammount.ToString();
+
+
+            Crypto newcryp = new Crypto(txtWalletName.Text, UserCrypto.Waletaddress, UserCrypto.Amount, "",user.RsaID);
+            CryptoController.UpateCrypto(newcryp);
 
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            wallet = new Crypto(Waletname, txtWalletCode.Text, txtWalletAmount.Text);
+           
         }
 
         private void metroTextBox14_Click(object sender, EventArgs e)

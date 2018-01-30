@@ -33,6 +33,7 @@ namespace Project500
         PaymentAccount BeneficiaryPaymentAccount = new PaymentAccount();
         Card userCard = new Card();
         Crypto benficairyCrypto = new Crypto();
+        Crypto userCrypto = new Crypto();
         string BenName = "";
         string Discription = "";
         float Amount1 = 0;
@@ -43,10 +44,7 @@ namespace Project500
         Random rnd2 = new Random();
 
 
-
-        string Waletname = "BTCACC";
-        float Waletammount = 11234;
-        string WalletID = "234567890";
+        
 
 
         //hier kom die SEOP nou   fill combo box met die # lists
@@ -67,7 +65,7 @@ namespace Project500
 
         private void Payments_Load(object sender, EventArgs e)
         {
-
+            userCrypto = CryptoController.GetUserCrypto(user.RsaID);
 
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
@@ -82,7 +80,8 @@ namespace Project500
         {
 
             // fill object list
-            UobjectListe.Add("Crypto:");
+            string mycryp = userCrypto.Waletaddress;
+            UobjectListe.Add("Crypto:"+mycryp);
             foreach (PaymentAccount item in UserPaymentAccountList)
             {
                 UobjectListe.Add("EFT:" + item.AccountNumber);
