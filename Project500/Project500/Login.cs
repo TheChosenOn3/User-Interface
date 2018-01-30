@@ -33,8 +33,13 @@ namespace Project500
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string password1 = "", passworrd;
             string username = txtUsername.Text.Trim();
-            string passworrd = txtPassword.Text.Trim();
+            password1 = EncryptData.Encrypt(txtPassword.Text.Trim());
+
+            passworrd = EncryptData.ConvertStringToHex(password1, System.Text.Encoding.Unicode);
+            //passworrd = password1.Replace('*', '/');
+
 
             if (IncorrectLoginCount > 2)
             {

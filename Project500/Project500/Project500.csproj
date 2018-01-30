@@ -90,6 +90,7 @@
     <Compile Include="Benenficiarys.Designer.cs">
       <DependentUpon>Benenficiarys.cs</DependentUpon>
     </Compile>
+    <Compile Include="EncryptData.cs" />
     <Compile Include="History.cs">
       <SubType>Form</SubType>
     </Compile>

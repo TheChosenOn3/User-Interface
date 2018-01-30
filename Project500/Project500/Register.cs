@@ -118,10 +118,17 @@ namespace Project500
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            string password1 = "";
+            string convirmpassword1 = "";
             bool cool = true;
             Email = txtEmail.Text.Trim();
-            password = txtPassword.Text.Trim();
-            convirmpassword = txtConfirmPassword.Text.Trim();
+            password1 = EncryptData.Encrypt(txtPassword.Text.Trim());
+            convirmpassword1 = EncryptData.Encrypt(txtConfirmPassword.Text.Trim());
+            password = EncryptData.ConvertStringToHex(password1, System.Text.Encoding.Unicode);
+            convirmpassword = EncryptData.ConvertStringToHex(convirmpassword1, System.Text.Encoding.Unicode);
+           // password = password1.Replace('/', '*');
+           //convirmpassword = convirmpassword1.Replace('/', '*');
+
 
             List<string> ErrorLog = new List<string>();
 
