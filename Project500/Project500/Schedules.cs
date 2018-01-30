@@ -31,7 +31,7 @@ namespace Project500
         User user = new User();
         PaymentType paymentType = new PaymentType();
         string status = "";
-
+        Crypto userCrypto = new Crypto();
         List<String> UobjectListe = new List<String>();
         List<String> BenbjectListe = new List<String>();
 
@@ -127,6 +127,7 @@ namespace Project500
                 }
               
             }
+            userCrypto = CryptoController.GetUserCrypto(user.RsaID);
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             UserCardList = CardController.RetrveCards(user.RsaID);
             FillPaymentsDatagrid(PaymentList);
@@ -136,7 +137,8 @@ namespace Project500
         {
 
             // fill object list
-            UobjectListe.Add("Crypto");
+            string mycryp = userCrypto.Waletaddress;
+            UobjectListe.Add("Crypto" + mycryp);
             foreach (PaymentAccount item in UserPaymentAccountList)
             {
                 UobjectListe.Add("EFT " + item.AccountNumber);

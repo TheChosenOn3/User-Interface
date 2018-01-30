@@ -333,7 +333,7 @@ namespace Project500
             }
             if (go == false)
             {
-                Crypto crypto = new Crypto(txtWaletName.Text.Trim(), txtWalletCode.Text.Trim(),ben.BeneficairyID);
+                Crypto crypto = new Crypto(txtWaletName.Text.Trim(), txtWalletCode.Text.Trim(),0,ben.BeneficairyID,"");
                    BenCryptoList.Add(crypto);
                 CryptoController.AddCrypto(crypto);
                 FillCryptoDatagrid(ben);
@@ -402,9 +402,8 @@ namespace Project500
 
         private void BtnDeletCrypto_Click(object sender, EventArgs e)
         {
-            txtWaletName.Text = "";
-            txtWalletCode.Text = "";
-            CryptoController.DeleteCrypto(EFT.BeneficiaryID);
+            
+            CryptoController.DeleteCrypto(crypto.BeneficiaryId);
             BenCryptoList.Remove(crypto);
             BenCryptoListS.Remove(crypto);
             FillCryptoDatagrid(ben);
@@ -585,7 +584,7 @@ namespace Project500
                 if (txtWalletCode.Text == item.Waletaddress)
                 {
                     BenCryptoList.Remove(item);
-                    BenCryptoList.Add(new Crypto(txtWaletName.Text.Trim(), txtWaletName.Text.Trim(),ben.BeneficairyID));
+                    BenCryptoList.Add(new Crypto(txtWaletName.Text.Trim(), txtWaletName.Text.Trim(),0,ben.BeneficairyID,""));
                     CryptoController.UpateCrypto(crypto);
 
                     FillCryptoDatagrid(ben);
