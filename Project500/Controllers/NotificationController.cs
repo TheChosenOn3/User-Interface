@@ -7,9 +7,10 @@ namespace Controllers
 {
    public class NotificationController
     {
-        //public static List<Notification> getNotifications(string UserID)
-        //{
-            
-        //}
+        static string Control = "Notification";
+        public static List<Notification> getNotifications(string UserID)
+        {
+            return ControllerHandler<Notification>.Search(Control + UserID);
+        }
     }
 }
