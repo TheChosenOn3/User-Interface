@@ -48,7 +48,6 @@ namespace Project500
         PaymentAccount EFT = new PaymentAccount();
         Crypto wallet = new Crypto();
 
-
         public Profile()
         {
             InitializeComponent();
