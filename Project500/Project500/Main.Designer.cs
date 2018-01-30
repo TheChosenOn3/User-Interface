@@ -35,7 +35,6 @@
             this.tcNotifications = new MetroFramework.Controls.MetroTabControl();
             this.tabNotifications = new MetroFramework.Controls.MetroTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRucuring = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnProfileImage = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -94,7 +93,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.btnRucuring);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.btnProfileImage);
             this.panel1.Controls.Add(this.panel7);
@@ -114,23 +112,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 734);
             this.panel1.TabIndex = 2;
-            // 
-            // btnRucuring
-            // 
-            this.btnRucuring.FlatAppearance.BorderSize = 0;
-            this.btnRucuring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRucuring.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRucuring.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRucuring.Image = ((System.Drawing.Image)(resources.GetObject("btnRucuring.Image")));
-            this.btnRucuring.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRucuring.Location = new System.Drawing.Point(12, 518);
-            this.btnRucuring.Name = "btnRucuring";
-            this.btnRucuring.Size = new System.Drawing.Size(164, 71);
-            this.btnRucuring.TabIndex = 9;
-            this.btnRucuring.Text = " Recurings";
-            this.btnRucuring.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRucuring.UseVisualStyleBackColor = true;
-            this.btnRucuring.Click += new System.EventHandler(this.btnRucuring_Click);
             // 
             // panel9
             // 
@@ -405,6 +386,5 @@
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button btnRucuring;
     }
 }

@@ -257,13 +257,15 @@ namespace Project500
                     break;
                 }
             }
+
             if (go == false)
             {
-                ben = new Beneficiary(txtBID.Text.Trim(), txtBName.Text.Trim(), txtBBranchCode.Text.Trim(), user.RsaID);
-                BeneficiaryList.Add(ben);
+                Beneficiary benAdd = new Beneficiary(txtBID.Text.Trim(), txtBName.Text.Trim(), txtBBranchCode.Text.Trim(), user.RsaID);
+                BeneficiaryList.Add(benAdd);
                 ClearBens();
+                BeneficiaryController.AddBeneficiary(benAdd);
                 FillBeneficiaryDatagrid(BeneficiaryList);
-                BeneficiaryController.AddBeneficiary(ben);
+                
             }
             else
             {
@@ -291,9 +293,9 @@ namespace Project500
                 if (item.BeneficairyID == txtBID.Text.Trim())
                 {
                     BeneficiaryList.Remove(item);
-                    ben = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text, user.RsaID);
-                    BeneficiaryList.Add(ben);
-                    BeneficiaryController.UpdateBeneficiary(ben);
+                    Benn = new Beneficiary(txtBID.Text, txtBName.Text, txtBBranchCode.Text, user.RsaID);
+                    BeneficiaryList.Add(Benn);
+                    BeneficiaryController.UpdateBeneficiary(Benn);
                     txtBName.Text = "";
                     txtBID.Text = "";
                     txtBBranchCode.Text = "";
