@@ -67,7 +67,15 @@ namespace Project500
 
         private void Payments_Load(object sender, EventArgs e)
         {
-            userCrypto = CryptoController.GetUserCrypto(user.RsaID);
+            if (CryptoController.GetUserCrypto(user.RsaID) == null)
+            {
+                userCrypto  = new Crypto("","",0,"",user.RsaID);
+            }
+            else
+            {
+                userCrypto = CryptoController.GetUserCrypto(user.RsaID);
+            }
+          
 
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
@@ -472,6 +480,14 @@ namespace Project500
                             if (item.CardNr == selectUser)
                             {
                                 UAccNum = item.CardNr;
+                            }
+
+                        }
+                        foreach (PaymentAccount item in BenPaymentAccountList)
+                        {
+                            if (item.AccountNumber == selectPayAcc)
+                            {
+                                BenAccNum = item.AccountNumber;
                             }
 
                         }
