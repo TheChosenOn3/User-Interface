@@ -11,6 +11,7 @@ namespace Controllers
         public static List<Notification> getNotifications(string UserID)
         {
             return ControllerHandler<Notification>.Search(Control + UserID);
+            //df
         }
     }
 }
