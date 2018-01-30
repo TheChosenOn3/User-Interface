@@ -28,7 +28,15 @@ namespace Controllers
             
             var response = client.GetStringAsync(path + UserId + "/" + userType.Client).Result;
             CryptoList = JsonConvert.DeserializeObject<List<Crypto>>(response);
-            crypt = CryptoList[0];
+            if (CryptoList.Count==0)
+            {
+                crypt = null;
+            }
+            else
+            {
+                crypt = CryptoList[0];
+            }
+            
 
             return crypt;
         }

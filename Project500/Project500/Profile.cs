@@ -63,10 +63,16 @@ namespace Project500
 
         private void Profile_Load(object sender, EventArgs e)
         {
-            //huj
             //populate mar dei random fields van btc
+            if (CryptoController.GetUserCrypto(user.RsaID) != null)
+            {
+                UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
+            }
+            else
+            {
+                UserCrypto = new Crypto("", "", 0, "", user.RsaID);
+            }
            
-            UserCrypto = CryptoController.GetUserCrypto(user.RsaID);
 
              UserCardList = CardController.RetrveCards(user.RsaID);
             UserEFTList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
