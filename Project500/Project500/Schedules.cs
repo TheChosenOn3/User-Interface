@@ -120,6 +120,7 @@ namespace Project500
         }
         private void Schedules_Load(object sender, EventArgs e)
         {
+
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             PaymentListF = PaymentsController.GetPayments(user.RsaID);
             foreach (Payment   item in PaymentListF)
@@ -145,6 +146,8 @@ namespace Project500
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             UserCardList = CardController.RetrveCards(user.RsaID);
             FillPaymentsDatagrid(PaymentList);
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
+            FillBeneficiaryDatagrid(BeneficairyList);
             popUcb();
         }
         public void popUcb()
@@ -215,7 +218,7 @@ namespace Project500
 
         private void btnUpdatePayment_Click(object sender, EventArgs e)
         {
-            payment = new Payment();
+           
             PaymentType typepay = new PaymentType();
             bool recur = false;
 
@@ -563,8 +566,8 @@ namespace Project500
             txtInterval.Text = payment.Interval;
             
             dtpPaymentdate.Value = DateTime.ParseExact(payment.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            FillBeneficiaryDatagrid(BeneficairyList);
-            FillBeneficiaryDatagrid(BeneficairyList);
+        
+        
         }
 
         private void dgvBeneficiary_RowEnter(object sender, DataGridViewCellEventArgs e)
