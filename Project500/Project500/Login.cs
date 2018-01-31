@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controllers;
@@ -20,8 +21,10 @@ namespace Project500
 
         public Login()
         {
+            
             InitializeComponent();
             txtUsername.Focus();
+
         }
 
         //Constructor used for Server Offline or Maintenance: True = Maintenance, False = Server Offline
@@ -57,7 +60,6 @@ namespace Project500
         {
             txtUsername.Focus();
             txtUsername.Select();
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

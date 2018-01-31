@@ -76,6 +76,7 @@
             this.Name = "Splash";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Splash_Load);
+            this.Shown += new System.EventHandler(this.Splash_Shown);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

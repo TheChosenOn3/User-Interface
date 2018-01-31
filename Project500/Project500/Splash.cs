@@ -28,9 +28,15 @@ namespace Project500
         public Splash()
         {
             InitializeComponent();
+            Main();
         }
 
         private void Splash_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void Main()
         {
             //Setting Local Variables
             MaintenanceStatus = true;
@@ -109,6 +115,11 @@ namespace Project500
 
 
             Finish = true;
-        }        
+        }
+
+        private void Splash_Shown(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
