@@ -96,12 +96,12 @@ namespace Project500
 
             foreach (Crypto item in bencryptolist)
             {
-                BenbjectListe.Add("Crypto " + item.Waletaddress);
+                BenbjectListe.Add("Crypto:" + item.Waletaddress);
 
             }
             foreach (PaymentAccount item in beneftlist)
             {
-                BenbjectListe.Add("EFT " + item.AccountNumber);
+                BenbjectListe.Add("EFT:" + item.AccountNumber);
             }
             return BenbjectListe;
 
@@ -155,14 +155,14 @@ namespace Project500
 
             // fill object list
             string mycryp = userCrypto.Waletaddress;
-            UobjectListe.Add("Crypto" + mycryp);
+            UobjectListe.Add("Crypto:" + mycryp);
             foreach (PaymentAccount item in UserPaymentAccountList)
             {
-                UobjectListe.Add("EFT " + item.AccountNumber);
+                UobjectListe.Add("EFT:" + item.AccountNumber);
             }
             foreach (Card item in UserCardList)
             {
-                UobjectListe.Add("Card " + item.CardNr);
+                UobjectListe.Add("Card:" + item.CardNr);
             }
             foreach (string item in UobjectListe)
             {
@@ -564,6 +564,7 @@ namespace Project500
             txtAmount.Text = payment.Amount.ToString();
             txtDescription.Text = payment.Description;
             txtInterval.Text = payment.Interval;
+            FillBeneficiaryDatagrid(BeneficairyList);
             
             dtpPaymentdate.Value = DateTime.ParseExact(payment.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
         
@@ -586,8 +587,9 @@ namespace Project500
             }
             txtBname.Text = beneficiary.BeneficairyName;
             BenPaymentAccountList = PaymentsAccountController.SearchBenPaymentAcount(beneficiary.BeneficairyID);
+            BeneficairyCrypoList = CryptoController.GetCrypto(beneficiary.BeneficairyID);
 
-            BenbjectListe = PopSelectedBenAcount(BenPaymentAccountList, CryptoController.GetCrypto(beneficiary.BeneficairyID));
+            BenbjectListe = PopSelectedBenAcount(BenPaymentAccountList, BeneficairyCrypoList);
             List<string> remove = new List<string>();
             cbBAcounType.Items.Clear();
             foreach (string item in BenbjectListe)
