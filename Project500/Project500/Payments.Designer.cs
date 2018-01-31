@@ -621,18 +621,19 @@
             // 
             // btnRetryPayment
             // 
-            this.btnRetryPayment.Location = new System.Drawing.Point(161, 214);
+            this.btnRetryPayment.Location = new System.Drawing.Point(808, 214);
             this.btnRetryPayment.Name = "btnRetryPayment";
             this.btnRetryPayment.Size = new System.Drawing.Size(119, 36);
             this.btnRetryPayment.TabIndex = 81;
             this.btnRetryPayment.Text = "Retry Payment ";
             this.btnRetryPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnRetryPayment.UseSelectable = true;
+            this.btnRetryPayment.Visible = false;
             this.btnRetryPayment.Click += new System.EventHandler(this.btnRetryPayment_Click);
             // 
             // btnExacutePayment
             // 
-            this.btnExacutePayment.Location = new System.Drawing.Point(286, 214);
+            this.btnExacutePayment.Location = new System.Drawing.Point(177, 214);
             this.btnExacutePayment.Name = "btnExacutePayment";
             this.btnExacutePayment.Size = new System.Drawing.Size(119, 36);
             this.btnExacutePayment.TabIndex = 80;
@@ -643,7 +644,7 @@
             // 
             // btnDeletePayment
             // 
-            this.btnDeletePayment.Location = new System.Drawing.Point(36, 214);
+            this.btnDeletePayment.Location = new System.Drawing.Point(554, 214);
             this.btnDeletePayment.Name = "btnDeletePayment";
             this.btnDeletePayment.Size = new System.Drawing.Size(119, 36);
             this.btnDeletePayment.TabIndex = 79;
@@ -661,6 +662,7 @@
             this.btnRetryAllPayment.Text = "Retry All Payments";
             this.btnRetryAllPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnRetryAllPayment.UseSelectable = true;
+            this.btnRetryAllPayment.Visible = false;
             this.btnRetryAllPayment.Click += new System.EventHandler(this.btnRetryAllPayment_Click);
             // 
             // btnExacuteAllPayment
@@ -672,6 +674,7 @@
             this.btnExacuteAllPayment.Text = "Execute All Payments";
             this.btnExacuteAllPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnExacuteAllPayment.UseSelectable = true;
+            this.btnExacuteAllPayment.Visible = false;
             this.btnExacuteAllPayment.Click += new System.EventHandler(this.btnExacuteAllPayment_Click);
             // 
             // btnDeleteAllPayment
@@ -683,6 +686,7 @@
             this.btnDeleteAllPayment.Text = "Delete All payment";
             this.btnDeleteAllPayment.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnDeleteAllPayment.UseSelectable = true;
+            this.btnDeleteAllPayment.Visible = false;
             this.btnDeleteAllPayment.Click += new System.EventHandler(this.btnDeleteAllPayment_Click);
             // 
             // panel8
