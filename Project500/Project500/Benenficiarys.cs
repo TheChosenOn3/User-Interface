@@ -65,6 +65,7 @@ namespace Project500
 
             DataTable bentable = ConvertListToDataTable(BenDataGridList);
             dgvBeneficiary.DataSource = bentable;
+
             DataTable ConvertListToDataTable(List<Beneficiary> benlist)
             {
                 DataTable table = new DataTable();
@@ -87,15 +88,15 @@ namespace Project500
             // BenCryptoListS = CryptoController.GetCrypto(selectedben.BeneficairyID);
 
             BenCryptoListS = BenCryptoList;
-            foreach (Crypto item in BenCryptoListS)
-            {
-                if (item.BeneficiaryId == ben.BeneficairyID)
-                {
-                    BenCryptoList.Add(item);
-                    break;
-                }
+            //foreach (Crypto item in BenCryptoListS)
+            //{
+            //    if (item.BeneficiaryId == ben.BeneficairyID)
+            //    {
+            //        BenCryptoList.Add(item);
+            //        break;
+            //    }
 
-            }
+            //}
 
             DataTable Cryptable = ConvertListToDataTable(BenCryptoList);
             dgvCrypto.DataSource = Cryptable;
@@ -119,18 +120,6 @@ namespace Project500
 
             //  BenEFTListS = PaymentsAccountController.SearchBenPaymentAcount(selectedben.BeneficairyID);
             BenEFTListS = BenEFTList;
-
-            foreach (PaymentAccount item in BenEFTListS)
-            {
-                
-                if (item.BeneficiaryID == ben.BeneficairyID)
-                {
-
-                    BenEFTList.Add(item);
-                    break;
-                }
-
-            }
 
             DataTable EFTtable = ConvertListToDataTable(BenEFTList);
             dgvEFT.DataSource = EFTtable;
@@ -211,19 +200,22 @@ namespace Project500
 
         private void btnSeachB_Click(object sender, EventArgs e)
         {
-           BenName = txtSearchBName.Text.Trim();
-            BeneficiaryListS = BeneficiaryList;
+            BeneficiaryList = BeneficiaryController.GetBeneficiarys(user.RsaID);
 
-            foreach (Beneficiary item in BeneficiaryListS)
+            List<Beneficiary> SearchList = new List<Beneficiary>();            
+
+            foreach (Beneficiary item in BeneficiaryList)
             {
                 if (item.BeneficairyName.IndexOf(txtSearchBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                 {
-                    BeneficiaryList.Add(item);
+                    SearchList.Add(item);
                 }
             }
 
-            FillBeneficiaryDatagrid(BeneficiaryList);
-            ClearBens();
+            BeneficiaryList = SearchList;
+
+            FillBeneficiaryDatagrid(SearchList);
+            
         }
 
         private void dgvBeneficiary_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -340,7 +332,7 @@ namespace Project500
             if (go == false)
             {
                 Crypto crypto = new Crypto(txtWaletName.Text.Trim(), txtWalletCode.Text.Trim(),0,ben.BeneficairyID,"");
-                   BenCryptoList.Add(crypto);
+                BenCryptoList.Add(crypto);
                 CryptoController.AddCrypto(crypto);
                 FillCryptoDatagrid(BenCryptoList);
                 txtWaletName.Text = "";
@@ -464,8 +456,9 @@ namespace Project500
                         break;
                 }
                 EFT = new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,"");
-                BenEFTList.Add(EFT);
+                
                 PaymentsAccountController.AddBenPaymentAcount(EFT);
+                BenEFTList.Add(EFT);
                 FillEFTDatagrid(BenEFTList);
                 txtEFTAccNum.Text = "";
                 txtAccHolder.Text = "";
@@ -557,8 +550,8 @@ namespace Project500
 
         private void btnSeAllBeneficairys_Click(object sender, EventArgs e)
         {
+            BeneficiaryList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             FillBeneficiaryDatagrid(BeneficiaryList);
-            ClearBens();
             
         }
 

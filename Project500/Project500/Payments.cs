@@ -585,17 +585,21 @@ namespace Project500
 
         private void btnSearchB_Click_1(object sender, EventArgs e)
         {
-            BenName = txtBName.Text.Trim();
-            BeneficiaryListS = BeneficairyList;
-            foreach (Beneficiary item in BeneficiaryListS)
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
+
+            List<Beneficiary> SearchList = new List<Beneficiary>();
+
+            foreach (Beneficiary item in BeneficairyList)
             {
                 if (item.BeneficairyName.IndexOf(txtBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                 {
-                    BeneficairyList.Add(item);
+                    SearchList.Add(item);
                 }
             }
 
-            FillBeneficiaryDatagrid(BeneficairyList);
+            BeneficairyList = SearchList;
+
+            FillBeneficiaryDatagrid(SearchList);
 
 
         }
@@ -607,8 +611,8 @@ namespace Project500
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             FillBeneficiaryDatagrid(BeneficairyList);
-            ClearBens();
         }
         public void ClearBens()
         {
