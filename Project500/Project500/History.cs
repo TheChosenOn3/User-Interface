@@ -520,8 +520,8 @@ namespace Project500
 
             List<string[]> Output = new List<string[]>();
 
-            Output.Add(new string[] { "Payment Number", "Beneficiary Name", "Description", "Pay Date", "Amount", "Interval", "Status", "Type" });
-            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
+            Output.Add(new string[] { "Payment Number", "Client Account", "Beneficiary Name", "Beneficiary Account", "Description", "Pay Date", "Amount", "Interval", "Status", "Type" });
+            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
 
             int TotalPayments = 0;
             int SuccessfulPayments = 0;
@@ -537,20 +537,20 @@ namespace Project500
             {
                 if (Counter <= RowCount - 2)
                 {
-                    Output.Add(new string[] { item.Cells[0].Value.ToString(), item.Cells[1].Value.ToString(), item.Cells[2].Value.ToString(), item.Cells[3].Value.ToString(), item.Cells[4].Value.ToString(), item.Cells[5].Value.ToString(), item.Cells[6].Value.ToString(), item.Cells[7].Value.ToString(), });
+                    Output.Add(new string[] { item.Cells[0].Value.ToString(), item.Cells[1].Value.ToString(), item.Cells[2].Value.ToString(), item.Cells[3].Value.ToString(), item.Cells[4].Value.ToString(), item.Cells[5].Value.ToString(), item.Cells[6].Value.ToString(), item.Cells[7].Value.ToString(), item.Cells[8].Value.ToString(), item.Cells[9].Value.ToString() });
 
                     TotalPayments++;
-                    TotalAmount += float.Parse(item.Cells[4].Value.ToString());
+                    TotalAmount += float.Parse(item.Cells[6].Value.ToString());
 
-                    if (item.Cells[6].Value.ToString() == "Success")
+                    if (item.Cells[8].Value.ToString() == "Success" || item.Cells[8].Value.ToString() == "Successful" || item.Cells[8].Value.ToString() == "Approved" || item.Cells[8].Value.ToString() == "Accepted")
                     {
                         SuccessfulPayments++;
-                        TotalSuccessAmount += float.Parse(item.Cells[4].Value.ToString());
+                        TotalSuccessAmount += float.Parse(item.Cells[6].Value.ToString());
                     }
-                    else if (item.Cells[6].Value.ToString() == "Failed")
+                    else if (item.Cells[8].Value.ToString() == "Failed")
                     {
                         FailedPayments++;
-                        TotalFailAmount += float.Parse(item.Cells[4].Value.ToString());
+                        TotalFailAmount += float.Parse(item.Cells[6].Value.ToString());
                     }
 
                     Counter++;
@@ -558,17 +558,17 @@ namespace Project500
 
             }
 
-            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
-            Output.Add(new string[] { "Summary:", "", "", "", "", "", "", "" });
-            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Payments: ", TotalPayments.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Amount: ", TotalAmount.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Successful Payments: ", SuccessfulPayments.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Amount for Successful: ", TotalSuccessAmount.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Failed Payments: ", FailedPayments.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Amount for Failed: ", TotalFailAmount.ToString(), "", "", "", "", "", "" });
+            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
+            Output.Add(new string[] { "Summary:", "", "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Payments: ", TotalPayments.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount: ", TotalAmount.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Successful Payments: ", SuccessfulPayments.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount for Successful: ", TotalSuccessAmount.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Failed Payments: ", FailedPayments.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount for Failed: ", TotalFailAmount.ToString(), "", "", "", "", "", "", "", "" });
 
             int length = Output.Count();
             StringBuilder sb = new StringBuilder();
@@ -578,8 +578,17 @@ namespace Project500
                 sb.AppendLine(string.Join(delimiter, Output[index]));
             }
 
-            File.WriteAllText(FinalPath, sb.ToString());
-            MetroMessageBox.Show(this, "Payment has been saved on your desktop!", "Payment Report Saved");
+            try
+            {
+                File.WriteAllText(FinalPath, sb.ToString());
+                MetroMessageBox.Show(this, "Payment has been saved on your desktop!", "Payment Report Saved");
+            }
+            catch (Exception)
+            {
+                MetroMessageBox.Show(this, "An Error Occured Trying to Write The File, Close Any Existing Excel Documents on Your Desktop!", "Write File Error");
+            }
+            
+            
         }
 
         private void btnGenerateReport_Click(object sender, EventArgs e)

@@ -130,7 +130,16 @@ namespace Project500
                 }
               
             }
-            userCrypto = CryptoController.GetUserCrypto(user.RsaID);
+            if (CryptoController.GetUserCrypto(user.RsaID) != null)
+            {
+                userCrypto = CryptoController.GetUserCrypto(user.RsaID);
+            }
+            else
+            {
+                userCrypto = new Crypto("", "", 0, "", user.RsaID);
+            }
+
+
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             UserCardList = CardController.RetrveCards(user.RsaID);
             FillPaymentsDatagrid(PaymentList);

@@ -774,8 +774,8 @@ namespace Project500
 
 
 
-            Crypto newcryp = new Crypto(txtWalletName.Text, UserCrypto.Waletaddress, UserCrypto.Amount, "",user.RsaID);
-            CryptoController.UpateCrypto(newcryp);
+            Crypto newcryp = new Crypto(txtWalletName.Text,txtWalletCode.Text,float.Parse( txtWalletAmount.Text), "",user.RsaID);
+            CryptoController.UpateUserCrypto(newcryp);
 
 
         }
@@ -1133,6 +1133,14 @@ namespace Project500
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAddWallet_Click(object sender, EventArgs e)
+        {
+            string Waletname = txtWalletName.Text.Trim();
+
+            Crypto newcryp = new Crypto(txtWalletName.Text, txtWalletCode.Text, float.Parse(txtWalletAmount.Text), "", user.RsaID);
+            CryptoController.AddCrypto(newcryp);
         }
     }
 }

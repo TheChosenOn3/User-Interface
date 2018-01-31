@@ -54,7 +54,7 @@ namespace Controllers
         }
         public static bool UpateCrypto(Crypto upcryp)
         {
-            upcryp.UserId = null;
+            upcryp.UserId = null; 
             return ControllerHandler<Crypto>.Update(upcryp, Control);
         }
 
