@@ -204,7 +204,7 @@ namespace Project500
         //make new user
         public User CreateNewUer()
         {
-            String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
+            String Address = txtCountry.Text + "/" + txtProvince.Text + "/" + txtCity.Text + "/" + txtSuburb.Text + "/" + txtStreet.Text + "/" + txtStreetNumber.Text;
             newuser = new User(txtName.Text, user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, password, "Active", txtBusinessName.Text);
             return newuser;
 

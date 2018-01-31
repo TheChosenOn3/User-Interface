@@ -142,6 +142,12 @@
       <DependentUpon>Schedules.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Batch.resx">
       <DependentUpon>Batch.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Schedules.resx">
       <DependentUpon>Schedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
