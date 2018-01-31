@@ -350,6 +350,7 @@
             // dgvNotification
             // 
             this.dgvNotification.AllowUserToResizeRows = false;
+            this.dgvNotification.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNotification.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvNotification.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvNotification.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;

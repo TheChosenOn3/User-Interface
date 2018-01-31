@@ -204,7 +204,7 @@ namespace Project500
         //make new user
         public User CreateNewUer()
         {
-            String Address = txtStreetNumber.Text + "/" + txtStreet.Text + "/" + txtSuburb.Text + "/" + txtCity.Text + "/" + txtProvince.Text + "/" + txtCountry.Text;
+            String Address = txtCountry.Text + "/" + txtProvince.Text + "/" + txtCity.Text + "/" + txtSuburb.Text + "/" + txtStreet.Text + "/" + txtStreetNumber.Text;
             newuser = new User(txtName.Text, user.RsaID, txtSurname.Text, txtCellNum.Text, Address, txtEmail.Text, password, "Active", txtBusinessName.Text);
             return newuser;
 
@@ -213,9 +213,9 @@ namespace Project500
         //make new card
         public Card makecard()
         {
-            string someDate = dtpED.Value.ToString("MM/yyyy");
+            string someDate = dtpED.Value.ToString("dd/MM/yyyy");
             DateTime NewDate = DateTime.ParseExact(someDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            Card newcard = new Card(txtCardNum.Text,txtCardHolder.Text, txtCVV.Text, NewDate, user.RsaID);/////////////////ikujyhtgvrfoikujyht8kiju7yht
+            Card newcard = new Card(txtCardNum.Text,txtCardHolder.Text, txtCVV.Text, NewDate,user.RsaID);/////////////////ikujyhtgvrfoikujyht8kiju7yht
             return newcard;
         }
 
@@ -261,7 +261,7 @@ namespace Project500
         // updaet new eft acount 
         public bool SendUserEFTAccUp()
         {
-            PaymentsAccountController.AddUserPaymentAcount(makeneweft());
+            PaymentsAccountController.UpdateUserPaymentAcount(makeneweft());
             return true;
         }
         private void navpan_Paint(object sender, PaintEventArgs e)
@@ -774,8 +774,8 @@ namespace Project500
 
 
 
-            Crypto newcryp = new Crypto(txtWalletName.Text, UserCrypto.Waletaddress, UserCrypto.Amount, "",user.RsaID);
-            CryptoController.UpateCrypto(newcryp);
+            Crypto newcryp = new Crypto(txtWalletName.Text,txtWalletCode.Text,float.Parse( txtWalletAmount.Text), "",user.RsaID);
+            CryptoController.UpateUserCrypto(newcryp);
 
 
         }
@@ -1133,6 +1133,14 @@ namespace Project500
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAddWallet_Click(object sender, EventArgs e)
+        {
+            string Waletname = txtWalletName.Text.Trim();
+
+            Crypto newcryp = new Crypto(txtWalletName.Text, txtWalletCode.Text, float.Parse(txtWalletAmount.Text), "", user.RsaID);
+            CryptoController.AddCrypto(newcryp);
         }
     }
 }

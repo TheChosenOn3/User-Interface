@@ -213,6 +213,7 @@ namespace Project500
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
+            PaymentList = HistoryController.getHistory(user.RsaID);
             FillPaymentsDatagrid(PaymentList);
         }
         public void clearall() {
@@ -230,176 +231,105 @@ namespace Project500
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            if (txtBName.Text.Trim() == "" && cmbStaus.SelectedIndex == -1 && cbPaymenttype.SelectedIndex == -1 && dtpEnd.Value == null && dtpEnd.Value == null )
-            {
-                MessageBox.Show("No filler set");
-            }
-            else
-            {
-                string benidtosearc = "";
+            PaymentList = HistoryController.getHistory(user.RsaID);
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
+            List<string> BeneficiarySearchIDs = new List<string>();
+            bool UsePaymentList = false;
 
+            List<Payment> SearchList = new List<Payment>();
+
+            //Filter for Beneficiary Name
+            if (!txtBName.Text.Equals(""))
+            {
+                //Get All ID's of Beneficiaries that fall under search Criteria
                 foreach (Beneficiary item in BeneficairyList)
                 {
                     if (item.BeneficairyName.IndexOf(txtBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        benidtosearc = item.BeneficairyID;
+                        BeneficiarySearchIDs.Add(item.BeneficairyID);
                     }
-                    //ewqqwe
-
                 }
-                
-                PaymentListS = PaymentList;
-                // begin
-                if (cbPaymenttype.SelectedIndex == -1)
+
+                //Filter All Payments, based on BeneficiaryID
+                foreach (Payment item in PaymentList)
                 {
-                    if (benidtosearc == "")
+                    if (BeneficiarySearchIDs.Contains(item.BeneficairyID))
                     {
-                        if (cmbStaus.SelectedIndex == -1)
-                        {
-                            foreach (Payment item in PaymentListS)
-                            {
-                                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                                if (payDate >= dtpStart.Value && payDate <= dtpEnd.Value)
-                                {
-                                    PaymentList.Add(item);
-                                }
-
-                            }
-
-                        }
-                        else
-                        {
-                            foreach (Payment item in PaymentListS)
-                            {
-                                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                                if (payDate >= dtpStart.Value && payDate <= dtpEnd.Value && item.Status ==cmbStaus.SelectedIndex.ToString())
-                                {
-                                    PaymentList.Add(item);
-                                }
-
-                            }
-
-
-                        }
-
-
+                        SearchList.Add(item);
                     }
-                    else
-                    {
-                        if (cmbStaus.SelectedIndex == -1)
-                        {
-                            foreach (Payment item in PaymentListS)
-                            {
-                                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                                if (payDate >= dtpStart.Value && payDate <= dtpEnd.Value && item.BeneficairyID == benidtosearc)
-                                {
-                                    PaymentList.Add(item);
-                                }
-
-                            }
-
-                        }
-                        else
-                        {
-                            foreach (Payment item in PaymentListS)
-                            {
-                                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                                if (payDate >= dtpStart.Value && payDate <= dtpEnd.Value && item.Status == cmbStaus.SelectedIndex.ToString() && item.BeneficairyID == benidtosearc)
-                                {
-                                    PaymentList.Add(item);
-                                }
-
-                            }
-
-
-                        }
-
-                    }
-                    //maby need to make new controller vor scheadualed table
-               
-
-
                 }
-                else
+
+                //Changes the Criteria list, depending on this Filter Criteria, only showing payments that meet this criteria, for the next criteria methods.
+                PaymentList = SearchList;
+                SearchList = new List<Payment>();
+                UsePaymentList = true;
+            }
+
+            //Filter Payments by Status
+            if (!cmbStaus.Text.Equals(""))
+            {
+                foreach (Payment item in PaymentList)
                 {
-                    if (benidtosearc == "")
+                    if (item.Status.Equals(cmbStaus.Text.ToString()))
                     {
-                        if (cmbStaus.SelectedIndex == -1)
-                        {
-                            foreach (Payment item in PaymentListS)
-                            {
-                                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                                if (payDate >= dtpStart.Value && payDate <= dtpEnd.Value && cbPaymenttype.SelectedItem.ToString() == item.TypePayment.ToString())
-                                {
-                                    PaymentList.Add(item);
-                                }
-
-                            }
-
-                        }
-                        else
-                        {
-                            foreach (Payment item in PaymentListS)
-                            {
-                                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                                if (payDate >= dtpStart.Value && payDate <= dtpEnd.Value && item.Status == cmbStaus.SelectedIndex.ToString() && cbPaymenttype.SelectedItem.ToString() == item.TypePayment.ToString())
-                                {
-                                    PaymentList.Add(item);
-                                }
-
-                            }
-
-
-                        }
-
-
+                        SearchList.Add(item);
                     }
-                    else
-                    {
-                        if (cmbStaus.SelectedIndex == -1)
-                        {
-                            foreach (Payment item in PaymentListS)
-                            {
-                                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                                if (payDate >= dtpStart.Value && payDate <= dtpEnd.Value && item.BeneficairyID == benidtosearc && cbPaymenttype.SelectedItem.ToString() == item.TypePayment.ToString())
-                                {
-                                    PaymentList.Add(item);
-                                }
-
-                            }
-
-                        }
-                        else
-                        {
-                            foreach (Payment item in PaymentListS)
-                            {
-                                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                                if (payDate >= dtpStart.Value && payDate <= dtpEnd.Value && item.Status == cmbStaus.SelectedIndex.ToString() && item.BeneficairyID == benidtosearc && cbPaymenttype.SelectedItem.ToString() == item.TypePayment.ToString())
-                                {
-                                    PaymentList.Add(item);
-                                }
-
-                            }
-
-
-                        }
-
-                    }
-                    //maby need to make new controller vor scheadualed table
-
                 }
 
+                PaymentList = SearchList;
+                SearchList = new List<Payment>();
+                UsePaymentList = true;
+            }
+
+            //Filter by Date
+            if (cxbDate.Checked)
+            {
+                string StartDateString = dtpStart.Value.ToString("dd/MM/yyyy");
+                DateTime StartDate = DateTime.ParseExact(StartDateString, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                string EndDateString = dtpEnd.Value.ToString("dd/MM/yyyy");
+                DateTime EndDate = DateTime.ParseExact(EndDateString, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                foreach (Payment item in PaymentList)
+                {
+                    DateTime PaymentDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                    if (PaymentDate > StartDate && PaymentDate < EndDate)
+                    {
+                        SearchList.Add(item);
+                    }
+                }
+
+                PaymentList = SearchList;
+                SearchList = new List<Payment>();
+                UsePaymentList = true;
+            }
+
+            //Filter by Payment Method
+            if (!cbPaymenttype.Text.Equals(""))
+            {
+                foreach (Payment item in PaymentList)
+                {
+                    if (item.TypePayment.ToString() == cbPaymenttype.Text.ToString())
+                    {
+                        SearchList.Add(item);
+                    }
+                }
+
+                PaymentList = SearchList;
+                SearchList = new List<Payment>();
+                UsePaymentList = true;
+            }
+
+            //Now Populate depending on which list, true means using PaymentList global variable, false means using the searchlist
+            if (UsePaymentList)
+            {
                 FillPaymentsDatagrid(PaymentList);
             }
-          
+            else
+            {
+                FillPaymentsDatagrid(SearchList);
+            }
         }
 
         private void BtnRety_Click(object sender, EventArgs e)
@@ -520,8 +450,8 @@ namespace Project500
 
             List<string[]> Output = new List<string[]>();
 
-            Output.Add(new string[] { "Payment Number", "Beneficiary Name", "Description", "Pay Date", "Amount", "Interval", "Status", "Type" });
-            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
+            Output.Add(new string[] { "Payment Number", "Client Account", "Beneficiary Name", "Beneficiary Account", "Description", "Pay Date", "Amount", "Interval", "Status", "Type" });
+            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
 
             int TotalPayments = 0;
             int SuccessfulPayments = 0;
@@ -537,20 +467,20 @@ namespace Project500
             {
                 if (Counter <= RowCount - 2)
                 {
-                    Output.Add(new string[] { item.Cells[0].Value.ToString(), item.Cells[1].Value.ToString(), item.Cells[2].Value.ToString(), item.Cells[3].Value.ToString(), item.Cells[4].Value.ToString(), item.Cells[5].Value.ToString(), item.Cells[6].Value.ToString(), item.Cells[7].Value.ToString(), });
+                    Output.Add(new string[] { item.Cells[0].Value.ToString(), item.Cells[1].Value.ToString(), item.Cells[2].Value.ToString(), item.Cells[3].Value.ToString(), item.Cells[4].Value.ToString(), item.Cells[5].Value.ToString(), item.Cells[6].Value.ToString(), item.Cells[7].Value.ToString(), item.Cells[8].Value.ToString(), item.Cells[9].Value.ToString() });
 
                     TotalPayments++;
-                    TotalAmount += float.Parse(item.Cells[4].Value.ToString());
+                    TotalAmount += float.Parse(item.Cells[6].Value.ToString());
 
-                    if (item.Cells[6].Value.ToString() == "Success")
+                    if (item.Cells[8].Value.ToString() == "Success" || item.Cells[8].Value.ToString() == "Successful" || item.Cells[8].Value.ToString() == "Approved" || item.Cells[8].Value.ToString() == "Accepted")
                     {
                         SuccessfulPayments++;
-                        TotalSuccessAmount += float.Parse(item.Cells[4].Value.ToString());
+                        TotalSuccessAmount += float.Parse(item.Cells[6].Value.ToString());
                     }
-                    else if (item.Cells[6].Value.ToString() == "Failed")
+                    else if (item.Cells[8].Value.ToString() == "Failed")
                     {
                         FailedPayments++;
-                        TotalFailAmount += float.Parse(item.Cells[4].Value.ToString());
+                        TotalFailAmount += float.Parse(item.Cells[6].Value.ToString());
                     }
 
                     Counter++;
@@ -558,17 +488,17 @@ namespace Project500
 
             }
 
-            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
-            Output.Add(new string[] { "Summary:", "", "", "", "", "", "", "" });
-            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Payments: ", TotalPayments.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Amount: ", TotalAmount.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Successful Payments: ", SuccessfulPayments.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Amount for Successful: ", TotalSuccessAmount.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "", "", "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Failed Payments: ", FailedPayments.ToString(), "", "", "", "", "", "" });
-            Output.Add(new string[] { "Total Amount for Failed: ", TotalFailAmount.ToString(), "", "", "", "", "", "" });
+            Output.Add(new string[] { "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------", "--------------------------------" });
+            Output.Add(new string[] { "Summary:", "", "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Payments: ", TotalPayments.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount: ", TotalAmount.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Successful Payments: ", SuccessfulPayments.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount for Successful: ", TotalSuccessAmount.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "", "", "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Failed Payments: ", FailedPayments.ToString(), "", "", "", "", "", "", "", "" });
+            Output.Add(new string[] { "Total Amount for Failed: ", TotalFailAmount.ToString(), "", "", "", "", "", "", "", "" });
 
             int length = Output.Count();
             StringBuilder sb = new StringBuilder();
@@ -578,8 +508,17 @@ namespace Project500
                 sb.AppendLine(string.Join(delimiter, Output[index]));
             }
 
-            File.WriteAllText(FinalPath, sb.ToString());
-            MetroMessageBox.Show(this, "Payment has been saved on your desktop!", "Payment Report Saved");
+            try
+            {
+                File.WriteAllText(FinalPath, sb.ToString());
+                MetroMessageBox.Show(this, "Payment has been saved on your desktop!", "Payment Report Saved");
+            }
+            catch (Exception)
+            {
+                MetroMessageBox.Show(this, "An Error Occured Trying to Write The File, Close Any Existing Excel Documents on Your Desktop!", "Write File Error");
+            }
+            
+            
         }
 
         private void btnGenerateReport_Click(object sender, EventArgs e)
@@ -670,6 +609,26 @@ namespace Project500
 
             }
             genratedes();
+        }
+
+        private void cxbDate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cxbDate.Checked)
+            {
+                metroLabel1.Visible = true;
+                metroLabel4.Visible = true;
+
+                dtpStart.Visible = true;
+                dtpEnd.Visible = true;
+            }
+            else
+            {
+                metroLabel1.Visible = false;
+                metroLabel4.Visible = false;
+
+                dtpStart.Visible = false;
+                dtpEnd.Visible = false;
+            }
         }
     }
 }

@@ -24,6 +24,35 @@ namespace Project500
             txtUsername.Focus();
         }
 
+        //Constructor used for Server Offline or Maintenance: True = Maintenance, False = Server Offline
+        public Login(bool Status)
+        {
+            InitializeComponent();
+            txtUsername.Focus();
+
+            if (Status)
+            {
+                this.Style = MetroColorStyle.Yellow;
+                MetroMessageBox.Show(this, "Server is Currently in Maintenance Mode! Please Come back Later!", "Server Maintenance");
+                LockControls();
+            }
+            else
+            {
+                this.Style = MetroColorStyle.Red;
+                MetroMessageBox.Show(this, "Server is Currently Offline! Please Come back Later!", "Server Offline");
+                LockControls();
+            }
+        }
+
+        public void LockControls()
+        {
+            txtUsername.Enabled = false;
+            txtPassword.Enabled = false;
+
+            btnLogin.Enabled = false;
+            lblLinkToRegister.Enabled = false;
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();

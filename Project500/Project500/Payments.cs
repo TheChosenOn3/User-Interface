@@ -51,14 +51,19 @@ namespace Project500
         //hier kom die SEOP nou   fill combo box met die # lists
         List<String> UobjectListe = new List<String>();
         List<String> BenbjectListe = new List<String>();
+        List<Payment> ALLPAY = new List<Payment>();
+        List<Payment> history = new List<Payment>();
+        List<Payment> scheduals = new List<Payment>();
 
 
+        
         User user = new User();
         public Payments(User _user)
         {
             InitializeComponent();
             user = _user;
             btnProfileImage.Text = " " + user.Name;
+
         }
         public Payments()
         {
@@ -67,6 +72,7 @@ namespace Project500
 
         private void Payments_Load(object sender, EventArgs e)
         {
+            
             if (CryptoController.GetUserCrypto(user.RsaID) == null)
             {
                 userCrypto  = new Crypto("","",0,"",user.RsaID);
@@ -75,7 +81,17 @@ namespace Project500
             {
                 userCrypto = CryptoController.GetUserCrypto(user.RsaID);
             }
-          
+            history= HistoryController.getHistory(user.RsaID);
+            scheduals = PaymentsController.GetPayments(user.RsaID);
+
+            foreach (Payment item in history)
+            {
+                ALLPAY.Add(item);
+            }
+            foreach (Payment item in scheduals)
+            {
+                ALLPAY.Add(item);
+            }
 
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
@@ -440,7 +456,7 @@ namespace Project500
             }
             else if (checkInter.Checked == true && txtInterval.Text == "")
             {
-                MetroMessageBox.Show(this, "Please Select Proper Interval for a Recurring Payment, with format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed","Interval Input Error");
+                MetroMessageBox.Show(this, "Please Select Proper Interval for a Recurring Payment, with format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed", "Interval Input Error");
             }
             else if (cbBAccType.SelectedIndex != -1 && cbxPaymentType.SelectedIndex != -1)
             {
@@ -449,15 +465,15 @@ namespace Project500
                 string userlected = cbxPaymentType.SelectedItem.ToString();
                 string usertype = userlected.Substring(0, 3);
                 string bentype = benected.Substring(0, 3);
-                if ((usertype == "Car"&&bentype=="EFT")||(usertype == "EFT" && bentype == "EFT") || (usertype== "Cry" && bentype == "Cry"))
+                if ((usertype == "Car" && bentype == "EFT") || (usertype == "EFT" && bentype == "EFT") || (usertype == "Cry" && bentype == "Cry"))
                 {
 
                     string UAccNum = "";
                     string BenAccNum = "";
                     int range1 = benected.IndexOf(":");
-                    string selectPayAcc = benected.Substring(range1+ 1, benected.Length - range1-1);
-                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":")-1);
-                  
+                    string selectPayAcc = benected.Substring(range1 + 1, benected.Length - range1 - 1);
+                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":") - 1);
+
                     if (usertype == "Cry")
                     {
                         UAccNum = userCrypto.Waletaddress;
@@ -517,17 +533,17 @@ namespace Project500
                     int SchedueldNum = rnd.Next(11, 1022);
                     string Schedpaynum = PaymentNum1.ToString() + PaymentNum2.ToString() + SchedueldNum.ToString();
 
-                    foreach (Payment item in PaymentList)
+                    foreach (Payment item1 in ALLPAY)
                     {
-                        if (Schedpaynum == item.PaymentNumber)
+                        foreach (Payment item in PaymentList)
                         {
-                            Schedpaynum += "9";
+                            if (Schedpaynum == item.PaymentNumber)
+                            {
+                                Schedpaynum += "9";
+                            }
+
                         }
-
-
                     }
-
-
 
 
                     //uiykjhtgrfdluiykjthre;oluiyutreeliitytrerelyty
@@ -539,10 +555,10 @@ namespace Project500
                     ClearFields();
 
                 }
-                
+
                 else
                 {
-                    MetroMessageBox.Show(this, "Your Payment type and Beneficiary Payment Type Does Not Match!","Payment Type Input Error");
+                    MetroMessageBox.Show(this, "Your Payment type and Beneficiary Payment Type Does Not Match!", "Payment Type Input Error");
                 }
 
 
@@ -585,17 +601,21 @@ namespace Project500
 
         private void btnSearchB_Click_1(object sender, EventArgs e)
         {
-            BenName = txtBName.Text.Trim();
-            BeneficiaryListS = BeneficairyList;
-            foreach (Beneficiary item in BeneficiaryListS)
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
+
+            List<Beneficiary> SearchList = new List<Beneficiary>();
+
+            foreach (Beneficiary item in BeneficairyList)
             {
                 if (item.BeneficairyName.IndexOf(txtBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                 {
-                    BeneficairyList.Add(item);
+                    SearchList.Add(item);
                 }
             }
 
-            FillBeneficiaryDatagrid(BeneficairyList);
+            BeneficairyList = SearchList;
+
+            FillBeneficiaryDatagrid(SearchList);
 
 
         }
@@ -607,8 +627,8 @@ namespace Project500
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             FillBeneficiaryDatagrid(BeneficairyList);
-            ClearBens();
         }
         public void ClearBens()
         {
@@ -669,43 +689,57 @@ namespace Project500
 
         private void btnBatch_Click(object sender, EventArgs e)
         {
-            //List<Payment> batchlist = new List<Payment>();
-            //StreamReader reader = new StreamReader("ReadTest.csv");
+            List<Payment> batchlist = new List<Payment>();
+            StreamReader reader = new StreamReader("ReadTest.csv");
 
 
-            //    List<string> headerList = null;
-            //    List<Payment> paylist = new List<Payment>();
+            
+            List<Payment> paylist = new List<Payment>();
 
 
-            //    while (!reader.EndOfStream)
+            while (!reader.EndOfStream)
 
-            //    {
-            //        Payment payment = new Payment();
-            //        var line = reader.ReadLine();
-            //        string[] values = null;
-            //        values = line.Split(',');
+            {
+                Payment payment = new Payment();
+                var line = reader.ReadLine();
+                string[] values = null;
+                values = line.Split(',');
 
-            //        payment.Amount = float.Parse(values[0]);
-            //        payment.BeneficairyID = values[1];
-            //        payment.DateCreated = Convert.ToDateTime(values[2]);
-            //        payment.Description = values[3];
-            //        payment.Interval = values[4];
-            //        payment.PayDate = Convert.ToDateTime(values[5]);
-            //        payment.PaymentNumber = values[6];
-            //        payment.Recurring = Convert.ToBoolean(values[7]);
-            //        payment.ScheduleNr = values[8];
-            //        payment.Status = values[9];
-            //        paylist.Add(payment);
-            //        MessageBox.Show(payment.Amount.ToString());
-            //        payment.TypePayment = PaymentType.Card;
-            //        payment.UserID = "1";
-            //        batchlist.Add(payment);
-            //    }
-            //foreach (var item in batchlist)
-            //{
-            //    PaymentList.Add(item);
-            //}
-            //FillPaymentDatagrid(PaymentList);
+                payment.ScheduleNr = values[0];
+                payment.Description = values[1];
+                payment.BeneficairyID = values[2];
+                payment.PayDate = Convert.ToDateTime(values[3]).ToString();
+                payment.Amount = float.Parse(values[4]);
+                payment.Interval = values[5];
+                payment.Status = values[6];
+                payment.PaymentNumber = values[7];
+                payment.TypePayment = PaymentType.Card;
+                payment.Recurring = Convert.ToBoolean(values[9]);
+                payment.DateCreated = Convert.ToDateTime(values[10]).ToString();
+                payment.UserID = values[11];
+                payment.BeneficiaryAccount = values[12];
+
+
+                foreach (Payment item1 in ALLPAY)
+                {
+                    foreach (Payment item in PaymentList)
+                    {
+                        if (payment.ScheduleNr == item.PaymentNumber)
+                        {
+                            payment.ScheduleNr += "9";
+                        }
+
+                    }
+                }
+                paylist.Add(payment);
+
+              
+            }
+            foreach (var item in paylist)
+            {
+                PaymentList.Add(item);
+            }
+            FillPaymentDatagrid(PaymentList);
 
             // Read sample data from CSV file
         }

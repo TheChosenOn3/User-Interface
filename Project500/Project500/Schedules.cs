@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities1;
 using Controllers;
+using MetroFramework.Forms;
+using MetroFramework;
 
 namespace Project500
 {
@@ -118,22 +120,34 @@ namespace Project500
         }
         private void Schedules_Load(object sender, EventArgs e)
         {
+
             BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             PaymentListF = PaymentsController.GetPayments(user.RsaID);
             foreach (Payment   item in PaymentListF)
             {
-                DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                //DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
 
-                if (payDate > DateTime.Now || item.Recurring == true)
-                {
+                //if (payDate > DateTime.Now || item.Recurring == true)
+                //{
                     PaymentList.Add(item);
-                }
+                //}
               
             }
-            userCrypto = CryptoController.GetUserCrypto(user.RsaID);
+            if (CryptoController.GetUserCrypto(user.RsaID) != null)
+            {
+                userCrypto = CryptoController.GetUserCrypto(user.RsaID);
+            }
+            else
+            {
+                userCrypto = new Crypto("", "", 0, "", user.RsaID);
+            }
+
+
             UserPaymentAccountList = PaymentsAccountController.SearchUserPaymentAcount(user.RsaID);
             UserCardList = CardController.RetrveCards(user.RsaID);
             FillPaymentsDatagrid(PaymentList);
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
+            FillBeneficiaryDatagrid(BeneficairyList);
             popUcb();
         }
         public void popUcb()
@@ -204,33 +218,32 @@ namespace Project500
 
         private void btnUpdatePayment_Click(object sender, EventArgs e)
         {
-          
+           
             PaymentType typepay = new PaymentType();
             bool recur = false;
-
 
             if (checkInter.Checked)
             {
                 recur = true;
-                  lblInterval.Visible = true;
+                lblInterval.Visible = true;
                 txtInterval.Visible = true;
+
             }
             if (recur == true && txtInterval.Text == "")
             {
-                MessageBox.Show("please fill in a interval if you want payment to be recuuring otherwize untick the box ");
+                MetroMessageBox.Show(this, "Recurring Payment Selected, but Interval for Recurring Payment is blank, Please Enter a Interval with the following format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed", "Interval Input Error");
             }
             else if (recur == true && txtInterval.Text.Length != 5)
             {
-                MessageBox.Show("your interval must be int he correct format ");
-
+                MetroMessageBox.Show(this, "Your Interval for a Recurring Payment is incorrect, please you the following format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed", "Interval Input Error");
             }
             else if (txtAmount.Text == "" || cbBAcounType.SelectedIndex == -1 || cbuserpaymentmethod.SelectedIndex == -1 || txtDescription.Text == "" || txtBname.Text == "")
             {
-                MessageBox.Show("please fill in all fields and select a beneficairy");
+                MetroMessageBox.Show(this, "Fill in all fields to Add a Payment to Execute", "Blank Fields Input Error");
             }
             else if (checkInter.Checked == true && txtInterval.Text == "")
             {
-                MessageBox.Show("please select a interval if you want payment to be recuring");
+                MetroMessageBox.Show(this, "Please Select Proper Interval for a Recurring Payment, with format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed", "Interval Input Error");
             }
             else if (cbBAcounType.SelectedIndex != -1 && cbuserpaymentmethod.SelectedIndex != -1)
             {
@@ -239,12 +252,9 @@ namespace Project500
                 string userlected = cbuserpaymentmethod.SelectedItem.ToString();
                 string usertype = userlected.Substring(0, 3);
                 string bentype = benected.Substring(0, 3);
-
-
-
-                if ((usertype == "Car" && bentype == "EFT") || (usertype == "EFT" && bentype == "EFT") || (usertype == "Cry" && bentype == "Cry")) { }
-                else
+                if ((usertype == "Car" && bentype == "EFT") || (usertype == "EFT" && bentype == "EFT") || (usertype == "Cry" && bentype == "Cry"))
                 {
+
                     string UAccNum = "";
                     string BenAccNum = "";
                     int range1 = benected.IndexOf(":");
@@ -253,8 +263,9 @@ namespace Project500
 
                     if (usertype == "Cry")
                     {
-                        typepay = PaymentType.Crypto;
+                        UAccNum = userCrypto.Waletaddress;
 
+                        typepay = PaymentType.Crypto;
                         foreach (Crypto item in BeneficairyCrypoList)
                         {
                             if (item.Waletaddress == selectPayAcc)
@@ -266,13 +277,20 @@ namespace Project500
                     }
                     else if (usertype == "Car")
                     {
-
                         typepay = PaymentType.Card;
                         foreach (Card item in UserCardList)
                         {
                             if (item.CardNr == selectUser)
                             {
                                 UAccNum = item.CardNr;
+                            }
+
+                        }
+                        foreach (PaymentAccount item in BenPaymentAccountList)
+                        {
+                            if (item.AccountNumber == selectPayAcc)
+                            {
+                                BenAccNum = item.AccountNumber;
                             }
 
                         }
@@ -297,8 +315,11 @@ namespace Project500
 
                         }
                     }
+                  
 
-                    string Paydate1 = dtpPaymentdate.Value.ToString("dd/MM/yyyy");
+
+
+        string Paydate1 = dtpPaymentdate.Value.ToString("dd/MM/yyyy");
                     ///////zswedxcfvghjnszxdcfvgbhjnmklyjrthegdsvyihywe'igfhawev9urv[o9wz8ebytm'p0czseurytipv98difoouvpgtvyf0ucqv4oi7brufaf,m[ivnycgfdm,xcihrtvns[mg,ci'drjzhg[c,em'rslkvhn[mcf,rdmetrvlkchjn.cj,mi.knmchmndulwgmh5dip[wcmuv,w,4iv;oeaw'
 
                     Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", UAccNum, typepay, recur, DateTime.Now.ToString(), user.RsaID, BenAccNum);
@@ -316,7 +337,11 @@ namespace Project500
                     FillPaymentsDatagrid(PaymentList);
 
                 }
-             
+                else
+                {
+                    MetroMessageBox.Show(this, "payment types must match", "Interval Input Error");
+                }
+
 
             }
 
@@ -541,8 +566,8 @@ namespace Project500
             txtInterval.Text = payment.Interval;
             
             dtpPaymentdate.Value = DateTime.ParseExact(payment.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            FillBeneficiaryDatagrid(BeneficairyList);
-            FillBeneficiaryDatagrid(BeneficairyList);
+        
+        
         }
 
         private void dgvBeneficiary_RowEnter(object sender, DataGridViewCellEventArgs e)
