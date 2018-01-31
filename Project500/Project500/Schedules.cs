@@ -374,93 +374,92 @@ namespace Project500
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            if (txtFBName.Text.Trim() == "" && cbFPaymentMethod.SelectedIndex == -1  && dtpFStart.Value == null && dtpFEnd.Value == null)
+            PaymentList = PaymentsController.GetPayments(user.RsaID);
+            BeneficairyList = BeneficiaryController.GetBeneficiarys(user.RsaID);
+            List<string> BeneficiarySearchIDs = new List<string>();
+            bool UsePaymentList = false;
+
+            List<Payment> SearchList = new List<Payment>();
+
+            //Filter for Beneficiary Name
+            if (!txtFBName.Text.Equals(""))
             {
-                MessageBox.Show("No filler set");
-            }
-            else
-            {
-                string benidtosearc = "";
+                //Get All ID's of Beneficiaries that fall under search Criteria
                 foreach (Beneficiary item in BeneficairyList)
                 {
                     if (item.BeneficairyName.IndexOf(txtFBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        benidtosearc = item.BeneficairyID;
+                        BeneficiarySearchIDs.Add(item.BeneficairyID);
                     }
-
                 }
 
-                if (cbFPaymentMethod.SelectedIndex == -1)
+                //Filter All Payments, based on BeneficiaryID
+                foreach (Payment item in PaymentList)
                 {
-                    if (benidtosearc == "")
+                    if (BeneficiarySearchIDs.Contains(item.BeneficairyID))
                     {
-                        foreach (Payment item in PaymentListS)
-                        {
-                            DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                            if (payDate >= dtpFStart.Value && payDate <= dtpFEnd.Value )
-                            {
-                                PaymentList.Add(item);
-                            }
-
-                        }
-
+                        SearchList.Add(item);
                     }
-                    else
-                    {
-                        foreach (Payment item in PaymentListS)
-                        {
-                            DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                            if (payDate >= dtpFStart.Value && payDate <= dtpFEnd.Value && item.BeneficairyID == benidtosearc)
-                            {
-                                PaymentList.Add(item);
-                            }
-
-                        }
-
-                    }
-                    //maby need to make new controller vor scheadualed table
-               
-                   
-                  
                 }
-                else
-                {
-                
-                    if (benidtosearc == "")
-                    {
-                        foreach (Payment item in PaymentListS)
-                        {
-                            DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
 
-                            if (cbFPaymentMethod.SelectedIndex.ToString() == item.TypePayment.ToString() && payDate >= dtpFStart.Value && payDate <= dtpFEnd.Value)
-                            {
-                                PaymentList.Add(item);
-                            }
-
-                        }
-
-                    }
-                    else
-                    {
-                        foreach (Payment item in PaymentListS)
-                        {
-                            DateTime payDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
-                            if (cbFPaymentMethod.SelectedIndex.ToString() == item.TypePayment.ToString() && payDate >= dtpFStart.Value && payDate <= dtpFEnd.Value && item.BeneficairyID == benidtosearc)
-                            {
-                                PaymentList.Add(item);
-                            }
-
-                        }
-
-                    }
-                    
-                  
-                }
-                FillPaymentsDatagrid(PaymentListS);
+                //Changes the Criteria list, depending on this Filter Criteria, only showing payments that meet this criteria, for the next criteria methods.
+                PaymentList = SearchList;
+                SearchList = new List<Payment>();
+                UsePaymentList = true;
             }
+
+            //Filter by Payment Method
+            if (!cbFPaymentMethod.Text.Equals(""))
+            {
+                foreach (Payment item in PaymentList)
+                {
+                    if (item.TypePayment.ToString() == cbFPaymentMethod.Text.ToString())
+                    {
+                        SearchList.Add(item);
+                    }
+                }
+
+                PaymentList = SearchList;
+                SearchList = new List<Payment>();
+                UsePaymentList = true;
+            }
+
+            //Filter by Date
+            if (cxbDate.Checked)
+            {
+                string StartDateString = dtpFStart.Value.ToString("dd/MM/yyyy");
+                DateTime StartDate = DateTime.ParseExact(StartDateString, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                string EndDateString = dtpFEnd.Value.ToString("dd/MM/yyyy");
+                DateTime EndDate = DateTime.ParseExact(EndDateString, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                foreach (Payment item in PaymentList)
+                {
+                    DateTime PaymentDate = DateTime.ParseExact(item.PayDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                    if (PaymentDate > StartDate && PaymentDate < EndDate)
+                    {
+                        SearchList.Add(item);
+                    }
+                }
+
+                PaymentList = SearchList;
+                SearchList = new List<Payment>();
+                UsePaymentList = true;
+            }
+
+            
+
+            //Now Populate depending on which list, true means using PaymentList global variable, false means using the searchlist
+            if (UsePaymentList)
+            {
+                FillPaymentsDatagrid(PaymentList);
+            }
+            else
+            {
+                FillPaymentsDatagrid(SearchList);
+            }
+
 
         }
 
@@ -609,6 +608,26 @@ namespace Project500
         private void tabFilterScheduel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cxbDate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cxbDate.Checked)
+            {
+                metroLabel1.Visible = true;
+                metroLabel4.Visible = true;
+
+                dtpFStart.Visible = true;
+                dtpFEnd.Visible = true;
+            }
+            else
+            {
+                metroLabel1.Visible = false;
+                metroLabel4.Visible = false;
+
+                dtpFStart.Visible = false;
+                dtpFEnd.Visible = false;
+            }
         }
     }
 }

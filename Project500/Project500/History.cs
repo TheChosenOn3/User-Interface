@@ -465,7 +465,7 @@ namespace Project500
 
             foreach (DataGridViewRow item in dgvPayments.Rows)
             {
-                if (Counter <= RowCount - 2)
+                if (Counter <= RowCount - 1)
                 {
                     Output.Add(new string[] { item.Cells[0].Value.ToString(), item.Cells[1].Value.ToString(), item.Cells[2].Value.ToString(), item.Cells[3].Value.ToString(), item.Cells[4].Value.ToString(), item.Cells[5].Value.ToString(), item.Cells[6].Value.ToString(), item.Cells[7].Value.ToString(), item.Cells[8].Value.ToString(), item.Cells[9].Value.ToString() });
 

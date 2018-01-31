@@ -32,19 +32,25 @@ namespace Controllers
             client = new HttpClient();
             User _user = null;
             //path += username;
-            var response = client.GetStringAsync(path + username + "/").Result;
-            bool Exists = JsonConvert.DeserializeObject<bool>(response);
-
-            if (Exists)
+            try
             {
-                _user = CheckLogin(username, pass);
-                return (_user.RsaID == null) ? new User { Email = username } : _user;
+                var response = client.GetStringAsync(path + username + "/").Result;
+                bool Exists = JsonConvert.DeserializeObject<bool>(response);
+
+                if (Exists)
+                {
+                    _user = CheckLogin(username, pass);
+                    return (_user.RsaID == null) ? new User { Email = username } : _user;
+                }
+                else
+                {
+                    return new User();
+                }
             }
-            else
+            catch (Exception)
             {
                 return new User();
             }
-
         }
 
 

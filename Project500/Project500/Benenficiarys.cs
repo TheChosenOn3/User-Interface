@@ -160,6 +160,7 @@ namespace Project500
             BtnDeletCrypto.Visible = false;
             btnDeletEFT.Visible = false;
             btnDeleteB.Visible = false;
+            lblAdditionalInfo.Visible = false;
 
 
 
@@ -245,6 +246,12 @@ namespace Project500
         private void btnAddB_Click(object sender, EventArgs e)
         {
             bool go = false;
+
+            if (txtBID.Text.Equals(""))
+            {
+                txtBID.Text = Guid.NewGuid().ToString("N");
+            }
+
             foreach (Beneficiary item in BeneficiaryList)
             {
                 if (txtBID.Text.Trim() == item.BeneficairyID)
@@ -278,6 +285,7 @@ namespace Project500
             txtBName.Text = "";
             txtBID.Text = "";
             txtBBranchCode.Text = "";
+            lblAdditionalInfo.Visible = true;
         }
 
         private void btnUpdateBPI_Click(object sender, EventArgs e)
@@ -637,7 +645,7 @@ namespace Project500
             FillCryptoDatagrid(BenCryptoList);
             FillEFTDatagrid(BenEFTList);
             btnUpdateBPI.Visible = true;
-            btnDeleteB.Visible = true;
+            btnDeleteB.Visible = false;
         }
 
         private void dgvEFT_RowEnter(object sender, DataGridViewCellEventArgs e)
