@@ -70,6 +70,7 @@ namespace Project500
                 DataTable table = new DataTable();
                 table.Columns.Add("Beneficairy Nme");
                 table.Columns.Add("Beneficiary Branch");
+
                 foreach (Beneficiary item in benlist)
                 {
                     table.Rows.Add(item.BeneficairyName, item.BeneficiaryBranch);
@@ -79,23 +80,24 @@ namespace Project500
 
         }
         // method to populate crypto datagrid of beneficiary
-        public void FillCryptoDatagrid(Beneficiary selectedben)
+        public void FillCryptoDatagrid(List<Crypto> selectedben)
         {
 
-            
+
             // BenCryptoListS = CryptoController.GetCrypto(selectedben.BeneficairyID);
 
-            BenCryptoListS.Clear();
-            foreach (Crypto item in BenCryptoList)
+            BenCryptoListS = BenCryptoList;
+            foreach (Crypto item in BenCryptoListS)
             {
-                if (item.BeneficiaryId == selectedben.BeneficairyID)
+                if (item.BeneficiaryId == ben.BeneficairyID)
                 {
-                    BenCryptoListS.Add(item);
+                    BenCryptoList.Add(item);
+                    break;
                 }
 
             }
 
-            DataTable Cryptable = ConvertListToDataTable(BenCryptoListS);
+            DataTable Cryptable = ConvertListToDataTable(BenCryptoList);
             dgvCrypto.DataSource = Cryptable;
             DataTable ConvertListToDataTable(List<Crypto> cryplist)
             {
@@ -111,24 +113,26 @@ namespace Project500
             }
         }
         // method to populate eft datagrid of beneficiary
-        public void FillEFTDatagrid(Beneficiary selectedben)
+        public void FillEFTDatagrid(List<PaymentAccount> selectedben)
         {
-          
-           
+
+
             //  BenEFTListS = PaymentsAccountController.SearchBenPaymentAcount(selectedben.BeneficairyID);
-            BenEFTListS.Clear();
-            foreach (PaymentAccount item in BenEFTList)
+            BenEFTListS = BenEFTList;
+
+            foreach (PaymentAccount item in BenEFTListS)
             {
                 
-                if (item.BeneficiaryID == selectedben.BeneficairyID)
+                if (item.BeneficiaryID == ben.BeneficairyID)
                 {
 
-                    BenEFTListS.Add(item);
+                    BenEFTList.Add(item);
+                    break;
                 }
 
             }
 
-            DataTable EFTtable = ConvertListToDataTable(BenEFTListS);
+            DataTable EFTtable = ConvertListToDataTable(BenEFTList);
             dgvEFT.DataSource = EFTtable;
             DataTable ConvertListToDataTable(List<PaymentAccount> Acclist)
             {
@@ -208,17 +212,17 @@ namespace Project500
         private void btnSeachB_Click(object sender, EventArgs e)
         {
            BenName = txtSearchBName.Text.Trim();
-            BeneficiaryListS.Clear();
+            BeneficiaryListS = BeneficiaryList;
 
-            foreach (Beneficiary item in BeneficiaryList)
+            foreach (Beneficiary item in BeneficiaryListS)
             {
                 if (item.BeneficairyName.IndexOf(txtSearchBName.Text.Trim(), StringComparison.CurrentCultureIgnoreCase) != -1)
                 {
-                    BeneficiaryListS.Add(item);
+                    BeneficiaryList.Add(item);
                 }
             }
 
-            FillBeneficiaryDatagrid(BeneficiaryListS);
+            FillBeneficiaryDatagrid(BeneficiaryList);
             ClearBens();
         }
 
@@ -338,7 +342,7 @@ namespace Project500
                 Crypto crypto = new Crypto(txtWaletName.Text.Trim(), txtWalletCode.Text.Trim(),0,ben.BeneficairyID,"");
                    BenCryptoList.Add(crypto);
                 CryptoController.AddCrypto(crypto);
-                FillCryptoDatagrid(ben);
+                FillCryptoDatagrid(BenCryptoList);
                 txtWaletName.Text = "";
                 txtWalletCode.Text = "";
                
@@ -373,11 +377,10 @@ namespace Project500
                             break;
                         default:
                             break;
-                    }
-                    BenEFTList.Add(new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,user.RsaID));
-                    PaymentsAccountController.UpdateBenPaymentAcount(EFT);
-                    
-                    FillEFTDatagrid(ben);
+                    } PaymentsAccountController.UpdateBenPaymentAcount(new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID, ""));
+                    BenEFTList.Remove(item);
+                    BenEFTList.Add(new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID, ""));
+                    FillEFTDatagrid(BenEFTList);
                     txtEFTAccNum.Text = "";
                     txtAccHolder.Text = "";
                     txtEFTRefernce.Text = "";
@@ -408,7 +411,7 @@ namespace Project500
             CryptoController.DeleteCrypto(crypto.BeneficiaryId);
             BenCryptoList.Remove(crypto);
             BenCryptoListS.Remove(crypto);
-            FillCryptoDatagrid(ben);
+            FillCryptoDatagrid(BenCryptoList);
             /// deos not permanently deleet but as soon daniels pice is in it will i think
 
         }
@@ -463,7 +466,7 @@ namespace Project500
                 EFT = new PaymentAccount(txtEFTAccNum.Text.Trim(), txtAccHolder.Text.Trim(), txtEFTRefernce.Text.Trim(), Acounttype, ben.BeneficairyID,"");
                 BenEFTList.Add(EFT);
                 PaymentsAccountController.AddBenPaymentAcount(EFT);
-                FillEFTDatagrid(ben);
+                FillEFTDatagrid(BenEFTList);
                 txtEFTAccNum.Text = "";
                 txtAccHolder.Text = "";
                 txtEFTRefernce.Text = "";
@@ -485,7 +488,7 @@ namespace Project500
             PaymentsAccountController.DeleteBenPaymentAcount(EFT.BeneficiaryID);
             BenEFTList.Remove(EFT);
             BenEFTListS.Remove(EFT);
-            FillEFTDatagrid(ben);
+            FillEFTDatagrid(BenEFTList);
             /// deos not permanently deleet but as soon daniels pice is in it will i think
         }
 
@@ -589,7 +592,7 @@ namespace Project500
                     BenCryptoList.Add(new Crypto(txtWaletName.Text.Trim(), txtWaletName.Text.Trim(),0,ben.BeneficairyID,""));
                     CryptoController.UpateCrypto(crypto);
 
-                    FillCryptoDatagrid(ben);
+                    FillCryptoDatagrid(BenCryptoList);
                     txtWaletName.Text = "";
                     txtWalletCode.Text = "";
 
@@ -627,26 +630,19 @@ namespace Project500
         private void dgvBeneficiary_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            Beneficiary ben1 = null;
-            if (BeneficiaryListS.Count == 0)
-            {
-                ben1 = BeneficiaryList[index];
-            }
-            else
-            {
-                ben1 = BeneficiaryListS[index];
-                BeneficiaryListS.Clear();
-            }
+            ben = BeneficiaryList[index];
 
-            ClearBens();
-            ben = ben1;
+
+           
+
             txtBBranchCode.Text = ben.BeneficiaryBranch;
             txtBID.Text = ben.BeneficairyID;
             txtBName.Text = ben.BeneficairyName;
             BenCryptoList = CryptoController.GetCrypto(ben.BeneficairyID);
             BenEFTList = PaymentsAccountController.SearchBenPaymentAcount(ben.BeneficairyID);
-            FillCryptoDatagrid(ben);
-            FillEFTDatagrid(ben);
+
+            FillCryptoDatagrid(BenCryptoList);
+            FillEFTDatagrid(BenEFTList);
             btnUpdateBPI.Visible = true;
             btnDeleteB.Visible = true;
         }

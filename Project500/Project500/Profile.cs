@@ -213,9 +213,9 @@ namespace Project500
         //make new card
         public Card makecard()
         {
-            string someDate = dtpED.Value.ToString("MM/yyyy");
+            string someDate = dtpED.Value.ToString("dd/MM/yyyy");
             DateTime NewDate = DateTime.ParseExact(someDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            Card newcard = new Card(txtCardNum.Text,txtCardHolder.Text, txtCVV.Text, NewDate, user.RsaID);/////////////////ikujyhtgvrfoikujyht8kiju7yht
+            Card newcard = new Card(txtCardNum.Text,txtCardHolder.Text, txtCVV.Text, NewDate,user.RsaID);/////////////////ikujyhtgvrfoikujyht8kiju7yht
             return newcard;
         }
 
@@ -261,7 +261,7 @@ namespace Project500
         // updaet new eft acount 
         public bool SendUserEFTAccUp()
         {
-            PaymentsAccountController.AddUserPaymentAcount(makeneweft());
+            PaymentsAccountController.UpdateUserPaymentAcount(makeneweft());
             return true;
         }
         private void navpan_Paint(object sender, PaintEventArgs e)

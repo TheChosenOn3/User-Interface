@@ -42,9 +42,10 @@ namespace Entities1
         public string Id1 { get => Id; set => Id = value; }
         public string UserId { get => userId; set => userId = value; }
 
-        public Card(string CardNr, string AccountHolder, string Cvv, DateTime Expiry,string UseId)
+        public Card(string CardNr, string CardHolder, string Cvv, DateTime Expiry,string UserId)
         {
             this.cardNr = CardNr;
+            this.cardHolder = CardHolder;
             this.cardHolder = CardHolder;
             this.cvv = Cvv;
             this.expiry = Expiry;
