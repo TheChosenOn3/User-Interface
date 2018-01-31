@@ -634,7 +634,7 @@ namespace Project500
             }
             else if (UserController.UpdateUser(CreateNewUer()))
             {
-                MessageBox.Show("sccount succsessfully updaated");
+                MetroMessageBox.Show(this, "Account Successfully Updated!", "Update Successful");
                 user = CreateNewUer();
                 ClearPI();
             }
@@ -861,7 +861,7 @@ namespace Project500
             }
             if (go != true)
             {
-                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+                MetroMessageBox.Show(this, "The Account You're Trying to Update Does Not Exist!", "Account Does Not Exist");
             }
         }
 
@@ -936,7 +936,7 @@ namespace Project500
             }
             else
             {
-                MessageBox.Show("Sorry the Account alreddy exists");
+                MetroMessageBox.Show(this, "Account Already Exists!", "Account Exists");
             }
         }
 
@@ -1009,7 +1009,7 @@ namespace Project500
             }
             if (go != true)
             {
-                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+                MetroMessageBox.Show(this, "The Account You're Trying to Update Does Not Exist!", "Account Does Not Exist");
 
             }
 
@@ -1060,7 +1060,7 @@ namespace Project500
             }
             else
             {
-                MessageBox.Show("Sorry the Accountalreddy exists");
+                MetroMessageBox.Show(this, "Account Already Exists!", "Account Exists");
             }
 
         }
