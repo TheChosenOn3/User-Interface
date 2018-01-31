@@ -456,7 +456,7 @@ namespace Project500
             }
             else if (checkInter.Checked == true && txtInterval.Text == "")
             {
-                MetroMessageBox.Show(this, "Please Select Proper Interval for a Recurring Payment, with format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed","Interval Input Error");
+                MetroMessageBox.Show(this, "Please Select Proper Interval for a Recurring Payment, with format: Days/Months\n\nExample: 01/01 - This repeats every 1 day and 1 month that has passed", "Interval Input Error");
             }
             else if (cbBAccType.SelectedIndex != -1 && cbxPaymentType.SelectedIndex != -1)
             {
@@ -465,15 +465,15 @@ namespace Project500
                 string userlected = cbxPaymentType.SelectedItem.ToString();
                 string usertype = userlected.Substring(0, 3);
                 string bentype = benected.Substring(0, 3);
-                if ((usertype == "Car"&&bentype=="EFT")||(usertype == "EFT" && bentype == "EFT") || (usertype== "Cry" && bentype == "Cry"))
+                if ((usertype == "Car" && bentype == "EFT") || (usertype == "EFT" && bentype == "EFT") || (usertype == "Cry" && bentype == "Cry"))
                 {
 
                     string UAccNum = "";
                     string BenAccNum = "";
                     int range1 = benected.IndexOf(":");
-                    string selectPayAcc = benected.Substring(range1+ 1, benected.Length - range1-1);
-                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":")-1);
-                  
+                    string selectPayAcc = benected.Substring(range1 + 1, benected.Length - range1 - 1);
+                    string selectUser = userlected.Substring(userlected.IndexOf(":") + 1, userlected.Length - userlected.IndexOf(":") - 1);
+
                     if (usertype == "Cry")
                     {
                         UAccNum = userCrypto.Waletaddress;
@@ -532,10 +532,10 @@ namespace Project500
                     int PaymentNum2 = rnd.Next(10, 1042);
                     int SchedueldNum = rnd.Next(11, 1022);
                     string Schedpaynum = PaymentNum1.ToString() + PaymentNum2.ToString() + SchedueldNum.ToString();
-                    
+
                     foreach (Payment item1 in ALLPAY)
                     {
-                        foreach (Payment item in PaymentList )
+                        foreach (Payment item in PaymentList)
                         {
                             if (Schedpaynum == item.PaymentNumber)
                             {
@@ -544,7 +544,7 @@ namespace Project500
 
                         }
                     }
-                  
+
 
                     //uiykjhtgrfdluiykjthre;oluiyutreeliitytrerelyty
                     string Paydate1 = dtpPayDate.Value.ToString("dd/MM/yyyy");
@@ -555,10 +555,10 @@ namespace Project500
                     ClearFields();
 
                 }
-                
+
                 else
                 {
-                    MetroMessageBox.Show(this, "Your Payment type and Beneficiary Payment Type Does Not Match!","Payment Type Input Error");
+                    MetroMessageBox.Show(this, "Your Payment type and Beneficiary Payment Type Does Not Match!", "Payment Type Input Error");
                 }
 
 
