@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities1;
 using Controllers;
+using MetroFramework;
 
     
 
@@ -259,7 +260,7 @@ namespace Project500
             }
             else
             {
-                MessageBox.Show("Sorry the Beneficairy with this ID alreddy exists");
+                MetroMessageBox.Show(this, "Beneficiary With Your Specified ID, Already Exists!", "Beneficiary ID In Use");
             }
         }
 
@@ -300,7 +301,7 @@ namespace Project500
             }
             if (go != true)
             {
-                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+                MetroMessageBox.Show(this, "The Account You're Trying to Update Does Not Exist!", "Account Does Not Exist");
             }
 
 
@@ -336,7 +337,7 @@ namespace Project500
             }
             else
             {
-                MessageBox.Show("Sorry the Accountalreddy exists");
+                MetroMessageBox.Show(this, "Account Already Exists!", "Account Exists");
             }
 
         }
@@ -379,7 +380,7 @@ namespace Project500
             }
             if (go != true)
             {
-                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+                MetroMessageBox.Show(this, "The Account You're Trying to Update Does Not Exist!", "Account Does Not Exist");
 
             }
         }
@@ -461,7 +462,7 @@ namespace Project500
             }
             else
             {
-                MessageBox.Show("Sorry the Accountalreddy exists");
+                MetroMessageBox.Show(this, "Account Already Exists!", "Account Exists");
             }
 
         }
@@ -589,7 +590,7 @@ namespace Project500
             }
             if (go != true)
             {
-                MessageBox.Show("Sorry the Account deos not exsist that you are trying to update");
+                MetroMessageBox.Show(this, "The Account You're Trying to Update Does Not Exist!", "Account Does Not Exist");
 
             }
         }
