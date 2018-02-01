@@ -545,8 +545,7 @@ namespace Project500
                         }
                     }
 
-
-                    //uiykjhtgrfdluiykjthre;oluiyutreeliitytrerelyty
+                    
                     string Paydate1 = dtpPayDate.Value.ToString("dd/MM/yyyy");
 
                     PaymentList.Add(new Payment(Schedpaynum, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", UAccNum, typepay, recur, DateTime.Now.ToString(), user.RsaID, BenAccNum));

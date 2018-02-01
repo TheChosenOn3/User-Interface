@@ -56,11 +56,9 @@ namespace Project500
             BeneficiaryList = BeneficiaryController.GetBeneficiarys(user.RsaID);
             FillBeneficiaryDatagrid(BeneficiaryList);
           
-            //demo population
-       
         }
 
-        // method to populate datagrid beneficharys
+   
         public void FillBeneficiaryDatagrid(List<Beneficiary> BenDataGridList) {
 
             DataTable bentable = ConvertListToDataTable(BenDataGridList);
@@ -80,24 +78,13 @@ namespace Project500
             }
 
         }
-        // method to populate crypto datagrid of beneficiary
+        
         public void FillCryptoDatagrid(List<Crypto> selectedben)
         {
 
-
-            // BenCryptoListS = CryptoController.GetCrypto(selectedben.BeneficairyID);
-
             BenCryptoListS = BenCryptoList;
-            //foreach (Crypto item in BenCryptoListS)
-            //{
-            //    if (item.BeneficiaryId == ben.BeneficairyID)
-            //    {
-            //        BenCryptoList.Add(item);
-            //        break;
-            //    }
-
-            //}
-
+        
+        
             DataTable Cryptable = ConvertListToDataTable(BenCryptoList);
             dgvCrypto.DataSource = Cryptable;
             DataTable ConvertListToDataTable(List<Crypto> cryplist)
@@ -221,13 +208,13 @@ namespace Project500
 
         private void dgvBeneficiary_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // get ben
+          
             int index = e.RowIndex;
             ben = BeneficiaryList[index];
-            //BenEFTList =
+         
 
 
-            //BenCryptoList =
+       
             txtBName.Text = ben.BeneficairyName;
             txtBID.Text = ben.BeneficairyID;
             txtBBranchCode.Text = ben.BeneficiaryBranch;
@@ -321,7 +308,7 @@ namespace Project500
 
         private void dgvCrypto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //  Crypto = Selected from datagrid
+          
             
         }
 
@@ -401,7 +388,7 @@ namespace Project500
         {
             txtWaletName.Text = "";
             txtWalletCode.Text = "";
-            // clear combobox
+       
 
         }
 
@@ -412,7 +399,7 @@ namespace Project500
             BenCryptoList.Remove(crypto);
             BenCryptoListS.Remove(crypto);
             FillCryptoDatagrid(BenCryptoList);
-            /// deos not permanently deleet but as soon daniels pice is in it will i think
+
 
         }
 
@@ -426,11 +413,10 @@ namespace Project500
 
         private void dgvEFT_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //EFT = select one from datagrid
             txtAccHolder.Text = EFT.AccountHolder;
             txtEFTAccNum.Text = EFT.AccountNumber;
             txtEFTRefernce.Text = EFT.Reference;
-            // update combobox
+          
 
 
         }
@@ -490,7 +476,7 @@ namespace Project500
             BenEFTList.Remove(EFT);
             BenEFTListS.Remove(EFT);
             FillEFTDatagrid(BenEFTList);
-            /// deos not permanently deleet but as soon daniels pice is in it will i think
+        
         }
 
         private void tabBeneficiary_Click(object sender, EventArgs e)

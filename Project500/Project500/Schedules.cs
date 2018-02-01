@@ -320,8 +320,7 @@ namespace Project500
 
 
         string Paydate1 = dtpPaymentdate.Value.ToString("dd/MM/yyyy");
-                    ///////zswedxcfvghjnszxdcfvgbhjnmklyjrthegdsvyihywe'igfhawev9urv[o9wz8ebytm'p0czseurytipv98difoouvpgtvyf0ucqv4oi7brufaf,m[ivnycgfdm,xcihrtvns[mg,ci'drjzhg[c,em'rslkvhn[mcf,rdmetrvlkchjn.cj,mi.knmchmndulwgmh5dip[wcmuv,w,4iv;oeaw'
-
+                 
                     Payment newPayment = new Payment(payment.ScheduleNr, txtDescription.Text.Trim(), beneficiary.BeneficairyID, Paydate1, float.Parse(txtAmount.Text.Trim()), txtInterval.Text.Trim(), "Pending", UAccNum, typepay, recur, DateTime.Now.ToString(), user.RsaID, BenAccNum);
                     PaymentsController.UpdatePyaments(newPayment);
                     foreach (Payment item in PaymentList)
